@@ -4,42 +4,52 @@
   "html": [
     {
       "file": "search/index.html",
-      "bytes": 177754,
-      "gzipBytes": 38317
+      "bytes": 179474,
+      "gzipBytes": 38865
+    },
+    {
+      "file": "airport/index.html",
+      "bytes": 71804,
+      "gzipBytes": 12729
     },
     {
       "file": "compare/index.html",
-      "bytes": 77146,
-      "gzipBytes": 11414
+      "bytes": 79662,
+      "gzipBytes": 12005
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 29601,
-      "gzipBytes": 10501
+      "bytes": 31548,
+      "gzipBytes": 11201
     },
     {
       "file": "airport/yuzhoucloud/index.html",
-      "bytes": 29540,
-      "gzipBytes": 10484
-    },
-    {
-      "file": "airport/wuyou/index.html",
-      "bytes": 29252,
-      "gzipBytes": 10458
+      "bytes": 31495,
+      "gzipBytes": 11190
     }
   ],
   "javascript": [
     {
-      "file": "_astro/compare.astro_astro_type_script_index_0_lang.DT930Kxm.js",
-      "bytes": 4911,
-      "gzipBytes": 2083
+      "file": "_astro/compare.astro_astro_type_script_index_0_lang.BEfMstKZ.js",
+      "bytes": 5205,
+      "gzipBytes": 2248
+    },
+    {
+      "file": "_astro/BrandMemoryClient.astro_astro_type_script_index_0_lang.B8acVHUe.js",
+      "bytes": 3177,
+      "gzipBytes": 1443
+    },
+    {
+      "file": "_astro/brand-memory.3ySSehjU.js",
+      "bytes": 3092,
+      "gzipBytes": 1333
     }
   ],
   "css": [
     {
-      "file": "_astro/Base.DozasS3M.css",
-      "bytes": 74625,
-      "gzipBytes": 16278
+      "file": "_astro/Base.EbWhoLnp.css",
+      "bytes": 80448,
+      "gzipBytes": 17310
     }
   ],
   "thirdPartyCode": "没有新增第三方运行时脚本、远程字体或追踪请求。",

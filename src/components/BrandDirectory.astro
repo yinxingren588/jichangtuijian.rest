@@ -1,16 +1,32 @@
 ---
 import {partnerAirports,planPriceText,planTrafficText} from '../data/airports';
 import Coupon from './Coupon.astro';
+import BrandLibrary from './BrandLibrary.astro';
 import {brandEditorials} from '../data/brand-editorials';
+import type {DirectoryBrand} from '../lib/directory-filters';
+const filterData:DirectoryBrand[]=partnerAirports.map(a=>({slug:a.slug,name:a.name,searchText:(a.name+' '+brandEditorials[a.slug].focus+' '+(a.coupon?.code||'')).toLowerCase(),hasCoupon:Boolean(a.coupon),plans:a.plans.map(p=>({name:p.name,price:p.price,currency:p.currency,period:p.period,priceKind:p.priceKind,trafficGB:p.trafficGB,unlimited:p.unlimited,priceText:planPriceText(p),trafficText:planTrafficText(p)}))}));
 ---
-<div class="brand-directory-controls"><label class="sr-only" for="brand-search">搜索机场品牌</label><input id="brand-search" type="search" placeholder="搜索品牌名称或优惠码"/><label><input id="coupon-only" type="checkbox"/>只看有优惠码的品牌</label></div><p id="brand-count" class="status" role="status" aria-live="polite">共 {partnerAirports.length} 家品牌 · 展示顺序不代表排名</p>
-<div class="brand-label-row" aria-hidden="true"><span>品牌档案</span><span>入门参考价格</span><span>参考流量</span><span>优惠码 · 未验证</span><span>详情</span></div>
-<div class="brand-directory">{partnerAirports.map((a,i)=><article class="brand-directory-row" data-brand-search={(a.name+' '+brandEditorials[a.slug].focus+' '+(a.coupon?.code||'')).toLowerCase()} data-has-coupon={a.coupon?'true':'false'}><div><h3><a href={'/airport/'+a.slug+'/'}>{a.name}</a></h3><p class="brand-mini-focus">{brandEditorials[a.slug].focus}</p><small>档案 {String(i+1).padStart(2,'0')} · 第三方参考资料</small><a class="directory-evidence-link" href={'/airport/'+a.slug+'/#performance-evidence'}>测速与解锁图 ↗</a></div><div class="directory-plan"><small>入门方案参考</small>{planPriceText(a.plans[0])}</div><div class="directory-plan"><small>流量口径</small>{planTrafficText(a.plans[0])}</div><div class="directory-coupon"><Coupon brand={a} compact/></div><a class="text-link" href={'/airport/'+a.slug+'/'}>套餐 ↗</a></article>)}</div>
+<div class="directory-quick-links"><a href="#brand-filters">按预算与流量筛选 ↓</a><a href="#my-brands">候选清单 / 最近浏览 ↓</a></div>
+<div class="brand-filter-panel" id="brand-filters"><div class="brand-filter-grid"><label>品牌名称 / 优惠码<input id="brand-search" type="search" maxlength="100" placeholder="搜索品牌或优惠码"/></label><label>付款周期<select id="brand-period"><option value="all">不限周期</option><option value="month">月付</option><option value="year">年付</option><option value="one-time">不限时一次性</option></select></label><label><span id="budget-label">单期预算上限（元）</span><input id="brand-budget" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" placeholder="不限"/></label><label>最低流量（GB）<input id="brand-traffic" type="number" min="0" max="1000000" step="1" inputmode="numeric" placeholder="不限"/></label></div><div class="brand-filter-footer"><label><input id="coupon-only" type="checkbox"/>只看有优惠码的品牌</label><button type="button" id="reset-brand-filters">重置筛选</button></div><p class="fine-print">月付按每月预算、年付按完整年费筛选；年付月均价不当作实付金额。价格与流量须由同一档套餐同时满足，流量发放周期见结果标注。</p></div>
+<p id="brand-count" class="status" role="status" aria-live="polite">共 {partnerAirports.length} 家品牌 · 展示顺序不代表排名</p>
+<div class="brand-label-row" aria-hidden="true"><span>品牌档案</span><span>匹配方案参考价格</span><span>对应参考流量</span><span>优惠码 · 未验证</span><span>详情 / 候选</span></div>
+<div class="brand-directory">{partnerAirports.map((a,i)=><article class="brand-directory-row" data-directory-slug={a.slug} data-brand-search={(a.name+' '+brandEditorials[a.slug].focus+' '+(a.coupon?.code||'')).toLowerCase()} data-has-coupon={a.coupon?'true':'false'}><div><h3><a href={'/airport/'+a.slug+'/'}>{a.name}</a></h3><p class="brand-mini-focus">{brandEditorials[a.slug].focus}</p><small>档案 {String(i+1).padStart(2,'0')} · 第三方参考资料</small><a class="directory-evidence-link" href={'/airport/'+a.slug+'/#performance-evidence'}>测速与解锁图 ↗</a></div><div class="directory-plan"><small data-directory-plan-name>{a.plans[0].name}</small><span data-directory-price>{planPriceText(a.plans[0])}</span></div><div class="directory-plan"><small>同一档方案的标示流量</small><span data-directory-traffic>{planTrafficText(a.plans[0])}</span></div><div class="directory-coupon"><Coupon brand={a} compact/></div><div class="directory-row-actions"><a class="text-link" href={'/airport/'+a.slug+'/'}>套餐 ↗</a><button type="button" class="save-brand" data-save-brand={a.slug} aria-label={'候选清单：'+a.name} aria-pressed="false" hidden>加入候选 +</button></div></article>)}</div>
 <noscript><p class="fine-print">筛选需要 JavaScript；所有品牌已在本页列出，可以直接浏览。</p></noscript>
+<BrandLibrary/>
+<script id="directory-filter-data" type="application/json" set:html={JSON.stringify(filterData).replace(/</g,'\u003c')}/>
 <script>
-const search=document.querySelector<HTMLInputElement>('#brand-search')!;
-const couponOnly=document.querySelector<HTMLInputElement>('#coupon-only')!;
-const rows=[...document.querySelectorAll<HTMLElement>('[data-brand-search]')];
-function filterBrands(){let count=0;const query=search.value.trim().toLowerCase();rows.forEach(row=>{row.hidden=!row.dataset.brandSearch!.includes(query)||(couponOnly.checked&&row.dataset.hasCoupon!=='true');if(!row.hidden)count++;});document.querySelector('#brand-count')!.textContent=count?'显示 '+count+' 家品牌 · 展示顺序不代表排名':'没有匹配品牌，请缩短搜索词或关闭优惠码筛选。';}
-search.addEventListener('input',filterBrands);couponOnly.addEventListener('change',filterBrands);
+import {filterNumber,filtersFromParams,matchingDirectoryPlan,type DirectoryBrand,type PaymentPeriod} from '../lib/directory-filters';
+const brands:DirectoryBrand[]=JSON.parse(document.querySelector('#directory-filter-data')!.textContent!);
+const search=document.querySelector<HTMLInputElement>('#brand-search')!,period=document.querySelector<HTMLSelectElement>('#brand-period')!,budget=document.querySelector<HTMLInputElement>('#brand-budget')!,traffic=document.querySelector<HTMLInputElement>('#brand-traffic')!,couponOnly=document.querySelector<HTMLInputElement>('#coupon-only')!;
+const rows=[...document.querySelectorAll<HTMLElement>('[data-directory-slug]')];
+const initial=filtersFromParams(new URLSearchParams(location.search));search.value=initial.query;period.value=initial.period;budget.value=initial.maxPrice===null?'':String(initial.maxPrice);traffic.value=initial.minTraffic===null?'':String(initial.minTraffic);couponOnly.checked=initial.couponOnly;
+function filterBrands(){let count=0;const filters={query:search.value,period:period.value as PaymentPeriod,maxPrice:filterNumber(budget.value),minTraffic:filterNumber(traffic.value),couponOnly:couponOnly.checked};
+ document.querySelector('#budget-label')!.textContent=period.value==='month'?'每月预算上限（元）':period.value==='year'?'完整年费上限（元）':period.value==='one-time'?'一次性预算上限（元）':'单期预算上限（元）';
+ for(const row of rows){const brand=brands.find(b=>b.slug===row.dataset.directorySlug)!,plan=matchingDirectoryPlan(brand,filters);row.hidden=!plan;if(!plan)continue;count++;
+  row.querySelector('[data-directory-plan-name]')!.textContent=plan.name;row.querySelector('[data-directory-price]')!.textContent=plan.priceText;row.querySelector('[data-directory-traffic]')!.textContent=plan.trafficText;
+ }
+ document.querySelector('#brand-count')!.textContent=count?'显示 '+count+' 家品牌 · 每家展示一档同时匹配条件的参考方案':'没有同时满足条件的套餐，请提高预算、降低流量要求或重置筛选。';
+}
+for(const input of [search,budget,traffic])input.addEventListener('input',filterBrands);period.addEventListener('change',filterBrands);couponOnly.addEventListener('change',filterBrands);
+document.querySelector('#reset-brand-filters')!.addEventListener('click',()=>{search.value='';period.value='all';budget.value='';traffic.value='';couponOnly.checked=false;filterBrands();});filterBrands();
 </script>

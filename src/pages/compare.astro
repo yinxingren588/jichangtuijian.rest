@@ -11,6 +11,7 @@ const data=airports.map(comparisonBrand);
 <div class="note">收录 28 家机场参考档案及 5 家 VPN 官方资料。不同类别、币种、付款周期与无限流量方案不能直接按单价排序；维护者图表未独立复测。</div>
 <div class="comparison-workspace"><div class="compare-controls"><label for="brand-select" class="sr-only">选择候选品牌</label><select id="brand-select"><option value="">选择要添加的品牌</option>{data.map(a=><option value={a.slug}>{a.name}（{a.kind==='vpn'?'VPN':'机场'}）</option>)}</select><button id="add-brand" class="button">添加候选</button></div><div id="selected-brands" aria-label="已选品牌"></div>
 <div class="compare-toolbar"><div class="compare-modes" role="group" aria-label="选择比较内容"><button type="button" data-compare-mode="plans" aria-pressed="true" aria-controls="compare-result">套餐条件</button><button type="button" data-compare-mode="charts" aria-pressed="false" aria-controls="compare-result">测速与解锁</button><button type="button" data-compare-mode="all" aria-pressed="false" aria-controls="compare-result">全部资料</button></div><a class="text-link" href="/evidence/">全部原始图表 ↗</a></div>
+<div class="compare-save-tools" aria-label="保存与分享对比"><button type="button" id="copy-comparison" disabled>复制对比链接 ⧉</button><button type="button" id="save-comparison" disabled>保存到本机</button><button type="button" id="restore-comparison" disabled>恢复已保存</button><button type="button" id="clear-saved-comparison" disabled>删除已保存</button><a href="/airport/#my-brands">我的候选清单 →</a></div><p class="compare-save-status" id="comparison-save-status" role="status" aria-live="polite">所选品牌与视图会同步到网址，刷新后可恢复。</p><div id="comparison-share-box" class="comparison-share-box" hidden><label for="comparison-share-url">当前对比链接</label><input id="comparison-share-url" type="text" readonly/></div>
 <p id="compare-status" class="status" role="status" aria-live="polite">请至少添加 2 家品牌，最多 4 家。</p><div id="compare-result"></div>
 <div id="compare-chart-note" class="comparison-chart-note" hidden><strong>先看时间，再看差异。</strong><p>下载单位为 MB/s；平均值为节点等权均值，最高值为各节点峰值中的最大值。各品牌场景时间不同，运营商、设备和带宽未提供，不能当作同条件速度排名。平台 n/60 为绿色状态节点数，非独立请求成功率；Steam 货币区显示不作解锁率。缺少图表的品牌保留“未提供图表”，不填零。</p></div></div>
 <noscript><div class="note">交互比较需要 JavaScript。下方已列出全部品牌资料，每个机场均可打开对应图表。</div></noscript>
@@ -18,11 +19,16 @@ const data=airports.map(comparisonBrand);
 <script id="compare-data" type="application/json" set:html={JSON.stringify(data).replace(/</g,'\u003c')}/>
 <script>
 import {comparisonFields,comparisonMode,selectedBrandSlugs,type ComparisonBrand,type CompareMode} from '../lib/comparison-fields';
+import {comparisonSearch,createBrandMemoryStore,memoryKey} from '../lib/brand-memory';
 const brands:ComparisonBrand[]=JSON.parse(document.querySelector('#compare-data')!.textContent!);
 const params=new URLSearchParams(location.search);const selected=selectedBrandSlugs(params.get('brands'),brands);let mode:CompareMode=comparisonMode(params.get('view'));
 const select=document.querySelector<HTMLSelectElement>('#brand-select')!;const status=document.querySelector('#compare-status')!;const result=document.querySelector('#compare-result')!;const chips=document.querySelector('#selected-brands')!;const modes=[...document.querySelectorAll<HTMLButtonElement>('[data-compare-mode]')];
+const memory=createBrandMemoryStore(brands),copyButton=document.querySelector<HTMLButtonElement>('#copy-comparison')!,saveButton=document.querySelector<HTMLButtonElement>('#save-comparison')!,restoreButton=document.querySelector<HTMLButtonElement>('#restore-comparison')!,clearSaved=document.querySelector<HTMLButtonElement>('#clear-saved-comparison')!,saveStatus=document.querySelector<HTMLElement>('#comparison-save-status')!,shareInput=document.querySelector<HTMLInputElement>('#comparison-share-url')!,shareBox=document.querySelector<HTMLElement>('#comparison-share-box')!;
+function savedControls(){const saved=memory.read().comparison;restoreButton.disabled=!saved;clearSaved.disabled=!saved;}
 function cell(tag:string,text:string){const e=document.createElement(tag);e.textContent=text;return e;}
 function draw(){
+ const query=comparisonSearch(selected,mode,brands);if(location.search!==query)history.replaceState(null,'',location.pathname+query+location.hash);
+ copyButton.disabled=selected.length<2;saveButton.disabled=selected.length<2;shareInput.value=location.href;
  chips.replaceChildren();for(const slug of selected){const b=brands.find(a=>a.slug===slug)!;const chip=cell('span',b.name);chip.className='chip';const remove=cell('button','×');remove.setAttribute('aria-label','移除 '+b.name);remove.addEventListener('click',()=>{selected.splice(selected.indexOf(slug),1);draw();});chip.append(remove);chips.append(chip);}
  modes.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.compareMode===mode)));
  document.querySelector<HTMLElement>('#compare-chart-note')!.hidden=mode==='plans'||selected.length<2;
@@ -39,5 +45,11 @@ function draw(){
 }
 for(const button of modes)button.addEventListener('click',()=>{mode=comparisonMode(button.dataset.compareMode||null);draw();});
 document.querySelector('#add-brand')!.addEventListener('click',()=>{if(!select.value){status.textContent='请先选择一个品牌。';return;}if(selected.includes(select.value)){status.textContent='该品牌已经加入比较。';return;}if(selected.length>=4){status.textContent='最多比较 4 家，请先移除一个品牌。';return;}selected.push(select.value);select.value='';draw();});
-draw();
+copyButton.addEventListener('click',async()=>{if(selected.length<2)return;try{await navigator.clipboard.writeText(location.href);saveStatus.textContent='对比链接已复制，打开后会恢复相同品牌与视图。';shareBox.hidden=true;}catch{shareBox.hidden=false;shareInput.value=location.href;shareInput.focus();shareInput.select();saveStatus.textContent='请手动复制下方对比链接。';}});
+saveButton.addEventListener('click',()=>{if(selected.length<2)return;const current=memory.read();const persisted=memory.write({...current,comparison:{brands:[...selected],view:mode}});savedControls();saveStatus.textContent=persisted?'当前对比已保存到本机，可使用“恢复已保存”找回。':'当前浏览器不允许长期保存，请复制对比链接保留结果。';});
+restoreButton.addEventListener('click',()=>{const saved=memory.read().comparison;if(!saved){savedControls();saveStatus.textContent='没有可恢复的对比。';return;}selected.splice(0,selected.length,...saved.brands);mode=saved.view;draw();saveStatus.textContent='已恢复保存的品牌与视图。';});
+clearSaved.addEventListener('click',()=>{memory.write({...memory.read(),comparison:null});savedControls();saveStatus.textContent='已删除本机保存的对比，当前页面选择保持不变。';});
+window.addEventListener('brand-memory-change',savedControls);window.addEventListener('storage',event=>{if(event.key===memoryKey||event.key===null)savedControls();});
+window.addEventListener('popstate',()=>{const next=new URLSearchParams(location.search);selected.splice(0,selected.length,...selectedBrandSlugs(next.get('brands'),brands));mode=comparisonMode(next.get('view'));draw();});
+draw();savedControls();
 </script></Base>

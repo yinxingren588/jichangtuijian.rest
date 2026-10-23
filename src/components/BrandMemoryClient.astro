@@ -1,0 +1,40 @@
+---
+import {airports} from '../data/airports';
+---
+<script id="brand-identities" type="application/json" set:html={JSON.stringify(airports.map(({slug,name})=>({slug,name}))).replace(/</g,'\u003c')}/>
+<div class="memory-toast" role="status" aria-live="polite" data-memory-status></div>
+<script>
+import {createBrandMemoryStore,recordBrandVisit,toggleCandidate,memoryKey,type BrandIdentity} from '../lib/brand-memory';
+const identities:BrandIdentity[]=JSON.parse(document.querySelector('#brand-identities')!.textContent!);
+const store=createBrandMemoryStore(identities);
+const controls=[...document.querySelectorAll<HTMLButtonElement>('[data-save-brand]')];
+const library=document.querySelector<HTMLElement>('[data-brand-library]');
+function announce(message:string){document.querySelectorAll<HTMLElement>('[data-memory-status]').forEach(status=>{status.textContent=message;setTimeout(()=>{if(status.textContent===message)status.textContent='';},4500);});const status=library?.querySelector('[data-library-status]');if(status)status.textContent=message;}
+function drawMemory(){const memory=store.read();
+ document.querySelectorAll<HTMLElement>('[data-candidate-count]').forEach(count=>count.textContent=String(memory.candidates.length));
+ for(const button of controls){const saved=memory.candidates.includes(button.dataset.saveBrand!);button.hidden=false;button.setAttribute('aria-pressed',String(saved));button.textContent=saved?'已加入候选 ✓':'加入候选 +';}
+ if(!library)return;
+ const status=library.querySelector('[data-library-status]')!;status.textContent=store.available?'已保存 '+memory.candidates.length+' 个候选；最近浏览只记录本站品牌。':'当前浏览器无法长期保存，离开页面后记录可能丢失。';
+ function fill(selector:string,slugs:string[],removable:boolean){const list=library!.querySelector(selector)!;list.replaceChildren();
+  if(!slugs.length){const empty=document.createElement('li');empty.className='library-empty';empty.textContent=removable?'尚未选择候选品牌。可在品牌卡片上点击“加入候选”。':'尚无最近浏览记录。打开品牌详情后会自动记录。';list.append(empty);return;}
+  for(const slug of slugs){const brand=identities.find(b=>b.slug===slug)!;const item=document.createElement('li'),link=document.createElement('a');link.href='/airport/'+slug+'/';link.textContent=brand.name+' ↗';item.append(link);
+   if(removable){const remove=document.createElement('button');remove.type='button';remove.textContent='移除';remove.setAttribute('aria-label','从候选移除 '+brand.name);remove.addEventListener('click',()=>{const current=store.read();store.write({...current,candidates:current.candidates.filter(s=>s!==slug)});});item.append(remove);}list.append(item);
+  }
+ }
+ fill('[data-candidate-list]',memory.candidates,true);fill('[data-recent-list]',memory.recent,false);
+ const compare=library.querySelector<HTMLAnchorElement>('[data-compare-candidates]')!;compare.hidden=memory.candidates.length<2;compare.href='/compare/?brands='+encodeURIComponent(memory.candidates.join(','));
+ const clearCandidates=library.querySelector<HTMLButtonElement>('[data-clear-candidates]')!;clearCandidates.hidden=false;clearCandidates.disabled=!memory.candidates.length;
+ const clearRecent=library.querySelector<HTMLButtonElement>('[data-clear-recent]')!;clearRecent.hidden=false;clearRecent.disabled=!memory.recent.length;
+}
+for(const button of controls)button.addEventListener('click',()=>{const result=toggleCandidate(store.read(),button.dataset.saveBrand!,identities);
+ if(result.full){announce('候选清单最多保存 4 个品牌，请先到“我的清单”移除一个。');return;}
+ const persisted=store.write(result.memory);announce(persisted?'候选清单已更新，可在“我的清单”查看。':'本页候选已更新，当前浏览器不允许长期保存。');
+});
+library?.querySelector('[data-clear-candidates]')?.addEventListener('click',()=>{store.write({...store.read(),candidates:[]});announce('候选清单已清空。');});
+library?.querySelector('[data-clear-recent]')?.addEventListener('click',()=>{store.write({...store.read(),recent:[]});announce('最近浏览记录已清空。');});
+window.addEventListener('brand-memory-change',drawMemory);window.addEventListener('storage',event=>{if(event.key===memoryKey||event.key===null)drawMemory();});
+const visited=location.pathname.match(/^\/airport\/([^/]+)\/$/)?.[1];
+if(visited&&identities.some(b=>b.slug===visited))store.write(recordBrandVisit(store.read(),visited,identities));
+drawMemory();
+window.addEventListener('pageshow',event=>{if(event.persisted){if(visited&&identities.some(b=>b.slug===visited))store.write(recordBrandVisit(store.read(),visited,identities));drawMemory();}});
+</script>
