@@ -682,3 +682,57 @@ input::placeholder{color:#8b9fbe;opacity:1}
 .prose .guide-interface a{display:block;border:0}
 .prose .guide-interface img{display:block;width:100%;height:auto;margin:0}
 .guide-interface figcaption{padding:13px 17px;font-size:11px;color:#a7bedf;line-height:1.9}
+
+/* Topic lists: visible ordering, reference terms and direct brand journeys. */
+.topic-tabs{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 12px}
+.topic-tabs>a{display:flex;align-items:center;gap:13px;padding:11px 16px;border:1px solid #2d3d58;border-radius:8px;font-size:12px;background:#101a2b;color:#a9bcd8}
+.topic-tabs>a>span{font:10px ui-monospace,monospace;color:#7994ba}
+.topic-tabs>a[aria-current=page]{border-color:#91b7fa;background:#20375a;color:#e3edff}
+.topic-leaderboard{padding-top:24px}
+.topic-method{padding:22px 26px;border:1px solid #334b6e;border-left:3px solid #9fbeff;border-radius:10px;background:#101e33}
+.topic-method>strong{color:#d9e7ff;font-size:15px}
+.topic-method p{font-size:12px;color:#a8bcda;line-height:1.95;margin:9px 0}
+.topic-method details{margin-top:12px;border-top:1px solid #293d5b;padding-top:12px}
+.topic-method summary{font-size:11px;color:#b5cff4;width:fit-content}
+.topic-method a{color:#d1e3ff;text-decoration:underline;text-underline-offset:4px}
+.topic-rank-jumps{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.topic-rank-jumps>a{display:flex;gap:9px;padding:8px 12px;border:1px solid #283954;border-radius:7px;font-size:11px;color:#a8bfdf;background:#0d1728}
+.topic-rank-jumps b{font:11px ui-monospace,monospace;color:#d8e6ff}
+.topic-rank-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.topic-rank-card{display:grid;grid-template-columns:65px minmax(0,1fr) minmax(235px,28%);gap:0 25px;background:#101a2c;border:1px solid #2b3d59;border-radius:15px;padding:28px;scroll-margin-top:24px}
+.topic-rank-first{border-color:#6e91c5;background:linear-gradient(120deg,#172b49,#101a2c 70%);box-shadow:0 0 35px #81a8f00a}
+.topic-rank-number{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+.topic-rank-number>span{font:9px Arial;letter-spacing:2px;color:#91a8cd}
+.topic-rank-number>b{font:43px ui-monospace,monospace;letter-spacing:-3px;line-height:1.2;color:#6b84a8}
+.topic-rank-first .topic-rank-number>b{color:#d1e2ff}
+.topic-rank-content{min-width:0}
+.topic-rank-brand{display:flex;align-items:center;gap:12px}
+.topic-rank-brand h3{font-size:20px;margin:0 0 2px;letter-spacing:-.4px}
+.topic-rank-brand>div>span{font-size:10px;color:#92a8c9}
+.topic-rank-content>p{font-size:12px;color:#adbed8;line-height:2;margin:17px 0}
+.topic-rank-metric{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:10px}
+.topic-rank-metric>span{color:#8da6c9}
+.topic-rank-metric>strong{font-size:12px;color:#c9ddfc;background:#1d3151;border:1px solid #30496d;padding:4px 9px;border-radius:5px;font-weight:500}
+.topic-rank-content>.topic-chart-time{font-size:9px;color:#91a6c5;margin:12px 0 0}
+.topic-rank-plan{min-width:0;padding-left:25px;border-left:1px solid #2c3e5a;display:flex;align-items:flex-start;flex-direction:column}
+.topic-rank-plan .topic-plan-label{font-size:10px;color:#94accf}
+.topic-rank-plan>strong{font-size:20px;color:#e0eaff;font-weight:500;line-height:1.7;margin:9px 0}
+.topic-rank-plan>span:not(.topic-plan-label){font-size:10px;color:#93a9c9}
+.topic-rank-plan>p{font-size:12px;color:#b2c7e6;margin:6px 0 16px}
+.topic-rank-plan .coupon{margin:0;gap:8px;flex-wrap:wrap}
+.topic-rank-plan .coupon code{font-size:11px;overflow-wrap:anywhere}
+.topic-rank-plan>small{display:block;font-size:9px;color:#8da3c4;margin-top:11px;line-height:1.9}
+.topic-rank-actions{grid-column:2/-1;display:flex;align-items:center;flex-wrap:wrap;gap:12px 23px;margin-top:22px;padding-top:18px;border-top:1px solid #2a3a54;font-size:11px;color:#9fbbe2}
+.topic-rank-actions .topic-brand-link{font-weight:600;color:#d3e5ff}
+.topic-rank-actions .topic-back-top{margin-left:auto;font-size:10px;color:#88a0c1}
+.topic-checks{border-top:1px solid #293851;margin-top:15px}
+.topic-checks h3{font-size:16px}
+.topic-reading-links{display:flex;gap:15px 25px;flex-wrap:wrap;margin-top:25px;font-size:12px;color:#afc9f2}
+.topic-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.topic-directory-card .topic-directory-preview{list-style:none;margin:22px 0 16px;padding:16px 0 6px;border-top:1px solid #2a3b56;display:grid;gap:13px}
+.topic-directory-preview li{display:flex;align-items:center;gap:14px;font-size:13px;color:#c3d4ef}
+.topic-directory-preview b{font:12px ui-monospace,monospace;color:#7894bc}
+.topic-directory-preview li:first-child b{color:#c2d9ff}
+.topic-directory-card .topic-directory-rule{font-size:10px;color:#90a8cd;min-height:20px;margin-bottom:20px}
+@media(max-width:900px){.topic-rank-card{grid-template-columns:48px minmax(0,1fr) minmax(210px,32%);gap:0 17px;padding:23px}.topic-rank-number>b{font-size:34px}.topic-rank-plan{padding-left:17px}.topic-rank-brand h3{font-size:18px}.topic-rank-plan>strong{font-size:18px}}
+@media(max-width:650px){.topic-tabs{gap:7px}.topic-tabs>a{padding:9px 10px;font-size:11px;gap:8px}.topic-leaderboard .section-head{display:block}.topic-leaderboard .section-head>a{display:inline-block;margin-top:14px}.topic-leaderboard .section-head h2{font-size:23px}.topic-method{padding:18px}.topic-method>strong{font-size:13px}.topic-method p{font-size:11px}.topic-rank-jumps{gap:7px;margin:18px 0}.topic-rank-jumps>a{font-size:10px;padding:7px 9px;gap:7px}.topic-rank-card{grid-template-columns:37px minmax(0,1fr);padding:21px 17px;gap:0 12px;scroll-margin-top:15px}.topic-rank-number>span{font-size:7px;letter-spacing:1px}.topic-rank-number>b{font-size:29px;letter-spacing:-2px}.topic-rank-brand{gap:9px}.topic-rank-brand .brand-monogram{width:31px;height:31px;font-size:13px;border-radius:8px}.topic-rank-brand h3{font-size:17px;overflow-wrap:anywhere}.topic-rank-brand>div>span{font-size:9px}.topic-rank-content>p{font-size:11px;margin:14px 0}.topic-rank-metric{gap:7px}.topic-rank-metric>strong{font-size:10px}.topic-rank-plan{grid-column:1/-1;padding:17px 0 0;border-left:0;border-top:1px solid #2a3d59;margin-top:18px}.topic-rank-plan>strong{font-size:20px;margin:6px 0}.topic-rank-plan>p{font-size:11px;margin-bottom:12px}.topic-rank-plan>small{font-size:9px}.topic-rank-actions{grid-column:1/-1;gap:15px 20px;margin-top:18px;padding-top:17px;font-size:10px}.topic-rank-actions .topic-back-top{margin-left:0}.topic-directory-heading .tag{font-size:9px}.topic-checks .section-head h2{font-size:22px}.topic-reading-links{font-size:11px}}

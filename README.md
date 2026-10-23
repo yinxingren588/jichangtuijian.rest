@@ -23,6 +23,7 @@ npm run preview
 - 200 篇知识文章、30 篇操作教程、5 篇百科；含原有内容，本次新增 195 篇文章及 25 篇教程。
 - 28 家机场、56 档第三方参考套餐、12 个维护者提供的优惠码和 28 条推广入口；另保留 5 家商业 VPN 官方字段档案。未做独立实测。
 - 4 个机场榜单方法页，当前无合格样本，noindex，Sitemap 排除。
+- 6 个需求专题各含 10 家品牌的编辑参考排行；指定首位和排序依据在各专题公开，与上述证据型数据榜分别处理。
 - 独立评测模板及发布路由已实现，当前发布评测 0 篇。
 - 比较支持 2–4 家、移除、上限提示、空状态、完整静态资料表。搜索在浏览器内处理。
 
@@ -32,6 +33,7 @@ npm run preview
 
 - `src/data/airports.ts`：统一数据出口，机场记录存放于 `src/data/brand-catalogue.json`；`kind` 严格区分 airport/vpn。价格只在数据源维护，不复制到模板。
 - `src/data/ranking.ts`：价格、倍率、身份、周期和证据准入逻辑。默认仅比较 CNY 月付，不兑换币种。
+- `src/data/topic-rankings.ts`：六专题参考排序；高端专线沿用原清单前十，低预算按月付参考价，其余四个隐形人固定首位。
 - `src/content/articles/`：文章；frontmatter 含正文类别、日期、标签、来源和草稿状态。
 - `src/content/reviews/`：独立评测；未达到证据要求不能取消 draft。
 - `src/data/site.ts`：正式域名与专题；`src/data/policies.ts`：透明政策。
