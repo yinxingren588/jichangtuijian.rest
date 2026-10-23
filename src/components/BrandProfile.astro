@@ -1,0 +1,16 @@
+---
+import {planPriceText,planTrafficText,sourceLabel,type Airport} from '../data/airports';
+import Coupon from './Coupon.astro';
+const {brand:a}=Astro.props as {brand:Airport};
+const reference=a.sourceType==='reference';
+---
+<div class="note">{a.kind==='vpn'?'商业 VPN':'订阅机场'} · {sourceLabel(a)} · 未做独立实测。{reference?'价格与流量来自节点推荐网，非商家结算验证。':'仅核对所列官方来源中的部分字段。'}</div>
+<div class="article-layout"><article class="prose"><h2>品牌与资料范围</h2><p>{a.description}</p><p>{reference?`来源读取日期：${a.referenceChecked}。推广链接和优惠码由本站维护者提供。`:`最后字段核验：${a.lastVerified}。`}</p>
+{a.affiliateUrl&&<div class="purchase-panel"><h2>品牌入口与优惠码</h2><Coupon brand={a}/><p>优惠码未验证，不自动计算券后价格；以结算页实际显示的折扣、周期和金额为准。</p><a class="button" href={a.affiliateUrl} target="_blank" rel="sponsored noopener noreferrer">前往 {a.name} 推广入口 ↗</a><p class="muted">推广披露：通过此链接注册或购买，本站可能获得佣金。该链接为维护者提供，域名归属和当前可用性未独立核验。</p></div>}
+<h2>套餐价格与流量</h2><p>{reference?'以下按来源站套餐表整理，金额不是承诺报价。':'以下条件仅对应所引用的官方页面。'}月付、年付与不限时额度分别展示。</p><div class="table-wrap"><table><thead><tr><th scope="col">套餐</th><th scope="col">价格 / 计费口径</th><th scope="col">流量 / 发放口径</th><th scope="col">说明</th></tr></thead><tbody>{a.plans.length?a.plans.map(p=><tr><th scope="row">{p.name}</th><td>{planPriceText(p)}</td><td>{planTrafficText(p)}</td><td>{p.note||'条件以对应官方说明为准。'}<br/>流量倍率：{p.multiplier??'尚未核实'}</td></tr>):<tr><td colspan="4">套餐价格与流量尚未核实。</td></tr>}</tbody></table></div>
+<h2>购买前需要确认</h2><ul><li>核对结算页的套餐周期、完整实付金额和流量重置规则。</li><li>年付月均价不表示可以按月购买；不限时总额度不表示每月重复发放。</li><li>优惠码可能限制套餐、用户或期限，当前没有确认折扣比例与有效期。</li><li>线路、节点地区、退款和设备限制以商家当前条款为准。</li></ul>
+<h2>节点、协议与设备</h2><p>节点地区：{a.regions.join('、')||'尚未核实'}。协议：{a.protocols.join('、')||'尚未核实'}。设备限制：{a.deviceLimit||'尚未核实'}。</p><h2>AI、流媒体与稳定性</h2><p>本站尚未进行独立测试。没有导入来源站的星级、评分、测速、零丢包或解锁承诺。</p>
+{a.advantages.length>0&&<><h2>已整理的资料特点</h2><ul>{a.advantages.map(t=><li>{t}</li>)}</ul></>}
+<h2>注意事项</h2><ul>{a.disadvantages.map(t=><li>{t}</li>)}</ul><h2>常见问题</h2><h3>优惠码能直接算出券后价吗？</h3><p>不能。当前仅保存维护者提供的代码，没有折扣比例、适用套餐和有效期证据，因此不计算券后价格。</p><h3>这是一篇独立实测吗？</h3><p>不是。这是价格与条款资料档案，来源读取不代表商家报价或连接质量经过独立核验。</p>
+<h2>来源与核验状态</h2><p>{reference?`第三方参考资料读取于 ${a.referenceChecked}；商家当前报价与服务身份尚未独立核验。`:`所列官方字段核验于 ${a.lastVerified}。`}</p><ul class="sources">{a.sources.map(s=><li><a href={s} target="_blank" rel="noopener noreferrer">{reference?'节点推荐网对应品牌套餐表':'官方原始资料'} · {s}</a></li>)}</ul><p><a href="/blog/plan-cost/">理解周期与流量倍率</a> · <a href="/contact/">报告资料错误</a></p></article>
+<aside class="sidebar card"><h2 class="text-lg font-bold">比较与选择</h2><a href={'/compare/?brands='+a.slug}>加入横向比较 →</a><a href="/airport/">浏览全部品牌</a><a href="/editorial-policy/">来源与推广披露</a>{a.affiliateUrl&&<a href={a.affiliateUrl} target="_blank" rel="sponsored noopener noreferrer">品牌推广入口 ↗</a>}</aside></div>

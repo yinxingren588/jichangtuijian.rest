@@ -1,0 +1,5 @@
+---
+import {partnerAirports,planPriceText,planTrafficText} from '../data/airports';
+import Coupon from './Coupon.astro';
+---
+<div class="table-wrap"><table><caption>28 家收录品牌 · 入门方案参考 · 展示顺序不代表排名</caption><thead><tr><th scope="col">品牌</th><th scope="col">参考价格 / 周期</th><th scope="col">参考流量</th><th scope="col">优惠码</th><th scope="col">详情与入口</th></tr></thead><tbody>{partnerAirports.map(a=><tr><th scope="row"><a href={'/airport/'+a.slug+'/'}>{a.name}</a></th><td>{planPriceText(a.plans[0])}</td><td>{planTrafficText(a.plans[0])}</td><td><Coupon brand={a} compact/></td><td><a href={'/airport/'+a.slug+'/'}>全部套餐 →</a><br/><a href={a.affiliateUrl} target="_blank" rel="sponsored noopener noreferrer">推广入口 ↗</a></td></tr>)}</tbody></table></div>
