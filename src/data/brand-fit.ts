@@ -1,0 +1,38 @@
+export interface BrandFit {audience:string;highlight:string;caution:string}
+// Short reading cues distilled from the existing brand editorials and plan records.
+// These describe plan structures, never unverified service quality.
+export const brandFit:Record<string,BrandFit>={
+ yinxingren:{audience:'想按月付费、比较容量升级的用户',highlight:'144 GB / 350 GB 两档月付资料',caution:'“纯专线”的线路范围仍需核对'},
+ muguang:{audience:'需要区分常态与高用量月份的用户',highlight:'120 GB / 300 GB 月付档位对照',caution:'先确认升级补差、额度与到期日'},
+ breezenet:{audience:'关注低月付起点与容量的用户',highlight:'200 GB / 500 GB 两档参考额度',caution:'实际扣量倍率与续费条件待确认'},
+ feimaoyun:{audience:'想分清月付与年付承诺的用户',highlight:'月付档与年付月均展示分别收录',caution:'年付月均价不能当作月付实付价'},
+ dalaocloud:{audience:'希望按每月用量选择档位的用户',highlight:'180 GB / 450 GB 两档月付资料',caution:'更大额度不代表更高速度'},
+ feiv:{audience:'想比较月付和不限时额度的用户',highlight:'小额月付与一次性总额度并列',caution:'两种方案的流量重置口径不同'},
+ laddercloud:{audience:'想比较基础档与进阶档权益的用户',highlight:'基础与专线档采用不同套餐名称',caution:'先核对节点范围、限速和共享条件'},
+ lingdongcloud:{audience:'希望从轻量月付开始核对的用户',highlight:'100 GB / 260 GB 两档参考额度',caution:'低一档价格也要配合用量判断'},
+ firefly:{audience:'想比较短周期与长期付款的用户',highlight:'年付月均与标准月付分别展示',caution:'确认年付总额、额度发放与退款'},
+ lingmao:{audience:'希望核对 IPLC 档位差异的用户',highlight:'150 GB / 350 GB 两档月付资料',caution:'IPLC 标签不能单独证明线路品质'},
+ flashleap:{audience:'需要对比两档月付容量的用户',highlight:'150 GB / 360 GB 月度额度对照',caution:'容量升级与性能权益应分别核对'},
+ wuyou:{audience:'需要为常态和高峰用量留余量的用户',highlight:'100 GB / 260 GB 两档月付资料',caution:'先查流量重置及超额后的处理'},
+ kuajiecloud:{audience:'希望逐项核对专线宣传的用户',highlight:'120 GB / 320 GB 两档月付资料',caution:'“全专线”仍需具体节点与条款证据'},
+ stardream:{audience:'希望控制每月支出并预留额度的用户',highlight:'100 GB / 240 GB 月付容量对照',caution:'“双专线”名称不代表独立故障备份'},
+ lightspeed:{audience:'想精确估算月度额度的用户',highlight:'148 GB / 360 GB 两档参考额度',caution:'速度应另测，不能由品牌名称推断'},
+ v2yun:{audience:'想比较小额月付与进阶容量的用户',highlight:'100 GB / 240 GB 月付档位对照',caution:'先核对品牌入口与优惠适用条件'},
+ u1s1:{audience:'希望在相近月付预算中逐项比较的用户',highlight:'120 GB / 300 GB 两档月付资料',caution:'“优化”描述需要具体指标支撑'},
+ jiliancloud:{audience:'关注月付起点与容量梯度的用户',highlight:'100 GB / 250 GB 月付档位对照',caution:'“双专线”的实际含义仍需确认'},
+ quanqiuyun:{audience:'有明确目标地区、想建立对照的用户',highlight:'120 GB / 300 GB 两档月付资料',caution:'品牌名称不等于节点覆盖范围'},
+ guangnianti:{audience:'想从较低月付起点核对用量的用户',highlight:'110 GB / 280 GB 月付容量对照',caution:'结合倍率与续费核对完整成本'},
+ sogoyun:{audience:'希望将套餐权益对应具体任务的用户',highlight:'150 GB / 350 GB 两档月付资料',caution:'商业专线名称不等于服务保障承诺'},
+ yuzhoucloud:{audience:'月度用量较轻、希望保留升级空间的用户',highlight:'60 GB / 180 GB 月付容量对照',caution:'先核对小额度能否覆盖完整周期'},
+ ermaoyun:{audience:'想按常用地区与容量筛选的用户',highlight:'120 GB / 280 GB 两档月付资料',caution:'节点数量不代表常用地区表现'},
+ yifanyun:{audience:'希望先明确升级用途的用户',highlight:'150 GB / 350 GB 两档月付资料',caution:'旗舰名称不说明具体性能增益'},
+ edgenova:{audience:'能评估长期付款承诺的用户',highlight:'年付总额与月度额度分别列出',caution:'年付报价不能当作单月支出'},
+ kexincloud:{audience:'想从小额度开始核对任务用量的用户',highlight:'45 GB / 150 GB 月付档位对照',caution:'先估算实际用量及额度增长空间'},
+ sujie:{audience:'想按任务响应与容量建立记录的用户',highlight:'150 GB / 350 GB 两档月付资料',caution:'“高速”名称不能代替实际测量'},
+ kuaili:{audience:'想对照轻量年付与标准月付的用户',highlight:'两种付款周期与额度分开呈现',caution:'年付月均与完整账单应分开核对'},
+ 'proton-vpn':{audience:'希望先了解免费 VPN 条件的用户',highlight:'已收录官方免费方案与设备条件',caution:'免费条件不代表付费功能或本地可用性'},
+ mullvad:{audience:'偏好明确欧元月度报价的用户',highlight:'统一欧元月价，付款周期较直观',caution:'使用权益及本地连接表现需另核对'},
+ windscribe:{audience:'想了解协议配置与设备条件的用户',highlight:'已收录多协议配置与连接数说明',caution:'价格和流量尚未核实'},
+ tunnelbear:{audience:'希望先做轻量免费试用的用户',highlight:'官方资料列有 2 GB 免费额度',caution:'免费额度的重置周期尚未核实'},
+ 'hide-me':{audience:'想把免费与付费方案分别比较的用户',highlight:'免费条件与完整月付方案单列',caution:'税费、设备与功能范围分别核对'}
+};
