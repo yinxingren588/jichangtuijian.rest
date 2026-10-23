@@ -1,26 +1,46 @@
 ---
 import Base from '../layouts/Base.astro';
-import BrandCard from '../components/BrandCard.astro';
-import {partnerAirports} from '../data/airports';
-import PartnerTable from '../components/PartnerTable.astro';
+import {partnerAirports,planPriceText,planTrafficText} from '../data/airports';
 import {topics} from '../data/site';
 import {getCollection} from 'astro:content';
-import {ordered} from '../lib/content';
-const posts=ordered(await getCollection('articles',a=>!a.data.draft));
-const faq=[['新手如何选择机场或 VPN？','先区分自带应用的 VPN 与需要客户端的代理订阅，再核对身份、设备、周期、流量和退出方式。先用短期方案验证自己的环境。'],['性价比机场只看每月价格吗？','不够。必须同时看实付周期、额度、倍率、续费和退款条件。本站仅对同币种、已核实的月付有限额套餐计算每 GB 成本。'],['机场节点越多越好吗？','节点数量不能直接证明速度和稳定。应关注常用地区、可用时段、限速与故障恢复，并保留可复核测试记录。'],['VPN 机场与 VPN 是同一种服务吗？','搜索中常被混用，但代理订阅与商业 VPN 的配置、客户端和支持方式不同。本站按类别标注，不把两者的数据混成一份榜单。'],['为什么没有显示推荐星级或机场名次？','本站已收录机场参考套餐，但尚未独立核验商家身份、当前结算和测试结果。参考站评分不会搬成本站实测评分。'],['能保证 AI、流媒体可用或 Bing 收录吗？','不能。平台可用性、账号资格和网络状态可能变化；搜索通知被接收也不代表收录或排名。']];
+import {ordered,categoryFor} from '../lib/content';
+const posts=ordered(await getCollection('articles',a=>!a.data.draft&&a.data.section==='blog'));
+const coupons=partnerAirports.filter(a=>a.coupon).slice(0,4);
 ---
-<Base title="机场推荐与节点选择指南｜比较套餐、读懂 VPN" description="从预算、节点与使用场景出发选择机场与 VPN。航线笔记提供购买清单、公开资料档案、横向比较和实用教程，区分官方资料与独立实测。">
-<div class="hero"><div><p class="eyebrow">独立资料 · 透明方法 · 理性选择</p><h1>机场推荐，<br/>从<span>选得明白</span>开始。</h1><p>预算、节点、线路，哪一个更重要？<br/>把复杂参数变成清晰的选择依据，找到适合自己的连接方式。</p><div class="actions"><a href="/recommend/" class="button">按需求选择 <span>↗</span></a><a href="/compare/" class="button secondary">打开比较工具 <span>⇄</span></a></div><p class="muted">不虚构测速，不替未知项打分。每一条资料，都保留核验边界。</p></div><aside class="hero-panel"><p class="eyebrow">THE SELECTION BRIEF</p><h2>购买之前，先问三个问题。</h2><ol><li>我的设备、网络和用途是什么？</li><li>实际付多少，能用多久、多少流量？</li><li>这些承诺，有没有可核验的依据？</li></ol><p>从一份检查清单开始，而不是从一张评分表开始。</p><a class="text-sm text-white underline underline-offset-4" href="/blog/buying-checklist/">阅读购买前检查清单 →</a></aside></div>
-<div class="trust-strip"><span>价格与流量逐项注明来源</span><span>VPN 与订阅机场分别标注</span><span>推广链接明确披露</span><span>内容更新 2026.10.23</span></div>
-<section><div class="section-head"><div><p class="eyebrow">01 / QUICK ANSWERS</p><h2>先给你几个实用答案</h2></div><a class="text-link" href="/guides/">从零开始 →</a></div><div class="grid four">{[['新手怎么选？','先确认设备与客户端，再用短周期验证实际网络。','/recommend/beginner/'],['哪些参数重要？','常用地区、限额、倍率、设备限制与退出成本。','/blog/buying-checklist/'],['套餐划算吗？','统一周期和币种，按实际可用流量计算成本。','/blog/plan-cost/'],['购买前查什么？','官网身份、完整结算金额、续费和退款条款。','/blog/buying-checklist/']].map(([h,p,u],i)=><a class="card" href={u}><span class="number">0{i+1}</span><h3>{h}</h3><p>{p}</p><span class="text-link">了解更多 ↗</span></a>)}</div></section>
-<section><div class="section-head"><div><p class="eyebrow">02 / BRAND PROFILES</p><h2>先从有来源的资料看起</h2><p>28 家机场资费与优惠资料 · 展示顺序不代表排名</p></div><a href="/airport/" class="text-link">全部档案 ↗</a></div><div class="grid">{partnerAirports.slice(0,6).map(a=><BrandCard brand={a}/>)}</div><p class="muted mt-4">推广披露：以上品牌含维护者提供的推广链接，本站可能获得佣金。价格与流量为第三方参考资料，优惠码未验证。</p></section>
-<section><div class="section-head"><div><p class="eyebrow">BRAND & PLAN DIRECTORY</p><h2>28 家品牌，价格、流量和优惠一起看</h2><p>完整套餐见品牌页；年付月均、年付总价与不限时额度分别标注。</p></div><a class="text-link" href="/airport/">浏览全部档案 ↗</a></div><PartnerTable/></section>
-<section><div class="section-head"><div><p class="eyebrow">03 / RANKING METHODOLOGY</p><h2>排行榜，让依据先于名次</h2><p>综合、性价比、低预算、稳定性，分别使用对应的证据标准。</p></div><a href="/ranking/" class="text-link">排名方法 →</a></div><div class="table-wrap"><table><thead><tr><th scope="col">榜单</th><th scope="col">核心依据</th><th scope="col">当前状态</th><th scope="col">查看</th></tr></thead><tbody>{[['综合榜','身份、资料与测试证据','overall'],['性价比榜','同币种月付每 GB 成本','value'],['低预算榜','月付实付金额','budget'],['稳定性榜','多时段失败与恢复记录','stable']].map(([n,r,s])=><tr><td><strong>{n}</strong></td><td>{r}</td><td><span class="tag neutral">样本尚未核实</span></td><td><a href={'/ranking/'+s+'/'}>查看标准 ↗</a></td></tr>)}</tbody></table></div></section>
-<section><div class="section-head"><div><p class="eyebrow">04 / FIND YOUR ROUTE</p><h2>按你的需求，走一条更短的路</h2></div></div><div class="grid">{topics.map((t,i)=><a class="card" href={'/recommend/'+t.slug+'/'}><span class="number">ROUTE 0{i+1} ↗</span><h3>{t.name}</h3><p>{t.lead}</p></a>)}</div></section>
-<section><div class="callout"><div><p class="eyebrow">COMPARE, WITH CONTEXT.</p><h2>放在一起，差异才清楚。</h2><p>选择 2–4 家品牌，对照价格、流量、协议和限制。未知字段保留未知。</p></div><a href="/compare/" class="button">开始横向比较 ⇄</a></div></section>
-<section><div class="section-head"><div><p class="eyebrow">05 / INDEPENDENT REVIEWS</p><h2>深度评测，先公开证据标准</h2><p>暂无已发布实测。不以官方资料或单张截图冒充使用体验。</p></div><a class="text-link" href="/review/">评测中心 →</a></div><div class="grid">{[['记录完整环境','设备、运营商、节点、协议、目标与时间，都是结论的一部分。','/blog/stability-method/'],['保留失败样本','稳定性应包含连接失败和恢复时间，不只挑选最快的一次。','/blog/stability-method/'],['区分宣传与实测','线路标签与解锁承诺需要核验，资料档案不能替代体验报告。','/blog/line-labels/']].map(([h,p,u])=><a class="card" href={u}><span class="tag neutral">方法说明</span><h3>{h}</h3><p>{p}</p><span class="text-link">阅读方法 ↗</span></a>)}</div></section>
-<section><div class="section-head"><div><p class="eyebrow">06 / GET STARTED</p><h2>从安装到排错，一步步来</h2></div><a class="text-link" href="/guides/">教程中心 ↗</a></div><div class="grid four">{[['Windows','windows'],['Android','android'],['iOS','ios'],['macOS','macos']].map(([n,s])=><a class="card" href={'/guides/'+s+'/'}><span class="number">INSTALL & CHECK</span><h3>{n} ↗</h3><p>下载来源、权限检查与首次连接验证。</p></a>)}</div></section>
-<section><div class="section-head"><div><p class="eyebrow">07 / THE BASICS</p><h2>读懂参数，再做选择</h2></div><a class="text-link" href="/glossary/">知识百科 →</a></div><div class="grid">{posts.filter(a=>a.data.section==='glossary').slice(0,3).map(a=><a class="card" href={'/glossary/'+a.id+'/'}><span class="tag neutral">基础概念</span><h3>{a.data.title}</h3><p>{a.data.description}</p></a>)}</div></section>
-<section><div class="section-head"><div><p class="eyebrow">08 / LATEST NOTES</p><h2>最近更新的选择指南</h2></div><a class="text-link" href="/blog/">全部文章 ↗</a></div><div class="grid">{posts.filter(a=>a.data.section==='blog').slice(0,3).map(a=><article class="card article-card"><span class="muted">{a.data.updated} / 选择指南</span><h3><a href={'/blog/'+a.id+'/'}>{a.data.title}</a></h3><p>{a.data.description}</p><a class="text-link" href={'/blog/'+a.id+'/'}>阅读全文 ↗</a></article>)}</div></section>
-<section class="faq"><div class="section-head"><div><p class="eyebrow">09 / QUESTIONS, ANSWERED</p><h2>选择之前，你可能还想知道</h2></div></div>{faq.map(([q,a])=><details><summary>{q}</summary><p>{a}</p></details>)}</section>
+<Base title="机场推荐与节点选择指南｜品牌套餐、优惠与连接知识" description="航线笔记整理机场品牌套餐、参考价格、流量与优惠码，提供 200 篇选择文章和 30 篇操作教程。价格注明来源，公开资料与独立实测分别标明。">
+<div class="edition-line"><span>连接知识与品牌资料</span><span>更新于 2026.10.23 · 第 01 期</span></div>
+<div class="media-layout home-layout">
+ <div class="main-column">
+  <section class="cover-story" aria-labelledby="cover-title">
+   <p class="eyebrow"><span class="live-dot"></span> 本期导读 / THE CONNECTION ISSUE</p>
+   <h1 id="cover-title">选一条适合你的航线。<br/><em>先读懂，再连接。</em></h1>
+   <p class="cover-deck">从价格、流量到节点与客户端，把购买前要看清的事，一项项说明白。</p>
+   <div class="route-illustration" aria-label="连接路径示意：你的设备，经服务节点，访问目标应用；不代表实测线路">
+    <div class="route-node"><span class="route-symbol">▤</span><strong>你的设备</strong><small>客户端与配置</small></div><span class="route-track"><i></i></span><div class="route-node middle"><span class="route-symbol">↗</span><strong>服务节点</strong><small>线路与流量</small></div><span class="route-track"><i></i></span><div class="route-node"><span class="route-symbol">◎</span><strong>目标应用</strong><small>真实使用需求</small></div>
+    <span class="diagram-label">CONNECTION MAP · 路径示意</span>
+   </div>
+   <div class="cover-bottom"><a class="button" href="/blog/buying-checklist/">阅读购买前清单 <span>↗</span></a><a class="text-link" href="/recommend/">按使用需求选择 →</a></div>
+  </section>
+  <section class="brand-digest" aria-labelledby="brands-title">
+   <div class="section-head"><div><p class="eyebrow">01 / BRAND DESK</p><h2 id="brands-title">品牌与套餐速览</h2></div><a class="text-link" href="/airport/">全部 28 家 ↗</a></div>
+   <p class="section-deck">先核对价格口径与流量周期，再打开完整档案。展示顺序不代表排名。</p>
+   <div class="digest-labels" aria-hidden="true"><span>品牌</span><span>入门参考价</span><span>参考流量</span><span></span></div>
+   {partnerAirports.slice(0,6).map((a,i)=><a class="digest-row" href={'/airport/'+a.slug+'/'}><span class="digest-name"><small>{String(i+1).padStart(2,'0')}</small><strong>{a.name}</strong></span><span>{planPriceText(a.plans[0])}</span><span>{planTrafficText(a.plans[0])}</span><span class="row-arrow" aria-hidden="true">↗</span></a>)}
+   <p class="fine-print">资料来自指定参考站，尚未验证商家结算。品牌含推广链接，本站可能获得佣金。</p>
+  </section>
+  <section aria-labelledby="notes-title">
+   <div class="section-head"><div><p class="eyebrow">02 / READING ROOM</p><h2 id="notes-title">把问题读明白</h2></div><a class="text-link" href="/blog/">200 篇文章 ↗</a></div>
+   <div class="editor-picks">{[['01','先算总账，再看月均价','分清月付、年付折算、续费和真实可用流量。','plan-cost','预算与计费'],['02','线路名称说明了什么？','从入口、出口与证据看清宣传中的线路标签。','line-labels','节点与线路']].map(([n,h,p,s,c])=><article class="editor-pick"><span class="pick-index">{n}</span><span class="tag neutral">{c}</span><h3><a href={'/blog/'+s+'/'}>{h}</a></h3><p>{p}</p><a class="text-link" href={'/blog/'+s+'/'}>继续阅读 ↗</a></article>)}</div>
+   <div class="latest-list">{posts.slice(0,6).map(a=><article><div><span class="article-kicker">{categoryFor(a)}</span><h3><a href={'/blog/'+a.id+'/'}>{a.data.title}</a></h3></div><span class="entry-date">{a.data.updated.slice(5).replace('-',' / ')}</span></article>)}</div>
+  </section>
+ </div>
+ <aside class="media-rail" aria-label="快速入口与优惠资料">
+  <div class="rail-intro"><span class="rail-label">THE NOTEBOOK</span><h2>连接之前，<br/>多看一页。</h2><p>品牌资料、选择方法与操作教程，放在同一本笔记里。</p><div class="rail-counts"><a href="/airport/"><strong>28</strong><span>机场品牌</span></a><a href="/blog/"><strong>200</strong><span>知识文章</span></a><a href="/guides/"><strong>30</strong><span>操作教程</span></a></div></div>
+  <section class="rail-section coupon-board"><div class="rail-heading"><h2>优惠码备忘</h2><a href="/airport/">查看全部 ↗</a></div><p class="fine-print">维护者提供，折扣与有效期未验证。</p>{coupons.map(a=><a class="coupon-note" href={'/airport/'+a.slug+'/'}><span>{a.name}</span><code>{a.coupon!.code}</code><span aria-hidden="true">↗</span></a>)}</section>
+  <section class="rail-section"><p class="eyebrow">HOW TO / 从这里开始</p><h2>你的设备，怎么设置？</h2><div class="platform-links">{[['Windows','windows','01'],['Android','android','02'],['iPhone / iPad','ios','03'],['macOS','macos','04']].map(([n,s,i])=><a href={'/guides/'+s+'/'}><small>{i}</small><span>{n}</span><span>→</span></a>)}</div><a class="text-link" href="/guides/">全部教程与排错步骤 ↗</a></section>
+  <section class="rail-section"><p class="eyebrow">BY YOUR NEEDS</p><h2>从你的需求出发</h2><div class="topic-links">{topics.map(t=><a href={'/recommend/'+t.slug+'/'}><strong>{t.name}</strong><span>{t.lead}</span><b aria-hidden="true">↗</b></a>)}</div></section>
+  <div class="editorial-note"><span class="rail-label">编者说明</span><p>资料应有出处，结论应有边界。</p><small>当前未发布独立测速或品牌名次。参考套餐与优惠码不代表已经验证的购买承诺。</small><a href="/editorial-policy/">阅读编辑政策 →</a></div>
+ </aside>
+</div>
+<section class="compare-banner"><div><p class="eyebrow">SIDE BY SIDE</p><h2>拿不准？放在一起看。</h2><p>选 2–4 家品牌，对照价格、流量、周期与优惠信息。</p></div><a href="/compare/" class="button">打开品牌比较工具 ⇄</a></section>
 </Base>

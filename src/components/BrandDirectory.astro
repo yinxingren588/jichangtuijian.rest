@@ -1,0 +1,15 @@
+---
+import {partnerAirports,planPriceText,planTrafficText} from '../data/airports';
+import Coupon from './Coupon.astro';
+---
+<div class="brand-directory-controls"><label class="sr-only" for="brand-search">搜索机场品牌</label><input id="brand-search" type="search" placeholder="搜索品牌名称或优惠码"/><label><input id="coupon-only" type="checkbox"/>只看有优惠码的品牌</label></div><p id="brand-count" class="status" role="status" aria-live="polite">共 {partnerAirports.length} 家品牌 · 展示顺序不代表排名</p>
+<div class="brand-label-row" aria-hidden="true"><span>品牌档案</span><span>入门参考价格</span><span>参考流量</span><span>优惠码 · 未验证</span><span>详情</span></div>
+<div class="brand-directory">{partnerAirports.map((a,i)=><article class="brand-directory-row" data-brand-search={(a.name+' '+(a.coupon?.code||'')).toLowerCase()} data-has-coupon={a.coupon?'true':'false'}><div><h3><a href={'/airport/'+a.slug+'/'}>{a.name}</a></h3><small>档案 {String(i+1).padStart(2,'0')} · 第三方参考资料</small></div><div class="directory-plan"><small>入门方案参考</small>{planPriceText(a.plans[0])}</div><div class="directory-plan"><small>流量口径</small>{planTrafficText(a.plans[0])}</div><Coupon brand={a} compact/><a class="text-link" href={'/airport/'+a.slug+'/'}>套餐 ↗</a></article>)}</div>
+<noscript><p class="fine-print">筛选需要 JavaScript；所有品牌已在本页列出，可以直接浏览。</p></noscript>
+<script>
+const search=document.querySelector<HTMLInputElement>('#brand-search')!;
+const couponOnly=document.querySelector<HTMLInputElement>('#coupon-only')!;
+const rows=[...document.querySelectorAll<HTMLElement>('[data-brand-search]')];
+function filterBrands(){let count=0;const query=search.value.trim().toLowerCase();rows.forEach(row=>{row.hidden=!row.dataset.brandSearch!.includes(query)||(couponOnly.checked&&row.dataset.hasCoupon!=='true');if(!row.hidden)count++;});document.querySelector('#brand-count')!.textContent=count?'显示 '+count+' 家品牌 · 展示顺序不代表排名':'没有匹配品牌，请缩短搜索词或关闭优惠码筛选。';}
+search.addEventListener('input',filterBrands);couponOnly.addEventListener('change',filterBrands);
+</script>
