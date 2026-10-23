@@ -7,7 +7,7 @@ import {ordered,categoryFor} from '../lib/content';
 const entries=await getCollection('articles',a=>!a.data.draft);
 const posts=ordered(entries.filter(a=>a.data.section==='blog'));
 const guides=entries.filter(a=>a.data.section==='guides');
-const selected=['breezenet','yinxingren','feimaoyun'].map(slug=>partnerAirports.find(a=>a.slug===slug)!);
+const selected=['yinxingren','breezenet','feimaoyun'].map(slug=>partnerAirports.find(a=>a.slug===slug)!);
 const planCount=partnerAirports.reduce((sum,a)=>sum+a.plans.length,0);
 const couponCount=partnerAirports.filter(a=>a.coupon).length;
 ---
