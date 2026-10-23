@@ -38,4 +38,3 @@ Ping是特定探测方式，其成功不能验证所有应用，其失败也可�
 ## 继续处理这个问题
 
 需要实际操作时，可从[对应操作教程](/guides/run-controlled-node-test/)开始；[相关基础指南](/blog/stability-method/)解释上一级判断方法，[同主题延伸阅读](/blog/warm-cold-start/)补充另一种情境。
-

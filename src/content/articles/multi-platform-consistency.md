@@ -38,4 +38,3 @@ Windows上的某个模式名称，在手机上可能不存在或含义不同，�
 ## 继续处理这个问题
 
 需要实际操作时，可从[对应操作教程](/guides/connection-check/)开始；[相关基础指南](/blog/buying-checklist/)解释上一级判断方法，[同主题延伸阅读](/blog/android-vpn-slot/)补充另一种情境。
-

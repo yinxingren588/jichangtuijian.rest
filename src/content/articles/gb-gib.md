@@ -38,4 +38,3 @@ GB通常按十进制计算，GiB按二进制计算；先确认单位，再解释
 ## 继续处理这个问题
 
 需要实际操作时，可从[对应操作教程](/guides/calculate-quota-multiplier/)开始；[相关基础指南](/blog/plan-cost/)解释上一级判断方法，[同主题延伸阅读](/blog/mixed-multiplier/)补充另一种情境。
-

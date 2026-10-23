@@ -38,4 +38,3 @@ TTL不是所有故障的统一倒计时，应用连接复用和其他缓存也�
 ## 继续处理这个问题
 
 需要实际操作时，可从[对应操作教程](/guides/build-network-baseline/)开始；[相关基础指南](/guides/connection-check/)解释上一级判断方法，[同主题延伸阅读](/blog/tls-certificate-time/)补充另一种情境。
-
