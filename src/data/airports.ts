@@ -10,6 +10,6 @@ export const airports:Airport[]=[
  {id:'hideme',slug:'hide-me',name:'hide.me',kind:'vpn',description:'官方列有月付与免费方案；本档案区分原价月付和多月促销。',officialUrl:'https://hide.me/en/pricing',startingPrice:0,currency:'EUR',plans:[{name:'Free',price:0,currency:'EUR',period:'free',unlimited:true,multiplier:1,verified:true,source:'https://hide.me/en/pricing'},{name:'1 Month',price:11.99,currency:'EUR',period:'month',unlimited:true,multiplier:1,verified:true,source:'https://hide.me/en/pricing'}],protocols:[],regions:[],deviceLimit:'免费 1 个连接；Premium 10 个同时连接',advantages:['免费与月付条件分别公开','官方列明同时连接限制'],disadvantages:['税费可能适用','免费方案与付费方案功能不同'],suitableFor:['希望比较免费与月付方案的用户'],sources:['https://hide.me/en/pricing'],lastVerified:verified,testStatus:'official-data'}
 ];
 export function costPerGB(p:Plan):number|null {return p.verified && p.multiplier>0 && p.trafficGB && p.trafficGB>0 && !p.unlimited && p.period==='month' ? p.price/(p.trafficGB/p.multiplier) : null;}
-export const airportCandidates=airports.filter(a=>a.kind==='airport'&&a.testStatus!=='unverified');
+export const airportCandidates=airports.filter(a=>a.kind==='airport'&&a.identityVerified&&a.testStatus!=='unverified');
 export const priceText=(a:Airport)=>a.plans.length ? a.plans.map(p=>`${p.currency} ${p.price} / ${p.period==='month'?'月付':p.period==='free'?'免费方案':p.period==='year'?'年付':'一次性'}`).join('；') : '尚未核实';
 export const trafficText=(a:Airport)=>a.plans.length ? a.plans.map(p=>`${p.name}：${p.unlimited?'官方不限流量':p.trafficGB ? p.trafficGB+' GB（周期见说明）':'尚未核实'}`).join('；'):'尚未核实';
