@@ -1,0 +1,25 @@
+<dialog id="chart-viewer" class="chart-viewer" aria-labelledby="chart-viewer-title"><div class="chart-viewer-toolbar"><p id="chart-viewer-title"></p><div><button type="button" data-chart-zoom aria-pressed="false">原始尺寸</button><a data-chart-download download>下载原图 ↓</a><form method="dialog"><button aria-label="关闭图表" autofocus>关闭 ×</button></form></div></div><div class="chart-viewer-scroll"><img alt=""/></div><div class="chart-viewer-footer"><button type="button" data-chart-prev>← 上一张</button><span data-chart-position></span><button type="button" data-chart-next>下一张 →</button></div></dialog>
+<script>
+const viewer=document.querySelector<HTMLDialogElement>('#chart-viewer')!;
+const image=viewer.querySelector<HTMLImageElement>('img')!;
+const zoom=viewer.querySelector<HTMLButtonElement>('[data-chart-zoom]')!;
+const links=[...document.querySelectorAll<HTMLAnchorElement>('[data-chart-open]')];
+let current=0;let opener:HTMLAnchorElement|undefined;
+function showChart(index:number){
+ current=(index+links.length)%links.length;const link=links[current];
+ const title=link.dataset.chartTitle||'高清图表';
+ viewer.querySelector('#chart-viewer-title')!.textContent=title;
+ image.alt=title+'，维护者提供';image.src=link.href;
+ const download=viewer.querySelector<HTMLAnchorElement>('[data-chart-download]')!;download.href=link.href;download.download=title+'.png';
+ viewer.querySelector('[data-chart-position]')!.textContent=`${current+1} / ${links.length} · 高清 PNG`;
+ viewer.classList.remove('original-size');zoom.setAttribute('aria-pressed','false');zoom.textContent='原始尺寸';
+ viewer.querySelector('.chart-viewer-scroll')!.scrollTo(0,0);
+}
+links.forEach((link,index)=>link.addEventListener('click',event=>{if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;event.preventDefault();opener=link;showChart(index);viewer.showModal();}));
+viewer.querySelector('[data-chart-prev]')!.addEventListener('click',()=>showChart(current-1));
+viewer.querySelector('[data-chart-next]')!.addEventListener('click',()=>showChart(current+1));
+zoom.addEventListener('click',()=>{const original=viewer.classList.toggle('original-size');zoom.setAttribute('aria-pressed',String(original));zoom.textContent=original?'适应宽度':'原始尺寸';});
+viewer.addEventListener('close',()=>{image.removeAttribute('src');opener?.focus();});
+viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();});
+viewer.addEventListener('keydown',event=>{if(event.key==='ArrowRight'){event.preventDefault();showChart(current+1);}if(event.key==='ArrowLeft'){event.preventDefault();showChart(current-1);}});
+</script>

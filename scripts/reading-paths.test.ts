@@ -29,7 +29,7 @@ test('every published article, guide and glossary entry belongs to one complete 
  }
 });
 
-test('all 33 brand pages have individually authored analysis, relevant reading, comparisons and explicit pending evidence',()=>{
+test('all 33 brand pages have individually authored analysis, relevant reading, comparisons and explicit evidence provenance',()=>{
  assert.deepEqual(Object.keys(brandEditorials).sort(),airports.map(a=>a.slug).sort());
  const focuses=new Set<string>();const questions=new Set<string>();
  for(const brand of airports){
@@ -39,7 +39,7 @@ test('all 33 brand pages have individually authored analysis, relevant reading, 
   const text=$('[data-brand-editorial]').text();
   for(const value of [editorial.focus,editorial.analysis,editorial.scenario,editorial.caution,editorial.verdict,editorial.question,editorial.answer])assert.ok(text.includes(value),brand.slug+' authored content');
   for(const id of ['brand-overview','plans-heading','selection-heading','coupon-heading','profile-heading','performance-evidence','brand-faq','brand-reading','brand-alternatives','sources-heading'])assert.equal($('[id="'+id+'"]').length,1,brand.slug+' '+id);
-  assert.equal($('[data-evidence-state]').attr('data-evidence-state'),'pending');
+  assert.equal($('[data-evidence-state]').attr('data-evidence-state'),brand.kind==='airport'?'provided':'pending');
   assert.equal($('.brand-reading-list>a').length,3);
   assert.equal($('.brand-crosslinks>div').length,2);
   for(const peer of editorial.comparisons){assert.notEqual(peer,brand.slug);assert.equal(airports.find(a=>a.slug===peer)!.kind,brand.kind);assert.ok($('.brand-crosslinks a').toArray().some(e=>$(e).attr('href')==='/compare/?brands='+brand.slug+','+peer));}

@@ -3,7 +3,7 @@
 需要网站所有者手动登录 [Bing Webmaster Tools](https://www.bing.com/webmasters/)，本次未访问私人账户或假装已完成验证。
 
 1. **添加并验证站点**：填写 `https://jichangtuijian.rest`，选择控制台提供的 DNS、XML 文件或 HTML meta 方法。验证值来自你的账号，不能生成假值。DNS 按当前控制台要求配置；XML 文件保存到 public 根目录后重新构建部署；meta 加入 Base 布局后重新部署。保留验证文件，直到控制台允许删除。
-2. **提交 Sitemap**：在 Sitemaps 中提交 `https://jichangtuijian.rest/sitemap-index.xml`。检查发现数量与可索引页面一致；当前为 308 个，排除 search、404 和四个待数据榜单。
+2. **提交 Sitemap**：在 Sitemaps 中提交 `https://jichangtuijian.rest/sitemap-index.xml`。检查发现数量与可索引页面一致；当前为 309 个，排除 search、404 和四个待数据榜单。
 3. **IndexNow 验证**：确认根目录 key 文件能通过 HTTPS 访问，响应内容严格等于 key。运行文档中的单 URL 提交，保存 HTTP 日志。200/202 只说明通知被接受或待处理，不代表索引。
 4. **URL Inspection**：先检查首页，再抽查文章、品牌和专题，查看抓取与索引状态、Canonical、可访问性及 robots。诊断后只对实质修改页请求重抓。
 5. **Search Performance**：按页面和查询观察曝光、点击及 CTR，使用足够长的观察窗口，不凭短期波动改写全部页面。按 keyword-map 处理搜索意图，避免多个页面写成相同推荐榜。
