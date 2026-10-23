@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+export interface Document {slug:string;meta:{title:string;description:string;section:string;published:string;updated:string;category?:string;related?:string[];sources:string[];draft?:boolean};body:string}
+export function readLibrary():Document[]{return fs.readdirSync('src/content/articles').filter(f=>f.endsWith('.md')).map(file=>{const text=fs.readFileSync(path.join('src/content/articles',file),'utf8');const [,front,...rest]=text.split('---');const meta=Object.fromEntries(front.trim().split(/\r?\n/).map(line=>{const pos=line.indexOf(': ');return[line.slice(0,pos),JSON.parse(line.slice(pos+2))];})) as Document['meta'];return {slug:file.slice(0,-3),meta,body:rest.join('---').trim()};}).filter(a=>!a.meta.draft);}
+export function shingles(body:string){const normalized=body.replace(/https?:\/\/[^\s)]+/g,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();const result=new Set<string>();for(let i=0;i<=normalized.length-8;i++)result.add(normalized.slice(i,i+8));return result;}
+export function similarity(a:Set<string>,b:Set<string>){let intersection=0;for(const key of a)if(b.has(key))intersection++;return intersection/(a.size+b.size-intersection);}

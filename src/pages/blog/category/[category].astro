@@ -1,0 +1,9 @@
+---
+import {getCollection} from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import ContentDirectory from '../../../components/ContentDirectory.astro';
+import {categories} from '../../../lib/content';
+export function getStaticPaths(){return categories.map(category=>({params:{category:category.slug},props:{category}}));}
+const {category}=Astro.props;const entries=await getCollection('articles',a=>!a.data.draft);
+---
+<Base title={category.name+'知识文章与判断方法'} description={category.description} breadcrumbs={[{name:'知识文章',url:'/blog/'},{name:category.name,url:Astro.url.pathname}]}><header class="page-intro"><p class="eyebrow">TOPIC LIBRARY</p><h1>{category.name}知识文章</h1><p>{category.description}</p></header><ContentDirectory entries={entries} section="blog" category={category.name}/></Base>

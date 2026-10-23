@@ -5,7 +5,8 @@ import {partnerAirports} from '../data/airports';
 import PartnerTable from '../components/PartnerTable.astro';
 import {topics} from '../data/site';
 import {getCollection} from 'astro:content';
-const posts=await getCollection('articles',a=>!a.data.draft);
+import {ordered} from '../lib/content';
+const posts=ordered(await getCollection('articles',a=>!a.data.draft));
 const faq=[['新手如何选择机场或 VPN？','先区分自带应用的 VPN 与需要客户端的代理订阅，再核对身份、设备、周期、流量和退出方式。先用短期方案验证自己的环境。'],['性价比机场只看每月价格吗？','不够。必须同时看实付周期、额度、倍率、续费和退款条件。本站仅对同币种、已核实的月付有限额套餐计算每 GB 成本。'],['机场节点越多越好吗？','节点数量不能直接证明速度和稳定。应关注常用地区、可用时段、限速与故障恢复，并保留可复核测试记录。'],['VPN 机场与 VPN 是同一种服务吗？','搜索中常被混用，但代理订阅与商业 VPN 的配置、客户端和支持方式不同。本站按类别标注，不把两者的数据混成一份榜单。'],['为什么没有显示推荐星级或机场名次？','本站已收录机场参考套餐，但尚未独立核验商家身份、当前结算和测试结果。参考站评分不会搬成本站实测评分。'],['能保证 AI、流媒体可用或 Bing 收录吗？','不能。平台可用性、账号资格和网络状态可能变化；搜索通知被接收也不代表收录或排名。']];
 ---
 <Base title="机场推荐与节点选择指南｜比较套餐、读懂 VPN" description="从预算、节点与使用场景出发选择机场与 VPN。航线笔记提供购买清单、公开资料档案、横向比较和实用教程，区分官方资料与独立实测。">

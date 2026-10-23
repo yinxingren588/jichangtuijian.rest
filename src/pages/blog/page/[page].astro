@@ -1,0 +1,9 @@
+---
+import {getCollection} from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import ContentDirectory from '../../../components/ContentDirectory.astro';
+import {PAGE_SIZE} from '../../../lib/content';
+export async function getStaticPaths(){const all=await getCollection('articles',a=>!a.data.draft&&a.data.section==='blog');return Array.from({length:Math.max(0,Math.ceil(all.length/PAGE_SIZE)-1)},(_,i)=>({params:{page:String(i+2)},props:{page:i+2}}));}
+const {page}=Astro.props;const entries=await getCollection('articles',a=>!a.data.draft);
+---
+<Base title={'网络连接知识文章 · 第 '+page+' 页'} description={'浏览航线笔记知识文章第 '+page+' 页，按预算、流量、节点、性能、设备与隐私分类阅读，每篇聚焦一个明确问题。'} breadcrumbs={[{name:'知识文章',url:'/blog/'},{name:'第 '+page+' 页',url:Astro.url.pathname}]}><header class="page-intro"><p class="eyebrow">NOTES LIBRARY</p><h1>知识文章 · 第 {page} 页</h1><p>找到当前问题，再沿着相关教程继续操作。</p></header><ContentDirectory entries={entries} section="blog" page={page}/></Base>

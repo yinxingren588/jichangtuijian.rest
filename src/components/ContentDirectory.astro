@@ -1,0 +1,13 @@
+---
+import {categories,categoryFor,ordered,PAGE_SIZE,type Entry} from '../lib/content';
+interface Props{entries:Entry[];section:'blog'|'guides'|'glossary';page?:number;category?:string}
+const {entries,section,page=1,category}=Astro.props;
+const all=ordered(entries.filter(a=>a.data.section===section));
+const selected=category?all.filter(a=>categoryFor(a)===category):all;
+const shown=section==='blog'&&!category?selected.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE):selected;
+const totalPages=Math.ceil(all.length/PAGE_SIZE);
+const guideGroups=['Windows','Android','iOS','macOS','通用'].map(platform=>({platform,list:all.filter(a=>categoryFor(a)==='操作教程 · '+platform)})).filter(g=>g.list.length);
+---
+{section==='blog'&&<><nav class="category-nav" aria-label="文章分类"><a href="/blog/" aria-current={!category?'page':undefined}>全部 {all.length}</a>{categories.map(c=><a href={'/blog/category/'+c.slug+'/'} aria-current={category===c.name?'page':undefined}>{c.name} {all.filter(a=>categoryFor(a)===c.name).length}</a>)}</nav><p class="muted">{category?`${category} · ${shown.length} 篇`:`共 ${all.length} 篇文章 · 第 ${page}/${totalPages} 页 · 每页最多 ${PAGE_SIZE} 篇`}</p></>}
+{section==='guides'?<><nav class="category-nav" aria-label="教程平台">{guideGroups.map(g=><a href={'#tutorial-'+g.platform}>{g.platform} · {g.list.length}</a>)}</nav>{guideGroups.map(g=><section id={'tutorial-'+g.platform}><div class="section-head"><div><h2>{g.platform} 教程</h2><p>按准备、操作、验证和恢复组织，具体界面以当前官方文档为准。</p></div></div><div class="grid">{g.list.map(a=><article class="card article-card"><span class="tag neutral">操作教程 · {g.platform}</span><h3><a href={'/guides/'+a.id+'/'}>{a.data.title}</a></h3><p>{a.data.description}</p><a class="text-link" href={'/guides/'+a.id+'/'}>查看步骤 →</a></article>)}</div></section>)}</>:<section><div class="grid">{shown.map(a=><article class="card article-card"><span class="tag neutral">{categoryFor(a)} · {a.data.updated}</span><h2><a href={'/'+section+'/'+a.id+'/'}>{a.data.title}</a></h2><p>{a.data.description}</p><a class="text-link" href={'/'+section+'/'+a.id+'/'}>阅读全文 →</a></article>)}</div></section>}
+{section==='blog'&&!category&&totalPages>1&&<nav class="pagination" aria-label="文章分页">{Array.from({length:totalPages},(_,i)=>i+1).map(n=><a href={n===1?'/blog/':'/blog/page/'+n+'/'} aria-current={n===page?'page':undefined}>{n===1?'第 1 页':n}</a>)}</nav>}
