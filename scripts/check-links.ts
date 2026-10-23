@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {load} from 'cheerio';
+import {pages,origin,report} from './common';
+const errors:string[]=[];const all=pages();const incoming=new Set<string>();
+for(const {url,$} of all){for(const el of $('a[href],script[src],link[href],img[src]').toArray()){const href=$(el).attr('href')||$(el).attr('src');if(!href||/^(mailto:|tel:|data:)/.test(href))continue;const target=new URL(href,origin+url);if(target.origin!==origin)continue;const pathname=decodeURIComponent(target.pathname);let file=path.join('dist',pathname.replace(/^\//,''));if(pathname.endsWith('/'))file=path.join(file,'index.html');if(pathname==='/404/')file='dist/404.html';if(!fs.existsSync(file)){errors.push(url+' → '+pathname);continue;}if($(el).is('a'))incoming.add(pathname);if(target.hash&&file.endsWith('.html')){const content=load(fs.readFileSync(file,'utf8'));const id=decodeURIComponent(target.hash.slice(1));if(!content('[id]').toArray().some(e=>content(e).attr('id')===id))errors.push(url+' 锚点不存在 '+target.hash);}}}
+const orphans=all.filter(p=>!['/','/404/'].includes(p.url)&&!incoming.has(p.url));report('audit-links',[{name:'内链 / 资源 / 锚点',status:errors.length?'FAIL':'PASS',detail:errors.join('；')||`遍历 ${all.length} 页的本域链接、静态资源与锚点，均存在。`},{name:'孤岛页面',status:orphans.length?'FAIL':'PASS',detail:orphans.map(p=>p.url).join('、')||'全部公开页面至少有一个入站内链。'},{name:'全部外链 HTTP 可达性',status:'NOT TESTED',detail:'核验过所引用的品牌资料页面，未执行所有外部链接的批量 HTTP 检查。'}]);

@@ -1,0 +1,5 @@
+---
+import {priceText,trafficText,type Airport} from '../data/airports';
+const {brand:a}=Astro.props as {brand:Airport};
+---
+<article class="card"><div class="brand-top"><span class="brand-icon" aria-hidden="true">{a.name.slice(0,1)}</span><span class="tag">{a.kind==='vpn'?'VPN':'订阅机场'} · {a.testStatus==='tested'?'有实测记录':a.testStatus==='official-data'?'官方资料':'尚未核实'}</span></div><h3><a href={'/airport/'+a.slug+'/'}>{a.name}</a></h3><p>{a.description}</p><dl class="facts"><div><dt>起步 / 周期</dt><dd>{priceText(a)}</dd></div><div><dt>流量</dt><dd>{trafficText(a)}</dd></div><div><dt>线路 / 协议</dt><dd>{a.protocols.join('、')||'尚未核实'}</dd></div><div><dt>适合人群</dt><dd>{a.suitableFor.join('、')}</dd></div></dl><p>优势：{a.advantages[0]}</p><p>注意：{a.disadvantages[0]}</p><a href={'/airport/'+a.slug+'/'} class="text-link">查看资料与来源 ↗</a></article>

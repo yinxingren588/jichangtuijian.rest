@@ -1,0 +1,6 @@
+---
+import {rankBrands,type Ranking} from '../data/ranking';
+const {kind}=Astro.props as {kind:Ranking};
+const rows=rankBrands(kind);
+---
+<div class="table-wrap"><table><caption>已核验订阅机场 · {kind==='stable'?'同环境观察':'CNY 月付口径'}</caption><thead><tr><th scope="col">名次 / 品牌</th><th scope="col">套餐</th><th scope="col">指标与依据</th><th scope="col">来源</th></tr></thead><tbody>{rows.length?rows.map(r=><tr><td>{r.rank}. <a href={'/airport/'+r.brand.slug+'/'}>{r.brand.name}</a></td><td>{r.plan?`${r.plan.currency} ${r.plan.price}/月；${r.plan.unlimited?'不限流量':r.plan.trafficGB+' GB'}；倍率 ${r.plan.multiplier}`:'见品牌资料'}</td><td>{r.metric.toFixed(3)} · {r.basis}</td><td><a href={r.plan?.source||r.brand.sources[0]}>原始资料</a><br/>{r.brand.lastVerified}</td></tr>):<tr><td colspan="4">暂无符合本榜证据条件的样本，不生成名次。</td></tr>}</tbody></table></div>

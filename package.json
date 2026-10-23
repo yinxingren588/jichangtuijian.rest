@@ -1,0 +1,34 @@
+{
+  "name": "jichangtuijian-rest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build && tsx scripts/manifest.ts",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "audit:seo": "tsx scripts/audit-seo.ts",
+    "check:links": "tsx scripts/check-links.ts",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "test": "npm run validate:content && npm run audit:seo && npm run check:links && tsx --test scripts/*.test.ts",
+    "indexnow": "tsx scripts/indexnow.ts",
+    "indexnow:key": "tsx scripts/indexnow-key.ts"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.4.2",
+    "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@types/node": "24.10.1",
+    "cheerio": "1.2.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

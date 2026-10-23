@@ -1,0 +1,12 @@
+---
+import fs from 'node:fs';
+import {getCollection,render} from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import {airports,priceText,trafficText} from '../../data/airports';
+import {site} from '../../data/site';
+export async function getStaticPaths(){const reviews=await getCollection('reviews',r=>!r.data.draft);return reviews.map(review=>({params:{slug:review.id},props:{review}}));}
+const {review}=Astro.props;const a=airports.find(b=>b.slug===review.data.airportSlug);
+if(!a||a.testStatus!=='tested'||!fs.existsSync(review.data.evidenceFile))throw Error('Published review requires a real brand and raw test evidence');
+const {Content}=await render(review);
+---
+<Base title={review.data.title} description={review.data.description} breadcrumbs={[{name:'独立评测',url:'/review/'},{name:review.data.title,url:Astro.url.pathname}]} schema={[{'@type':'Article',headline:review.data.title,datePublished:review.data.published,dateModified:review.data.updated,author:{'@type':'Organization',name:site.name}}]}><header class="page-intro"><p class="eyebrow">INDEPENDENT REVIEW</p><h1>{review.data.title}</h1><p>{review.data.conclusion}</p><p class="muted">发布 {review.data.published} · 更新 {review.data.updated}</p></header><article class="prose max-w-[820px]"><h2>基本介绍与套餐</h2><p>{a.description}</p><p>{priceText(a)}</p><p>{trafficText(a)}</p><h2>节点、协议与客户端</h2><p>{a.regions.join('、')||'尚未核实'} / {a.protocols.join('、')||'尚未核实'} / {a.deviceLimit||'尚未核实'}</p><Content/><h2>相关比较</h2><p><a href={'/compare/?brands='+a.slug}>将此品牌加入比较</a> · <a href={'/airport/'+a.slug+'/'}>品牌资料档案</a></p><h2>数据来源与最后核验</h2><p>{a.lastVerified||'尚未核实'}</p><ul>{review.data.sources.map((s:string)=><li><a href={s}>{s}</a></li>)}</ul></article></Base>

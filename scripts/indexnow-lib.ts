@@ -1,0 +1,2 @@
+export function changedUrls(current:Record<string,string>,previous:Record<string,string>){return Object.keys(current).filter(url=>current[url]!==previous[url]);}
+export function validateUrls(urls:string[],allowed:Record<string,string>,origin:string){for(const url of urls){const parsed=new URL(url);if(parsed.origin!==origin||parsed.search||parsed.hash||!(url in allowed))throw Error('URL is not an indexable production URL: '+url);}return [...new Set(urls)];}

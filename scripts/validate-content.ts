@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {airports,costPerGB} from '../src/data/airports';
+import {files,report} from './common';
+const errors:string[]=[];const ids=new Set();
+for(const a of airports){if(ids.has(a.slug))errors.push('重复品牌 '+a.slug);ids.add(a.slug);if(a.testStatus!=='unverified'&&(!a.sources.length||!a.lastVerified))errors.push(a.slug+' 缺少证据元数据');if(a.testStatus==='tested'&&!fs.existsSync('docs/evidence/'+a.slug+'.json'))errors.push(a.slug+' 实测状态无原始记录');for(const p of a.plans){if(p.price<0||p.multiplier<=0||!p.source||!a.sources.includes(p.source))errors.push(a.slug+' 套餐字段无效');if(p.verified&&a.testStatus==='unverified')errors.push(a.slug+' 状态冲突');if(p.unlimited&&costPerGB(p)!==null)errors.push('无限量错误排序');}}
+const hashes=new Set();const docs=files('src/content/articles').filter(f=>f.endsWith('.md'));for(const f of docs){const text=fs.readFileSync(f,'utf8');const body=text.split('---').slice(2).join('---').trim();if(body.length<450)errors.push(f+' 内容过短');const hash=crypto.createHash('sha256').update(body).digest('hex');if(hashes.has(hash))errors.push(f+' 重复正文');hashes.add(hash);if(!text.includes('sources: [')||!text.includes('updated:'))errors.push(f+' 缺少来源或日期');if(/五星好评|实测速度达到|百分之百可用|保证.*首页排名/.test(body))errors.push(f+' 可疑无依据声明');}
+report('audit-content',[{name:'内容模型 / 重复文章 / 证据字段',status:errors.length?'FAIL':'PASS',detail:errors.join('；')||`${airports.length} 家 VPN 官方资料，0 家订阅机场，${docs.length} 篇原创基础文章；未录入实测评分。`},{name:'所有品牌事实与原创性人工审计',status:'NOT TESTED',detail:'自动规则只能检查来源字段、状态、重复正文和已列风险词，不能证明不存在虚构数据或抄袭。品牌字段已按此次读取的官方页面限制录入，仍需运营者复核。'}]);

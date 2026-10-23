@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import {getCollection} from 'astro:content';
+import {airports} from '../data/airports';
+import {topics} from '../data/site';
+const articles=await getCollection('articles',a=>!a.data.draft);
+const list=[...articles.map(a=>({title:a.data.title,description:a.data.description,url:'/'+a.data.section+'/'+a.id+'/'})),...airports.map(a=>({title:a.name+' VPN 资料',description:a.description,url:'/airport/'+a.slug+'/'})),...topics.map(t=>({title:t.name+'机场选择专题',description:t.text,url:'/recommend/'+t.slug+'/'}))];
+---
+<Base title="站内搜索" description="在浏览器中搜索教程、选择指南、知识百科和品牌资料。" noindex breadcrumbs={[{name:'搜索',url:'/search/'}]}><header class="page-intro"><p class="eyebrow">SEARCH THE NOTES</p><h1>找到你需要的那条线索。</h1><p>搜索在本地浏览器完成，无需提交个人信息。</p></header><label for="search">文章标题、用途或品牌名称</label><input type="search" id="search" class="search-input" placeholder="试试：预算、Windows、订阅链接"/><p id="search-count" class="status" role="status"></p><div id="search-results" class="grid">{list.map(a=><article class="card" data-search={(a.title+' '+a.description).toLowerCase()}><h2><a href={a.url}>{a.title}</a></h2><p>{a.description}</p><a href={a.url} class="text-link">查看内容 →</a></article>)}</div><noscript><p>JavaScript 已关闭，可在下方浏览全部条目，或使用浏览器查找。</p></noscript><script>const input=document.querySelector<HTMLInputElement>('#search')!;const cards=[...document.querySelectorAll<HTMLElement>('[data-search]')];function update(){const query=input.value.trim().toLowerCase();let n=0;cards.forEach(c=>{c.hidden=!c.dataset.search!.includes(query);if(!c.hidden)n++;});document.querySelector('#search-count')!.textContent=n?`找到 ${n} 条内容`:'没有找到匹配内容，试试更短的词。';}input.addEventListener('input',update);update();</script></Base>
