@@ -1,0 +1,5 @@
+---
+import {couponNotes} from '../data/coupon-notes';
+const {slug}=Astro.props as {slug:string};const note=couponNotes[slug];
+---
+{note&&<div class="coupon-conditions" data-coupon-research={note.status}><div><h3>优惠参考条件</h3><span class="tag neutral">{note.status==='conflicting'?'存在不同说法':note.status==='stale'?'旧活动待确认':note.status==='not-confirmed'?'条件待补充':'结算待核对'}</span></div><dl><div><dt>折扣参考</dt><dd>{note.discount}</dd></div><div><dt>适用条件</dt><dd>{note.conditions}</dd></div><div><dt>有效期</dt><dd>{note.validity}</dd></div><div><dt>资料查阅日期</dt><dd><time>{note.checked}</time> · 未验证商家结算</dd></div></dl><p>{note.caution}</p><a class="text-link" href="/guides/check-coupon-without-payment/">核对优惠是否生效的六步流程 →</a></div>}

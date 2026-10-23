@@ -621,3 +621,64 @@ input::placeholder{color:#8b9fbe;opacity:1}
 .chart-viewer-footer>span{font-size:10px;color:#a5bbdc}
 @media(max-width:1000px){.evidence-hero{gap:35px}.evidence-hero-stat{padding:25px}.evidence-source-note{grid-template-columns:auto 1fr}.evidence-source-note>a{grid-column:2}.evidence-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-evidence{gap:25px;padding:30px}.brand-evidence{padding:24px!important}}
 @media(max-width:650px){.evidence-hero{grid-template-columns:1fr;gap:28px;padding:28px 0 35px}.evidence-hero h1{font-size:42px;letter-spacing:-1.6px}.evidence-hero>div>p:not(.eyebrow){font-size:13px}.evidence-hero-stat{min-height:250px;padding:24px}.evidence-hero-stat>strong{font-size:65px}.evidence-signal{height:46px}.evidence-source-note{padding:18px;gap:10px 14px}.evidence-source-note p{font-size:11px}.evidence-source-note .tag{align-self:start}.evidence-brand-grid{grid-template-columns:1fr;gap:12px}.evidence-brand-card{padding:20px 20px 0}.evidence-brand-card h3{font-size:18px;margin-bottom:14px}.evidence-brand-card p strong{font-size:26px}.chart-gallery{grid-template-columns:1fr;gap:20px}.chart-preview,.brand-evidence .chart-preview,.evidence-extra .chart-preview{height:270px}.evidence-heading{display:block}.evidence-heading .tag{margin-bottom:12px}.brand-details .evidence-heading h2,.evidence-heading h2{font-size:22px;margin-bottom:12px}.brand-evidence{padding:20px!important}.evidence-context{grid-template-columns:1fr;gap:14px}.evidence-metrics,.evidence-extra .evidence-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.evidence-metrics>div{padding:12px}.evidence-metrics strong{font-size:24px}.evidence-metrics strong small{font-size:10px}.unlock-grid{grid-template-columns:1fr}.unlock-details{padding:15px}.evidence-method>div:not(.inline-reading){grid-template-columns:1fr;gap:12px}.home-evidence{grid-template-columns:1fr;padding:24px;gap:24px}.home-evidence h2{font-size:25px}.home-evidence-art{border-left:0;border-top:1px solid #344c70;padding:20px 0 0}.home-evidence-art b{font-size:54px}.home-evidence-art>div{height:40px}.chart-viewer{border-radius:9px;width:96vw}.chart-viewer-toolbar{display:block;padding:12px}.chart-viewer-toolbar>p{font-size:11px;margin-bottom:10px}.chart-viewer-toolbar>div{justify-content:space-between;gap:8px}.chart-viewer button,.chart-viewer-toolbar a{font-size:10px;padding:7px 10px}.chart-viewer-footer{padding:10px 12px}.chart-viewer-footer>span{font-size:9px}}
+/* Brand overview and mobile reading shortcuts. */
+.brand-page-intro{padding-bottom:22px}
+.brand-snapshot{padding:26px 30px 20px;border:1px solid #3c557a;background:radial-gradient(ellipse at 100% 0,#28457166,transparent 65%),#111d31;border-radius:16px;margin:0 0 24px;box-shadow:0 14px 55px #0002}
+.snapshot-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}
+.snapshot-heading .eyebrow{margin-bottom:7px}
+.snapshot-heading h2{font-size:24px;margin:0;letter-spacing:-.6px}
+.snapshot-heading>.tag{white-space:nowrap}
+.snapshot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin:0}
+.snapshot-grid>div{min-width:0;border-left:1px solid #304765;padding-left:20px}
+.snapshot-grid>div:first-child{border-left:0;padding-left:0}
+.snapshot-grid dt{font-size:10px;color:#a2b8da;margin-bottom:9px}
+.snapshot-grid dd{font-size:19px;font-weight:550;color:#e3edff;line-height:1.65;margin:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.snapshot-grid dd>small{display:block;font-size:10px;font-weight:400;line-height:1.9;color:#98aece;margin-top:6px}
+.snapshot-grid .coupon{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.snapshot-grid .coupon>.muted{display:none}
+.snapshot-grid .coupon code{font-size:16px;word-break:break-all}
+.snapshot-grid .coupon button{font-size:10px;min-height:34px}
+.snapshot-grid .coupon p{margin:0;font-size:13px}
+.snapshot-grid .coupon-status{font-size:10px;font-weight:400}
+.snapshot-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:25px;padding-top:21px;border-top:1px solid #304765}
+.snapshot-actions .button{min-height:42px;padding:10px 18px}
+.snapshot-footnote{font-size:10px;color:#99afcf;line-height:1.9;margin:15px 0 0}
+.brand-mobile-actions{display:none}
+.brand-checkpoints{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+.brand-checkpoints>div{padding:20px;border:1px solid #2d405e;border-radius:10px;background:#101c30}
+.brand-details .brand-checkpoints h3{font-size:15px;margin:0 0 10px;color:#c8ddfc}
+.brand-details .brand-checkpoints p{font-size:12px;color:#a3b8d7;margin:0;line-height:2}
+.coupon-conditions{padding:22px;border:1px solid #3c4e6c;border-radius:11px;background:#111e33;margin:23px 0}
+.coupon-conditions>div{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand-details .coupon-conditions h3{font-size:17px;margin:0}
+.coupon-conditions>div .tag{white-space:nowrap}
+.coupon-conditions dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin:20px 0 16px}
+.coupon-conditions dt{font-size:10px;color:#96aece;margin-bottom:6px}
+.coupon-conditions dd{font-size:12px;color:#c2d3ed;margin:0;line-height:1.95}
+.brand-details .coupon-conditions>p{font-size:11px;color:#9eb2d1}
+.comparison-workspace{margin:28px 0 10px;border:1px solid #304361;border-radius:14px;padding:25px;background:#0f192b}
+.comparison-workspace .compare-controls{margin:0 0 12px}
+.compare-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:20px;padding-top:20px;border-top:1px solid #293b57}
+.compare-modes{display:flex;gap:4px;background:#080f1d;border:1px solid #304563;border-radius:9px;padding:5px}
+.compare-modes button{font-size:11px;padding:9px 15px;min-height:40px;border:1px solid transparent;border-radius:6px;color:#a6bcdc;background:transparent}
+.compare-modes button[aria-pressed=true]{border-color:#6e90c4;background:#243d63;color:#e2edff}
+.compare-toolbar>a{font-size:11px;white-space:nowrap}
+.compare-scroll-hint{font-size:10px;color:#93a9cb;margin:0 0 12px}
+.selected-comparison{margin-bottom:20px;overscroll-behavior-inline:contain}
+.selected-comparison table{table-layout:fixed;min-width:calc(160px + var(--compare-columns)*215px);width:100%;font-size:12px}
+.selected-comparison tr>:first-child{position:sticky;left:0;z-index:1;min-width:155px;width:155px;background:#111e32;border-right:1px solid #304361}
+.selected-comparison thead th{background:#172a45;font-size:13px;vertical-align:top}
+.selected-comparison thead th:first-child{background:#1a2d47;z-index:2}
+.selected-comparison td,.selected-comparison th{padding:15px 16px;overflow-wrap:anywhere;white-space:normal;line-height:1.9;vertical-align:top}
+.selected-comparison caption{font-size:11px;padding:12px;text-align:left;color:#a7bedf;background:#0d1729}
+.compare-chart-links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.compare-chart-links>a{display:block;border:1px solid #3b5275;background:#172840;color:#bcd6ff;padding:10px 14px;border-radius:8px;font-size:11px;min-height:42px}
+.comparison-chart-note{padding:18px 21px;background:#152238;border-left:3px solid #87aef0;border-radius:5px;margin-top:24px}
+.comparison-chart-note>strong{font-size:13px;color:#d5e5ff}
+.comparison-chart-note>p{font-size:11px;color:#a1b6d6;margin:6px 0 0;line-height:2}
+@media(max-width:1000px){.snapshot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.snapshot-grid>div{padding:0;border:0}.snapshot-grid dd{font-size:18px}.brand-checkpoints{grid-template-columns:1fr}.compare-toolbar{align-items:start;gap:12px}.compare-modes button{padding:9px 12px}}
+@media(max-width:650px){.brand-page-intro{padding:23px 0 17px}.brand-page-intro h1{font-size:27px;line-height:1.5;letter-spacing:-.7px;margin:12px 0}.brand-page-intro>p:not(.eyebrow):not(.muted){display:none}.brand-page-intro>.muted{font-size:10px}.brand-snapshot{padding:20px 18px 16px;border-radius:12px;margin-bottom:18px}.snapshot-heading{display:block;margin-bottom:20px}.snapshot-heading h2{font-size:19px;letter-spacing:-.4px}.snapshot-heading>.tag{margin-top:12px;font-size:9px}.snapshot-grid{gap:18px 15px}.snapshot-grid dt{font-size:9px;margin-bottom:7px}.snapshot-grid dd{font-size:16px;line-height:1.8}.snapshot-grid dd>small{font-size:9px;line-height:1.8}.snapshot-grid .coupon code{font-size:14px}.snapshot-grid .coupon button{font-size:9px;min-height:32px}.snapshot-actions{gap:13px 20px;margin-top:20px;padding-top:16px}.snapshot-actions .button{font-size:11px;padding:9px 13px}.snapshot-actions .quiet-button,.snapshot-actions .text-link{font-size:10px}.snapshot-footnote{font-size:9px}.brand-mobile-actions{position:fixed;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:5px;bottom:max(12px,env(safe-area-inset-bottom));left:17px;right:17px;z-index:40;border:1px solid #48638b;background:#13233bea;backdrop-filter:blur(20px);box-shadow:0 -5px 35px #0006;border-radius:13px;padding:7px}.brand-mobile-actions>a,.brand-mobile-actions>button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:45px;padding:7px 3px;font-size:11px;font-weight:500;border:0;border-radius:7px;background:#1c3351;color:#d0e3ff}.brand-mobile-actions>button{background:#d2e3ff;color:#152b48}.brand-mobile-actions>a>span,.brand-mobile-actions>button>span{font-size:16px}.brand-mobile-actions .coupon-status{position:absolute;bottom:calc(100% + 10px);left:0;right:0;padding:10px 12px;background:#1d3454;border:1px solid #52709b;border-radius:8px;text-align:center;font-size:11px;color:#e0edff}.brand-mobile-actions .coupon-status:empty{display:none}body:has(.brand-mobile-actions){padding-bottom:90px}.brand-checkpoints{gap:13px}.brand-checkpoints>div{padding:18px}.brand-details .brand-checkpoints h3{font-size:14px}.coupon-conditions{padding:18px}.coupon-conditions>div{display:block}.coupon-conditions .tag{margin-top:10px}.coupon-conditions dl{grid-template-columns:1fr;gap:14px}.comparison-workspace{padding:17px 13px;margin-top:20px}.comparison-workspace .compare-controls{gap:10px}.compare-toolbar{display:block}.compare-modes{justify-content:space-between}.compare-modes button{padding:8px 10px;font-size:10px;flex:1}.compare-toolbar>.text-link{display:inline-block;margin-top:12px}.comparison-workspace .status{font-size:11px;line-height:1.9;margin:15px 0}.selected-comparison table{min-width:calc(112px + var(--compare-columns)*174px)}.selected-comparison tr>:first-child{width:112px;min-width:112px}.selected-comparison td,.selected-comparison th{padding:12px;font-size:11px}.selected-comparison thead th{font-size:12px}.compare-chart-links>a{width:100%;font-size:10px}.comparison-chart-note{padding:15px}.comparison-chart-note p{font-size:10px}}
+.guide-interface{margin:28px 0;border:1px solid #3a5276;border-radius:10px;overflow:hidden;background:#101d31}
+.prose .guide-interface a{display:block;border:0}
+.prose .guide-interface img{display:block;width:100%;height:auto;margin:0}
+.guide-interface figcaption{padding:13px 17px;font-size:11px;color:#a7bedf;line-height:1.9}

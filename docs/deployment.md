@@ -24,3 +24,9 @@ GitHub Actions 在 push / pull_request 时执行安装、类型检查、构建�
 知识内容可部署审核，但机场品牌身份、真实套餐、数据排行榜和实测仍未完成。正式公开运营前需要维护者复核正文与政策、接受内容边界，并补齐运营所需资料。GitHub 推送成功不表示 Cloudflare 已上线，也不表示域名已接入。
 
 官方参考：https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/ ，https://developers.cloudflare.com/pages/configuration/custom-domains/ 。
+
+## 本轮访问检查 · 2026-10-23
+
+Cloudflare 控制台返回登录页，尚未进入拥有项目与域名权限的账户。正式域名的浏览器访问显示响应超时，本次无法确认在线部署状态。没有创建托管项目、修改 DNS、登录商家账户、购买服务或提交 IndexNow。
+
+可直接交付已构建的静态包及 GitHub 源码；继续正式发布需要站点所有者登录对应 Cloudflare 账户并确认项目与域名。上线后再检查 HTTPS、404、资源缓存、真实网络加载、Lighthouse 和 Bing 站长验证。本地资源体积记录见 asset-budget.json，不作为性能评分。

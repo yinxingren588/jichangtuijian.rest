@@ -1,4 +1,4 @@
-﻿Section,Category,Title,URL,Body characters,Published,Sources
+Section,Category,Title,URL,Body characters,Published,Sources
 blog,订阅与账户,账户到期与流量耗尽，怎样区分,https://jichangtuijian.rest/blog/account-expiry-versus-quota/,554,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,订阅与账户,更换客户端前，怎样避免丢失必要配置信息,https://jichangtuijian.rest/blog/account-migration/,566,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,流量加购包怎样改变当月总成本,https://jichangtuijian.rest/blog/addon-traffic-cost/,606,2026-10-23,https://mullvad.net/en/pricing
@@ -34,7 +34,7 @@ blog,基础指南,购买机场或 VPN 前，先核对这六项,https://jichangtu
 guides,操作教程 · 通用,教程：按不同倍率计算实际流量消耗,https://jichangtuijian.rest/guides/calculate-quota-multiplier/,714,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,网络原理,CDN会怎样影响节点测速与网站体验,https://jichangtuijian.rest/blog/cdn-routing/,588,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,选择与维护,修改配置之前，为什么要先写下原值,https://jichangtuijian.rest/blog/change-record/,551,2026-10-23,https://jichangtuijian.rest/editorial-policy/
-guides,操作教程 · 通用,教程：核对优惠码条件而不误读券后价,https://jichangtuijian.rest/guides/check-coupon-without-payment/,709,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+guides,操作教程 · 通用,教程：核对优惠码条件而不误读券后价,https://jichangtuijian.rest/guides/check-coupon-without-payment/,1846,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,结算页多出费用时，怎样核对最终金额,https://jichangtuijian.rest/blog/checkout-amount/,600,2026-10-23,https://mullvad.net/en/pricing
 blog,隐私与凭据,复制订阅到剪贴板后，还需要注意什么,https://jichangtuijian.rest/blog/clipboard-sync/,570,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,应用场景,云端开发环境访问异常，应怎样分层判断,https://jichangtuijian.rest/blog/cloud-development/,558,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
@@ -137,11 +137,11 @@ blog,流量与额度,月度用量接近上限时，怎样安排高需求日期,h
 blog,节点与线路,晚高峰选节点，应看哪些持续性指标,https://jichangtuijian.rest/blog/peak-hour-selection/,550,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,性能与测量,怎样把测试结果写成有边界的结论,https://jichangtuijian.rest/blog/performance-summary/,558,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,隐私与凭据,搜索到多个同名品牌域名，怎样降低误认风险,https://jichangtuijian.rest/blog/phishing-brand-domains/,577,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-blog,基础指南,性价比机场怎么算：周期、倍率与每 GB 成本,https://jichangtuijian.rest/blog/plan-cost/,575,2026-10-23,https://mullvad.net/en/pricing ; https://hide.me/en/pricing
+blog,基础指南,性价比机场怎么算：周期、倍率与每 GB 成本,https://jichangtuijian.rest/blog/plan-cost/,1512,2026-10-23,https://mullvad.net/en/pricing ; https://hide.me/en/pricing
 blog,应用场景,平台支持地区与IP显示地区怎样分别确认,https://jichangtuijian.rest/blog/platform-supported-region/,549,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,网络原理,端口号与协议名称有什么区别,https://jichangtuijian.rest/blog/port-number-role/,588,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,选择与维护,付款成功后，怎样确认买到的方案已经生效,https://jichangtuijian.rest/blog/post-purchase-validation/,556,2026-10-23,https://jichangtuijian.rest/editorial-policy/
-guides,操作教程 · 通用,教程：建立一张能区分周期的套餐比较表,https://jichangtuijian.rest/guides/prepare-comparison-sheet/,708,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+guides,操作教程 · 通用,教程：建立一张能区分周期的套餐比较表,https://jichangtuijian.rest/guides/prepare-comparison-sheet/,1936,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 guides,操作教程 · 通用,教程：把连接问题写成可处理的支持工单,https://jichangtuijian.rest/guides/prepare-support-ticket/,689,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,隐私与凭据,做连接检测时，怎样减少向外部站点暴露信息,https://jichangtuijian.rest/blog/privacy-minimal-testing/,572,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,网络原理,系统代理与隧道模式覆盖哪些流量,https://jichangtuijian.rest/blog/proxy-versus-tunnel/,582,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
@@ -168,7 +168,7 @@ blog,隐私与凭据,安装根证书为什么不是普通节点导入步骤,http
 guides,操作教程 · 通用,教程：订阅地址泄露后整理撤销与恢复步骤,https://jichangtuijian.rest/guides/rotate-subscription-token/,747,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,设备与客户端,路由器处理性能为什么可能成为瓶颈,https://jichangtuijian.rest/blog/router-hardware-limit/,577,2026-10-23,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-a-proxy-server-in-windows
 blog,设备与客户端,路由器配置与单设备客户端的覆盖范围怎样比较,https://jichangtuijian.rest/blog/router-vpn-scope/,578,2026-10-23,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-a-proxy-server-in-windows
-guides,操作教程 · 通用,教程：在同一环境下比较两条节点配置,https://jichangtuijian.rest/guides/run-controlled-node-test/,701,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+guides,操作教程 · 通用,教程：在同一环境下比较两条节点配置,https://jichangtuijian.rest/guides/run-controlled-node-test/,1537,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,节点与线路,多个节点显示相同出口IP，意味着什么,https://jichangtuijian.rest/blog/same-exit-multiple-nodes/,574,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,证据与编辑,一个地区的测试能代表全国用户吗,https://jichangtuijian.rest/blog/sample-representativeness/,549,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,证据与编辑,综合评分为什么要公开权重和缺失处理,https://jichangtuijian.rest/blog/score-weighting/,556,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330

@@ -1,0 +1,122 @@
+{
+  "yinxingren": {
+    "short": "8折参考",
+    "status": "reference",
+    "discount": "公开资料提及8折；尚未验证当前结算。",
+    "conditions": "常规套餐有8折描述，新用户或首单限制仍需确认。",
+    "validity": "未确认截止日期；不写成永久有效。",
+    "caution": "套餐名称与现有参考表并非完全一致，不能将折扣直接套入所有档位。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "breezenet": {
+    "short": "折扣说法不一",
+    "status": "conflicting",
+    "discount": "存在9折、7折等不同描述，当前幅度待确认。",
+    "conditions": "新用户、续费与升级是否适用的说法不一致。",
+    "validity": "查到旧活动截至2026-08-31；是否续期待确认。",
+    "caution": "不要根据 weifeng90 的字符推定9折，也不要把旧活动日期自动延长。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "feimaoyun": {
+    "short": "8折参考",
+    "status": "conflicting",
+    "discount": "多份资料提及8折；尚未验证当前结算。",
+    "conditions": "季付及以上、新用户及学生年包排除条件存在差异。",
+    "validity": "存在限时与长期两种描述，当前截止日期未确认。",
+    "caution": "首档年付折算方案是否参与优惠尚不明确，因此不计算其券后价。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "wuyou": {
+    "short": "旧活动待确认",
+    "status": "stale",
+    "discount": "旧资料提及6.8折，当前是否继续有效待确认。",
+    "conditions": "有新用户首单及MINI年包不参加的说明，尚未核验当前范围。",
+    "validity": "查到旧活动截至2026-08-31；未确认延期。",
+    "caution": "已过期的公告日期不等于代码当前一定无效，但也不能继续作为有效优惠宣传。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "flashleap": {
+    "short": "8折参考",
+    "status": "stale",
+    "discount": "资料提及8折，当前有效性待确认。",
+    "conditions": "新用户或每账号限一次等条件需在当前订单确认。",
+    "validity": "查到旧活动截至2026-08-31；未取得续期公告。",
+    "caution": "周期折扣与代码折扣应分别查看，不能直接连乘成承诺的最终价格。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "firefly": {
+    "short": "8折参考",
+    "status": "reference",
+    "discount": "公开资料提及新用户8折，未验证当前结算。",
+    "conditions": "有新用户首单、96元年付版不参加的说明；实际套餐范围待确认。",
+    "validity": "未取得可确认的当前截止日期。",
+    "caution": "本页首档为年付折算展示，不能把8折默认套入该档；先查当前订单是否接受代码。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "stardream": {
+    "short": "9折参考",
+    "status": "conflicting",
+    "discount": "公开资料多提及9折，未验证当前结算。",
+    "conditions": "新用户限制较常见；月付、年付和活动小包的适用说明不一致。",
+    "validity": "未取得可确认的当前截止日期。",
+    "caution": "先按自己准备购买的周期核对，不能把某一种周期的资格扩展到全部套餐。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "lightspeed": {
+    "short": "9折参考",
+    "status": "reference",
+    "discount": "查到9折描述，当前是否生效未确认。",
+    "conditions": "未查到与该代码对应的完整套餐、用户及叠加规则。",
+    "validity": "未取得可确认的截止日期。",
+    "caution": "核对时使用本页代码 jichangcha09，并确认订单上显示的优惠名称与适用范围一致。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "v2yun": {
+    "short": "折扣说法不一",
+    "status": "conflicting",
+    "discount": "同一代码存在9折和8折两种描述，幅度待确认。",
+    "conditions": "多为新人优惠描述，年付及限量包是否排除仍需核对。",
+    "validity": "存在长期和限时描述，当前截止日期未确认。",
+    "caution": "不同日期的优惠文字不能拼成一张当前有效的优惠券，本页暂不自动计算折后金额。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "u1s1": {
+    "short": "折扣说法不一",
+    "status": "conflicting",
+    "discount": "查到85折与8折两种说法，当前幅度待确认。",
+    "conditions": "多为新人或每账号限一次；小年包、定制包和重置包是否排除需确认。",
+    "validity": "未取得可确认的当前截止日期。",
+    "caution": "公告折扣文字与结算金额可能不同，实际应检查代码应用后的订单总额。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "quanqiuyun": {
+    "short": "条件待补充",
+    "status": "not-confirmed",
+    "discount": "未找到能确认 tt88 折扣幅度的有效说明。",
+    "conditions": "适用套餐、新老用户与使用次数均待核实。",
+    "validity": "未取得可确认的截止日期。",
+    "caution": "搜索中出现的 qq88 等其他代码不能证明 tt88 的规则，也不替换维护者原有代码。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  },
+  "yuzhoucloud": {
+    "short": "折扣说法不一",
+    "status": "conflicting",
+    "discount": "同一代码存在8折、9折不同说法，幅度待确认。",
+    "conditions": "新用户、首单次数与季付门槛的说明有差异。",
+    "validity": "不同资料中的期限不一致，未确认当前截止日期。",
+    "caution": "最终以当前账号、套餐与周期的结算总额为准；目前不计算自动券后价。",
+    "checked": "2026-10-23",
+    "checkoutVerified": false
+  }
+}

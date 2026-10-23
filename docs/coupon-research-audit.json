@@ -1,0 +1,158 @@
+{
+  "checked": "2026-10-23",
+  "couponCount": 12,
+  "confirmedCheckouts": 0,
+  "notes": "公开资料存在冲突或过时内容；未登录、注册、创建订单或付款。新参考链接不在客户页面显示。",
+  "records": {
+    "yinxingren": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://ji-chang.wiki/brands/invisible/",
+        "https://jcnav.net/yinxingren"
+      ],
+      "decision": "reference",
+      "merchantIdentityConfirmed": false
+    },
+    "breezenet": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichangzhinan.homes/youhui/",
+        "https://zjichang.cyou/coupons/",
+        "https://jichanga.world/deals/"
+      ],
+      "decision": "conflicting",
+      "merchantIdentityConfirmed": false
+    },
+    "feimaoyun": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichanga.world/deals/feimaoyun/",
+        "https://haiwaijichang.com/brands/feimao/",
+        "https://jichangzhinan.homes/youhui/"
+      ],
+      "decision": "conflicting",
+      "merchantIdentityConfirmed": false
+    },
+    "wuyou": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichangzhinan.homes/youhui/",
+        "https://flyjc.net/airports/coupons"
+      ],
+      "decision": "stale",
+      "merchantIdentityConfirmed": false
+    },
+    "flashleap": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://mesee.net/brands/shanyue",
+        "https://zjichang.cyou/coupons/",
+        "https://yiyuan-jichang.org/review/shanyue/"
+      ],
+      "decision": "stale",
+      "merchantIdentityConfirmed": false
+    },
+    "firefly": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://zjichang.cyou/coupons/",
+        "https://flyjc.net/airports/coupons"
+      ],
+      "decision": "reference",
+      "merchantIdentityConfirmed": false
+    },
+    "stardream": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichangzhinan.homes/youhui/",
+        "https://jichanga.world/deals/",
+        "https://tiziboke.blog/directory/coupons/"
+      ],
+      "decision": "conflicting",
+      "merchantIdentityConfirmed": false
+    },
+    "lightspeed": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://yiyuan-jichang.org/jichang-youhuima/",
+        "https://fqvpns.blog/airport/lightspeed/"
+      ],
+      "decision": "reference",
+      "merchantIdentityConfirmed": false
+    },
+    "v2yun": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichanga.world/deals/weituyun/",
+        "https://hiddifynext.app/coupons/",
+        "https://vpnsift.com/weituyun"
+      ],
+      "decision": "conflicting",
+      "merchantIdentityConfirmed": false
+    },
+    "u1s1": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichangtuijian1.com/pianyijichang/u1s1",
+        "https://clashjichang.com.cn/ceping/u1s1/",
+        "https://hiddifynext.app/coupons/"
+      ],
+      "decision": "conflicting",
+      "merchantIdentityConfirmed": false
+    },
+    "quanqiuyun": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://fqvpns.blog/airport/globalcloud/",
+        "https://yiyuan-jichang.org/jichang-youhuima/"
+      ],
+      "decision": "not-confirmed",
+      "merchantIdentityConfirmed": false
+    },
+    "yuzhoucloud": {
+      "checked": "2026-10-23",
+      "evidenceLevel": "secondary-public-reference",
+      "checkoutVerified": false,
+      "urls": [
+        "https://jichanga.world/deals/yuzhouyun/",
+        "https://jichangtuijian.live/pianyijichang/yuzhouyun",
+        "https://yiyuanjichang.cc/jichang/yuzhou/"
+      ],
+      "decision": "conflicting",
+      "merchantIdentityConfirmed": false
+    }
+  },
+  "measurementEnvironment": {
+    "status": "not-found",
+    "query": "隐形人 2026-10-18 20:01:52 测速",
+    "decision": "未发现与提供图表同一次测试相对应的环境记录；运营商、带宽和设备仍为未提供。"
+  },
+  "primaryPageAttempt": {
+    "brand": "yinxingren",
+    "checked": "2026-10-23",
+    "entry": "https://varnexa.invisibleaff.com/#/?code=JF4seZUy",
+    "observed": "线路检测页指向品牌登录页，未登录、注册或创建订单，不能验证当前结算规则。"
+  }
+}
