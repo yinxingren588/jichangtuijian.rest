@@ -19,5 +19,14 @@ export function categoryFor(a:Entry){if(a.data.category)return a.data.category;i
 export function ordered(entries:Entry[]){return [...entries].sort((a,b)=>b.data.updated.localeCompare(a.data.updated)||a.data.title.localeCompare(b.data.title,'zh-CN'));}
 export function relatedEntries(current:Entry,all:Entry[]){
  const paths=current.data.related||[];
- return all.filter(a=>a.id!==current.id).map(a=>{const url='/'+a.data.section+'/'+a.id+'/';return{a,score:(paths.includes(url)?100-paths.indexOf(url):0)+(categoryFor(a)===categoryFor(current)?10:0)+a.data.tags.filter(t=>current.data.tags.includes(t)).length*3};}).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.a.id.localeCompare(b.a.id)).slice(0,4).map(x=>x.a);
+ return all.filter(a=>a.id!==current.id).map(a=>{const url='/'+a.data.section+'/'+a.id+'/';return{a,score:(paths.includes(url)?100-paths.indexOf(url):0)+(categoryFor(a)===categoryFor(current)?10:0)+a.data.tags.filter(t=>current.data.tags.includes(t)).length*3+(a.data.section===current.data.section?1:0)};}).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.a.id.localeCompare(b.a.id)).slice(0,4).map(x=>x.a);
 }
+export function entryUrl(entry:Entry){return '/'+entry.data.section+'/'+entry.id+'/';}
+export function readingSequence(current:Entry,all:Entry[]){
+ const entries=ordered(all.filter(a=>a.data.section===current.data.section));
+ const index=entries.findIndex(a=>a.id===current.id);
+ if(index<0||entries.length<2)throw Error('Reading sequence requires a known entry and two or more documents.');
+ return {previous:entries[(index-1+entries.length)%entries.length],next:entries[(index+1)%entries.length],position:index+1,total:entries.length,wrapPrevious:index===0,wrapNext:index===entries.length-1};
+}
+export function categoryUrl(entry:Entry){const category=categories.find(c=>c.name===categoryFor(entry));return entry.data.section==='blog'&&category?'/blog/category/'+category.slug+'/':'/'+entry.data.section+'/';}
+export function readingMinutes(entry:Entry){return Math.max(1,Math.ceil((entry.body||entry.data.description).replace(/https?:\/\/\S+/g,'').length/450));}

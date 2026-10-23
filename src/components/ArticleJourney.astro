@@ -1,0 +1,14 @@
+---
+import ReadingNavigation from './ReadingNavigation.astro';
+import {entryUrl,type Entry} from '../lib/content';
+import {brandPathsFor} from '../lib/content-paths';
+interface Props{current:Entry;entries:Entry[];related:Entry[]}
+const {current,entries,related}=Astro.props;
+const brandPaths=brandPathsFor(current);
+---
+<div class="article-journey">
+ <ReadingNavigation current={current} entries={entries}/>
+ <section id="continue-reading" class="related-reading" aria-labelledby="related-reading-title"><p class="eyebrow">CONTINUE EXPLORING</p><h2 id="related-reading-title">接下来，可以继续了解</h2><div class="related-reading-list">{related.map(entry=><a href={entryUrl(entry)} data-related-reading><span>{entry.data.section==='guides'?'操作教程':entry.data.section==='glossary'?'基础百科':'知识文章'}</span><strong>{entry.data.title}</strong><p>{entry.data.description}</p><b aria-hidden="true">↗</b></a>)}</div></section>
+ {brandPaths&&<section class="article-brand-paths" aria-labelledby="article-brand-title"><p class="eyebrow">PUT IT IN CONTEXT</p><h2 id="article-brand-title">把知识放回具体资料里</h2><p>{brandPaths.reason}</p><div class="article-brand-links">{brandPaths.brands.map(brand=><a href={'/airport/'+brand.slug+'/'}><strong>{brand.name}</strong><span>查看套餐条件与来源 ↗</span></a>)}</div><p class="fine-print">这些是字段对照与阅读入口，展示顺序不代表品牌推荐名次。</p></section>}
+ <nav class="reading-utility" aria-label="继续浏览"><a href="/guides/">按设备找教程</a><a href="/airport/">浏览品牌资料</a><a href="#main">返回顶部 ↑</a></nav>
+</div>

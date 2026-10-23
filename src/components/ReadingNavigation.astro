@@ -1,0 +1,12 @@
+---
+import {entryUrl,readingSequence,type Entry} from '../lib/content';
+interface Props{current:Entry;entries:Entry[]}
+const {current,entries}=Astro.props;
+const sequence=readingSequence(current,entries);
+const labels={blog:'知识文章',guides:'操作教程',glossary:'知识百科'};
+---
+<div id="reading-navigation" class="reading-navigation" data-reading-section={current.data.section}>
+ <div class="reading-position"><span>{labels[current.data.section]} · {sequence.position} / {sequence.total}</span><a href={'/'+current.data.section+'/'}>返回栏目目录 ↗</a></div>
+ <nav class="article-pagination" aria-label="文章前后导航"><a href={entryUrl(sequence.previous)} rel="prev" data-reading-direction="prev"><span>← 上一篇{sequence.wrapPrevious?' · 本栏目最后一篇':''}</span><strong>{sequence.previous.data.title}</strong></a><a href={entryUrl(sequence.next)} rel="next" data-reading-direction="next"><span>下一篇 →{sequence.wrapNext?' · 回到本栏目第一篇':''}</span><strong>{sequence.next.data.title}</strong></a></nav>
+ <p class="fine-print">按当前栏目目录顺序连续阅读；到达最后一篇后，可以接着从本栏目第一篇阅读。</p>
+</div>
