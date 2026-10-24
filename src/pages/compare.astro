@@ -8,7 +8,7 @@ const data=airports.map(comparisonBrand);
 ---
 <Base title="品牌套餐与测速对比工具：核对 2–4 家品牌" description="选择 2–4 家品牌，对照价格、流量和优惠条件，切换查看维护者提供图表中的速度、延迟、平台状态及测试日期。不同来源与未知字段分别标明。" breadcrumbs={[{name:'横向比较',url:'/compare/'}]}>
 <header class="page-intro"><p class="eyebrow">COMPARE / 放在一起看</p><h1>少一点猜测，多一点对照。</h1><p>选好候选，再切换套餐条件与测速图表。让价格、时间和指标都保留自己的含义。</p></header>
-<div class="note">收录 28 家机场参考档案及 5 家 VPN 官方资料。不同类别、币种、付款周期与无限流量方案不能直接按单价排序；维护者图表未独立复测。</div>
+<div class="note">收录维护者提供的28家机场参考档案。不同付款周期和流量发放方式不能直接按单价排序；维护者图表未独立复测。</div>
 <nav class="guide-tutorial-links" aria-label="节点与服务选择帮助"><a href="/blog/node-name-labels/">机场节点资料怎么看 →</a><a href="/blog/nearby-node/">VPN节点怎么选 →</a><a href="/vpn/">VPN推荐条件对照 →</a></nav>
 <div class="comparison-workspace" id="compare-workspace"><div class="compare-controls"><label for="brand-select" class="sr-only">选择候选品牌</label><select id="brand-select"><option value="">选择要添加的品牌</option>{data.map(a=><option value={a.slug}>{a.name}（{a.kind==='vpn'?'VPN':'机场'}）</option>)}</select><button id="add-brand" class="button">添加候选</button></div><div id="selected-brands" aria-label="已选品牌"></div>
 <div class="compare-toolbar"><div class="compare-modes" role="group" aria-label="选择比较内容"><button type="button" data-compare-mode="plans" aria-pressed="true" aria-controls="compare-result">套餐条件</button><button type="button" data-compare-mode="charts" aria-pressed="false" aria-controls="compare-result">测速与解锁</button><button type="button" data-compare-mode="all" aria-pressed="false" aria-controls="compare-result">全部资料</button></div><a class="text-link" href="/evidence/">全部原始图表 ↗</a></div>

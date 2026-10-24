@@ -4,28 +4,28 @@
   "html": [
     {
       "file": "search/index.html",
-      "bytes": 198688,
-      "gzipBytes": 43274
-    },
-    {
-      "file": "airport/index.html",
-      "bytes": 72456,
-      "gzipBytes": 13012
+      "bytes": 194510,
+      "gzipBytes": 42308
     },
     {
       "file": "recommend/premium/index.html",
-      "bytes": 51430,
-      "gzipBytes": 12470
+      "bytes": 51232,
+      "gzipBytes": 12394
     },
     {
-      "file": "compare/index.html",
-      "bytes": 80702,
-      "gzipBytes": 12383
+      "file": "airport/index.html",
+      "bytes": 68163,
+      "gzipBytes": 12040
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 33240,
-      "gzipBytes": 11489
+      "bytes": 33042,
+      "gzipBytes": 11414
+    },
+    {
+      "file": "airport/wuyou/index.html",
+      "bytes": 32840,
+      "gzipBytes": 11403
     }
   ],
   "javascript": [

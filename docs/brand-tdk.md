@@ -1,13 +1,13 @@
 # 全部品牌独立 TDK 完整清单 · 2026-10-24
 
-当前 33 个独立品牌页均有各自标题、描述、关键词和页面大标题：28 个机场品牌与另外 5 个商业 VPN 品牌。本次导出同步最新公开字段；以下 T、D、K 和 H1 均从实际构建页面读取。
+当前28个独立品牌页均为维护者提供的机场品牌，各有自己的标题、描述、关键词和页面大标题。本次导出同步最新公开字段；以下 T、D、K 和 H1 均从实际构建页面读取。
 
 - T：网页标题，末尾由网站统一加上“ · 航线笔记”；搜索引擎展示文字可能与网页设置不同。
 - D：页面描述，分别突出各品牌已有的套餐价格、流量、节点测速资料、优惠条件或待补充项目。
 - K：关键词标签，各品牌独立写入，不在正文中重复堆放。
 - H1：客户打开页面时看到的大标题，可与 SEO 标题分别修改。
 
-价格沿用现有参考记录，没有宣称已核验商家最新结算。28 家机场的维护者测速与解锁图未独立复测；5 家 VPN 没有本站测速图，描述明确说明。年付月均、完整年费和一次性额度分别处理，优惠码不自动计算折后价。
+价格沿用现有参考记录，没有宣称已核验商家最新结算。28家机场的维护者测速与解锁图未独立复测。年付月均、完整年费和一次性额度分别处理，优惠码不自动计算折后价。
 
 ## 28 个机场品牌
 
@@ -234,48 +234,6 @@
 - **D｜描述：** 快狸KuaiLi机场如何区分年付与月付？参考档为年付折算10元/月均、30 GB/月；24元/月、120 GB/月，附节点测速及平台解锁图。完整年费总额待确认，月均不能当月付。两档额度、IEPL节点范围、退款和续费应分别核对，不能由线路标签推断实际表现；维护者图表未独立复测。
 - **K｜关键词：** 快狸机场, KuaiLi, 快狸怎么样, 快狸套餐价格, 快狸年付月均, 快狸流量, 快狸节点测速, 快狸IEPL
 - **H1｜页面大标题：** 快狸机场怎么样？
-
-## 另外 5 个商业 VPN 品牌
-
-### 29. Proton VPN
-
-- 独立页面：[本地查看](http://127.0.0.1:4321/airport/proton-vpn/) · [正式路径](https://jichangtuijian.rest/airport/proton-vpn/)
-- **T｜标题：** Proton VPN怎么样？免费套餐价格、流量与节点测速资料说明 · 航线笔记
-- **D｜描述：** Proton VPN免费方案有哪些条件？本页整理0欧元免费档、官方不限流量与免费方案 1 台的已录入信息，说明节点、客户端和套餐适用范围。本站暂无该品牌测速及解锁图，付费价格与未录入节点条件保留待核实，不以免费额度推断连接速度或平台可用性。
-- **K｜关键词：** Proton VPN, Proton VPN怎么样, Proton VPN免费套餐, Proton VPN价格, Proton VPN流量, Proton VPN设备限制, Proton VPN节点, Proton VPN测速资料
-- **H1｜页面大标题：** Proton VPN怎么样？
-
-### 30. Mullvad
-
-- 独立页面：[本地查看](http://127.0.0.1:4321/airport/mullvad/) · [正式路径](https://jichangtuijian.rest/airport/mullvad/)
-- **T｜标题：** Mullvad VPN怎么样？月付套餐价格、流量条件与节点测速资料 · 航线笔记
-- **D｜描述：** Mullvad VPN怎么样？查看5欧元/月、流量额度尚未核实与最多 5 台条件，区分充值时长、套餐金额和流量口径。本站暂无Mullvad节点测速及解锁图；页面按已录入官方资料说明核对重点，设备限制应与账号规则一起阅读，不把统一月价当作性能保证。
-- **K｜关键词：** Mullvad VPN, Mullvad怎么样, Mullvad套餐价格, Mullvad月付, Mullvad流量, Mullvad设备限制, Mullvad节点, Mullvad测速资料
-- **H1｜页面大标题：** Mullvad VPN怎么样？
-
-### 31. Windscribe
-
-- 独立页面：[本地查看](http://127.0.0.1:4321/airport/windscribe/) · [正式路径](https://jichangtuijian.rest/airport/windscribe/)
-- **T｜标题：** Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对 · 航线笔记
-- **D｜描述：** Windscribe VPN免费与Pro如何选择？本页记录默认2 GB/月，Pro为9美元/月、官方不限流量与69美元/年、官方不限流量，年付月均不当月付。另列协议、设备和账号共享条件，本站暂无节点测速及解锁图，公开方案不等于本地使用与最终结算验证。
-- **K｜关键词：** Windscribe VPN, Windscribe怎么样, Windscribe套餐价格, Windscribe流量, Windscribe节点, Windscribe测速资料, Windscribe协议, Windscribe设备连接
-- **H1｜页面大标题：** Windscribe VPN怎么样？
-
-### 32. TunnelBear
-
-- 独立页面：[本地查看](http://127.0.0.1:4321/airport/tunnelbear/) · [正式路径](https://jichangtuijian.rest/airport/tunnelbear/)
-- **T｜标题：** TunnelBear VPN怎么样？免费套餐价格、流量与节点测速资料 · 航线笔记
-- **D｜描述：** TunnelBear VPN免费额度如何理解？页面记录0美元免费档、2 GB/月；付费促销起价的计费周期未明确，不当作月付报价。本站暂无节点测速与解锁图，可据套餐、节点和设备核对项继续查证，不以免费方案推断付费条件，也不承诺实际连接表现。
-- **K｜关键词：** TunnelBear VPN, TunnelBear怎么样, TunnelBear免费套餐, TunnelBear价格, TunnelBear流量, TunnelBear 2 GB/月, TunnelBear节点, TunnelBear测速资料
-- **H1｜页面大标题：** TunnelBear VPN怎么样？
-
-### 33. hide.me
-
-- 独立页面：[本地查看](http://127.0.0.1:4321/airport/hide-me/) · [正式路径](https://jichangtuijian.rest/airport/hide-me/)
-- **T｜标题：** hide.me VPN怎么样？免费与月付套餐价格、流量及节点测速资料 · 航线笔记
-- **D｜描述：** hide.me VPN免费与月付如何对照？本页收录0美元免费档、官方不限流量；11.99美元/月、官方不限流量，设备条件为免费 1 个连接；Premium 10 个同时连接，税费需按结算核对。本站暂无节点测速及解锁图，免费和付费的地区、功能条件应分别确认，套餐不限量不能替代实际速度及平台可用性验证。
-- **K｜关键词：** hide.me VPN, hide.me怎么样, hide.me套餐价格, hide.me免费方案, hide.me月付, hide.me流量, hide.me节点, hide.me测速资料
-- **H1｜页面大标题：** hide.me VPN怎么样？
 
 ## 后续修改与本轮范围
 

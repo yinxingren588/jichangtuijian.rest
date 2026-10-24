@@ -29,7 +29,7 @@ test('every published article, guide and glossary entry belongs to one complete 
  }
 });
 
-test('all 33 brand pages have individually authored analysis, relevant reading, comparisons and explicit evidence provenance',()=>{
+test('all 28 brand pages have individually authored analysis, relevant reading, comparisons and explicit evidence provenance',()=>{
  assert.deepEqual(Object.keys(brandEditorials).sort(),airports.map(a=>a.slug).sort());
  const focuses=new Set<string>();const questions=new Set<string>();
  for(const brand of airports){
@@ -44,14 +44,14 @@ test('all 33 brand pages have individually authored analysis, relevant reading, 
   assert.equal($('.brand-crosslinks>div').length,2);
   for(const peer of editorial.comparisons){assert.notEqual(peer,brand.slug);assert.equal(airports.find(a=>a.slug===peer)!.kind,brand.kind);assert.ok($('.brand-crosslinks a').toArray().some(e=>$(e).attr('href')==='/compare/?brands='+brand.slug+','+peer));}
  }
- assert.equal(focuses.size,33);assert.equal(questions.size,33);
+ assert.equal(focuses.size,28);assert.equal(questions.size,28);
 });
 
-test('brand next and previous links form separate complete airport and VPN cycles',()=>{
+test('brand next and previous links form a complete cycle across the retained brand catalogue',()=>{
  const edges=new Map<string,{previous:string;next:string}>();
  for(const brand of airports){const $=load(fs.readFileSync('dist/airport/'+brand.slug+'/index.html','utf8'));edges.set('/airport/'+brand.slug+'/',{previous:$('[data-brand-direction="prev"]').attr('href')!,next:$('[data-brand-direction="next"]').attr('href')!});}
  for(const [route,edge]of edges){assert.notEqual(route,edge.next);assert.equal(edges.get(edge.next)?.previous,route);assert.equal(edges.get(edge.previous)?.next,route);}
- for(const kind of ['airport','vpn']){const start='/airport/'+airports.find(a=>a.kind===kind)!.slug+'/';const seen=new Set<string>();let route=start;while(!seen.has(route)){seen.add(route);route=edges.get(route)!.next;}assert.equal(route,start);assert.equal(seen.size,airports.filter(a=>a.kind===kind).length);}
+ for(const kind of new Set(airports.map(a=>a.kind))){const start='/airport/'+airports.find(a=>a.kind===kind)!.slug+'/';const seen=new Set<string>();let route=start;while(!seen.has(route)){seen.add(route);route=edges.get(route)!.next;}assert.equal(route,start);assert.equal(seen.size,airports.filter(a=>a.kind===kind).length);}
 });
 
 test('new plan narratives keep annual totals, monthly equivalents, one-time quotas and free plans distinct',()=>{
@@ -60,8 +60,7 @@ test('new plan narratives keep annual totals, monthly equivalents, one-time quot
  assert.match(planComparison(brand('edgenova')),/年付周期多 CNY 82/);
  assert.match(planComparison(brand('edgenova')),/每月额度多 250 GB/);
  assert.match(planComparison(brand('feiv')),/一次性总量/);
- assert.match(planComparison(brand('hide-me')),/免费与付费/);
- assert.doesNotMatch(planComparison(brand('hide-me')),/一次性/);
- assert.match(planComparison(brand('windscribe')),/免费与付费/);
- assert.match(planComparison({...brand('windscribe'),plans:[]}),/不能用空白价格推断免费/);
+ const sample=structuredClone(brand('yinxingren'));sample.plans[0]={...sample.plans[0],period:'free',price:0,unlimited:true};
+ assert.match(planComparison(sample),/免费与付费/);assert.doesNotMatch(planComparison(sample),/一次性/);
+ assert.match(planComparison({...sample,plans:[]}),/不能用空白价格推断免费/);
 });

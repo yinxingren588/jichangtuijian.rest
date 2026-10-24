@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {load} from 'cheerio';
 import {coreKeywordTargets,coreReadingRoutes} from '../src/data/core-keywords';
-import {airports,priceText,trafficText} from '../src/data/airports';
 import {readLibrary} from './library';
 
 test('the original eight search themes have explicit owners and pass the rendered coverage audit',()=>{
@@ -22,8 +21,9 @@ test('home and blog reading paths expose six useful guides and keep the existing
  const beginner=load(fs.readFileSync('dist/recommend/beginner/index.html','utf8'));assert.equal(beginner('[data-beginner-guide] ol>li').length,3);assert.ok(beginner('[data-beginner-guide]').text().includes('隐形人固定首位'));
 });
 
-test('the VPN guide uses all five existing VPN records and does not substitute airport charts',()=>{
- const $=load(fs.readFileSync('dist/vpn/index.html','utf8'));const brands=airports.filter(b=>b.kind==='vpn');assert.equal($('[data-vpn-brand]').length,brands.length);
- for(const b of brands){const card=$('[data-vpn-brand="'+b.slug+'"]');assert.equal(card.length,1);const text=card.text();assert.ok(text.includes(priceText(b)));assert.ok(text.includes(trafficText(b)));assert.ok(text.includes('本站暂无该品牌图表'));assert.equal(card.find('a[href="/airport/'+b.slug+'/"]').length,2);assert.equal(card.find('a[href="/compare/?brands='+b.slug+'"]').length,1);}
- assert.equal($('[data-evidence-state="provided"]').length,0);assert.equal($('h1').length,1);assert.ok($('h1').text().includes('VPN推荐'));assert.ok($('a[href="/glossary/vpn/"]').length);assert.ok($('a[href="/blog/nearby-node/"]').length);
+test('the VPN guide retains the original keyword destination without adding outside brand recommendations',()=>{
+ const $=load(fs.readFileSync('dist/vpn/index.html','utf8'));
+ assert.equal($('[data-vpn-brand]').length,0);assert.equal($('h1').length,1);assert.ok($('h1').text().includes('VPN推荐'));
+ for(const path of ['/glossary/vpn/','/blog/nearby-node/','/airport/','/tools/traffic-calculator/'])assert.ok($('main a[href="'+path+'"]').length,path);
+ assert.equal($('main [data-vpn-check]').length,3);
 });

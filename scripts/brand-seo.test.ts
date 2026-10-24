@@ -10,7 +10,7 @@ import {evidenceFor} from '../src/data/evidence';
 import {site} from '../src/data/site';
 
 test('every published brand has independently editable, distinct TDK and a separate visible heading',()=>{
- assert.equal(airports.length,33);
+ assert.equal(airports.length,28);
  assert.deepEqual(Object.keys(brandSeo).sort(),airports.map(b=>b.slug).sort());
  for(const field of ['title','description','heading'] as const)assert.equal(new Set(Object.values(brandSeo).map(s=>s[field])).size,airports.length,field);
  assert.equal(new Set(Object.values(brandSeo).map(s=>s.keywords.join(','))).size,airports.length);
@@ -48,13 +48,14 @@ test('fact rendering keeps payment period, quota period, unknowns and unlimited 
  delete brand.plans[0].trafficGB;assert.match(renderBrandFacts('{{plans}}',brand),/流量额度尚未核实/);
  brand.plans[0].unlimited=true;assert.match(renderBrandFacts('{{plans}}',brand),/官方不限流量/);
  assert.throws(()=>renderBrandFacts('{{typo}}',brand),/Unknown brand fact token/);
- const vpn=structuredClone(airports.find(b=>b.slug==='tunnelbear')!);vpn.plans[0].trafficGB=3;
- const seo=resolveBrandSeo(vpn);assert.match(seo.description,/3 GB\/月/);assert.ok(seo.keywords.some(k=>k.includes('3 GB')));assert.ok(!seo.keywords.some(k=>k.includes('2GB')));
- delete vpn.plans[0].trafficPeriod;assert.match(resolveBrandSeo(vpn).description,/3 GB（重置周期尚未核实）/);
- vpn.deviceLimit='最多 2 台';assert.ok(resolveBrandSeo(vpn,{...brandSeoTemplates[vpn.slug],description:'{{devices}}'}).description.includes('最多 2 台'));
+ const sample=structuredClone(partnerAirports[0]);sample.plans[0].trafficGB=3;
+ const template={...brandSeoTemplates[sample.slug],description:'{{quota:0}} {{devices}}',keywords:['{{quota:0}}']};
+ const seo=resolveBrandSeo(sample,template);assert.match(seo.description,/3 GB\/月/);assert.ok(seo.keywords.some(k=>k.includes('3 GB')));
+ delete sample.plans[0].trafficPeriod;assert.match(resolveBrandSeo(sample,template).description,/3 GB（重置周期尚未核实）/);
+ sample.deviceLimit='最多 2 台';assert.ok(resolveBrandSeo(sample,template).description.includes('最多 2 台'));
 });
 
-test('all 33 brand pages render four distinct authored questions and resolved answers',()=>{
+test('all 28 brand pages render four distinct authored questions and resolved answers',()=>{
  assert.deepEqual(Object.keys(brandFaqTemplates).sort(),airports.map(b=>b.slug).sort());
  const questionSet=new Set<string>();
  for(const brand of airports){
@@ -62,7 +63,7 @@ test('all 33 brand pages render four distinct authored questions and resolved an
   assert.equal(questions.length,4,brand.slug);assert.equal($('.brand-faq').length,4);assert.equal($('.brand-faq[open]').length,1);
   questions.forEach((q,i)=>{questionSet.add(q.question);assert.equal($('.brand-faq summary').eq(i).text(),q.question);assert.equal($('.brand-faq p').eq(i).text(),q.answer);assert.ok(q.answer.length>45,brand.slug);assert.ok(!q.answer.includes('{{'),brand.slug);});
  }
- assert.equal(questionSet.size,132);
+ assert.equal(questionSet.size,112);
 });
 
 test('built brand head, social metadata, H1 and canonical use that brand own values',()=>{
@@ -88,5 +89,4 @@ test('descriptions preserve reference plan amounts, exact coupon case and availa
  for(const slug of ['feimaoyun','firefly','kuaili']){const text=brandSeo[slug].description;assert.ok(text.includes('月均'));assert.ok(text.includes('总额')||text.includes('年费'));assert.ok(text.includes('确认')||text.includes('核对'));}
  assert.match(brandSeo.feiv.description,/200 GB一次性总额度/);assert.match(brandSeo.edgenova.description,/86元\/年、200 GB\/月/);
  for(const b of airports.filter(b=>b.kind==='vpn')){assert.equal(evidenceFor(b.slug),undefined);assert.match(brandSeo[b.slug].description,/暂无.*测速/);}
- assert.match(brandSeo.windscribe.description,/9美元\/月/);assert.match(brandSeo.windscribe.description,/69美元\/年/);assert.match(brandSeo.tunnelbear.description,/2 GB\/月/);
 });

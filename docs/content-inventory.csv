@@ -14,7 +14,7 @@ guides,操作教程 · Android,Android教程：检查Wi-Fi与移动数据切换�
 blog,设备与客户端,Android私人DNS与VPN里的DNS如何一起理解,https://jichangtuijian.rest/blog/android-private-dns/,958,2026-10-23,https://support.google.com/android/answer/9654714?hl=en | https://developer.android.com/develop/connectivity/vpn
 blog,设备与客户端,Android同时启用多个网络工具为什么可能冲突,https://jichangtuijian.rest/blog/android-vpn-slot/,988,2026-10-23,https://developer.android.com/develop/connectivity/vpn
 blog,设备与客户端,工作资料中的应用与个人应用为什么可能走不同网络,https://jichangtuijian.rest/blog/android-work-profile/,972,2026-10-23,https://developer.android.com/develop/connectivity/vpn
-guides,操作教程 · Android,Android 安装与连接检查清单,https://jichangtuijian.rest/guides/android/,1046,2026-10-23,https://support.google.com/android/answer/9089766 | https://protonvpn.com/download-android
+guides,操作教程 · Android,Android 安装与连接检查清单,https://jichangtuijian.rest/guides/android/,1046,2026-10-23,https://support.google.com/android/answer/9089766
 blog,预算与计费,年付折扣是否划算：先计算承诺期内的实际支出,https://jichangtuijian.rest/blog/annual-commitment/,1122,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,节点与线路,同一服务器地址为什么可能连接到不同位置,https://jichangtuijian.rest/blog/anycast-routing/,933,2026-10-23,https://www.rfc-editor.org/rfc/rfc4786
 blog,隐私与凭据,第三方审计报告为什么不能证明永远安全,https://jichangtuijian.rest/blog/audit-scope/,944,2026-10-23,https://jichangtuijian.rest/editorial-policy/
@@ -40,7 +40,7 @@ blog,隐私与凭据,复制订阅到剪贴板后，还需要注意什么,https:/
 blog,应用场景,云端开发环境访问异常，应怎样分层判断,https://jichangtuijian.rest/blog/cloud-development/,932,2026-10-23,https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-your-connection-to-github-codespaces
 blog,流量与额度,云盘同步怎样在不知不觉中消耗额度,https://jichangtuijian.rest/blog/cloud-sync-quota/,908,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,选择与维护,一张有用的套餐比较表，应该保留哪些列,https://jichangtuijian.rest/blog/comparison-template/,948,2026-10-23,https://jichangtuijian.rest/editorial-policy/
-guides,操作教程 · 通用,连接异常怎么排查：一次只验证一个变量,https://jichangtuijian.rest/guides/connection-check/,1042,2026-10-23,https://protonvpn.com/support | https://mullvad.net/en/help
+guides,操作教程 · 通用,连接异常怎么排查：一次只验证一个变量,https://jichangtuijian.rest/guides/connection-check/,1042,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,网络原理,连接复用为什么会影响切换节点后的观察,https://jichangtuijian.rest/blog/connection-reuse/,937,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 blog,证据与编辑,发现价格或教程错误，怎样做清晰的更正,https://jichangtuijian.rest/blog/correction-process/,906,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,优惠码没有标有效期，还能写成长期有效吗,https://jichangtuijian.rest/blog/coupon-expiry/,1114,2026-10-23,https://jichangtuijian.rest/editorial-policy/
@@ -75,7 +75,7 @@ blog,设备与客户端,iPhone中旧VPN配置太多，会产生哪些排错困�
 guides,操作教程 · iOS,iOS教程：查看VPN配置与管理描述文件的区别,https://jichangtuijian.rest/guides/ios-profile-inspection/,753,2026-10-23,https://support.apple.com/en-gb/guide/security/sec802e8ab55/web
 guides,操作教程 · iOS,iOS教程：移除不再使用的个人VPN配置,https://jichangtuijian.rest/guides/ios-remove-personal-vpn/,707,2026-10-23,https://support.apple.com/en-gb/guide/security/sec802e8ab55/web
 guides,操作教程 · iOS,iOS教程：制作不泄露二维码和账户信息的故障截图,https://jichangtuijian.rest/guides/ios-support-screenshot/,705,2026-10-23,https://support.apple.com/en-gb/guide/security/sec802e8ab55/web
-guides,操作教程 · iOS,iOS 使用指南：识别应用与 VPN 配置,https://jichangtuijian.rest/guides/ios/,1101,2026-10-23,https://support.apple.com/guide/iphone/install-or-remove-configuration-profiles-iph6c493b19/ios | https://protonvpn.com/download-ios
+guides,操作教程 · iOS,iOS 使用指南：识别应用与 VPN 配置,https://jichangtuijian.rest/guides/ios/,1101,2026-10-23,https://support.apple.com/guide/iphone/install-or-remove-configuration-profiles-iph6c493b19/ios
 blog,隐私与凭据,检测页看到多个IP，就一定是泄漏吗,https://jichangtuijian.rest/blog/ip-leak-interpretation/,1160,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url | https://www.rfc-editor.org/rfc/rfc1918 | https://www.rfc-editor.org/rfc/rfc8305
 blog,节点与线路,节点支持IPv4是否也代表支持IPv6,https://jichangtuijian.rest/blog/ipv4-ipv6-node/,1124,2026-10-23,https://www.rfc-editor.org/rfc/rfc8305 | https://www.rfc-editor.org/rfc/rfc2330
 blog,网络原理,双栈网络为什么要分别检查IPv4和IPv6,https://jichangtuijian.rest/blog/ipv6-dual-stack/,1184,2026-10-23,https://www.rfc-editor.org/rfc/rfc8305
@@ -99,7 +99,7 @@ blog,设备与客户端,退出Mac客户端后仍无法联网，应该区分什�
 blog,设备与客户端,Mac上的网络扩展授权代表什么,https://jichangtuijian.rest/blog/mac-network-extension/,1169,2026-10-23,https://developer.apple.com/system-extensions/
 guides,操作教程 · macOS,macOS教程：从Wi-Fi切换有线后复核连接,https://jichangtuijian.rest/guides/mac-network-switch/,699,2026-10-23,https://support.apple.com/en-gb/guide/security/sec802e8ab55/web
 blog,设备与客户端,Mac不同网络服务的代理设置为什么可能不同,https://jichangtuijian.rest/blog/mac-proxy-location/,1191,2026-10-23,https://support.apple.com/en-gb/guide/mac-help/mchlp2591/mac
-guides,操作教程 · macOS,macOS 连接指南：网络扩展与代理排错,https://jichangtuijian.rest/guides/macos/,1082,2026-10-23,https://support.apple.com/guide/mac-help/change-vpn-settings-mchlp1570/mac | https://protonvpn.com/download-macos
+guides,操作教程 · macOS,macOS 连接指南：网络扩展与代理排错,https://jichangtuijian.rest/guides/macos/,1082,2026-10-23,https://support.apple.com/guide/mac-help/change-vpn-settings-mchlp1570/mac
 blog,隐私与凭据,设备管理描述文件和VPN配置怎样区分,https://jichangtuijian.rest/blog/managed-profile/,1118,2026-10-23,https://support.apple.com/guide/iphone/install-or-remove-configuration-profiles-iph6c493b19/ios | https://developer.apple.com/documentation/devicemanagement/configuring-multiple-devices-using-profiles
 blog,性能与测量,Mbps与MB每秒怎样换算，为什么仍有误差,https://jichangtuijian.rest/blog/mbps-mbs/,1306,2026-10-23,https://www.rfc-editor.org/rfc/rfc6349
 blog,证据与编辑,可复现与可重复验证，在评测中意味着什么,https://jichangtuijian.rest/blog/measurement-reproducibility/,1143,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
@@ -115,7 +115,7 @@ blog,设备与客户端,同一订阅跨平台使用，哪些设置不应照抄,h
 blog,网络原理,公网IP与设备本地地址分别表示什么,https://jichangtuijian.rest/blog/nat-and-public-ip/,1121,2026-10-23,https://www.rfc-editor.org/rfc/rfc1918 | https://www.rfc-editor.org/rfc/rfc3022
 blog,节点与线路,VPN节点怎么选？距离、地区与延迟的核对方法,https://jichangtuijian.rest/blog/nearby-node/,2167,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency | https://www.rfc-editor.org/rfc/rfc2330
 blog,网络原理,从DNS到应用，怎样建立分层排查顺序,https://jichangtuijian.rest/blog/network-layer-checklist/,1380,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
-blog,隐私与凭据,怎样阅读不记录日志的公开声明,https://jichangtuijian.rest/blog/no-log-claims/,1153,2026-10-23,https://protonvpn.com/support/no-logs-vpn | https://protonvpn.com/privacy-policy
+blog,隐私与凭据,怎样阅读不记录日志的公开声明,https://jichangtuijian.rest/blog/no-log-claims/,1140,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,节点与线路,节点数量与可用节点数量怎样区分,https://jichangtuijian.rest/blog/node-count-quality/,1184,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,客户端延迟颜色为什么不能代替完整测试,https://jichangtuijian.rest/blog/node-latency-color/,1057,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330 | https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency
 blog,节点与线路,节点维护公告应该怎样用于故障判断,https://jichangtuijian.rest/blog/node-maintenance/,1071,2026-10-23,https://jichangtuijian.rest/editorial-policy/
@@ -232,5 +232,5 @@ blog,设备与客户端,为什么Windows上的不同应用不一定遵循同一�
 guides,操作教程 · Windows,Windows教程：检查系统代理与当前应用是否一致,https://jichangtuijian.rest/guides/windows-proxy-state/,803,2026-10-23,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-a-proxy-server-in-windows
 blog,设备与客户端,Windows唤醒后连接失效，怎样缩小排查范围,https://jichangtuijian.rest/blog/windows-sleep-network/,1049,2026-10-23,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows | https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 guides,操作教程 · Windows,Windows教程：排查睡眠唤醒后的连接中断,https://jichangtuijian.rest/guides/windows-sleep-reconnect/,747,2026-10-23,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-a-proxy-server-in-windows
-guides,操作教程 · Windows,Windows 使用前检查：来源、权限与连接验证,https://jichangtuijian.rest/guides/windows/,1099,2026-10-23,https://support.microsoft.com/windows | https://protonvpn.com/download-windows
+guides,操作教程 · Windows,Windows 使用前检查：来源、权限与连接验证,https://jichangtuijian.rest/guides/windows/,1099,2026-10-23,https://support.microsoft.com/windows
 glossary,基础百科,WireGuard 是什么？协议与服务商如何区分,https://jichangtuijian.rest/glossary/wireguard/,575,2026-10-23,https://www.wireguard.com/

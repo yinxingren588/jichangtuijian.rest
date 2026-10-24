@@ -3,9 +3,9 @@ title: "iOS 使用指南：识别应用与 VPN 配置"
 description: "理解 iPhone 上的 VPN 授权，区分订阅配置和设备管理描述文件。"
 section: "guides"
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-24"
 tags: ["客户端", "入门"]
-sources: ["https://support.apple.com/guide/iphone/install-or-remove-configuration-profiles-iph6c493b19/ios", "https://protonvpn.com/download-ios"]
+sources: ["https://support.apple.com/guide/iphone/install-or-remove-configuration-profiles-iph6c493b19/ios"]
 draft: false
 ---
 

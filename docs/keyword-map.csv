@@ -6,7 +6,7 @@
 VPN,理解VPN的作用与适用范围,https://jichangtuijian.rest/glossary/vpn/,Glossary,P0,VPN是什么？VPN机场与商业VPN有什么区别,VPN是什么？VPN机场与商业VPN有什么区别
 VPN机场,区分代理订阅、客户端和商业VPN,https://jichangtuijian.rest/glossary/vpn/,Glossary,P1,VPN是什么？VPN机场与商业VPN有什么区别,VPN是什么？VPN机场与商业VPN有什么区别
 VPN节点,根据任务、地区和连接记录选择服务器,https://jichangtuijian.rest/blog/nearby-node/,Guide,P1,VPN节点怎么选？距离、地区与延迟的核对方法,VPN节点怎么选？距离、地区与延迟的核对方法
-VPN推荐,按已录入套餐和设备条件对照五家VPN,https://jichangtuijian.rest/vpn/,Pillar,P1,VPN推荐选择指南｜五家品牌套餐、流量与设备条件对照,VPN推荐怎么选？先对照条件，再判断适合。
+VPN推荐,按服务类别、套餐、设备与节点条件建立选择清单,https://jichangtuijian.rest/vpn/,Pillar,P1,VPN推荐选择指南｜服务类别、套餐流量与设备核对,VPN推荐怎么选？先明确需求，再核对条件。
 低预算机场怎么选,特定需求选择,https://jichangtuijian.rest/recommend/budget/,Topic,P1,低预算机场推荐｜月付10元以内方案与十品牌对照,低预算机场推荐｜月付10元以内方案与十品牌对照
 高端专线机场怎么选,特定需求选择,https://jichangtuijian.rest/recommend/premium/,Topic,P1,高端专线机场怎么选？IPLC、IEPL与十品牌套餐对照,高端专线机场怎么选？IPLC、IEPL与十品牌套餐对照
 稳定优先机场怎么选,特定需求选择,https://jichangtuijian.rest/recommend/stable/,Topic,P1,稳定机场怎么选？失败率、晚高峰与恢复时间对照,稳定机场怎么选？失败率、晚高峰与恢复时间对照
@@ -279,11 +279,6 @@ Windows教程：验证连接前后的公网出口,具体操作教程,https://jic
 Windows教程：检查系统代理与当前应用是否一致,具体操作教程,https://jichangtuijian.rest/guides/windows-proxy-state/,Tutorial,P1,Windows教程：检查系统代理与当前应用是否一致,Windows教程：检查系统代理与当前应用是否一致
 Windows唤醒后连接失效，怎样缩小排查范围,单一知识问题,https://jichangtuijian.rest/blog/windows-sleep-network/,Article,P1,Windows唤醒后连接失效，怎样缩小排查范围,Windows唤醒后连接失效，怎样缩小排查范围
 Windows教程：排查睡眠唤醒后的连接中断,具体操作教程,https://jichangtuijian.rest/guides/windows-sleep-reconnect/,Tutorial,P1,Windows教程：排查睡眠唤醒后的连接中断,Windows教程：排查睡眠唤醒后的连接中断
-Proton VPN,品牌套餐与条件核对,https://jichangtuijian.rest/airport/proton-vpn/,Brand,P1,Proton VPN怎么样？免费套餐价格、流量与节点测速资料说明,Proton VPN怎么样？
-Mullvad VPN,品牌套餐与条件核对,https://jichangtuijian.rest/airport/mullvad/,Brand,P1,Mullvad VPN怎么样？月付套餐价格、流量条件与节点测速资料,Mullvad VPN怎么样？
-Windscribe VPN,品牌套餐与条件核对,https://jichangtuijian.rest/airport/windscribe/,Brand,P1,Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对,Windscribe VPN怎么样？
-TunnelBear VPN,品牌套餐与条件核对,https://jichangtuijian.rest/airport/tunnelbear/,Brand,P1,TunnelBear VPN怎么样？免费套餐价格、流量与节点测速资料,TunnelBear VPN怎么样？
-hide.me VPN,品牌套餐与条件核对,https://jichangtuijian.rest/airport/hide-me/,Brand,P1,hide.me VPN怎么样？免费与月付套餐价格、流量及节点测速资料,hide.me VPN怎么样？
 流量需求计算器,按任务估算传输、计费与预留额度,https://jichangtuijian.rest/tools/traffic-calculator/,Tool,P1,流量需求计算器｜估算每月GB、计费倍率与套餐额度,流量需求计算器。把每个月，算清楚。
 机场流量怎么算,估算使用周期所需GB并带入参考套餐筛选,https://jichangtuijian.rest/tools/traffic-calculator/,Tool,P1,流量需求计算器｜估算每月GB、计费倍率与套餐额度,流量需求计算器。把每个月，算清楚。
 月付10元以内机场,对照同口径人民币月付与额度,https://jichangtuijian.rest/recommend/budget/,Topic,P1,低预算机场推荐｜月付10元以内方案与十品牌对照,低预算机场推荐｜月付10元以内方案与十品牌对照

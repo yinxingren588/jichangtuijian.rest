@@ -6,6 +6,6 @@ const brandPaths:Record<string,{reason:string;slugs:string[]}>= {
  '流量与额度':{reason:'对照按月标示的流量与一次性总额度，避免把不同发放方式混用。',slugs:['feiv','kexincloud','ermaoyun']},
  '节点与线路':{reason:'看看套餐名称中的线路标签如何记录，未知的网络字段仍需另行核验。',slugs:['laddercloud','lingmao','kuaili']},
  '选择与维护':{reason:'从完整品牌档案建立自己的候选清单，再使用比较工具记录差异。',slugs:['muguang','wuyou','stardream']},
- '证据与编辑':{reason:'查看参考套餐档案与官方资料档案的来源标记，了解两类证据的边界。',slugs:['yinxingren','proton-vpn','mullvad']}
+ '证据与编辑':{reason:'对照品牌参考套餐与维护者图表，区分公开资料、提供截图和独立实测。',slugs:['yinxingren','muguang','breezenet']}
 };
 export function brandPathsFor(entry:Entry){const match=entry.data.section==='blog'?brandPaths[categoryFor(entry)]:undefined;return match?{reason:match.reason,brands:match.slugs.map(s=>airports.find(a=>a.slug===s)!)}:null;}

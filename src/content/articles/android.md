@@ -3,9 +3,9 @@ title: "Android 安装与连接检查清单"
 description: "核对 Android 应用来源、VPN 权限、后台限制和配置保密。"
 section: "guides"
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-24"
 tags: ["客户端", "入门"]
-sources: ["https://support.google.com/android/answer/9089766", "https://protonvpn.com/download-android"]
+sources: ["https://support.google.com/android/answer/9089766"]
 draft: false
 ---
 

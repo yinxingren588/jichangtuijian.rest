@@ -3,9 +3,9 @@ title: "macOS 连接指南：网络扩展与代理排错"
 description: "检查 Mac 客户端来源、网络扩展授权和断开后的系统代理状态。"
 section: "guides"
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-24"
 tags: ["客户端", "入门"]
-sources: ["https://support.apple.com/guide/mac-help/change-vpn-settings-mchlp1570/mac", "https://protonvpn.com/download-macos"]
+sources: ["https://support.apple.com/guide/mac-help/change-vpn-settings-mchlp1570/mac"]
 draft: false
 ---
 

@@ -3,9 +3,9 @@ title: "Windows 使用前检查：来源、权限与连接验证"
 description: "在 Windows 上先核对发布渠道，再建立可重复的连接验证流程。"
 section: "guides"
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-24"
 tags: ["客户端", "入门"]
-sources: ["https://support.microsoft.com/windows", "https://protonvpn.com/download-windows"]
+sources: ["https://support.microsoft.com/windows"]
 draft: false
 ---
 

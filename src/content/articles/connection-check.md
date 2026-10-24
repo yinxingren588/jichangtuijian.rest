@@ -3,9 +3,9 @@ title: "连接异常怎么排查：一次只验证一个变量"
 description: "用分层排查区分本地网络、配置、节点和目标服务故障。"
 section: "guides"
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-24"
 tags: ["客户端", "稳定性"]
-sources: ["https://protonvpn.com/support", "https://mullvad.net/en/help"]
+sources: ["https://jichangtuijian.rest/editorial-policy/"]
 draft: false
 ---
 

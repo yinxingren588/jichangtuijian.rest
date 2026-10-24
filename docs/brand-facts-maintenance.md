@@ -1,8 +1,8 @@
 # 品牌 TDK 与问答的资料联动
 
-2026-10-24。33 个独立品牌保留自己的 Title、Description、Keywords 和 H1；不把品牌页面改成同一段文案。
+2026-10-24。28个独立品牌保留自己的 Title、Description、Keywords 和 H1；不把品牌页面改成同一段文案。
 
-机场套餐由 `src/data/brand-catalogue.json` 维护，5 家 VPN 的对应字段在 `src/data/airports.ts`。TDK 文案在 `src/data/brand-seo.json`。模板内的事实在构建时解析，页面的套餐表、搜索描述、OG/Twitter 描述使用相同字段。
+机场套餐由 `src/data/brand-catalogue.json` 维护，`src/data/airports.ts`仅加载这28个品牌。TDK 文案在 `src/data/brand-seo.json`。模板内的事实在构建时解析，页面的套餐表、搜索描述、OG/Twitter 描述使用相同字段。
 
 | 占位符 | 含义 |
 | --- | --- |
@@ -19,7 +19,7 @@
 
 独立标题与 H1 可单独编辑；若套餐模型由年付改为月付等，应重新审阅标题与固定说明是否仍准确；要改变品牌定位或适用场景，仍需审阅相应文案。已有其他编辑段落、首屏提示、优惠参考说明及图表中的历史数字不在本次自动联动范围，资料更新时应一并审阅，不能据本功能声称全站所有历史文字都会自动改写。
 
-新增 99 条问答在 `src/data/brand-faq.json`，与原有 33 条问答合成每品牌 4 条。新问答中的套餐与优惠事实支持相同占位符；不要把动态占位符改回重复维护的硬编码价格。旧问答保留原有编辑内容。
+84条补充问答在 `src/data/brand-faq.json`，与原有28条问答合成每品牌 4 条。新问答中的套餐与优惠事实支持相同占位符；不要把动态占位符改回重复维护的硬编码价格。旧问答保留原有编辑内容。
 
 验证与导出顺序：`npm run build`、`npm test`、`npm run check`、`npm run export:tdk`、`npm run export:faq`。导出会核对实际生成的页面。测试用临时克隆数据改变价格、额度、代码及空缺状态，不修改真实品牌资料。
 

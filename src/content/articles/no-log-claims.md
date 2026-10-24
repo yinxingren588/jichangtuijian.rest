@@ -6,7 +6,7 @@ published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["隐私", "隐私与凭据"]
 category: "隐私与凭据"
-sources: ["https://protonvpn.com/support/no-logs-vpn", "https://protonvpn.com/privacy-policy"]
+sources: ["https://jichangtuijian.rest/editorial-policy/"]
 related: ["/blog/audit-scope/", "/blog/official-reference-test/", "/blog/log-redaction/", "/blog/vpn-https-boundary/"]
 draft: false
 ---
@@ -15,7 +15,7 @@ draft: false
 
 ## 按数据类别读，而不是只找一句承诺
 
-厂商公开说明可以作为声明来源，但与独立技术验证不同。例如Proton VPN有专门的不记录日志说明，读者仍需连同当前隐私政策核对产品与数据类别。本页借此解释阅读方法，不为该厂商或其他品牌提供本站认证。
+厂商公开说明可以作为声明来源，但与独立技术验证不同。读者应同时核对当前隐私政策、对应产品和数据类别，把宣传用语与实际条款逐项对照。本页解释阅读方法，不为任何品牌提供本站认证。
 
 | 类别 | 值得核对的问题 | 容易混淆之处 |
 | --- | --- | --- |

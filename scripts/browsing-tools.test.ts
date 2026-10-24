@@ -26,13 +26,13 @@ test('six overview tables retain all ten ranked brands, matching billing terms, 
  assert.ok(!ai('[data-overview-brand="edgenova"]').text().includes('CNY 86 / 月付'));
 });
 
-test('all 33 brand first-screen cues remain distinct and preserve the existing plan and evidence summaries',()=>{
+test('all 28 brand first-screen cues remain distinct and preserve the existing plan and evidence summaries',()=>{
  assert.deepEqual(Object.keys(brandFit).sort(),airports.map(a=>a.slug).sort());
- assert.equal(new Set(Object.values(brandFit).map(f=>f.audience)).size,33);
+ assert.equal(new Set(Object.values(brandFit).map(f=>f.audience)).size,28);
  for(const brand of airports){const $=load(fs.readFileSync('dist/airport/'+brand.slug+'/index.html','utf8'));const fit=$('[data-brand-fit="'+brand.slug+'"]');
   assert.equal(fit.length,1);assert.equal(fit.find('div').length,3);
   for(const text of Object.values(brandFit[brand.slug])){assert.ok(fit.text().includes(text));assert.ok(text.length<40);assert.doesNotMatch(text,/保证|实测第一|百分之百|全平台解锁/);}
   assert.equal($('[data-brand-snapshot] .snapshot-grid>div').length,4);assert.equal($('.brand-mobile-actions').length,1);
  }
- assert.match(brandFit.feimaoyun.caution,/年付月均/);assert.match(brandFit.edgenova.caution,/年付/);assert.match(brandFit.windscribe.caution,/尚未核实/);
+ assert.match(brandFit.feimaoyun.caution,/年付月均/);assert.match(brandFit.edgenova.caution,/年付/);
 });

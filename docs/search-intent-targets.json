@@ -2,8 +2,8 @@
   "updated": "2026-10-24",
   "scope": "编辑规划与实际目标页核对；未获取搜索量、排名、展现或点击数据。",
   "passed": true,
-  "keywords": 153,
-  "pages": 44,
+  "keywords": 138,
+  "pages": 39,
   "rows": [
     {
       "keyword": "机场推荐",
@@ -13,7 +13,7 @@
       "group": "原始核心词",
       "title": "机场推荐与节点选择指南｜品牌套餐、优惠与连接知识 · 航线笔记",
       "h1": "机场推荐。先看清选择。",
-      "incomingPages": 316
+      "incomingPages": 311
     },
     {
       "keyword": "机场节点",
@@ -33,7 +33,7 @@
       "group": "原始核心词",
       "title": "性价比机场怎么算：周期、倍率与每 GB 成本 · 航线笔记",
       "h1": "性价比机场怎么算：周期、倍率与每 GB 成本",
-      "incomingPages": 54
+      "incomingPages": 49
     },
     {
       "keyword": "梯子推荐",
@@ -53,7 +53,7 @@
       "group": "原始核心词",
       "title": "VPN是什么？VPN机场与商业VPN有什么区别 · 航线笔记",
       "h1": "VPN是什么？VPN机场与商业VPN有什么区别",
-      "incomingPages": 12
+      "incomingPages": 11
     },
     {
       "keyword": "VPN机场",
@@ -63,7 +63,7 @@
       "group": "原始核心词",
       "title": "VPN是什么？VPN机场与商业VPN有什么区别 · 航线笔记",
       "h1": "VPN是什么？VPN机场与商业VPN有什么区别",
-      "incomingPages": 12
+      "incomingPages": 11
     },
     {
       "keyword": "VPN节点",
@@ -78,12 +78,12 @@
     {
       "keyword": "VPN推荐",
       "url": "/vpn/",
-      "intent": "按已录入套餐和设备条件对照五家VPN",
+      "intent": "按服务类别、套餐、设备与节点条件建立选择清单",
       "priority": "P0",
       "group": "原始核心词",
-      "title": "VPN推荐选择指南｜五家品牌套餐、流量与设备条件对照 · 航线笔记",
-      "h1": "VPN推荐怎么选？先对照条件，再判断适合。",
-      "incomingPages": 8
+      "title": "VPN推荐选择指南｜服务类别、套餐流量与设备核对 · 航线笔记",
+      "h1": "VPN推荐怎么选？先明确需求，再核对条件。",
+      "incomingPages": 7
     },
     {
       "keyword": "低预算机场推荐",
@@ -113,7 +113,7 @@
       "group": "用量工具",
       "title": "流量需求计算器｜估算每月GB、计费倍率与套餐额度 · 航线笔记",
       "h1": "流量需求计算器。把每个月，算清楚。",
-      "incomingPages": 56
+      "incomingPages": 51
     },
     {
       "keyword": "机场流量怎么算",
@@ -123,7 +123,7 @@
       "group": "用量工具",
       "title": "流量需求计算器｜估算每月GB、计费倍率与套餐额度 · 航线笔记",
       "h1": "流量需求计算器。把每个月，算清楚。",
-      "incomingPages": 56
+      "incomingPages": 51
     },
     {
       "keyword": "不限时流量和月付怎么选",
@@ -203,7 +203,7 @@
       "group": "品牌选择",
       "title": "暮光网络机场怎么样？套餐价格、月付流量与节点测速 · 航线笔记",
       "h1": "暮光网络机场怎么样？",
-      "incomingPages": 22
+      "incomingPages": 33
     },
     {
       "keyword": "暮光网络机场套餐价格",
@@ -213,7 +213,7 @@
       "group": "品牌套餐",
       "title": "暮光网络机场怎么样？套餐价格、月付流量与节点测速 · 航线笔记",
       "h1": "暮光网络机场怎么样？",
-      "incomingPages": 22
+      "incomingPages": 33
     },
     {
       "keyword": "暮光网络机场流量额度",
@@ -223,7 +223,7 @@
       "group": "品牌套餐",
       "title": "暮光网络机场怎么样？套餐价格、月付流量与节点测速 · 航线笔记",
       "h1": "暮光网络机场怎么样？",
-      "incomingPages": 22
+      "incomingPages": 33
     },
     {
       "keyword": "暮光网络机场节点测速",
@@ -233,7 +233,7 @@
       "group": "品牌图表",
       "title": "暮光网络机场怎么样？套餐价格、月付流量与节点测速 · 航线笔记",
       "h1": "暮光网络机场怎么样？",
-      "incomingPages": 22
+      "incomingPages": 33
     },
     {
       "keyword": "微风网络机场怎么样",
@@ -243,7 +243,7 @@
       "group": "品牌选择",
       "title": "微风网络机场怎么样？Breezenet套餐价格、流量与节点测速 · 航线笔记",
       "h1": "微风网络机场怎么样？",
-      "incomingPages": 36
+      "incomingPages": 47
     },
     {
       "keyword": "微风网络机场套餐价格",
@@ -253,7 +253,7 @@
       "group": "品牌套餐",
       "title": "微风网络机场怎么样？Breezenet套餐价格、流量与节点测速 · 航线笔记",
       "h1": "微风网络机场怎么样？",
-      "incomingPages": 36
+      "incomingPages": 47
     },
     {
       "keyword": "微风网络机场流量额度",
@@ -263,7 +263,7 @@
       "group": "品牌套餐",
       "title": "微风网络机场怎么样？Breezenet套餐价格、流量与节点测速 · 航线笔记",
       "h1": "微风网络机场怎么样？",
-      "incomingPages": 36
+      "incomingPages": 47
     },
     {
       "keyword": "微风网络机场节点测速",
@@ -273,7 +273,7 @@
       "group": "品牌图表",
       "title": "微风网络机场怎么样？Breezenet套餐价格、流量与节点测速 · 航线笔记",
       "h1": "微风网络机场怎么样？",
-      "incomingPages": 36
+      "incomingPages": 47
     },
     {
       "keyword": "微风网络机场优惠码",
@@ -283,7 +283,7 @@
       "group": "品牌优惠",
       "title": "微风网络机场怎么样？Breezenet套餐价格、流量与节点测速 · 航线笔记",
       "h1": "微风网络机场怎么样？",
-      "incomingPages": 36
+      "incomingPages": 47
     },
     {
       "keyword": "飞猫云机场怎么样",
@@ -1384,156 +1384,6 @@
       "title": "快狸机场怎么样？KuaiLi套餐价格、年付月均流量与节点测速 · 航线笔记",
       "h1": "快狸机场怎么样？",
       "incomingPages": 29
-    },
-    {
-      "keyword": "Proton VPN怎么样",
-      "url": "/airport/proton-vpn/",
-      "intent": "了解品牌资料、适用场景与证据范围",
-      "priority": "P1",
-      "group": "品牌选择",
-      "title": "Proton VPN怎么样？免费套餐价格、流量与节点测速资料说明 · 航线笔记",
-      "h1": "Proton VPN怎么样？",
-      "incomingPages": 19
-    },
-    {
-      "keyword": "Proton VPN套餐价格",
-      "url": "/airport/proton-vpn/",
-      "intent": "核对已录入金额、币种与付款周期",
-      "priority": "P1",
-      "group": "品牌套餐",
-      "title": "Proton VPN怎么样？免费套餐价格、流量与节点测速资料说明 · 航线笔记",
-      "h1": "Proton VPN怎么样？",
-      "incomingPages": 19
-    },
-    {
-      "keyword": "Proton VPN流量额度",
-      "url": "/airport/proton-vpn/",
-      "intent": "核对已录入容量、发放周期与未知条件",
-      "priority": "P2",
-      "group": "品牌套餐",
-      "title": "Proton VPN怎么样？免费套餐价格、流量与节点测速资料说明 · 航线笔记",
-      "h1": "Proton VPN怎么样？",
-      "incomingPages": 19
-    },
-    {
-      "keyword": "Mullvad VPN怎么样",
-      "url": "/airport/mullvad/",
-      "intent": "了解品牌资料、适用场景与证据范围",
-      "priority": "P1",
-      "group": "品牌选择",
-      "title": "Mullvad VPN怎么样？月付套餐价格、流量条件与节点测速资料 · 航线笔记",
-      "h1": "Mullvad VPN怎么样？",
-      "incomingPages": 18
-    },
-    {
-      "keyword": "Mullvad VPN套餐价格",
-      "url": "/airport/mullvad/",
-      "intent": "核对已录入金额、币种与付款周期",
-      "priority": "P1",
-      "group": "品牌套餐",
-      "title": "Mullvad VPN怎么样？月付套餐价格、流量条件与节点测速资料 · 航线笔记",
-      "h1": "Mullvad VPN怎么样？",
-      "incomingPages": 18
-    },
-    {
-      "keyword": "Mullvad VPN流量额度",
-      "url": "/airport/mullvad/",
-      "intent": "核对已录入容量、发放周期与未知条件",
-      "priority": "P2",
-      "group": "品牌套餐",
-      "title": "Mullvad VPN怎么样？月付套餐价格、流量条件与节点测速资料 · 航线笔记",
-      "h1": "Mullvad VPN怎么样？",
-      "incomingPages": 18
-    },
-    {
-      "keyword": "Windscribe VPN怎么样",
-      "url": "/airport/windscribe/",
-      "intent": "了解品牌资料、适用场景与证据范围",
-      "priority": "P1",
-      "group": "品牌选择",
-      "title": "Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对 · 航线笔记",
-      "h1": "Windscribe VPN怎么样？",
-      "incomingPages": 6
-    },
-    {
-      "keyword": "Windscribe VPN套餐价格",
-      "url": "/airport/windscribe/",
-      "intent": "核对已录入金额、币种与付款周期",
-      "priority": "P1",
-      "group": "品牌套餐",
-      "title": "Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对 · 航线笔记",
-      "h1": "Windscribe VPN怎么样？",
-      "incomingPages": 6
-    },
-    {
-      "keyword": "Windscribe VPN流量额度",
-      "url": "/airport/windscribe/",
-      "intent": "核对已录入容量、发放周期与未知条件",
-      "priority": "P2",
-      "group": "品牌套餐",
-      "title": "Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对 · 航线笔记",
-      "h1": "Windscribe VPN怎么样？",
-      "incomingPages": 6
-    },
-    {
-      "keyword": "TunnelBear VPN怎么样",
-      "url": "/airport/tunnelbear/",
-      "intent": "了解品牌资料、适用场景与证据范围",
-      "priority": "P1",
-      "group": "品牌选择",
-      "title": "TunnelBear VPN怎么样？免费套餐价格、流量与节点测速资料 · 航线笔记",
-      "h1": "TunnelBear VPN怎么样？",
-      "incomingPages": 7
-    },
-    {
-      "keyword": "TunnelBear VPN套餐价格",
-      "url": "/airport/tunnelbear/",
-      "intent": "核对已录入金额、币种与付款周期",
-      "priority": "P1",
-      "group": "品牌套餐",
-      "title": "TunnelBear VPN怎么样？免费套餐价格、流量与节点测速资料 · 航线笔记",
-      "h1": "TunnelBear VPN怎么样？",
-      "incomingPages": 7
-    },
-    {
-      "keyword": "TunnelBear VPN流量额度",
-      "url": "/airport/tunnelbear/",
-      "intent": "核对已录入容量、发放周期与未知条件",
-      "priority": "P2",
-      "group": "品牌套餐",
-      "title": "TunnelBear VPN怎么样？免费套餐价格、流量与节点测速资料 · 航线笔记",
-      "h1": "TunnelBear VPN怎么样？",
-      "incomingPages": 7
-    },
-    {
-      "keyword": "hide.me VPN怎么样",
-      "url": "/airport/hide-me/",
-      "intent": "了解品牌资料、适用场景与证据范围",
-      "priority": "P1",
-      "group": "品牌选择",
-      "title": "hide.me VPN怎么样？免费与月付套餐价格、流量及节点测速资料 · 航线笔记",
-      "h1": "hide.me VPN怎么样？",
-      "incomingPages": 7
-    },
-    {
-      "keyword": "hide.me VPN套餐价格",
-      "url": "/airport/hide-me/",
-      "intent": "核对已录入金额、币种与付款周期",
-      "priority": "P1",
-      "group": "品牌套餐",
-      "title": "hide.me VPN怎么样？免费与月付套餐价格、流量及节点测速资料 · 航线笔记",
-      "h1": "hide.me VPN怎么样？",
-      "incomingPages": 7
-    },
-    {
-      "keyword": "hide.me VPN流量额度",
-      "url": "/airport/hide-me/",
-      "intent": "核对已录入容量、发放周期与未知条件",
-      "priority": "P2",
-      "group": "品牌套餐",
-      "title": "hide.me VPN怎么样？免费与月付套餐价格、流量及节点测速资料 · 航线笔记",
-      "h1": "hide.me VPN怎么样？",
-      "incomingPages": 7
     }
   ]
 }

@@ -2535,9 +2535,9 @@
       "published": "2026-10-23",
       "updated": "2026-10-24",
       "beforeCharacters": 583,
-      "afterCharacters": 1153,
+      "afterCharacters": 1140,
       "beforeBodySha256": "ea953675cb1f9879d984a16869f8b4a34555ac175af745c0d7477121cc502eac",
-      "afterBodySha256": "44be673a1ae9ab9cb882cc7e178d0822b7f11d5b5ef5cedadaf6cddb8002485d",
+      "afterBodySha256": "7d90c55daf8da792adef801b975ff50a6ed75cbe000788948a7e4542ec26c49a",
       "focus": "不记录日志声明中数据类别和适用范围",
       "distinction": "与audit-scope区分：先解读政策字段，审计只作核对一环。",
       "related": [
@@ -2547,10 +2547,9 @@
         "/blog/vpn-https-boundary/"
       ],
       "sources": [
-        "https://protonvpn.com/support/no-logs-vpn",
-        "https://protonvpn.com/privacy-policy"
+        "https://jichangtuijian.rest/editorial-policy/"
       ],
-      "reviewNotes": "本文操作框架和自设情境属于编辑建议；未新增品牌报价、亲测结论或环境信息。"
+      "reviewNotes": "独立编辑方法；已按维护者要求移除非本站品牌示例，不构成品牌隐私认证或实测。"
     },
     {
       "index": 98,

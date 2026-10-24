@@ -1,27 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
-import {airports,priceText,trafficText} from '../data/airports';
-import {brandFit} from '../data/brand-fit';
 import {keywordsForPath} from '../data/core-keywords';
-import {site} from '../data/site';
-const brands=airports.filter(b=>b.kind==='vpn');
-const title='VPN推荐选择指南｜五家品牌套餐、流量与设备条件对照';
-const description='VPN推荐从使用条件开始：按免费试用、月付预算与协议配置需求，对照Proton VPN、Mullvad、Windscribe、TunnelBear及hide.me的已录入套餐、流量和设备资料。未知字段保留，本站暂无这些品牌的节点测速图。';
-const schema=[{'@type':'ItemList',name:'商业VPN套餐与条件参考资料',numberOfItems:brands.length,itemListElement:brands.map((b,i)=>({'@type':'ListItem',position:i+1,name:b.name,url:site.url+'/airport/'+b.slug+'/'}))}];
+const title='VPN推荐选择指南｜服务类别、套餐流量与设备核对';
+const description='VPN推荐先明确任务，再核对服务类别、付款周期、流量额度、设备和节点条件。本页提供选择清单、配置教程与本站品牌资料入口，帮助区分VPN应用、机场订阅和客户端，避免把宣传或单次截图当作长期使用保证。';
 ---
-<Base title={title} description={description} keywords={keywordsForPath('/vpn/')} breadcrumbs={[{name:'VPN推荐选择指南',url:'/vpn/'}]} schema={schema}>
- <header class="page-intro"><p class="eyebrow">VPN / CHOOSE BY CONDITIONS</p><h1>VPN推荐怎么选？<br/>先对照条件，再判断适合。</h1><p>{description}</p><p class="muted">页面更新：2026-10-24 · 套餐资料查看日期以各品牌档案为准</p></header>
- <nav class="vpn-route-nav" aria-label="VPN指南目录"><a href="#vpn-selection">按需求选择 ↓</a><a href="#vpn-brands">五家品牌条件 ↓</a><a href="#vpn-checklist">购买前核对 ↓</a><a href="/blog/nearby-node/">VPN节点选择方法 ↗</a></nav>
- <section aria-labelledby="vpn-selection"><div class="section-head"><div><p class="eyebrow">YOUR REQUIREMENTS</p><h2 id="vpn-selection">把“适合我”变成几个明确条件。</h2><p>本页依据本站已录入的公开资料给出阅读路径，品牌展示顺序不代表速度、隐私或稳定性排名。</p></div></div>
- <div class="vpn-summary-grid"><div><h2>先了解免费方案</h2><p>可以从Proton VPN、Windscribe、TunnelBear和hide.me档案中的免费资料开始，分别看额度、设备与功能范围。免费档条件不能直接代替付费权益，某项额度未知时也不能补成不限量。</p><a class="text-link" href="/airport/proton-vpn/">阅读Proton VPN条件 →</a></div><div><h2>关注完整月度支出</h2><p>Mullvad、Windscribe与hide.me档案有独立月付记录，可先看币种、周期、税费与设备条件。不同币种不直接按数字高低排序；促销月均与完整月付也应分开。</p><a class="text-link" href="/compare/?brands=mullvad,hide-me">并列核对这两家 →</a></div><div><h2>需要协议与配置资料</h2><p>Windscribe档案已补充免费月度额度、9美元月付和69美元完整年费，并保留多协议配置与设备说明。先确认系统、配置生成方式和账号条件，再判断是否符合自己的实际任务。</p><a class="text-link" href="/airport/windscribe/">阅读Windscribe条件 →</a></div></div>
- </section>
- <a class="selection-tool-link" href="/tools/traffic-calculator/"><div><strong>有限额度是否够用，先按任务估算。</strong><span>填入视频、会议与文件消耗；不限流量、设备限制与平台资格分别判断。</span></div><b aria-hidden="true">↗</b></a>
- <section aria-labelledby="vpn-brands"><div class="section-head"><div><p class="eyebrow">FIVE BRAND RECORDS</p><h2 id="vpn-brands">五家VPN，分别看清已有资料。</h2><p>价格、流量与连接数各保留原始口径。本轮复核了对应公开字段；没有进行登录后结算、付款或独立连接测试。</p></div></div>
- <div class="vpn-brand-grid">{brands.map(b=><article data-vpn-brand={b.slug}><span class="tag neutral">商业VPN · 公开资料</span><h3><a href={'/airport/'+b.slug+'/'}>{b.name}</a></h3><p>{brandFit[b.slug].audience}。{brandFit[b.slug].highlight}。</p><dl><div><dt>已录入价格 / 付款周期</dt><dd>{priceText(b)}</dd></div><div><dt>流量与发放条件</dt><dd>{trafficText(b)}</dd></div><div><dt>设备连接条件</dt><dd>{b.deviceLimit||'尚未核实'}</dd></div><div><dt>协议记录</dt><dd>{b.protocols.join('、')||'本次资料未录入，需继续核对'}</dd></div><div><dt>节点测速与解锁图</dt><dd>本站暂无该品牌图表，不以机场截图替代。</dd></div></dl><p>{brandFit[b.slug].caution}。{b.disadvantages.join('；')}。</p><div class="vpn-card-links"><a href={'/airport/'+b.slug+'/'}>完整品牌档案 ↗</a><a href={'/compare/?brands='+b.slug}>加入比较工具 ⇄</a><button type="button" class="save-brand" data-save-brand={b.slug} aria-label={'候选清单：'+b.name} aria-pressed="false" hidden>加入候选 +</button></div></article>)}</div>
- </section>
- <section class="vpn-method" aria-labelledby="vpn-checklist"><p class="eyebrow">BEFORE THE DECISION</p><h2 id="vpn-checklist">VPN推荐清单怎样变成自己的决定？</h2><p>先写明设备、任务、目标地区和付款范围，再逐项排除明显不满足条件的方案。不要把设备连接数量当作允许共享账号的证明，也不要把某项官方声明扩展成所有网络下的使用保证。</p>
- <ol><li><strong>确定服务类别。</strong>如果实际需要的是代理订阅配置，先读<a href="/glossary/vpn/">VPN与VPN机场的区别</a>，再到<a href="/recommend/beginner/">梯子推荐与新手入门</a>按另一组条件筛选。</li><li><strong>核对账单与权益。</strong>记录原价、完整周期、流量发放、设备与续费条件。已录入数据不代表当前结算不变，未知项可以继续查阅品牌档案中的原始资料。</li><li><strong>确认软件来源和支持。</strong>从可信渠道核对系统要求、安装权限与配置格式。安装客户端和取得套餐权益是不同步骤，需要分别确认。</li><li><strong>验证自己的任务。</strong>按<a href="/blog/nearby-node/">VPN节点选择方法</a>记录实际地区、目标与连接结果，保留失败样本。不把能打开登录页当作取得目标平台使用资格。</li><li><strong>保留退出方式。</strong>查看退款、自动续费与停止使用的条件，再决定是否承诺更长周期。候选可存入<a href="/airport/#my-brands">我的清单</a>，也可用<a href="/guides/prepare-comparison-sheet/">对比链接与本机保存</a>找回。</li></ol>
- <h2>速度、解锁与隐私为什么没有综合评分？</h2><p>本站目前没有这五家VPN的独立测速、平台状态或长期使用记录。公开套餐、设备条件和配置功能分别回答不同问题，不能代替性能、日志处理与服务可信度的完整审查。因此这里展示可以核对的条件和阅读路径，缺失证据继续保留。</p>
- <h2>接下来可以读什么？</h2><p>需要理解节点名称时读<a href="/blog/node-name-labels/">机场节点资料怎么看</a>；需要统一付款口径时读<a href="/blog/plan-cost/">性价比机场成本计算</a>，其中的周期区分也适用于整理VPN账单。回到<a href="/">机场推荐总览</a>，可以继续按任务查找品牌、教程与比较工具。</p>
+<Base title={title} description={description} keywords={keywordsForPath('/vpn/')} breadcrumbs={[{name:'VPN推荐选择指南',url:'/vpn/'}]}>
+ <header class="page-intro"><p class="eyebrow">VPN / CHOOSE BY CONDITIONS</p><h1>VPN推荐怎么选？<br/>先明确需求，再核对条件。</h1><p>{description}</p><p class="muted">页面更新：2026-10-24</p></header>
+ <nav class="vpn-route-nav" aria-label="VPN指南目录"><a href="#vpn-selection">按需求选择 ↓</a><a href="#vpn-checklist">购买前核对 ↓</a><a href="/blog/nearby-node/">VPN节点选择方法 ↗</a><a href="/airport/">浏览本站品牌 ↗</a></nav>
+ <section aria-labelledby="vpn-selection"><div class="section-head"><div><p class="eyebrow">YOUR REQUIREMENTS</p><h2 id="vpn-selection">先把需求写成三个具体问题。</h2><p>服务、订阅与客户端各自解决不同问题。先确认自己需要哪一类，再查对应权益；本站品牌目录收录维护者提供的28家机场参考档案。</p></div></div>
+ <div class="vpn-summary-grid">
+  <div data-vpn-check><h2>需要什么服务？</h2><p>先区分带独立应用的VPN服务、代理节点订阅和客户端软件。安装软件不代表已取得订阅权益，订阅名称也不能直接说明连接范围。确认设备、目标任务与配置格式，才能找到对应核对项。</p><a class="text-link" href="/glossary/vpn/">理解VPN与VPN机场 →</a></div>
+  <div data-vpn-check><h2>接受怎样的账单？</h2><p>分开记录实际付款周期、完整金额和流量发放方式。年付月均、月付实付和一次性总额度应分别比较；优惠码是否适用、续费金额与退款条件，需要在当前结算条款确认。</p><a class="text-link" href="/blog/plan-cost/">统一套餐成本口径 →</a></div>
+  <div data-vpn-check><h2>在哪些设备上完成任务？</h2><p>写明系统、使用人数和目标地区，再检查客户端来源、配置兼容及设备限制。设备连接数不等于账号共享权限；能打开登录页，也不代表具备目标平台的账号或地区资格。</p><a class="text-link" href="/guides/">按设备查看操作教程 →</a></div>
+ </div></section>
+ <a class="selection-tool-link" href="/tools/traffic-calculator/"><div><strong>先估算任务用量，再查看套餐。</strong><span>按视频、会议、文件与人数估算GB，随后分别核对流量倍率、有效期和重置规则。</span></div><b aria-hidden="true">↗</b></a>
+ <section class="vpn-method" aria-labelledby="vpn-checklist"><p class="eyebrow">BEFORE THE DECISION</p><h2 id="vpn-checklist">按这个顺序建立自己的选择清单。</h2>
+ <ol><li><strong>确定服务类别。</strong>先读<a href="/glossary/vpn/">VPN与VPN机场的区别</a>。需要代理节点订阅时，可到<a href="/recommend/beginner/">新手入门专题</a>了解订阅核对步骤。</li><li><strong>记录完整权益。</strong>逐项写下套餐金额、币种、付款周期、流量发放与设备条件。未知项保持待确认，不因缺少数字推断免费或无限制。</li><li><strong>检查软件与配置。</strong>核对可信发布渠道、系统要求和配置格式。保护订阅链接、二维码与账号信息，避免公开分享含凭据的文件。</li><li><strong>验证实际任务。</strong>参照<a href="/blog/nearby-node/">VPN节点选择方法</a>固定设备和目标，记录时间、网络与结果，同时保留失败样本。</li><li><strong>确认停止使用的方式。</strong>查看自动续费、取消、退款和额度到期规则，再决定是否承诺更长付款周期。</li></ol>
+ <h2>本站品牌资料可以怎样使用？</h2><p><a href="/airport/">28家品牌资料库</a>提供维护者指定的机场参考套餐、优惠码和图表入口。需要导入订阅的服务与独立VPN应用应分开理解；按具体品牌核对配置和权益，不根据搜索名称推断服务类别。可以把自己的候选放到<a href="/compare/">比较工具</a>，或使用<a href="/airport/#my-brands">我的清单</a>保存阅读进度。</p>
+ <h2>为什么仍要核对测速与隐私证据？</h2><p>套餐额度与设备说明不能证明持续吞吐、平台可用性或隐私处理。维护者提供的图表可以帮助查看当时记录，仍需结合网络环境、测试时间和适用范围；隐私声明与独立审计也应分别阅读。需要长期判断时，按<a href="/blog/stability-method/">稳定性记录方法</a>保留多时段的成功与失败样本。</p>
+ <h2>接下来可以读什么？</h2><p>看<a href="/blog/node-name-labels/">机场节点资料</a>了解名称与权限，读<a href="/blog/buying-checklist/">购买前检查清单</a>整理待确认项，再回到<a href="/">机场推荐总览</a>按任务选择资料入口。</p>
  </section>
 </Base>

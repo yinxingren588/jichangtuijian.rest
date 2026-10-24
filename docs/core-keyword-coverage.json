@@ -1,8 +1,8 @@
 {
   "updated": "2026-10-24",
   "scope": "实际构建HTML的关键词落地与正文内链检查，不等于收录、排名或流量测量。",
-  "htmlPages": 317,
-  "indexablePages": 311,
+  "htmlPages": 312,
+  "indexablePages": 306,
   "keywordCount": 8,
   "passed": true,
   "rows": [
@@ -92,8 +92,7 @@
         "/",
         "/recommend/beginner/",
         "/recommend/budget/",
-        "/tools/traffic-calculator/",
-        "/vpn/"
+        "/tools/traffic-calculator/"
       ]
     },
     {
@@ -115,8 +114,7 @@
         "/blog/",
         "/blog/plan-cost/",
         "/glossary/vpn/",
-        "/",
-        "/vpn/"
+        "/"
       ]
     },
     {
@@ -135,7 +133,6 @@
         "canonical": true
       },
       "incomingPages": [
-        "/airport/proton-vpn/",
         "/blog/",
         "/blog/nearby-node/",
         "/glossary/",
@@ -164,7 +161,6 @@
         "canonical": true
       },
       "incomingPages": [
-        "/airport/proton-vpn/",
         "/blog/",
         "/blog/nearby-node/",
         "/glossary/",
@@ -210,10 +206,10 @@
     {
       "keyword": "VPN推荐",
       "url": "/vpn/",
-      "intent": "按已录入套餐和设备条件对照五家VPN",
-      "title": "VPN推荐选择指南｜五家品牌套餐、流量与设备条件对照 · 航线笔记",
-      "h1": "VPN推荐怎么选？先对照条件，再判断适合。",
-      "description": "VPN推荐从使用条件开始：按免费试用、月付预算与协议配置需求，对照Proton VPN、Mullvad、Windscribe、TunnelBear及hide.me的已录入套餐、流量和设备资料。未知字段保留，本站暂无这些品牌的节点测速图。",
+      "intent": "按服务类别、套餐、设备与节点条件建立选择清单",
+      "title": "VPN推荐选择指南｜服务类别、套餐流量与设备核对 · 航线笔记",
+      "h1": "VPN推荐怎么选？先明确需求，再核对条件。",
+      "description": "VPN推荐先明确任务，再核对服务类别、付款周期、流量额度、设备和节点条件。本页提供选择清单、配置教程与本站品牌资料入口，帮助区分VPN应用、机场订阅和客户端，避免把宣传或单次截图当作长期使用保证。",
       "checks": {
         "title": true,
         "description": true,
@@ -223,7 +219,6 @@
         "canonical": true
       },
       "incomingPages": [
-        "/airport/",
         "/blog/",
         "/blog/nearby-node/",
         "/blog/plan-cost/",
