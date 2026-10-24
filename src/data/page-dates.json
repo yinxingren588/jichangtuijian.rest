@@ -13,7 +13,7 @@
   "/editorial-policy/": "2026-10-23",
   "/privacy-policy/": "2026-10-23",
   "/disclaimer/": "2026-10-23",
-  "/recommend/budget/": "2026-10-23",
+  "/recommend/budget/": "2026-10-24",
   "/recommend/premium/": "2026-10-23",
   "/recommend/beginner/": "2026-10-24",
   "/recommend/stable/": "2026-10-23",
@@ -74,5 +74,6 @@
   "/blog/category/workflow/": "2026-10-23",
   "/evidence/": "2026-10-23",
   "/vpn/": "2026-10-24",
-  "/search/": "2026-10-24"
+  "/search/": "2026-10-24",
+  "/tools/traffic-calculator/": "2026-10-24"
 }

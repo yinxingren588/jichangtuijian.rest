@@ -219,7 +219,7 @@ blog,流量与额度,上传流量是否计入套餐，为什么必须先问清,h
 blog,流量与额度,知道视频码率后，怎样估算流量需求,https://jichangtuijian.rest/blog/video-bitrate-budget/,593,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
 blog,应用场景,游戏能玩但语音异常，为什么要分别排查,https://jichangtuijian.rest/blog/voice-chat-versus-game/,557,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,隐私与凭据,使用VPN之后，HTTPS仍然重要吗,https://jichangtuijian.rest/blog/vpn-https-boundary/,570,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-glossary,基础百科,VPN是什么？VPN机场与商业VPN有什么区别,https://jichangtuijian.rest/glossary/vpn/,1696,2026-10-23,https://www.cloudflare.com/learning/access-management/what-is-a-vpn/
+glossary,基础百科,VPN是什么？VPN机场与商业VPN有什么区别,https://jichangtuijian.rest/glossary/vpn/,1840,2026-10-23,https://www.cloudflare.com/learning/access-management/what-is-a-vpn/
 blog,性能与测量,冷启动与已连接状态的体验怎样分别观察,https://jichangtuijian.rest/blog/warm-cold-start/,569,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,隐私与凭据,WebRTC相关地址信息为什么需要结合浏览器说明,https://jichangtuijian.rest/blog/webrtc-addresses/,577,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,网络原理,长连接应用为什么可能在网络切换后失效,https://jichangtuijian.rest/blog/websocket-long-session/,583,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview

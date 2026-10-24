@@ -1,6 +1,7 @@
 ---
 import Coupon from './Coupon.astro';
 import BeginnerSelectionGuide from './BeginnerSelectionGuide.astro';
+import BudgetSelectionGuide from './BudgetSelectionGuide.astro';
 import {topics} from '../data/site';
 import {planPriceText,planTrafficText} from '../data/airports';
 import {topicRanking,topicRankingRules,type TopicSlug} from '../data/topic-rankings';
@@ -12,6 +13,7 @@ const rules=topicRankingRules[slug];
 <div class="topic-browser" data-topic-browser>
 <nav class="topic-tabs" aria-label="六个品牌排行专题">{topics.map(t=><a href={'/recommend/'+t.slug+'/'} aria-current={t.slug===slug?'page':undefined}>{t.name}<span>10</span></a>)}</nav>
 {slug==='beginner'&&<BeginnerSelectionGuide/>}
+{slug==='budget'&&<BudgetSelectionGuide/>}
 <section class="topic-leaderboard" aria-labelledby="topic-ranking-heading" data-topic-ranking={slug}>
  <div class="section-head"><div><p class="eyebrow">TOP 10 / EDITOR'S LIST</p><h2 id="topic-ranking-heading">{topic.name} · 十品牌参考排行</h2><p>套餐、流量与图表入口，一次看清。</p></div><a class="text-link" href={'/compare/?brands='+rows.slice(0,2).map(r=>r.brand.slug).join(',')}>对比榜单前两家 ⇄</a></div>
  <div class="topic-method" id="topic-ranking-method"><strong>{rules.label}</strong><p>{rules.method}</p><details><summary>查看数据口径与适用范围</summary><p>{rules.limit}</p><p>这是编辑参考排行，包含站点指定展示位；不设虚构评分。图表由维护者提供，尚未独立复测。机场品牌含推广链接，本站可能获得佣金。<a href="/editorial-policy/">完整排序说明 ↗</a></p></details></div>

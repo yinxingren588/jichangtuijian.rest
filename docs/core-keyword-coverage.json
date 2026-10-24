@@ -1,8 +1,8 @@
 {
   "updated": "2026-10-24",
   "scope": "实际构建HTML的关键词落地与正文内链检查，不等于收录、排名或流量测量。",
-  "htmlPages": 316,
-  "indexablePages": 310,
+  "htmlPages": 317,
+  "indexablePages": 311,
   "keywordCount": 8,
   "passed": true,
   "rows": [
@@ -12,7 +12,7 @@
       "intent": "从预算、套餐、节点与使用条件开始选择",
       "title": "机场推荐与节点选择指南｜品牌套餐、优惠与连接知识 · 航线笔记",
       "h1": "机场推荐。先看清选择。",
-      "description": "机场推荐从预算、流量和使用条件开始。航线笔记整理28家机场参考套餐、优惠码与节点测速图，提供性价比比较、节点选择、VPN概念和品牌对照指南，配合200篇文章与30篇教程逐项核对。",
+      "description": "机场推荐从预算、月度用量和节点需求开始。对照28家机场参考套餐、优惠码与测速图，按月付、低预算或一次性总量建立候选；使用流量需求计算器估算额度，再查看品牌条件、成本方法与配置教程。",
       "checks": {
         "title": true,
         "description": true,
@@ -127,6 +127,8 @@
         "/guides/read-source-price-conflict/",
         "/",
         "/recommend/beginner/",
+        "/recommend/budget/",
+        "/tools/traffic-calculator/",
         "/vpn/"
       ]
     },

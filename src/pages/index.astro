@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import OrbitArt from '../components/OrbitArt.astro';
 import CoreReadingRoutes from '../components/CoreReadingRoutes.astro';
+import HomeSelectionGuide from '../components/HomeSelectionGuide.astro';
 import {partnerAirports,planPriceText,planTrafficText} from '../data/airports';
 import {getCollection} from 'astro:content';
 import {ordered,categoryFor} from '../lib/content';
@@ -12,11 +13,12 @@ const selected=['yinxingren','breezenet','feimaoyun'].map(slug=>partnerAirports.
 const planCount=partnerAirports.reduce((sum,a)=>sum+a.plans.length,0);
 const couponCount=partnerAirports.filter(a=>a.coupon).length;
 ---
-<Base title="机场推荐与节点选择指南｜品牌套餐、优惠与连接知识" description="机场推荐从预算、流量和使用条件开始。航线笔记整理28家机场参考套餐、优惠码与节点测速图，提供性价比比较、节点选择、VPN概念和品牌对照指南，配合200篇文章与30篇教程逐项核对。" keywords={["机场推荐"]}>
+<Base title="机场推荐与节点选择指南｜品牌套餐、优惠与连接知识" description="机场推荐从预算、月度用量和节点需求开始。对照28家机场参考套餐、优惠码与测速图，按月付、低预算或一次性总量建立候选；使用流量需求计算器估算额度，再查看品牌条件、成本方法与配置教程。" keywords={["机场推荐"]}>
 <section class="tech-hero" aria-labelledby="hero-title">
- <div class="hero-copy"><p class="eyebrow"><span class="light-dot"></span> 把复杂的选择，变得清楚</p><h1 id="hero-title">机场推荐。<br/><em>先看清选择。</em></h1><p class="hero-description">机场推荐从预算和任务开始。<br/>价格、流量、节点与使用方法，一处看清。</p><div class="hero-actions"><a class="button" href="/airport/">探索品牌套餐 <span>↗</span></a><a class="quiet-button" href="/compare/">打开比较工具 <span>→</span></a></div><div class="hero-meta"><a href="/airport/"><b>{partnerAirports.length}</b><span>机场品牌</span></a><a href="/airport/"><b>{planCount}</b><span>参考套餐</span></a><a href="/airport/"><b>{couponCount}</b><span>优惠码</span></a></div></div>
+ <div class="hero-copy"><p class="eyebrow"><span class="light-dot"></span> 把复杂的选择，变得清楚</p><h1 id="hero-title">机场推荐。<br/><em>先看清选择。</em></h1><p class="hero-description">机场推荐从预算和任务开始。<br/>价格、流量、节点与使用方法，一处看清。</p><div class="hero-actions"><a class="button" href="/airport/">探索品牌套餐 <span>↗</span></a><a class="quiet-button" href="/tools/traffic-calculator/">估算月度流量 <span>→</span></a><a class="quiet-button" href="/compare/">打开比较工具 <span>→</span></a></div><div class="hero-meta"><a href="/airport/"><b>{partnerAirports.length}</b><span>机场品牌</span></a><a href="/airport/"><b>{planCount}</b><span>参考套餐</span></a><a href="/airport/"><b>{couponCount}</b><span>优惠码</span></a></div></div>
  <div class="hero-visual"><OrbitArt/><div class="visual-label top-label"><span>资料索引</span><b>品牌 / 价格 / 流量</b></div><div class="visual-label bottom-label"><span>使用指南</span><b>{posts.length} 篇文章 · {guides.length} 篇教程</b></div></div>
 </section>
+<HomeSelectionGuide/>
 <section class="plan-section" aria-labelledby="plan-title"><div class="section-head"><div><p class="eyebrow">BRAND EXPLORER</p><h2 id="plan-title">从品牌，到适合你的方案。</h2></div><a href="/airport/" class="text-link">全部品牌 ↗</a></div><div class="plan-grid">{selected.map(a=><a class="plan-card" href={'/airport/'+a.slug+'/'}><div class="card-brand"><span class="brand-monogram" aria-hidden="true">{a.name[0]}</span><span>{a.name}<small>第三方参考套餐</small></span><span class="tiny-arrow" aria-hidden="true">↗</span></div><p class="plan-price">{planPriceText(a.plans[0])}</p><p class="plan-traffic">{planTrafficText(a.plans[0])}</p><div class="card-bottom"><span>{a.coupon?<>优惠码 <code>{a.coupon.code}</code></>:'查看全部套餐'}</span><span>查看档案 →</span></div></a>)}</div><p class="fine-print">价格与流量为第三方参考，尚未验证商家结算；优惠码的折扣、适用范围与有效期未验证。品牌含推广链接，本站可能获得佣金。展示顺序不代表排名。</p></section>
 <CoreReadingRoutes/>
 <div class="modern-resources"><a href="/guides/"><span>01 / GET STARTED</span><h2>配置不复杂。<br/>一步一步来。</h2><p>Windows、macOS、iOS 与 Android 操作指南。</p><b>打开 {guides.length} 篇教程 →</b></a><a href="/blog/"><span>02 / KNOW THE DIFFERENCE</span><h2>把参数读明白。<br/>选择更有把握。</h2><p>预算、流量、线路、隐私与实际使用需求。</p><b>阅读 {posts.length} 篇知识文章 →</b></a></div>

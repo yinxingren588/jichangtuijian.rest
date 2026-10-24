@@ -1,0 +1,13 @@
+---
+import {monthlyExample,lowMonthlyExamples,onceExample,calculatorPath} from '../data/selection-examples';
+import {planPriceText,planTrafficText} from '../data/airports';
+import {compactQuota} from '../lib/brand-facts';
+const once=onceExample.plans.find(p=>p.period==='one-time');
+---
+<section class="selection-guide home-selection" aria-labelledby="home-selection-heading" data-home-selection>
+ <div class="section-head"><div><p class="eyebrow">FIND YOUR FIT / 按需求选</p><h2 id="home-selection-heading">机场推荐，先对照自己的用法。</h2><p>持续使用、控制预算和偶尔备用，需要看的条件各不相同。</p></div><a class="text-link" href={calculatorPath}>先估算每月流量 ↗</a></div>
+ <div class="selection-cards"><article class="selection-card"><span class="selection-number">01 / 持续按月使用</span><h3>先看用量，再选容量。</h3><p>用<a href={'/airport/'+monthlyExample.slug+'/'}>{monthlyExample.name}</a>的两档月付作对照。确认完整周期消耗，再问新增容量是否解决实际缺口。</p><dl>{monthlyExample.plans.filter(p=>p.period==='month').map(p=><div><dt>{planPriceText(p)}</dt><dd>{planTrafficText(p)}</dd></div>)}</dl><a class="text-link" href={'/airport/'+monthlyExample.slug+'/'}>查看套餐与节点图 →</a></article>
+ <article class="selection-card"><span class="selection-number">02 / 控制每月支出</span><h3>把实付和月均分开。</h3><p>以下示例仅取人民币月付、不超过10元的参考档位；先看对应容量，再核对目标节点。</p><ul>{lowMonthlyExamples.map(({brand,plan})=><li><a href={'/airport/'+brand.slug+'/'}>{brand.name}</a><span>{plan.price}元/月 · {compactQuota(plan)}</span></li>)}</ul><a class="text-link" href="/recommend/budget/">低预算机场选择与十品牌对照 →</a></article>
+ <article class="selection-card"><span class="selection-number">03 / 偶尔连接或备用</span><h3>按累计总量安排。</h3><p>一次性额度和每月重置是两种模型。以<a href={'/airport/'+onceExample.slug+'/'}>{onceExample.name}</a>所录入的总量档为例，闲置与有效条件仍要确认。</p>{once&&<dl><div><dt>{planPriceText(once)}</dt><dd>{planTrafficText(once)}</dd></div></dl>}<a class="text-link" href="/blog/one-time-versus-reset/">月度额度与一次性总量怎么选 →</a></article></div>
+ <p class="selection-footnote">套餐来自现有参考资料，不代表已核验当前结算或连接能力。此处按需求提供阅读示例；六专题的编辑顺序与各品牌完整条件见对应页面。</p>
+</section>

@@ -1,0 +1,15 @@
+---
+const {vpn=false}=Astro.props as {vpn?:boolean};
+const rows=vpn?[
+ ['网页与日常应用','目标服务允许地区、客户端与账号条件','首次打开、重复请求、准确提示','/blog/speed-versus-response/','网页响应和下载速度'],
+ ['远程会议或长连接','组织允许的连接方式、上传与UDP支持','持续任务、中断、恢复时间','/blog/remote-meeting-priority/','会议任务检查'],
+ ['文件与同步','单次文件大小、计费与断点处理','完整完成时间、失败与重试','/blog/large-upload-workflow/','长时间上传准备'],
+ ['特定平台功能','官方支持范围、账号套餐和付款资格','登录、实际任务与错误类型分别记录','/blog/platform-supported-region/','平台地区与IP标签'],
+ ]:[
+ ['先查目标地区','所购档实际可见的节点','名称里有地区，不代表该档都包含','/blog/node-subscription-range/','节点与套餐权限'],
+ ['再查计费口径','节点倍率、上传扣量与重置日','低倍率宣传不能替代实际规则','/blog/mixed-multiplier/','混合倍率核算'],
+ ['区分线路与任务','入口、出口、目标与客户端条件','专线标签不等于端到端质量证明','/blog/line-labels/','专线名称怎样判断'],
+ ['最后做同条件对照','相同设备、运营商、目标和时段','保留失败记录，别只选最好一次','/guides/run-controlled-node-test/','同条件节点测试'],
+ ];
+---
+<section class="selection-guide node-task-guide" aria-labelledby="node-task-guide-heading" data-node-task-guide><p class="eyebrow">MAKE IT PRACTICAL</p><h2 id="node-task-guide-heading">{vpn?'VPN节点选择，按实际任务继续核对。':'机场节点选择，把标签变成核对顺序。'}</h2><div class="table-wrap selection-reference-table" role="region" aria-label="节点任务核对表，可横向滚动" tabindex="0"><table><caption>{vpn?'任务、条件与观察分开记录':'节点选择的四步检查'}</caption><thead><tr>{(vpn?['任务','先确认的条件','实际观察','继续阅读']:['顺序','核对什么','容易混淆什么','继续阅读']).map(label=><th scope="col">{label}</th>)}</tr></thead><tbody>{rows.map(row=><tr><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td><td><a href={row[3]}>{row[4]} →</a></td></tr>)}</tbody></table></div><p>确定候选后，可在<a href="/compare/">套餐与图表比较工具</a>保留2–4家，或用<a href="/tools/traffic-calculator/">流量需求计算器</a>先估算额度。自己的任务记录与商家权益要分别确认，不能只按截图峰值形成长期结论。</p></section>

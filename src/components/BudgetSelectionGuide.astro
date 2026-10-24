@@ -1,0 +1,12 @@
+---
+import {lowMonthlyExamples,annualExample,onceExample,calculatorPath} from '../data/selection-examples';
+import {planPriceText,planTrafficText} from '../data/airports';
+const annual=annualExample.plans.find(p=>p.period==='year'&&p.priceKind!=='monthly-equivalent');
+const once=onceExample.plans.find(p=>p.period==='one-time');
+---
+<section class="selection-guide budget-selection" aria-labelledby="budget-selection-heading" data-budget-selection>
+ <p class="eyebrow">BUDGET / 先把账单看清</p><h2 id="budget-selection-heading">月付10元以内机场，先看这一档买到什么。</h2><p>低预算机场选择先确认付款周期与流量，而不是把年付月均、一年总价和单月实付混在一起。以下是同一付款口径的参考方案，不按单次测速为它们打分。</p>
+ <div class="table-wrap selection-reference-table" role="region" aria-label="低预算参考套餐表，可横向滚动" tabindex="0"><table><caption>已收录的人民币月付、不超过10元方案 · 当前参考记录</caption><thead><tr><th scope="col">品牌档案</th><th scope="col">同一档参考价格</th><th scope="col">对应流量</th></tr></thead><tbody>{lowMonthlyExamples.map(({brand,plan})=><tr data-budget-example={brand.slug}><th scope="row"><a href={'/airport/'+brand.slug+'/'}>{brand.name} ↗</a></th><td>{planPriceText(plan)}</td><td>{planTrafficText(plan)}</td></tr>)}</tbody></table></div>
+ <div class="selection-cards"><div class="selection-card"><h3>先估算够不够用</h3><p>相同月付上限下，容量可能不同。将视频、上传、同步与临时任务一起估算，再核对倍率和重置日。小额度不自动适合多设备，大额度也不证明更快。</p><a class="text-link" href={calculatorPath}>流量需求计算器 →</a></div><div class="selection-card"><h3>偶尔用，看总量条件</h3>{once&&<p>{onceExample.name}的参考总量档为{planPriceText(once)}、{planTrafficText(once)}。这是累计消耗模型，不能按每月重领计算；账户有效条件仍需核对。</p>}<a class="text-link" href="/blog/one-time-versus-reset/">读懂一次性总量 →</a></div><div class="selection-card"><h3>长周期，看完整支出</h3>{annual&&<p>{annualExample.name}首档参考为{planPriceText(annual)}、{planTrafficText(annual)}。付款按年，额度按月标示；完整年费不能当作月付，退款与续费需另外确认。</p>}<a class="text-link" href="/blog/annual-commitment/">年付是否适合自己 →</a></div></div>
+ <div class="selection-actions"><a class="button secondary" href="/airport/?period=month&amp;max=10#brand-filters">筛选月付10元以内参考套餐 ↗</a><a class="text-link" href="/blog/plan-cost/">性价比机场成本与倍率方法 →</a></div><p class="selection-footnote">上表是按字段筛出的低价示例；下方十品牌榜单继续采用已公布的编辑排序。优惠不自动计入价格，商家当前结算与真实可用量仍需核对。</p>
+</section>
