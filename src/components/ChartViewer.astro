@@ -9,7 +9,7 @@ function showChart(index:number){
  current=(index+links.length)%links.length;const link=links[current];
  const title=link.dataset.chartTitle||'高清图表';
  viewer.querySelector('#chart-viewer-title')!.textContent=title;
- image.alt=title+'，维护者提供';image.src=link.href;
+ image.alt=title+'，站长实测';image.src=link.href;
  const download=viewer.querySelector<HTMLAnchorElement>('[data-chart-download]')!;download.href=link.href;download.download=title+'.png';
  viewer.querySelector('[data-chart-position]')!.textContent=`${current+1} / ${links.length} · 高清 PNG`;
  viewer.classList.remove('original-size');zoom.setAttribute('aria-pressed','false');zoom.textContent='原始尺寸';

@@ -5,7 +5,7 @@ import {brandEditorials} from './brand-editorials';
 export type TopicSlug='budget'|'premium'|'beginner'|'stable'|'ai'|'streaming';
 export interface TopicRankingRow {rank:number;brand:Airport;plan:Plan;reason:string;metric:{label:string;value:string};chartTime?:string}
 export const topicRankingRules:Record<TopicSlug,{label:string;method:string;limit:string}>={
- budget:{label:'月付参考价从低到高',method:'仅选人民币、按月付费且标价为当期总额的套餐，每家取最低月付价。按价格升序排列，同价先看标示月流量，再沿用品牌清单顺序；取前 10 家。',limit:'年付月均价、年付总额与不限时套餐不混排，不扣减未验证优惠。价格和流量沿用本站参考档案，尚未验证商家当前结算。'},
+ budget:{label:'月付参考价从低到高',method:'仅选人民币、按月付费且标价为当期总额的套餐，每家取最低月付价。按价格升序排列，同价先看标示月流量，再沿用品牌清单顺序；取前 10 家。',limit:'年付月均价、年付总额与不限时套餐不混排，不扣减尚未确认金额的优惠。价格和流量沿用本站参考档案，尚未验证商家当前结算。'},
  premium:{label:'沿用品牌清单前十位',method:'依照站点收录品牌的原始顺序，取前 10 家：隐形人、暮光网络、微风网络、飞猫云、大佬云、飞V、梯子云、灵动云、Firefly机场、灵猫。',limit:'这是站点指定的专题展示顺序。套餐名称与图表标签不能单独确认专线类型；具体入口、跨境段、带宽和共享范围仍需向商家核对。'},
  beginner:{label:'隐形人首位 · 编辑选择顺序',method:'隐形人固定首位；其余优先安排有短周期月付入口、不同价位和流量档位可比较的品牌，方便首次订阅者从小额验证开始。',limit:'编辑顺序不代表客服、客户端或退款体验已通过测试。先核对设备兼容、可信下载入口、续费和退出条件。'},
  stable:{label:'隐形人首位 · 连接延迟观察',method:'隐形人固定首位；其余按已收录图表中的平均 TLS 握手耗时从低到高取 9 家，同值沿用品牌清单顺序，便于建立后续观察清单。',limit:'平均 TLS 耗时只反映图中节点的握手记录，不代表长期稳定性。各图未证明同环境，尚缺多时段失败率、抖动与恢复日志，本专题不是长期稳定性实测榜。'},

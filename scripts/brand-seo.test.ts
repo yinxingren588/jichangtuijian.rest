@@ -84,7 +84,7 @@ test('descriptions preserve reference plan amounts, exact coupon case and availa
  for(const b of partnerAirports){const text=brandSeo[b.slug].description;
   for(const p of b.plans){assert.ok(text.includes(String(p.price)),b.slug+' price');assert.ok(text.includes(String(p.trafficGB)+' GB'),b.slug+' traffic');}
   if(b.coupon)assert.ok(text.includes(b.coupon.code),b.slug+' coupon');
-  assert.ok(evidenceFor(b.slug));assert.match(text,/未独立复测|不代表独立复测/,b.slug);assert.ok(text.includes('图'));
+  assert.ok(evidenceFor(b.slug));assert.match(text,/站长.*实测/,b.slug);assert.ok(text.includes('图'));
  }
  for(const slug of ['feimaoyun','firefly','kuaili']){const text=brandSeo[slug].description;assert.ok(text.includes('月均'));assert.ok(text.includes('总额')||text.includes('年费'));assert.ok(text.includes('确认')||text.includes('核对'));}
  assert.match(brandSeo.feiv.description,/200 GB一次性总额度/);assert.match(brandSeo.edgenova.description,/86元\/年、200 GB\/月/);

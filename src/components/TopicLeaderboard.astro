@@ -18,8 +18,8 @@ const rules=topicRankingRules[slug];
 <TopicSelectionGuide slug={slug}/>
 <section class="topic-leaderboard" aria-labelledby="topic-ranking-heading" data-topic-ranking={slug}>
  <div class="section-head"><div><p class="eyebrow">TOP 10 / EDITOR'S LIST</p><h2 id="topic-ranking-heading">{topic.name} · 十品牌参考排行</h2><p>套餐、流量与图表入口，一次看清。</p></div><a class="text-link" href={'/compare/?brands='+rows.slice(0,2).map(r=>r.brand.slug).join(',')}>对比榜单前两家 ⇄</a></div>
- <div class="topic-method" id="topic-ranking-method"><strong>{rules.label}</strong><p>{rules.method}</p><details><summary>查看数据口径与适用范围</summary><p>{rules.limit}</p><p>这是编辑参考排行，包含站点指定展示位；不设虚构评分。图表由维护者提供，尚未独立复测。机场品牌含推广链接，本站可能获得佣金。<a href="/editorial-policy/">完整排序说明 ↗</a></p></details></div>
- <p class="fine-print">套餐为参考资料；图表由维护者提供，尚未独立复测。名次依照上述编辑口径展示。</p>
+ <div class="topic-method" id="topic-ranking-method"><strong>{rules.label}</strong><p>{rules.method}</p><details><summary>查看数据口径与适用范围</summary><p>{rules.limit}</p><p>这是编辑参考排行，包含站点指定展示位；不设虚构评分。图表由站长本人实测。机场品牌含推广链接，本站可能获得佣金。<a href="/editorial-policy/">完整排序说明 ↗</a></p></details></div>
+ <p class="fine-print">套餐为参考资料；图表由站长本人实测。名次依照上述编辑口径展示。</p>
  <div class="topic-overview" id="topic-overview" aria-labelledby="topic-overview-heading">
   <div class="topic-overview-heading"><div><p class="eyebrow">COMPARE AT A GLANCE</p><h3 id="topic-overview-heading">十品牌总览</h3></div><a href="#topic-detailed-list" class="text-link">直接看详细介绍 ↓</a></div>
   <form action="/compare/" method="get" class="topic-selection-toolbar" data-topic-selection-toolbar hidden><input type="hidden" name="brands" data-topic-selected-values/><p role="status" aria-live="polite" data-topic-selection-status>勾选 2–4 个品牌，放在一起比较。</p><div><button type="button" data-topic-selection-clear disabled>清空</button><button type="submit" class="button" data-topic-selection-submit disabled>对比已选（0/4） ⇄</button></div></form>

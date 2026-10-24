@@ -15,7 +15,7 @@ export function compactPlan(p:Plan):string {
 export function renderBrandFacts(template:string,brand:Airport):string {
  const tokens:Record<string,string>={
   plans:brand.plans.length?brand.plans.map(compactPlan).join('；'):'套餐价格、流量额度尚未录入',
-  coupon:brand.coupon?`优惠码${brand.coupon.code}的折扣、适用范围与有效期须核对。`:'未记录可用优惠码，折扣条件待核对。',
+  coupon:brand.coupon?(brand.coupon.validity==='permanent'?`优惠码${brand.coupon.code}对应优惠价永久有效；折扣与适用范围按方案确认。`:`优惠码${brand.coupon.code}的折扣、适用范围与有效期须核对。`):'未记录可用优惠码，折扣条件待核对。',
   couponCode:brand.coupon?.code||'',
   devices:brand.deviceLimit||'设备限制尚未核实',
   protocols:brand.protocols.join('、')||'协议尚未核实',

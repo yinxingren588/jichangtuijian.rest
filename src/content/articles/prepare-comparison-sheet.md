@@ -15,7 +15,7 @@ draft: false
 
 ## 适用范围
 
-适用于本站的[品牌资料库](/airport/#brand-filters)、[我的清单](/airport/#my-brands)与[比较工具](/compare/#compare-workspace)。示例品牌只用于说明界面，不代表实测推荐。参考价格、优惠状态与维护者提供的图表仍各自保留核验范围。
+适用于本站的[品牌资料库](/airport/#brand-filters)、[我的清单](/airport/#my-brands)与[比较工具](/compare/#compare-workspace)。示例品牌只用于说明界面，不代表实测推荐。参考价格、优惠状态与站长实测图表仍各自保留核验范围。
 
 ## 开始前准备
 
@@ -41,7 +41,7 @@ draft: false
 
 先看“套餐条件”中的付款周期、流量发放和未知字段，再切换“测速与解锁”。读图时先看时间、样本和单位：MB/s不是Mbps，绿色节点数不是请求成功率。不同日期或环境的图表不能直接变成同条件速度排名。点表格下方的品牌入口，可继续检查原图中的常用地区和节点。
 
-<figure class="guide-interface"><a href="/guides/comparison-tool.jpg" target="_blank" rel="noopener"><img src="/guides/comparison-tool.jpg" width="1265" height="712" loading="lazy" decoding="async" alt="本站比较工具当前界面，包含套餐与测速视图、复制对比链接、保存到本机及恢复已保存按钮。"/></a><figcaption>本站实际界面：品牌与视图同步到网址；“复制对比链接”用于分享，“保存到本机”用于在当前浏览器找回。表格中的图表由维护者提供，尚未独立复测。点击图片可查看完整尺寸。</figcaption></figure>
+<figure class="guide-interface"><a href="/guides/comparison-tool.jpg" target="_blank" rel="noopener"><img src="/guides/comparison-tool.jpg" width="1265" height="712" loading="lazy" decoding="async" alt="本站比较工具当前界面，包含套餐与测速视图、复制对比链接、保存到本机及恢复已保存按钮。"/></a><figcaption>本站实际界面：品牌与视图同步到网址；“复制对比链接”用于分享，“保存到本机”用于在当前浏览器找回。表格中的图表由站长本人实测。点击图片可查看完整尺寸。</figcaption></figure>
 
 ### 第5步：选择链接或本机保存
 

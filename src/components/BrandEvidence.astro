@@ -4,10 +4,10 @@ import ChartGallery from './ChartGallery.astro';
 interface Props {record:EvidenceRecord;headingId?:string;hub?:boolean}
 const {record:r,headingId='performance-evidence',hub=false}=Astro.props;
 ---
-<section aria-labelledby={headingId} class="brand-evidence" data-evidence-state="provided" data-evidence-brand={r.slug}>
- <div class="evidence-heading"><div><p class="eyebrow">CHART ARCHIVE / 图表档案</p><h2 id={headingId}>{hub?r.name+' · 图表资料':'节点测速与流媒体解锁图'}</h2></div><span class="tag neutral">维护者提供</span></div>
- <p>收录 {r.name} 的节点测速图与流媒体、AI 平台状态图。{r.slug==='yinxingren'?'本次采用隐形人 IEPL 专线高清修订版；IEPL 为提供图中的线路标注。':''}以下摘要转录自所附汇总图，本站未独立复测，也未取得原始测试日志。</p>
- <dl class="evidence-context"><div><dt>图示场景时间 · 时区未注明</dt><dd><time>{r.time}</time></dd></div><div><dt>图示样本 / 地区</dt><dd>{r.nodeCount} 个节点 · 港 / 日 / 新 / 美 / 台</dd></div><div><dt>来源 / 收录日期</dt><dd>维护者提供图表 · 2026-10-23</dd></div><div><dt>本地运营商 / 设备 / 带宽</dt><dd>未提供</dd></div></dl>
+<section aria-labelledby={headingId} class="brand-evidence" data-evidence-state="provided" data-evidence-brand={r.slug} data-test-author={r.testedBy}>
+ <div class="evidence-heading"><div><p class="eyebrow">CHART ARCHIVE / 图表档案</p><h2 id={headingId}>{hub?r.name+' · 图表资料':'节点测速与流媒体解锁图'}</h2></div><span class="tag neutral">站长本人实测</span></div>
+ <p>收录 {r.name} 的节点测速图与流媒体、AI 平台状态图。{r.slug==='yinxingren'?'本次采用隐形人 IEPL 专线高清修订版；IEPL 为提供图中的线路标注。':''}图表由站长本人完成并确认是真实测试数据；以下摘要转录自所附汇总图，原始测试日志尚未在本站公开。</p>
+ <dl class="evidence-context"><div><dt>图示场景时间 · 时区未注明</dt><dd><time>{r.time}</time></dd></div><div><dt>图示样本 / 地区</dt><dd>{r.nodeCount} 个节点 · 港 / 日 / 新 / 美 / 台</dd></div><div><dt>来源 / 收录日期</dt><dd>站长实测 · 2026-10-23 收录</dd></div><div><dt>本地运营商 / 设备 / 带宽</dt><dd>待站长补充</dd></div></dl>
  <div class="evidence-metrics"><div><span>图示平均下载</span><strong>{r.averageDownloadMBps.toFixed(2)} <small>MB/s</small></strong></div><div><span>图示最高峰值</span><strong>{r.peakDownloadMBps.toFixed(2)} <small>MB/s</small></strong></div><div><span>平均 TLS RTT</span><strong>{r.averageTlsMs.toFixed(1)} <small>ms</small></strong></div><div><span>平均 HTTPS Ping</span><strong>{r.averageHttpsMs.toFixed(1)} <small>ms</small></strong></div></div>
  <p class="fine-print">平均值按图中节点等权统计；最高值是全部节点中的峰值，不能代表持续速度或你的本地速度。下载单位为 MB/s，与 Mbps 不同。两类延迟指标分别保留。</p>
  <ChartGallery name={r.name} speed={r.speed} unlock={r.unlock}/>

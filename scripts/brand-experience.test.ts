@@ -24,20 +24,19 @@ test('comparison exposes exact chart units and keeps absent data unknown across 
  assert.equal(new Set(comparisonFields.map(f=>f.key)).size,comparisonFields.length);
  for(const brand of airports){const compared=comparisonBrand(brand);const r=evidenceFor(brand.slug);
   assert.deepEqual(Object.keys(compared.values).sort(),comparisonFields.map(f=>f.key).sort());
-  if(r){assert.equal(compared.values.chartAverage,r.averageDownloadMBps.toFixed(2)+' MB/s');assert.equal(compared.values.chartTls,r.averageTlsMs.toFixed(1)+' ms');assert.equal(compared.values.chartNetflix,r.greenCounts[1]+' / 60（绿色节点数）');assert.ok(compared.values.chartTime.startsWith(r.time));assert.match(compared.values.chartStatus,/未独立复测/);}
+  if(r){assert.equal(compared.values.chartAverage,r.averageDownloadMBps.toFixed(2)+' MB/s');assert.equal(compared.values.chartTls,r.averageTlsMs.toFixed(1)+' ms');assert.equal(compared.values.chartNetflix,r.greenCounts[1]+' / 60（绿色节点数）');assert.ok(compared.values.chartTime.startsWith(r.time));assert.match(compared.values.chartStatus,/站长本人实测/);}
   else for(const f of comparisonFields.filter(f=>f.group==='charts'))assert.equal(compared.values[f.key],'未提供图表');
  }
  assert.equal(comparisonMode(null),'plans');assert.equal(comparisonMode('charts'),'charts');assert.equal(comparisonMode('all'),'all');assert.equal(comparisonMode('unknown'),'plans');
  assert.deepEqual(selectedBrandSlugs('bad,yinxingren,yinxingren,muguang,breezenet,feiv,lingmao',airports),['yinxingren','muguang','breezenet','feiv']);
 });
 
-test('all 12 researched coupon records remain references and omit new research URLs from customer panels',()=>{
+test('all 12 coupon offers show owner-confirmed permanent validity without inventing checkout or discount amounts',()=>{
  assert.deepEqual(Object.keys(couponNotes).sort(),partnerAirports.filter(a=>a.coupon).map(a=>a.slug).sort());
- for(const [slug,note]of Object.entries(couponNotes)){assert.equal(note.checkoutVerified,false);assert.equal(note.checked,'2026-10-23');const $=load(fs.readFileSync('dist/airport/'+slug+'/index.html','utf8'));const panel=$('[data-coupon-research]');
-  assert.equal(panel.length,1);assert.equal(panel.attr('data-coupon-research'),note.status);assert.ok(panel.text().includes(note.discount));assert.ok(panel.text().includes(note.conditions));assert.ok(panel.text().includes(note.validity));assert.ok(panel.text().includes('未验证商家结算'));assert.equal(panel.find('a[href^="https://"]').length,0);
+ for(const [slug,note]of Object.entries(couponNotes)){assert.equal(note.checkoutVerified,false);assert.equal(note.checked,'2026-10-24');assert.equal(note.validityConfirmedBy,'site-owner');assert.equal(note.validityConfirmedAt,'2026-10-24');const $=load(fs.readFileSync('dist/airport/'+slug+'/index.html','utf8'));const panel=$('[data-coupon-research]');
+  assert.equal(panel.length,1);assert.equal(panel.attr('data-coupon-research'),note.status);assert.ok(panel.text().includes(note.discount));assert.ok(panel.text().includes(note.conditions));assert.ok(panel.text().includes(note.validity));assert.ok(panel.text().includes('站长确认'));assert.equal(panel.find('a[href^="https://"]').length,0);
  }
- for(const slug of ['breezenet','u1s1','v2yun','yuzhoucloud'])assert.equal(couponNotes[slug].status,'conflicting');
- assert.equal(couponNotes.quanqiuyun.status,'not-confirmed');
+ for(const note of Object.values(couponNotes)){assert.equal(note.status,'owner-confirmed');assert.equal(note.validity,'永久有效（站长确认）');}
 });
 
 test('28 brands have distinct chart-reading and checkout checkpoints rendered in their own pages',()=>{

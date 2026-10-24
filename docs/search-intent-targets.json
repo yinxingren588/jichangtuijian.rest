@@ -178,7 +178,7 @@
     {
       "keyword": "隐形人机场节点测速",
       "url": "/airport/yinxingren/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "隐形人机场怎么样？套餐价格、流量与节点测速信息 · 航线笔记",
@@ -228,7 +228,7 @@
     {
       "keyword": "暮光网络机场节点测速",
       "url": "/airport/muguang/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "暮光网络机场怎么样？套餐价格、月付流量与节点测速 · 航线笔记",
@@ -268,7 +268,7 @@
     {
       "keyword": "微风网络机场节点测速",
       "url": "/airport/breezenet/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "微风网络机场怎么样？Breezenet套餐价格、流量与节点测速 · 航线笔记",
@@ -318,7 +318,7 @@
     {
       "keyword": "飞猫云机场节点测速",
       "url": "/airport/feimaoyun/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "飞猫云机场怎么样？套餐价格、流量与节点测速信息 · 航线笔记",
@@ -368,7 +368,7 @@
     {
       "keyword": "大佬云机场节点测速",
       "url": "/airport/dalaocloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "大佬云机场怎么样？套餐价格、流量档位与节点测速 · 航线笔记",
@@ -408,7 +408,7 @@
     {
       "keyword": "飞V机场节点测速",
       "url": "/airport/feiv/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "飞V机场怎么样？套餐价格、月付与不限时流量及节点测速 · 航线笔记",
@@ -448,7 +448,7 @@
     {
       "keyword": "梯子云机场节点测速",
       "url": "/airport/laddercloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "梯子云机场怎么样？LadderCloud套餐价格、流量与节点测速 · 航线笔记",
@@ -488,7 +488,7 @@
     {
       "keyword": "灵动云机场节点测速",
       "url": "/airport/lingdongcloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "灵动云机场怎么样？套餐价格、月度流量与节点测速信息 · 航线笔记",
@@ -528,7 +528,7 @@
     {
       "keyword": "Firefly机场节点测速",
       "url": "/airport/firefly/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "Firefly机场怎么样？套餐价格、年付流量与节点测速信息 · 航线笔记",
@@ -578,7 +578,7 @@
     {
       "keyword": "灵猫机场节点测速",
       "url": "/airport/lingmao/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "灵猫机场怎么样？IPLC套餐价格、流量与节点测速信息 · 航线笔记",
@@ -618,7 +618,7 @@
     {
       "keyword": "闪跃机场节点测速",
       "url": "/airport/flashleap/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "闪跃机场怎么样？FlashLeap套餐价格、流量与节点测速 · 航线笔记",
@@ -668,7 +668,7 @@
     {
       "keyword": "无忧链接机场节点测速",
       "url": "/airport/wuyou/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "无忧链接机场怎么样？套餐价格、流量与节点测速及优惠信息 · 航线笔记",
@@ -718,7 +718,7 @@
     {
       "keyword": "跨界云机场节点测速",
       "url": "/airport/kuajiecloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "跨界云机场怎么样？专线套餐价格、流量与节点测速信息 · 航线笔记",
@@ -758,7 +758,7 @@
     {
       "keyword": "星岛梦机场节点测速",
       "url": "/airport/stardream/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "星岛梦机场怎么样？StarDream套餐价格、流量与节点测速 · 航线笔记",
@@ -808,7 +808,7 @@
     {
       "keyword": "光速云机场节点测速",
       "url": "/airport/lightspeed/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "光速云机场怎么样？LightSpeed套餐价格、流量与节点测速 · 航线笔记",
@@ -858,7 +858,7 @@
     {
       "keyword": "唯兔云机场节点测速",
       "url": "/airport/v2yun/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "唯兔云机场怎么样？V2云套餐价格、流量与节点测速信息 · 航线笔记",
@@ -908,7 +908,7 @@
     {
       "keyword": "U1S1机场节点测速",
       "url": "/airport/u1s1/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "U1S1机场怎么样？有一说一套餐价格、流量与节点测速 · 航线笔记",
@@ -958,7 +958,7 @@
     {
       "keyword": "极连云机场节点测速",
       "url": "/airport/jiliancloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "极连云机场怎么样？双专线套餐价格、流量与节点测速 · 航线笔记",
@@ -998,7 +998,7 @@
     {
       "keyword": "全球云机场节点测速",
       "url": "/airport/quanqiuyun/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "全球云机场怎么样？套餐价格、流量与节点测速及解锁资料 · 航线笔记",
@@ -1048,7 +1048,7 @@
     {
       "keyword": "光年梯机场节点测速",
       "url": "/airport/guangnianti/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "光年梯机场怎么样？套餐价格、月付流量与节点测速信息 · 航线笔记",
@@ -1088,7 +1088,7 @@
     {
       "keyword": "Sogo云机场节点测速",
       "url": "/airport/sogoyun/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "Sogo云机场怎么样？套餐价格、专线流量与节点测速信息 · 航线笔记",
@@ -1128,7 +1128,7 @@
     {
       "keyword": "宇宙云机场节点测速",
       "url": "/airport/yuzhoucloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "宇宙云机场怎么样？YuZhou套餐价格、流量与节点测速 · 航线笔记",
@@ -1178,7 +1178,7 @@
     {
       "keyword": "二猫云机场节点测速",
       "url": "/airport/ermaoyun/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "二猫云机场怎么样？2mao套餐价格、流量与节点测速信息 · 航线笔记",
@@ -1218,7 +1218,7 @@
     {
       "keyword": "一翻云机场节点测速",
       "url": "/airport/yifanyun/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "一翻云机场怎么样？1fly套餐价格、流量与节点测速信息 · 航线笔记",
@@ -1258,7 +1258,7 @@
     {
       "keyword": "边缘节点机场节点测速",
       "url": "/airport/edgenova/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "边缘节点机场怎么样？EdgeNova年付套餐价格、流量与测速 · 航线笔记",
@@ -1298,7 +1298,7 @@
     {
       "keyword": "可信云机场节点测速",
       "url": "/airport/kexincloud/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "可信云机场怎么样？IPLC套餐价格、流量与节点测速信息 · 航线笔记",
@@ -1338,7 +1338,7 @@
     {
       "keyword": "速界机场节点测速",
       "url": "/airport/sujie/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "速界机场怎么样？SuJie套餐价格、流量与节点测速信息 · 航线笔记",
@@ -1378,7 +1378,7 @@
     {
       "keyword": "快狸机场节点测速",
       "url": "/airport/kuaili/",
-      "intent": "查看维护者图表及测试环境缺失项",
+      "intent": "查看站长实测图表及测试环境缺失项",
       "priority": "P2",
       "group": "品牌图表",
       "title": "快狸机场怎么样？KuaiLi套餐价格、年付月均流量与节点测速 · 航线笔记",

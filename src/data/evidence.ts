@@ -1,7 +1,7 @@
 import raw from './evidence.json';
 
 export interface ChartAsset {original:string;preview:string;width:number;height:number;previewWidth:number;previewHeight:number;bytes:number;previewBytes:number;sha256:string;source:string}
-export interface EvidenceRecord {slug:string;name:string;brandSlug:string|null;sourceType:string;independentlyVerified:boolean;nodeCount:number;time:string;timeZone:string|null;averageTlsMs:number;averageHttpsMs:number;averageDownloadMBps:number;peakDownloadMBps:number;greenCounts:number[];speed:ChartAsset;unlock:ChartAsset}
+export interface EvidenceRecord {slug:string;name:string;brandSlug:string|null;sourceType:string;testedBy:string;ownerConfirmedAt:string;authenticityConfirmed:boolean;nodeCount:number;time:string;timeZone:string|null;averageTlsMs:number;averageHttpsMs:number;averageDownloadMBps:number;peakDownloadMBps:number;greenCounts:number[];speed:ChartAsset;unlock:ChartAsset}
 export const evidenceRecords:EvidenceRecord[]=raw.records;
 export const evidenceFor=(slug:string)=>evidenceRecords.find(record=>record.brandSlug===slug);
 export const summaryCharts=raw.summaries;

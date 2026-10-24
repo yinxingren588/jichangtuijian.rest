@@ -1,0 +1,30 @@
+{
+  "confirmedAt": "2026-10-24",
+  "confirmedBy": "site-owner",
+  "couponOffer": {
+    "validity": "permanent",
+    "statement": "优惠价是永久有效",
+    "scope": "站长提供并已收录的优惠码所对应优惠价",
+    "discountAmountsConfirmed": false,
+    "codes": [
+      "yxr888",
+      "weifeng90",
+      "flycat888",
+      "firefly",
+      "shanyue",
+      "wuyou666",
+      "nmw888",
+      "jichangcha09",
+      "rabbit",
+      "U1S1",
+      "tt88",
+      "YUZHOU553"
+    ]
+  },
+  "chartEvidence": {
+    "testedBy": "site-owner",
+    "authenticityConfirmed": true,
+    "statement": "那些全都是我自己做的，都是真实数据，站长测试",
+    "scope": "站长已提供的全部测速与解锁图"
+  }
+}

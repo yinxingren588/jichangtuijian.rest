@@ -18,7 +18,7 @@ export const searchIntentTargets:SearchIntentTarget[]=[
    {keyword:base+'套餐价格',url,intent:'核对已录入金额、币种与付款周期',priority:'P1',group:'品牌套餐'},
    {keyword:base+'流量额度',url,intent:'核对已录入容量、发放周期与未知条件',priority:'P2',group:'品牌套餐'},
   ];
-  if(b.kind==='airport')rows.push({keyword:base+'节点测速',url,intent:'查看维护者图表及测试环境缺失项',priority:'P2',group:'品牌图表'});
+  if(b.kind==='airport')rows.push({keyword:base+'节点测速',url,intent:'查看站长实测图表及测试环境缺失项',priority:'P2',group:'品牌图表'});
   if(b.coupon)rows.push({keyword:base+'优惠码',url,intent:'查看原始代码、优惠参考与待确认条件',priority:'P2',group:'品牌优惠'});
   return rows;
  }),
