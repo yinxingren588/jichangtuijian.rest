@@ -76,3 +76,7 @@ npm run preview
 ## 图文教程与手机阅读
 
 2026-10-24：筛选、清单、保存分享与优惠核对三篇教程配合四张当前界面截图；手机正文提高到 16 px，优化小字、按钮与换行。文章表格由原生 Sätteri 插件包装为可聚焦滚动区域。截图索引见 `docs/guide-screenshots.json`；本轮验证和限制见 `docs/tutorial-readability.md`。
+
+## 全部品牌独立 TDK
+
+2026-10-24：28 个机场和 5 个 VPN 的 Title、Description、Keywords 及 H1 均独立维护在 `src/data/brand-seo.json`。网页标题由共享布局追加站名；页面大标题可以分别修改，分享卡片同步品牌标题与描述。品牌页真实修改日期登记在 `src/data/page-dates.json`，不更改已有套餐和图表的核验日期。构建后运行 `npm run export:tdk`，从实际生成的页面导出 `docs/brand-tdk.md` 与 `docs/brand-tdk-export.json`。逐品牌完整文案见清单，验证范围见 `docs/brand-tdk-validation.md`。

@@ -17,7 +17,8 @@
     "test": "npm run validate:content && npm run audit:seo && npm run check:links && tsx --test scripts/*.test.ts",
     "indexnow": "tsx scripts/indexnow.ts",
     "indexnow:key": "tsx scripts/indexnow-key.ts",
-    "audit:assets": "tsx scripts/audit-assets.ts"
+    "audit:assets": "tsx scripts/audit-assets.ts",
+    "export:tdk": "tsx scripts/export-brand-tdk.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

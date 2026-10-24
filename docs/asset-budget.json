@@ -5,7 +5,7 @@
     {
       "file": "search/index.html",
       "bytes": 179688,
-      "gzipBytes": 38922
+      "gzipBytes": 38924
     },
     {
       "file": "airport/index.html",
@@ -15,17 +15,17 @@
     {
       "file": "compare/index.html",
       "bytes": 79815,
-      "gzipBytes": 12060
+      "gzipBytes": 12059
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 31548,
-      "gzipBytes": 11204
+      "bytes": 31737,
+      "gzipBytes": 11246
     },
     {
-      "file": "airport/yuzhoucloud/index.html",
-      "bytes": 31495,
-      "gzipBytes": 11192
+      "file": "airport/wuyou/index.html",
+      "bytes": 31725,
+      "gzipBytes": 11240
     }
   ],
   "javascript": [
@@ -47,9 +47,9 @@
   ],
   "css": [
     {
-      "file": "_astro/Base.Bs-HPSX4.css",
-      "bytes": 88274,
-      "gzipBytes": 18539
+      "file": "_astro/Base.g5M1K3Dr.css",
+      "bytes": 88302,
+      "gzipBytes": 18551
     }
   ],
   "thirdPartyCode": "没有新增第三方运行时脚本、远程字体或追踪请求。",
