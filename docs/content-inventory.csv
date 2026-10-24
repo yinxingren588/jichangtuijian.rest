@@ -113,13 +113,13 @@ blog,选择与维护,长期使用时，哪些内容值得每月复核,https://ji
 blog,网络原理,MTU问题为什么可能表现为部分网站卡住,https://jichangtuijian.rest/blog/mtu-packet-size/,589,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,设备与客户端,同一订阅跨平台使用，哪些设置不应照抄,https://jichangtuijian.rest/blog/multi-platform-consistency/,579,2026-10-23,https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-a-proxy-server-in-windows
 blog,网络原理,公网IP与设备本地地址分别表示什么,https://jichangtuijian.rest/blog/nat-and-public-ip/,580,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
-blog,节点与线路,离得最近的节点为什么不一定最快,https://jichangtuijian.rest/blog/nearby-node/,572,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,节点与线路,VPN节点怎么选？距离、地区与延迟的核对方法,https://jichangtuijian.rest/blog/nearby-node/,1816,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency | https://www.cloudflare.com/learning/access-management/what-is-a-vpn/
 blog,网络原理,从DNS到应用，怎样建立分层排查顺序,https://jichangtuijian.rest/blog/network-layer-checklist/,590,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,隐私与凭据,怎样阅读不记录日志的公开声明,https://jichangtuijian.rest/blog/no-log-claims/,583,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,节点与线路,节点数量与可用节点数量怎样区分,https://jichangtuijian.rest/blog/node-count-quality/,578,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,客户端延迟颜色为什么不能代替完整测试,https://jichangtuijian.rest/blog/node-latency-color/,567,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,节点维护公告应该怎样用于故障判断,https://jichangtuijian.rest/blog/node-maintenance/,576,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,节点与线路,节点名字里的高倍率、游戏和专线能说明什么,https://jichangtuijian.rest/blog/node-name-labels/,568,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,节点与线路,机场节点怎么选？读懂节点名称、线路标签与套餐权限,https://jichangtuijian.rest/blog/node-name-labels/,1930,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency | https://www.cloudflare.com/learning/performance/glossary/what-is-latency/
 blog,节点与线路,频繁切换节点会让排错更难吗,https://jichangtuijian.rest/blog/node-rotation/,571,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,怎样建立不依赖记忆的节点选择记录,https://jichangtuijian.rest/blog/node-selection-log/,570,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,订阅里没有某个节点，是套餐还是配置问题,https://jichangtuijian.rest/blog/node-subscription-range/,564,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
@@ -137,7 +137,7 @@ blog,流量与额度,月度用量接近上限时，怎样安排高需求日期,h
 blog,节点与线路,晚高峰选节点，应看哪些持续性指标,https://jichangtuijian.rest/blog/peak-hour-selection/,550,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,性能与测量,怎样把测试结果写成有边界的结论,https://jichangtuijian.rest/blog/performance-summary/,558,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,隐私与凭据,搜索到多个同名品牌域名，怎样降低误认风险,https://jichangtuijian.rest/blog/phishing-brand-domains/,577,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-blog,基础指南,性价比机场怎么算：周期、倍率与每 GB 成本,https://jichangtuijian.rest/blog/plan-cost/,1512,2026-10-23,https://mullvad.net/en/pricing ; https://hide.me/en/pricing
+blog,基础指南,性价比机场怎么算：周期、倍率与每 GB 成本,https://jichangtuijian.rest/blog/plan-cost/,1702,2026-10-23,https://mullvad.net/en/pricing | https://hide.me/en/pricing
 blog,应用场景,平台支持地区与IP显示地区怎样分别确认,https://jichangtuijian.rest/blog/platform-supported-region/,549,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,网络原理,端口号与协议名称有什么区别,https://jichangtuijian.rest/blog/port-number-role/,588,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,选择与维护,付款成功后，怎样确认买到的方案已经生效,https://jichangtuijian.rest/blog/post-purchase-validation/,556,2026-10-23,https://jichangtuijian.rest/editorial-policy/
@@ -219,7 +219,7 @@ blog,流量与额度,上传流量是否计入套餐，为什么必须先问清,h
 blog,流量与额度,知道视频码率后，怎样估算流量需求,https://jichangtuijian.rest/blog/video-bitrate-budget/,593,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
 blog,应用场景,游戏能玩但语音异常，为什么要分别排查,https://jichangtuijian.rest/blog/voice-chat-versus-game/,557,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,隐私与凭据,使用VPN之后，HTTPS仍然重要吗,https://jichangtuijian.rest/blog/vpn-https-boundary/,570,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-glossary,基础百科,VPN 是什么？与机场订阅有什么区别,https://jichangtuijian.rest/glossary/vpn/,472,2026-10-23,https://www.cloudflare.com/learning/access-management/what-is-a-vpn/
+glossary,基础百科,VPN是什么？VPN机场与商业VPN有什么区别,https://jichangtuijian.rest/glossary/vpn/,1696,2026-10-23,https://www.cloudflare.com/learning/access-management/what-is-a-vpn/
 blog,性能与测量,冷启动与已连接状态的体验怎样分别观察,https://jichangtuijian.rest/blog/warm-cold-start/,569,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,隐私与凭据,WebRTC相关地址信息为什么需要结合浏览器说明,https://jichangtuijian.rest/blog/webrtc-addresses/,577,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,网络原理,长连接应用为什么可能在网络切换后失效,https://jichangtuijian.rest/blog/websocket-long-session/,583,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview

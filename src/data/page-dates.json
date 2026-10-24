@@ -1,12 +1,12 @@
 {
-  "/": "2026-10-23",
-  "/compare/": "2026-10-23",
+  "/": "2026-10-24",
+  "/compare/": "2026-10-24",
   "/recommend/": "2026-10-23",
   "/ranking/": "2026-10-23",
-  "/airport/": "2026-10-23",
+  "/airport/": "2026-10-24",
   "/review/": "2026-10-23",
   "/guides/": "2026-10-23",
-  "/blog/": "2026-10-23",
+  "/blog/": "2026-10-24",
   "/glossary/": "2026-10-23",
   "/about/": "2026-10-23",
   "/contact/": "2026-10-23",
@@ -15,7 +15,7 @@
   "/disclaimer/": "2026-10-23",
   "/recommend/budget/": "2026-10-23",
   "/recommend/premium/": "2026-10-23",
-  "/recommend/beginner/": "2026-10-23",
+  "/recommend/beginner/": "2026-10-24",
   "/recommend/stable/": "2026-10-23",
   "/recommend/ai/": "2026-10-23",
   "/recommend/streaming/": "2026-10-23",
@@ -72,5 +72,7 @@
   "/blog/category/account/": "2026-10-23",
   "/blog/category/evidence/": "2026-10-23",
   "/blog/category/workflow/": "2026-10-23",
-  "/evidence/": "2026-10-23"
+  "/evidence/": "2026-10-23",
+  "/vpn/": "2026-10-24",
+  "/search/": "2026-10-24"
 }

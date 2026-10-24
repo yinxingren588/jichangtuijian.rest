@@ -4,28 +4,28 @@
   "html": [
     {
       "file": "search/index.html",
-      "bytes": 179688,
-      "gzipBytes": 38924
+      "bytes": 181489,
+      "gzipBytes": 39315
     },
     {
       "file": "airport/index.html",
-      "bytes": 72157,
-      "gzipBytes": 12904
+      "bytes": 72243,
+      "gzipBytes": 12925
     },
     {
       "file": "compare/index.html",
-      "bytes": 79815,
-      "gzipBytes": 12059
+      "bytes": 80094,
+      "gzipBytes": 12176
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 31737,
-      "gzipBytes": 11246
+      "bytes": 31766,
+      "gzipBytes": 11258
     },
     {
       "file": "airport/wuyou/index.html",
-      "bytes": 31725,
-      "gzipBytes": 11240
+      "bytes": 31754,
+      "gzipBytes": 11251
     }
   ],
   "javascript": [
@@ -47,9 +47,9 @@
   ],
   "css": [
     {
-      "file": "_astro/Base.g5M1K3Dr.css",
-      "bytes": 88302,
-      "gzipBytes": 18551
+      "file": "_astro/Base.DwNW5Yq4.css",
+      "bytes": 92132,
+      "gzipBytes": 19242
     }
   ],
   "thirdPartyCode": "没有新增第三方运行时脚本、远程字体或追踪请求。",

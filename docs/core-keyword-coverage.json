@@ -1,0 +1,266 @@
+{
+  "updated": "2026-10-24",
+  "scope": "实际构建HTML的关键词落地与正文内链检查，不等于收录、排名或流量测量。",
+  "htmlPages": 316,
+  "indexablePages": 310,
+  "keywordCount": 8,
+  "passed": true,
+  "rows": [
+    {
+      "keyword": "机场推荐",
+      "url": "/",
+      "intent": "从预算、套餐、节点与使用条件开始选择",
+      "title": "机场推荐与节点选择指南｜品牌套餐、优惠与连接知识 · 航线笔记",
+      "h1": "机场推荐。先看清选择。",
+      "description": "机场推荐从预算、流量和使用条件开始。航线笔记整理28家机场参考套餐、优惠码与节点测速图，提供性价比比较、节点选择、VPN概念和品牌对照指南，配合200篇文章与30篇教程逐项核对。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/blog/",
+        "/blog/plan-cost/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "机场节点",
+      "url": "/blog/node-name-labels/",
+      "intent": "读懂节点名称、地区、线路和套餐权限",
+      "title": "机场节点怎么选？读懂节点名称、线路标签与套餐权限 · 航线笔记",
+      "h1": "机场节点怎么选？读懂节点名称、线路标签与套餐权限",
+      "description": "机场节点选择指南：从地区、入口与出口、套餐权限和流量倍率读懂节点列表，再按任务核对延迟、下载与解锁图。解释专线、游戏等名称的边界，并给出候选筛选与测试顺序。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/blog/category/nodes/",
+        "/blog/entry-exit-path/",
+        "/blog/",
+        "/blog/nearby-node/",
+        "/blog/plan-cost/",
+        "/blog/windows-sleep-network/",
+        "/compare/",
+        "/glossary/vpn/",
+        "/",
+        "/recommend/beginner/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "性价比机场",
+      "url": "/blog/plan-cost/",
+      "intent": "比较付款周期、流量倍率与真实用量成本",
+      "title": "性价比机场怎么算：周期、倍率与每 GB 成本 · 航线笔记",
+      "h1": "性价比机场怎么算：周期、倍率与每 GB 成本",
+      "description": "性价比机场如何比较？分清月付实付、完整年费、年付月均与一次性流量，结合倍率计算单位成本，再核对优惠、续费、节点与设备条件，避免只按最低起价选择。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/airport/yinxingren/",
+        "/blog/addon-traffic-cost/",
+        "/blog/ai-access/",
+        "/blog/annual-commitment/",
+        "/blog/auto-renew-control/",
+        "/blog/background-updates/",
+        "/blog/backup-subscription-budget/",
+        "/blog/budget-review/",
+        "/blog/bundled-client-fee/",
+        "/blog/buying-checklist/",
+        "/blog/category/basics/",
+        "/blog/checkout-amount/",
+        "/blog/cloud-sync-quota/",
+        "/blog/coupon-expiry/",
+        "/blog/currency-comparison/",
+        "/blog/discount-order/",
+        "/blog/discount-rounding/",
+        "/blog/download-resume/",
+        "/blog/gb-gib/",
+        "/blog/",
+        "/blog/limited-time-sale/",
+        "/blog/line-labels/",
+        "/blog/meeting-upload/",
+        "/blog/mixed-multiplier/",
+        "/blog/monthly-cashflow/",
+        "/blog/nearby-node/",
+        "/blog/node-name-labels/",
+        "/blog/one-time-versus-reset/",
+        "/blog/package-switch-cost/",
+        "/blog/payment-frequency/",
+        "/blog/peak-day-budget/",
+        "/blog/quota-display-delay/",
+        "/blog/quota-reset-clock/",
+        "/blog/quota-rollover/",
+        "/blog/receipt-records/",
+        "/blog/renewal-price/",
+        "/blog/shared-quota/",
+        "/blog/speedtest-quota/",
+        "/blog/stability-method/",
+        "/blog/streaming-preload/",
+        "/blog/traffic-alert-threshold/",
+        "/blog/traffic-expiry/",
+        "/blog/traffic-overhead/",
+        "/blog/trial-budget/",
+        "/blog/unlimited-fair-use/",
+        "/blog/unused-months/",
+        "/blog/upgrade-credit/",
+        "/blog/upload-counting/",
+        "/blog/video-bitrate-budget/",
+        "/glossary/vpn/",
+        "/guides/read-source-price-conflict/",
+        "/",
+        "/recommend/beginner/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "梯子推荐",
+      "url": "/recommend/beginner/",
+      "intent": "首次订阅的候选筛选与验证顺序",
+      "title": "梯子推荐与新手入门｜十品牌套餐、流量与选择指南 · 航线笔记",
+      "h1": "梯子推荐与新手入门｜十品牌套餐、流量与选择指南",
+      "description": "梯子推荐从设备、任务和预算开始。本页提供新手订阅核对顺序及十品牌参考套餐、流量、优惠码与节点图表入口，先建立候选再验证使用条件。隐形人固定首位；其余优先安排有短周期月付入口、不同价位和流量档位可比较的品牌，方便首次订阅者从小额验证开始。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/blog/",
+        "/blog/plan-cost/",
+        "/glossary/vpn/",
+        "/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "VPN",
+      "url": "/glossary/vpn/",
+      "intent": "理解VPN的作用与适用范围",
+      "title": "VPN是什么？VPN机场与商业VPN有什么区别 · 航线笔记",
+      "h1": "VPN是什么？VPN机场与商业VPN有什么区别",
+      "description": "解释VPN的作用、VPN机场的常见含义，以及商业VPN、代理订阅和客户端的区别。按套餐、节点、设备、隐私与支持条件理解服务边界，再进入VPN推荐、机场节点和配置教程选择适合的核对路径。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/airport/proton-vpn/",
+        "/blog/",
+        "/blog/nearby-node/",
+        "/glossary/",
+        "/glossary/latency/",
+        "/glossary/subscription/",
+        "/glossary/traffic-multiplier/",
+        "/glossary/wireguard/",
+        "/",
+        "/recommend/beginner/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "VPN机场",
+      "url": "/glossary/vpn/",
+      "intent": "区分代理订阅、客户端和商业VPN",
+      "title": "VPN是什么？VPN机场与商业VPN有什么区别 · 航线笔记",
+      "h1": "VPN是什么？VPN机场与商业VPN有什么区别",
+      "description": "解释VPN的作用、VPN机场的常见含义，以及商业VPN、代理订阅和客户端的区别。按套餐、节点、设备、隐私与支持条件理解服务边界，再进入VPN推荐、机场节点和配置教程选择适合的核对路径。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/airport/proton-vpn/",
+        "/blog/",
+        "/blog/nearby-node/",
+        "/glossary/",
+        "/glossary/latency/",
+        "/glossary/subscription/",
+        "/glossary/traffic-multiplier/",
+        "/glossary/wireguard/",
+        "/",
+        "/recommend/beginner/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "VPN节点",
+      "url": "/blog/nearby-node/",
+      "intent": "根据任务、地区和连接记录选择服务器",
+      "title": "VPN节点怎么选？距离、地区与延迟的核对方法 · 航线笔记",
+      "h1": "VPN节点怎么选？距离、地区与延迟的核对方法",
+      "description": "VPN节点选择从任务地区、套餐权限和客户端支持开始，再对照延迟、持续传输与失败记录。解释为什么最近的服务器不一定最快，怎样做同条件比较，以及节点连通与平台账号资格的区别。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/blog/category/nodes/",
+        "/blog/",
+        "/blog/node-name-labels/",
+        "/blog/node-subscription-range/",
+        "/blog/plan-cost/",
+        "/blog/root-certificate-boundary/",
+        "/compare/",
+        "/glossary/vpn/",
+        "/",
+        "/vpn/"
+      ]
+    },
+    {
+      "keyword": "VPN推荐",
+      "url": "/vpn/",
+      "intent": "按已录入套餐和设备条件对照五家VPN",
+      "title": "VPN推荐选择指南｜五家品牌套餐、流量与设备条件对照 · 航线笔记",
+      "h1": "VPN推荐怎么选？先对照条件，再判断适合。",
+      "description": "VPN推荐从使用条件开始：按免费试用、月付预算与协议配置需求，对照Proton VPN、Mullvad、Windscribe、TunnelBear及hide.me的已录入套餐、流量和设备资料。未知字段保留，本站暂无这些品牌的节点测速图。",
+      "checks": {
+        "title": true,
+        "description": true,
+        "h1": true,
+        "keywords": true,
+        "content": true,
+        "canonical": true
+      },
+      "incomingPages": [
+        "/airport/",
+        "/blog/",
+        "/blog/nearby-node/",
+        "/blog/plan-cost/",
+        "/compare/",
+        "/glossary/vpn/",
+        "/"
+      ]
+    }
+  ]
+}

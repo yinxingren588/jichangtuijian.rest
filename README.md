@@ -80,3 +80,7 @@ npm run preview
 ## 全部品牌独立 TDK
 
 2026-10-24：28 个机场和 5 个 VPN 的 Title、Description、Keywords 及 H1 均独立维护在 `src/data/brand-seo.json`。网页标题由共享布局追加站名；页面大标题可以分别修改，分享卡片同步品牌标题与描述。品牌页真实修改日期登记在 `src/data/page-dates.json`，不更改已有套餐和图表的核验日期。构建后运行 `npm run export:tdk`，从实际生成的页面导出 `docs/brand-tdk.md` 与 `docs/brand-tdk-export.json`。逐品牌完整文案见清单，验证范围见 `docs/brand-tdk-validation.md`。
+
+## 原始八个核心关键词
+
+2026-10-24：8个词分配到7个主要页面；映射在 `src/data/core-keywords.ts`。首页及文章目录复用6个内容入口，机场节点、VPN节点与VPN概念扩写为各自的解释页，新手专题补充梯子推荐流程，`/vpn/`按统一数据源展示5家VPN条件。正文仍为200篇文章、30篇教程与5篇百科。`npm run audit:keywords`验证实际HTML中的Title、Description、H1、Keywords、主要内容和相关正文入链，已纳入 `npm test`。实际结果见 `docs/core-keyword-coverage.json`，逐词完成报告见 `docs/core-keyword-implementation.md`。覆盖检查不表示搜索引擎收录或排名已验证。

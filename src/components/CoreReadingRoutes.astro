@@ -1,0 +1,10 @@
+---
+import {coreReadingRoutes} from '../data/core-keywords';
+interface Props{context?:'home'|'blog'}
+const {context='home'}=Astro.props;
+const headingId=context==='home'?'core-reading-heading':'blog-start-heading';
+---
+<section class="core-reading-routes" aria-labelledby={headingId} data-core-reading>
+ <div class="section-head"><div><p class="eyebrow">START WITH A QUESTION / 从问题开始</p><h2 id={headingId}>{context==='home'?'选套餐、看节点，先找到你的问题。':'先读懂选择，再深入了解。'}</h2><p>从概念、预算到实际核对，按当前需要继续阅读。</p></div>{context==='blog'&&<a class="text-link" href="/">机场推荐总览 ↗</a>}</div>
+ <div class="core-reading-grid">{coreReadingRoutes.map((item,i)=><a href={item.url}><span class="core-reading-label"><b>{String(i+1).padStart(2,'0')}</b>{item.label}</span><h3>{item.title}</h3><p>{item.text}</p><span class="text-link">继续了解 ↗</span></a>)}</div>
+</section>

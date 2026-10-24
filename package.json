@@ -14,11 +14,12 @@
     "audit:seo": "tsx scripts/audit-seo.ts",
     "check:links": "tsx scripts/check-links.ts",
     "validate:content": "tsx scripts/validate-content.ts",
-    "test": "npm run validate:content && npm run audit:seo && npm run check:links && tsx --test scripts/*.test.ts",
+    "test": "npm run validate:content && npm run audit:seo && npm run check:links && npm run audit:keywords && tsx --test scripts/*.test.ts",
     "indexnow": "tsx scripts/indexnow.ts",
     "indexnow:key": "tsx scripts/indexnow-key.ts",
     "audit:assets": "tsx scripts/audit-assets.ts",
-    "export:tdk": "tsx scripts/export-brand-tdk.ts"
+    "export:tdk": "tsx scripts/export-brand-tdk.ts",
+    "audit:keywords": "tsx scripts/audit-keywords.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

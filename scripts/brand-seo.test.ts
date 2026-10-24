@@ -31,7 +31,7 @@ test('built brand head, social metadata, H1 and canonical use that brand own val
   assert.ok($('.page-intro').text().includes('页面更新：'+brandSeoUpdated));
   const item=map('url').filter((_,el)=>map(el).find('loc').text()===site.url+'/airport/'+b.slug+'/');assert.equal(item.length,1);assert.ok(item.find('lastmod').text().startsWith(brandSeoUpdated));
  }
- const home=load(fs.readFileSync('dist/index.html','utf8'));assert.equal(home('meta[name="keywords"]').length,0);
+ const home=load(fs.readFileSync('dist/index.html','utf8'));assert.equal(home('meta[name="keywords"]').attr('content'),'机场推荐');
 });
 
 test('descriptions preserve reference plan amounts, exact coupon case and available chart status',()=>{
