@@ -1,13 +1,13 @@
 ---
 title: "年付折扣是否划算：先计算承诺期内的实际支出"
-description: "年付的核心差异是一次性承诺更长时间，而不只是页面上的月均价更低。只有计划使用时长和条款都明确，折算才有意义。"
+description: "用完整付款、实际使用月份和退出条件比较年付与月付，通过明确假设演算区分低月均、低现金支出和提前停用成本。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["预算", "预算与计费"]
 category: "预算与计费"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/plan-cost/", "/guides/prepare-comparison-sheet/", "/blog/renewal-price/"]
+related: ["/blog/payment-frequency/", "/blog/monthly-cashflow/", "/blog/unused-months/", "/blog/renewal-price/"]
 draft: false
 ---
 
@@ -37,3 +37,7 @@ draft: false
 年付总额与月度额度是两个时间维度。即使套餐写每月发放，也不能将全年额度相加后视作付款时立即可用；如果是一次性总量包，则应另按累计消耗和有效期安排。
 
 付款前保留账单周期、当次实付和下一次续费的脱敏记录。完整金额、退款或发放规则未确认时，先标记未知，不将它放进确定的优惠排名。继续看[月付与年付的公平比较](/blog/payment-frequency/)、[月均预算与现金支出](/blog/monthly-cashflow/)和[购买检查清单](/blog/buying-checklist/)。
+
+## 把停用情境也写进比较表
+
+除正常用满期限外，至少再比较一次提前停用情境：写清计划用几个月、剩余金额能否退回、优惠是否附带其他条件。若这些退出规则未知，就分别列“按不可退估算”和“规则待确认”，不要把可能退款直接当成确定收益。年付与月付的额度、节点、设备数不同，也不应只比较差价；把权益不相同处标出后再决定。

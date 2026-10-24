@@ -62,5 +62,6 @@ test('new plan narratives keep annual totals, monthly equivalents, one-time quot
  assert.match(planComparison(brand('feiv')),/一次性总量/);
  assert.match(planComparison(brand('hide-me')),/免费与付费/);
  assert.doesNotMatch(planComparison(brand('hide-me')),/一次性/);
- assert.match(planComparison(brand('windscribe')),/不能用空白价格推断免费/);
+ assert.match(planComparison(brand('windscribe')),/免费与付费/);
+ assert.match(planComparison({...brand('windscribe'),plans:[]}),/不能用空白价格推断免费/);
 });

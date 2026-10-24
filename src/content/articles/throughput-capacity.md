@@ -1,15 +1,16 @@
 ---
 title: "标称带宽、端口速率和实测吞吐怎样区分"
-description: "从端口、共享容量、用户限速到应用吞吐逐层判断，用300Mbps限速的假设例子避免把宣传容量当个人速度。"
+description: "端口速率、路径容量、个人限速与应用吞吐描述不同范围。对齐数字所指对象、单位、并发和观察窗口，区分上限声明与实际任务结果，不用峰值代替持续能力。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["稳定性", "性能与测量"]
 category: "性能与测量"
-sources: ["https://www.rfc-editor.org/rfc/rfc5136", "https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/mbps-mbs/", "/blog/single-multi-thread/", "/blog/cpu-encryption-limit/"]
+sources: ["https://www.rfc-editor.org/rfc/rfc5136"]
+related: ["/blog/single-multi-thread/", "/blog/server-test-target/", "/blog/cpu-encryption-limit/", "/blog/mbps-mbs/"]
 draft: false
 ---
+
 “10Gbps端口”“千兆节点”和“单用户300Mbps”可能同时出现在资料中，但描述范围不同。比较前先确定数字属于物理端口、共享容量、个人上限还是某次应用观察，不应把最大的数字当作每个用户持续可得速度。
 
 ## 从容量到任务的四层口径
@@ -29,8 +30,16 @@ RFC 5136对容量相关术语作区分，可帮助保持报告口径；它不是
 
 设备性能、Wi-Fi、上游链路、目标服务器、协议和同时任务都可能成为瓶颈。即使结果低于套餐上限，也不能只凭一次任务确定哪一层负责。不要在没有路径和负载证据时，直接指控共享超售或人为限速。
 
+## 比较前先做一张速率证据卡
+
+将“商家宣称的范围、方案限制、工具观察、任务平均”各写一行，注明单位和日期。假设页面写最高300Mbps、当次下载为160Mbps，只能说该任务观察低于所称上限；无法凭这两行证明违约、超售或设备故障。
+
+若存在明确服务承诺，还要读取其目标、时段和验收条款，再决定哪些测量能对应。没有公开承诺时，不把上限改写为最低保证；也不因一次达到高峰就宣称所有用户持续可得。
+
 ## 设计能比较的小任务
 
 固定设备、接入、目标、传输规模与时段，记录完整耗时和失败；把单连接与多连接方式分开，分别说明。测速目标不同或并发数不同，结果可能不具可比性。若客户端CPU明显繁忙，也应保留资源占用线索，不只看网络数字。
 
 大额测速会消耗配额，先限定规模和次数。图中单次峰值与完整文件平均吞吐应分别展示，不能通过取最高点制造保证速度。需要专线时，可以到[高端专线专题](/recommend/premium/)按线路权益与共享范围筛选；比较实际任务前，先完成[同条件节点验证](/guides/run-controlled-node-test/)，再对照[单线程与多线程](/blog/single-multi-thread/)解释差异。
+
+继续阅读：[单线程与多线程测速为什么可能差很多](/blog/single-multi-thread/)、[测速服务器的选择会怎样改变结论](/blog/server-test-target/)、[设备性能为什么可能限制网络测速](/blog/cpu-encryption-limit/)、[Mbps与MB每秒怎样换算，为什么仍有误差](/blog/mbps-mbs/)。

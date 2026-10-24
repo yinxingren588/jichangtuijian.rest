@@ -1,12 +1,14 @@
 ---
 title: "购买机场或 VPN 前，先核对这六项"
-description: "从身份、计费、兼容、隐私、支持和退出方式建立购买清单。"
+description: "购买前核对设备、账单、流量、地区、退出条件和证据，将必需条件写成可验证清单，筛掉明确冲突并保留未知项。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["入门", "预算"]
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
 draft: false
+category: "基础指南"
+related: ["/blog/requirements-before-brand/", "/blog/minimum-verification/", "/blog/comparison-template/", "/blog/post-purchase-validation/"]
 ---
 
 选机场或 VPN，先把“我需要完成什么”写清楚，再去看品牌。只比较最低价格、节点数量或解锁图，很容易买到参数漂亮但缺少必要权益的方案。下面这份清单用于付款前筛选，不构成任何品牌的效果保证。
@@ -37,3 +39,7 @@ draft: false
 出现价格、周期、退款或设备条件互相矛盾时，应保存不含凭据的记录并先解决疑问。不要为了试探账户状态重复付款，也不要把完整订阅链接贴进公共咨询区。
 
 完成筛选后，按[付款后的权益检查](/blog/post-purchase-validation/)核对订单和任务；如果仍有太多候选，使用[缩小比较范围的方法](/blog/shortlist-comparison/)逐项收敛。
+
+## 把缺失项变成购买停止条件
+
+筛选完成后，将每家候选归入“满足必需条件”“存在明确冲突”“关键条件未知”三类。最后一类应先获得可信解释，不能因优惠即将结束而跳过。比如必须家庭共用，但设备计数和共享授权均未说明，就尚未完成筛选。能证明参考套餐被收录，只解决资料入口问题，不代表适合自己，更不等于已经取得长期测试结论。

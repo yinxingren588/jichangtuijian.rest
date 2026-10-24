@@ -1,13 +1,13 @@
 ---
 title: "多台设备共享流量时，怎样估算家庭总需求"
-description: "先确认额度是否按账户共享，再分别记录设备用量。设备可连接数量与独立流量份数不是同一个概念。"
+description: "多台设备共享一份额度，应按允许使用的任务汇总。区分个人日常与家庭固定传输，避免按人数重复计算同一次备份，同时分别核对流量、并发和账号共享资格。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["套餐", "流量与额度"]
 category: "流量与额度"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/plan-cost/", "/guides/calculate-quota-multiplier/", "/blog/video-bitrate-budget/"]
+related: ["/blog/device-limit-types/", "/blog/background-updates/", "/blog/quota-display-delay/", "/blog/traffic-alert-threshold/"]
 draft: false
 ---
 
@@ -30,6 +30,12 @@ draft: false
 
 若设备记录来自操作系统、账户余额来自商家，两者统计范围可能不同。先用同一时间窗口对照，而不是把某台设备的历史累计和另一台设备的本月用量直接相加。只有一部分设备走该订阅时，也不要把家里全部宽带流量都记入套餐。
 
+## 不要把家庭固定任务重复乘人数
+
+假设家中一次公共文件备份为20GB，它应作为这次任务计入一次，不能因为有三个人就自动算60GB；每人各自观看的视频则按各自时长累计。多人共看同一台电视与分别在多台设备播放，也不是相同任务结构。
+
+可将共享文件、个人日常任务和临时大任务分组后，带入[流量需求计算器](/tools/traffic-calculator/)。其中人数和每日任务属于规划参数，家庭固定文件项不重复按人数放大；最终仍需用账户实际计量校正假设。
+
 ## 同时连接数与流量是两道检查
 
 额度足够，仍可能超过并发连接限制；连接数符合，也可能很快用完共享额度。还要区分安装设备、已登记设备、在线会话和允许的账号用途。字段未知时先确认，不把“不限设备”扩大为不限流量或允许转售。
@@ -37,3 +43,5 @@ draft: false
 接近额度上限时，先识别占用最大的后台任务，在允许的范围内调整同步和播放安排，并给必要会议留余量。不要直接关闭系统安全更新而不安排后续处理，也不要将他人设备的订阅和日志公开用于对账。
 
 可继续查看[设备数量的几种限制](/blog/device-limit-types/)、[后台更新与预算](/blog/background-updates/)和[流量倍率](/guides/calculate-quota-multiplier/)，再把各设备汇总结果带入[套餐比较](/compare/)。
+
+继续阅读：[设备数量、同时在线和连接数有什么区别](/blog/device-limit-types/)、[系统与应用更新会怎样影响流量预算](/blog/background-updates/)、[客户端用量与账户余额不同，应该先查什么](/blog/quota-display-delay/)、[额度提醒阈值怎样设置才有实际作用](/blog/traffic-alert-threshold/)。

@@ -1,15 +1,16 @@
 ---
 title: "一份有效的连接故障工单应该怎样组织"
-description: "提供可直接整理的故障工单字段与填写示例，分开观察、推断和已尝试操作，并列明订阅及支付凭据的脱敏范围。"
+description: "有效的连接故障工单应交代时间、环境、失败阶段、最小复现与已做改动。用原任务验收恢复，区分首次成功和持续正常，保护敏感日志并减少无效往返。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["账户", "订阅与账户"]
-category: "订阅与账户"
-sources: ["https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url", "https://jichangtuijian.rest/editorial-policy/"]
-related: ["/guides/prepare-support-ticket/", "/blog/log-redaction/", "/blog/network-layer-checklist/"]
+category: "选择与维护"
+sources: ["https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url"]
+related: ["/blog/log-redaction/", "/blog/test-log-format/", "/blog/subscription-update-state/", "/blog/failure-recovery-time/"]
 draft: false
 ---
+
 有效的连接故障工单，应让支持人员知道问题发生在哪个环节、在什么条件下复现，以及哪些操作已经做过。重点是少量可复核事实，而不是上传全部日志。工单不需要包含账号密码、完整订阅令牌或支付凭据。
 
 ## 一张表把必要信息写齐
@@ -36,6 +37,14 @@ draft: false
 
 不要把凭据发给主动私信的陌生“客服”，也不按未经核实的指令安装证书、远控或关闭安全保护。需重置泄露令牌时，走商家正式账户流程，而不是在公开工单中粘贴新令牌。
 
+## 最小复现与恢复验收也要写
+
+将复现缩到仍会出现问题的最少步骤，例如“打开现有配置、选择节点A、请求指定非敏感目标”，不要混入同时改DNS、换协议等未必要动作。若只能偶发，写出现频率和观察窗口，不能把一次未复现当永久恢复。
+
+支持提出操作后，记录执行时间和新错误，再用原来的任务验收。假设连接图标恢复但文件仍未完成，应分别说明；只写好了，会让后续人员误解处理范围。无新增信息时不重复上传同一份长日志，必要变化汇总成短段即可。
+
 ## 跟进时保留时间线
 
 每次回复注明新增事实、执行动作、恢复情况和观察时间；问题短暂好转时写首次成功，不提前宣称永久修复。按[工单准备教程](/guides/prepare-support-ticket/)整理附件，再用[日志脱敏](/blog/log-redaction/)复查。本站品牌图缺少环境字段时，也只能记录缺失，不能反向编造运营商、带宽或设备来填满表格。
+
+继续阅读：[提交日志时，哪些内容最容易忘记脱敏](/blog/log-redaction/)、[一份可复核网络测试日志应该有哪些字段](/blog/test-log-format/)、[更新订阅成功与节点可连接有什么不同](/blog/subscription-update-state/)、[故障恢复时间应该从哪一刻开始计算](/blog/failure-recovery-time/)。

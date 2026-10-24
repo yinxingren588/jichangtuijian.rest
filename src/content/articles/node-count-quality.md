@@ -1,15 +1,16 @@
 ---
 title: "节点数量与可用节点数量怎样区分"
-description: "用列表条目、可见权益、连接与任务四级计数拆解节点规模，说明去重条件、未知路径与备用价值。"
+description: "节点总条数、套餐权益、连接成功与任务成功需要不同分母。通过30条列表的假设案例和去重观察表，区分展示规模、有效备选与未知线路独立性。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["线路", "节点与线路"]
 category: "节点与线路"
 sources: ["https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/same-exit-multiple-nodes/", "/blog/node-subscription-range/", "/blog/fallback-independence/"]
+related: ["/blog/node-subscription-range/", "/blog/same-exit-multiple-nodes/", "/blog/fallback-independence/", "/blog/node-name-labels/"]
 draft: false
 ---
+
 节点列表有多少条，只说明展示规模。真正的选择空间，还取决于自己套餐能看到什么、配置能否连接、目标任务能否完成，以及这些条目是否共享故障点。不同问题需要不同分母，不宜合成一个“可用节点数”。
 
 ## 四级计数分开写
@@ -36,3 +37,9 @@ draft: false
 检查时先确认订阅更新成功、搜索过滤和套餐范围，再进行低频、小规模任务验证。节点不可见与连接失败要分开记录，不为补齐数量而泄露订阅到在线转换网站。遇到列表变化可读[订阅范围排查](/blog/node-subscription-range/)。
 
 最终在[品牌比较表](/compare/)记录明确权益和证据缺口，而不是给未知独立性打分。需要备用时，沿[备用路径独立性](/blog/fallback-independence/)核对共享环节；需要高端线路时，去[专线专题](/recommend/premium/)确认所购档覆盖，而不是只数节点国旗。
+
+## 需要去重时，保留依据而不是强行得出物理台数
+
+可以额外列“地区标记、协议、维护状态、当前套餐可见性、已观察出口”，但不要公开完整接入地址和凭据。名称相似仅是命名线索；出口相同仅是该次观察，均不能直接确定背后的服务器或共享链路。
+
+若目标是建立备用，就按核心任务能否完成、与主用方案哪些环节已知有差异来选。无法确认独立性时写“独立性未知”，不要把五个国旗或五个别名写成五重容灾。数量记录保留原表，实际选择另附理由，读者才知道分母从哪里来。

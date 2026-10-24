@@ -1,15 +1,16 @@
 ---
 title: "自动画质为什么会干扰线路比较"
-description: "保持影片、设备与设置一致，分别记录画质、首播和缓冲，解释自动画质造成的线路比较偏差。"
+description: "自动画质可能通过改变码率维持播放。分别记录实际质量、首播等待和中途缓冲，固定可控制条件并标明未知，避免将降画质或缓存命中误判成线路提升。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["应用", "应用场景"]
 category: "应用场景"
-sources: ["https://help.netflix.com/en/node/87", "https://help.netflix.com/en/node/114701"]
-related: ["/blog/buffering-versus-startup/", "/blog/video-bitrate-budget/", "/blog/streaming-library/"]
+sources: ["https://help.netflix.com/en/node/87"]
+related: ["/blog/streaming-preload/", "/blog/buffering-versus-startup/", "/blog/video-bitrate-budget/", "/blog/streaming-library/"]
 draft: false
 ---
+
 观看时没有停顿，不一定表示线路在相同画质下表现更好。播放器可能调整码率，在连接变化时降低画质以继续播放。比较前要把“能播放”“画面质量”和“播放是否连续”拆开，否则容易把降画质当成网络提升。
 
 ## 自动设置改变了比较条件
@@ -31,8 +32,16 @@ Netflix官方说明，自动用量设置会依当前连接速度调整画质。�
 
 比较顺序也会影响结果：第二次播放可能命中本地缓存，目标分发位置和时段也可能变化。记录冷启动或重复播放，交替观察并保留失败。不要清空系统数据或重复下载大段内容，只为制造看起来更统一的条件。
 
+## 同时保留画质与连续性两列
+
+可分别记录目标设置、实际可见画质、降档时间、首次等待与中途缓冲。假设两次都没有缓冲，但一次实际画质未知，应写“连续播放完成，实际质量未确认”，而不是给它同画质更稳定的结论。
+
+如果平台仅提供自动选项，仍可观察自己的任务是否满足需求，但应把码率变化列为不可控条件。不能为追求严格对照使用非官方工具绕过平台限制，也不能填入播放器未提供的精确数据。
+
 ## 把需求写成可验收条件
 
 先确定自己要看的平台、影片、设备和可接受画质，再观察是否完整播放，而不是盯着测速峰值。平台使用规则和账号权益也需先满足；解锁图一列绿色不保证目标片库、电视支持或4K。
 
 到[流媒体专题](/recommend/streaming/)核对购买路径后，可按[首播与缓冲记录](/blog/buffering-versus-startup/)分别留样本。规划月度额度时，用[流量需求计算器](/tools/traffic-calculator/)做低、中、高用量情形，再与真实应用统计核对；不要把自动画质下的一次低耗量当成长久用量承诺。
+
+继续阅读：[视频预加载与离线缓存怎样影响用量](/blog/streaming-preload/)、[首播等待和播放中缓冲应该怎样分开](/blog/buffering-versus-startup/)、[知道视频码率后，怎样估算流量需求](/blog/video-bitrate-budget/)、[流媒体片库与网络连通为什么不是同一结果](/blog/streaming-library/)。

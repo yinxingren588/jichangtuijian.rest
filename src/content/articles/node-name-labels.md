@@ -1,13 +1,13 @@
 ---
 title: "机场节点怎么选？读懂节点名称、线路标签与套餐权限"
-description: "机场节点选择指南：从地区、入口与出口、套餐权限和流量倍率读懂节点列表，再按任务核对延迟、下载与解锁图。解释专线、游戏等名称的边界，并给出候选筛选与测试顺序。"
+description: "机场节点怎么选，应先核对套餐权限、地区、倍率与协议，再按任务观察。结合六项清单、图表阅读与虚构标签拆解，将专线、游戏等宣传词转成可核对的问题。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["机场节点", "线路", "节点与线路"]
 category: "节点与线路"
-sources: ["https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency", "https://www.cloudflare.com/learning/performance/glossary/what-is-latency/"]
-related: ["/blog/nearby-node/", "/blog/line-labels/", "/guides/run-controlled-node-test/", "/blog/node-subscription-range/"]
+sources: ["https://www.rfc-editor.org/rfc/rfc2330", "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency"]
+related: ["/blog/line-labels/", "/blog/node-subscription-range/", "/blog/node-count-quality/", "/blog/nearby-node/"]
 draft: false
 ---
 
@@ -65,3 +65,9 @@ draft: false
 ### 如何把节点观察放回品牌选择？
 
 先用[性价比机场成本计算](/blog/plan-cost/)核对支出与额度，再看节点能否完成任务。候选品牌可以放进[比较工具](/compare/)并列查看；价格、图表与未知字段分别保留，不合成缺乏依据的综合评分。
+
+## 把一条节点名称翻成可核对的问题
+
+假设列表出现“地区甲·专线·2x·游戏01”，只能据此记录服务方使用了这些标签。可以依次询问：地区甲指入口还是出口；专线对应哪段；2x是否为当前套餐计费倍率；游戏标签是否有具体支持范围；01只是编号还是另有含义。没有说明时，不能把整串名字翻成已确认的技术拓扑。
+
+另一条写“地区乙·备用”，也不自动证明与主用独立。先查看是否属于自己套餐、配置是否更新，再用核心任务验证；缺少共享环节资料时保留独立性未知。标签是提问起点，任务与证据才决定候选是否值得保留。

@@ -1,13 +1,13 @@
 ---
 title: "为什么订阅链接应按密码级别保管"
-description: "链接可能携带访问配置的令牌，持有者未必需要再次输入密码。分享时应评估完整地址、二维码与日志里的凭据。"
+description: "订阅链接可能直接授予私人配置访问。检查网址路径、参数、二维码和导出文件中的敏感内容，按访问能力处理泄露、撤销与验证，不把HTTPS或改登录密码当成全部保护。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["隐私", "隐私与凭据"]
 category: "隐私与凭据"
 sources: ["https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url"]
-related: ["/glossary/subscription/", "/guides/prepare-support-ticket/", "/blog/root-certificate-boundary/"]
+related: ["/blog/qr-code-sharing/", "/blog/service-password-separation/", "/blog/online-converter-risk/", "/blog/log-redaction/"]
 draft: false
 ---
 
@@ -33,8 +33,16 @@ OWASP说明，URL查询参数中的敏感信息可能进入历史记录、日志
 
 用一个反例理解：把域名涂黑，却留下可识别的令牌和二维码，可能仍暴露访问能力；只删除聊天消息，也不能保证没有被复制。截图完成后再人工检查一遍，不依赖自动遮挡一定覆盖所有敏感项。
 
+## 建立一个不包含真实秘密的检查样例
+
+求助时可使用无效占位网址，说明敏感内容可能位于路径、参数或配置字段，而不复制真实值。假设地址中没有token字样，也不能据此判断安全；只要它能取得私人配置，就按对应访问能力处理。
+
+导出文件还可能包含独立节点密码，因此仅删除订阅URL不一定足够。检查文本、二维码和附件本身，而不是只看主截图；公开前重新打开最终文件核对，避免原始副本被一并上传。
+
 ## 已经泄露后怎样收尾
 
 按商家实际机制撤销或重置订阅凭据，再更新自己的客户端，确认旧访问方式是否失效。如果账户密码与订阅令牌分别管理，单改登录密码不一定撤销旧令牌；不能在没有机制说明时承诺某个操作必定有效。
 
 同时清理公开副本并检查异常用量。不要把新令牌再次贴到同一公开位置证明重置成功。继续看[订阅基础说明](/glossary/subscription/)、[支持工单脱敏](/guides/prepare-support-ticket/)和[二维码分享风险](/blog/qr-code-sharing/)，将求助与凭据保护一起完成。
+
+继续阅读：[二维码图片为什么同样可能泄露订阅](/blog/qr-code-sharing/)、[账户密码、订阅令牌和设备密钥为什么不能混用](/blog/service-password-separation/)、[使用在线订阅转换工具前要确认什么](/blog/online-converter-risk/)、[提交日志时，哪些内容最容易忘记脱敏](/blog/log-redaction/)。

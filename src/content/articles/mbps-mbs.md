@@ -1,13 +1,13 @@
 ---
 title: "Mbps与MB每秒怎样换算，为什么仍有误差"
-description: "比特与字节的基本换算是八比一，但界面单位、十进制二进制与传输开销仍需要说明。"
+description: "Mbps除以8才能与十进制MB/s比较，但单位一致不等于任务条件一致。结合换算表和完整下载算例，核对平均速率、等待时间与传输口径。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["稳定性", "性能与测量"]
 category: "性能与测量"
 sources: ["https://www.rfc-editor.org/rfc/rfc6349"]
-related: ["/blog/stability-method/", "/guides/run-controlled-node-test/", "/blog/icmp-limitations/"]
+related: ["/blog/gb-gib/", "/blog/single-multi-thread/", "/blog/throughput-capacity/", "/blog/speedtest-quota/"]
 draft: false
 ---
 
@@ -38,3 +38,9 @@ Mbps和MB/s的关键区别是bit与byte：通常一个字节为8比特。因此�
 ## 把结论写在正确范围内
 
 可以写“在这些条件下，该文件平均约多少MB/s”，不宜写“所有网站都有这个速度”。若要比较套餐，容量GB和速度Mbps属于不同维度，也不能相互替代。继续查看[GB与GiB](/blog/gb-gib/)、[单线程和多线程](/blog/single-multi-thread/)、[测速流量预算](/blog/speedtest-quota/)与[下载速度和网页响应](/blog/speed-versus-response/)。
+
+## 用完整任务检查一次算术
+
+假设一个十进制600 MB文件，实际传输120秒，应用数据平均速率为5 MB/s，按同一单位换算为40 Mbps。如果从点击开始还等待了10秒，则全任务平均为600÷130，约4.62 MB/s。两个结果都可成立，区别在于计时范围，不能只保留更高的一个。
+
+若应用界面写MiB/s，应先转换单位；若任务中失败重试，则文件最终大小并不等于网络累计传输量。先确认这些口径，再讨论是否存在性能差距，避免把单位换算直接变成品牌评价。

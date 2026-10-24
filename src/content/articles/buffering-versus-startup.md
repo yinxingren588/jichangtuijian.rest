@@ -1,15 +1,16 @@
 ---
 title: "首播等待和播放中缓冲应该怎样分开"
-description: "用两组假设播放记录区分首帧等待、播放中停顿和画质变化，提供固定片段与缓存状态的记录表。"
+description: "将首帧等待、播放中停顿和画质变化分开计时，比较点播与直播的边界，避免用单一总等待掩盖实际体验差异。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["应用", "应用场景"]
 category: "应用场景"
 sources: ["https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview", "https://help.netflix.com/en/node/87"]
-related: ["/blog/streaming-quality-adaptive/", "/blog/warm-cold-start/", "/blog/streaming-preload/"]
+related: ["/blog/streaming-quality-adaptive/", "/blog/streaming-preload/", "/blog/video-bitrate-budget/", "/blog/streaming-library/"]
 draft: false
 ---
+
 “播放很卡”至少可能描述两件事：按下播放后等待很久，或已经开始播放却反复停顿。前者是启动过程，后者是连续播放过程；还可能同时伴随自动降画质。分别计时，才能知道比较的是哪一类体验。
 
 ## 定义三个观察量
@@ -37,3 +38,7 @@ draft: false
 ## 用结果回到购买条件
 
 先核对片库、账号权益、设备支持和平台规则，再分析连接。绿色解锁状态并非完整播放证据。可在[流媒体专题](/recommend/streaming/)建立候选，再用[自动画质的比较偏差](/blog/streaming-quality-adaptive/)排除误判；如果关注额度，按[视频码率预算](/blog/video-bitrate-budget/)另算用量。体验记录与套餐扣量保持两套口径，不相互替代。
+
+## 直播和点播不能共用同一个终点
+
+点播可以按固定片段比较，直播还涉及与直播源的时间差；只把等待压短，可能换来更少缓冲余量。观察时分别写内容类型、是否拖动进度和播放器提供的延迟信息，不把直播落后几秒直接当成卡顿秒数。若无法读到播放器统计，只报告可见现象；不据此补出精确码率或网络段耗时。

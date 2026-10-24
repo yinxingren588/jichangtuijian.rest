@@ -1,15 +1,16 @@
 ---
 title: "相同优惠码为什么不同用户结果不同"
-description: "按新老用户、付款周期、套餐和活动期拆解优惠码资格，提供不付款的核对步骤与保存错误提示的方法。"
+description: "拆分用户、商品、周期、活动与叠加资格，用月付年付不同结果的假设解释提示，保留预览范围并保护账户信息。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["账户", "订阅与账户"]
 category: "订阅与账户"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/referral-versus-coupon/", "/blog/coupon-expiry/", "/blog/discount-order/"]
+related: ["/blog/coupon-expiry/", "/blog/discount-order/", "/blog/referral-versus-coupon/", "/guides/check-coupon-without-payment/"]
 draft: false
 ---
+
 同一个优惠码有人能用、有人被拒绝，不足以判断代码普遍失效。适用资格可能与账户、套餐、周期、渠道和活动时间有关；也可能是拼写或结算条件不符。没有商家说明时，不能自行补写“全场可用”或固定折扣。
 
 ## 把资格条件逐项拆开
@@ -36,3 +37,7 @@ draft: false
 邀请码与优惠码也不同，推广链接中的code参数不自动意味着有价格减免。本站12个代码保留维护者提供的原样字符；折扣、期限与适用范围未验证，不自动算进参考价。比如隐形人的yxr888只是已提供代码，不能据名称猜折扣。
 
 到[品牌档案](/airport/yinxingren/)查看时，应同时阅读价格和优惠条件状态。继续用[不付款核对优惠的教程](/guides/check-coupon-without-payment/)保存脱敏结果，或读[邀请码与优惠码区别](/blog/referral-versus-coupon/)。公开反馈不含账号、支付凭据或完整订单截图。
+
+## 核对账户状态时保护必要边界
+
+询问资格可描述“首购或续费、所选档位、周期、代码和原始提示”，不需要在公开讨论中展示完整邮箱、订单号或支付截图。若客服答复只写“可以用”，还应追问是否对应当前账户与商品；没有具体减免金额时，仍不生成券后价。一次结算预览与实际付款记录分开，前者不能写成已经支付成功。

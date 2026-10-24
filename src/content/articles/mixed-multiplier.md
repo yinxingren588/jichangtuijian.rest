@@ -1,13 +1,13 @@
 ---
 title: "多种倍率线路混用时，怎样核对总扣量"
-description: "各线路实际传输量要分别乘以对应倍率后相加，不能把所有流量都套用最低倍率或简单平均倍率。"
+description: "混合倍率线路应按各段用量加权核对，不能直接平均倍率。通过40GB传输扣45GB的假设示例，计算剩余额度分配，并按时间、单位与刷新状态检查差异。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["套餐", "流量与额度"]
 category: "流量与额度"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/plan-cost/", "/guides/calculate-quota-multiplier/", "/blog/traffic-expiry/"]
+related: ["/guides/calculate-quota-multiplier/", "/blog/upload-counting/", "/blog/peak-day-budget/", "/blog/quota-display-delay/"]
 draft: false
 ---
 
@@ -36,3 +36,9 @@ draft: false
 用自己一个周期的任务分布估算，而不是假设所有流量都能走低倍率节点。常用地区和任务可能只在部分节点满足，最低倍率未必对应可用选择。预算中同时保留临时任务空间，不要为追求最小扣量而忽略必要的连接条件。
 
 来源只写套餐总GB、没写节点倍率时，不默认一倍。本站将未知字段保留为待核实，因此并非所有方案都会生成每GB成本。先看[单节点倍率核对教程](/guides/calculate-quota-multiplier/)，再读[上传是否计入](/blog/upload-counting/)与[GB和GiB差异](/blog/gb-gib/)，最后用[性价比比较方法](/blog/plan-cost/)统一口径。
+
+## 剩余额度也要按任务分配
+
+假设还剩30 GB计费额度，接下来有一个明确按2倍扣量的10 GB任务，它在演示规则下需预留20 GB；剩余10 GB才能安排其他任务。若先把30 GB全部按一倍理解，就可能低估后续支出。这里仍未计入未知上传或额外重试，实际安排应留出解释得清楚的余量。
+
+对账时先核对各段开始、结束和节点规则，再查单位与余额刷新。若原始记录缺失，不要用一个“平均倍率”倒推出精确账单；保留可计算部分与未知部分，询问服务当前规则即可。

@@ -1,6 +1,6 @@
 # 全部品牌独立 TDK 完整清单 · 2026-10-24
 
-本轮已为全部 33 个独立品牌页编写标题、描述和关键词，并单独设置页面大标题：28 个机场品牌与另外 5 个商业 VPN 品牌。以下 T、D、K 和 H1 均从本次构建的实际页面读取，不是待应用的文案。
+当前 33 个独立品牌页均有各自标题、描述、关键词和页面大标题：28 个机场品牌与另外 5 个商业 VPN 品牌。本次导出同步最新公开字段；以下 T、D、K 和 H1 均从实际构建页面读取。
 
 - T：网页标题，末尾由网站统一加上“ · 航线笔记”；搜索引擎展示文字可能与网页设置不同。
 - D：页面描述，分别突出各品牌已有的套餐价格、流量、节点测速资料、优惠条件或待补充项目。
@@ -257,7 +257,7 @@
 
 - 独立页面：[本地查看](http://127.0.0.1:4321/airport/windscribe/) · [正式路径](https://jichangtuijian.rest/airport/windscribe/)
 - **T｜标题：** Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对 · 航线笔记
-- **D｜描述：** Windscribe VPN适合怎样的配置需求？本页整理官方OpenVPN、IKEv2、WireGuard配置及官方说明不限设备连接数的说明，提示账号使用与设备条件应单独核对。套餐价格、流量额度尚未录入，本站暂无节点测速及解锁图；空缺字段不表示免费或无限流量。
+- **D｜描述：** Windscribe VPN免费与Pro如何选择？本页记录默认2 GB/月，Pro为9美元/月、官方不限流量与69美元/年、官方不限流量，年付月均不当月付。另列协议、设备和账号共享条件，本站暂无节点测速及解锁图，公开方案不等于本地使用与最终结算验证。
 - **K｜关键词：** Windscribe VPN, Windscribe怎么样, Windscribe套餐价格, Windscribe流量, Windscribe节点, Windscribe测速资料, Windscribe协议, Windscribe设备连接
 - **H1｜页面大标题：** Windscribe VPN怎么样？
 
@@ -265,15 +265,15 @@
 
 - 独立页面：[本地查看](http://127.0.0.1:4321/airport/tunnelbear/) · [正式路径](https://jichangtuijian.rest/airport/tunnelbear/)
 - **T｜标题：** TunnelBear VPN怎么样？免费套餐价格、流量与节点测速资料 · 航线笔记
-- **D｜描述：** TunnelBear VPN免费额度如何理解？页面记录0美元免费档、2 GB（重置周期尚未核实）；付费促销起价的计费周期未明确，不当作月付报价。本站暂无节点测速与解锁图，可据套餐、节点和设备核对项继续查证，不以免费方案推断付费条件，也不承诺实际连接表现。
-- **K｜关键词：** TunnelBear VPN, TunnelBear怎么样, TunnelBear免费套餐, TunnelBear价格, TunnelBear流量, TunnelBear 2 GB（重置周期尚未核实）, TunnelBear节点, TunnelBear测速资料
+- **D｜描述：** TunnelBear VPN免费额度如何理解？页面记录0美元免费档、2 GB/月；付费促销起价的计费周期未明确，不当作月付报价。本站暂无节点测速与解锁图，可据套餐、节点和设备核对项继续查证，不以免费方案推断付费条件，也不承诺实际连接表现。
+- **K｜关键词：** TunnelBear VPN, TunnelBear怎么样, TunnelBear免费套餐, TunnelBear价格, TunnelBear流量, TunnelBear 2 GB/月, TunnelBear节点, TunnelBear测速资料
 - **H1｜页面大标题：** TunnelBear VPN怎么样？
 
 ### 33. hide.me
 
 - 独立页面：[本地查看](http://127.0.0.1:4321/airport/hide-me/) · [正式路径](https://jichangtuijian.rest/airport/hide-me/)
 - **T｜标题：** hide.me VPN怎么样？免费与月付套餐价格、流量及节点测速资料 · 航线笔记
-- **D｜描述：** hide.me VPN免费与月付如何对照？本页收录0欧元免费档、官方不限流量；11.99欧元/月、官方不限流量，设备条件为免费 1 个连接；Premium 10 个同时连接，税费需按结算核对。本站暂无节点测速及解锁图，免费和付费的地区、功能条件应分别确认，套餐不限量不能替代实际速度及平台可用性验证。
+- **D｜描述：** hide.me VPN免费与月付如何对照？本页收录0美元免费档、官方不限流量；11.99美元/月、官方不限流量，设备条件为免费 1 个连接；Premium 10 个同时连接，税费需按结算核对。本站暂无节点测速及解锁图，免费和付费的地区、功能条件应分别确认，套餐不限量不能替代实际速度及平台可用性验证。
 - **K｜关键词：** hide.me VPN, hide.me怎么样, hide.me套餐价格, hide.me免费方案, hide.me月付, hide.me流量, hide.me节点, hide.me测速资料
 - **H1｜页面大标题：** hide.me VPN怎么样？
 

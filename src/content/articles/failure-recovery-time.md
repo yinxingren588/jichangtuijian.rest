@@ -1,15 +1,16 @@
 ---
 title: "故障恢复时间应该从哪一刻开始计算"
-description: "以一分钟一次的假设观测时间线，区分故障边界、首次恢复、确认恢复和人工切换，避免伪精确计时。"
+description: "定义最后成功、首次失败、首次恢复和确认恢复，记录探测间隔与人工切换，避免把备用成功误当原线路修好。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["稳定性", "性能与测量"]
 category: "性能与测量"
 sources: ["https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/stability-method/", "/blog/backup-during-outage/", "/blog/test-log-format/"]
+related: ["/blog/availability-denominator/", "/blog/stability-method/", "/blog/fallback-independence/", "/blog/support-ticket-quality/"]
 draft: false
 ---
+
 故障恢复时间需要先定义“什么算故障”和“什么算恢复”。一次连接重新成功，可能只是短暂恢复；客服宣布修复，也不等于自己的业务已恢复。记录应按同一个任务口径计时，并保留探测间隔造成的不确定性。
 
 ## 先约定成功与失败
@@ -36,3 +37,7 @@ draft: false
 记录任务、网络环境、故障判定、最后成功、首次失败、首次成功、确认恢复、干预和原始错误。还应写自己的接受标准：会议能否重新加入、同步是否继续、大文件是否需重传。这样才能分析备用方案是否满足工作需求。
 
 本站维护者测速图不是连续故障监测，不能据此补出品牌恢复时间。可以先按[测试日志格式](/blog/test-log-format/)整理记录，再去[稳定优先专题](/recommend/stable/)比较证据缺口。对外工单只提交必要的脱敏时间线，不提供完整订阅令牌。
+
+## 恢复后的观察窗口不要省略
+
+确认恢复以后，继续按预定的小窗口观察是否再次失败，并标出窗口结束。可以写“恢复后继续观察十分钟未再失败”，不能据此写长期稳定。若停止观察、设备休眠或切到别的网络，必须记为覆盖结束；不能把没有继续测的时间补成成功，也不在结果出来后调整连续成功次数以缩短故障时长。

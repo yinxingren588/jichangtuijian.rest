@@ -1,15 +1,16 @@
 ---
 title: "更新订阅成功与节点可连接有什么不同"
-description: "将订阅获取、解析、应用、节点连接与目标任务拆成五层，附更新成功却仍超时的排查案例。"
+description: "客户端更新成功，不等于节点与目标任务都可用。分开核对配置获取、解析、应用、连接和任务，记录新旧配置与当前会话，避免靠重复更新代替实际验证。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["账户", "订阅与账户"]
 category: "订阅与账户"
-sources: ["https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview", "https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/subscription-http-error/", "/blog/node-subscription-range/", "/guides/connection-check/"]
+sources: ["https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status"]
+related: ["/blog/subscription-http-error/", "/blog/node-subscription-range/", "/blog/format-client-compatibility/", "/blog/post-purchase-validation/"]
 draft: false
 ---
+
 客户端提示“更新成功”，通常只说明某个配置更新环节完成，不能据此判断节点全部可连接。不同客户端的成功提示可能覆盖不同步骤，必须结合文档和日志确认，不应把配置下载状态当成目标网站的可用性。
 
 ## 先拆成五个状态
@@ -36,6 +37,14 @@ HTTP成功状态也不能单独证明内容符合订阅格式。返回登录页�
 
 重复获取配置可能产生额外请求，不能代替连接验证；更新失败时客户端还可能使用旧配置。旧列表仍能显示，也不能反过来证明账号和新权益都正常。
 
+## 新配置不一定替换了正在使用的会话
+
+可以记录“最新获取配置名、当前启用配置名、节点列表变化、任务请求时间”四项。假设新条目已经出现，但应用仍复用此前连接，切换效果可能尚未体现在这次任务中；这只是需要核对的分支，不是客户端统一行为。
+
+按该客户端当前说明应用配置或建立新任务，先保存工作与恢复路径。不要为强制验证把所有配置删除，也不把一个应用结果扩大为全部设备。最新更新时间与任务成功时间分开，后续工单才能准确对应状态。
+
 ## 用状态表写清工单
 
 写出“获取成功、解析成功、已应用、连接失败、任务未测”，比只说“不能用”更容易复核。附客户端版本、非敏感节点名称、发生时段和最小步骤，删除邮箱、令牌和会话凭据。按[节点缺失排查](/blog/node-subscription-range/)检查权益范围，再读[连接检查教程](/guides/connection-check/)验证小任务，不为试探状态重复付款。
+
+继续阅读：[订阅更新返回错误码时，先保留哪些信息](/blog/subscription-http-error/)、[订阅里没有某个节点，是套餐还是配置问题](/blog/node-subscription-range/)、[订阅格式不兼容时，为什么不能反复改服务器密码](/blog/format-client-compatibility/)、[付款成功后，怎样确认买到的方案已经生效](/blog/post-purchase-validation/)。

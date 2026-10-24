@@ -1,14 +1,16 @@
 ---
 title: "AI 服务与 VPN 节点：购买前核对什么"
-description: "AI服务购买前分开核对地区、账号、产品功能与网络表现，附任务验收表和登录成功但上传失败的排查示例。"
+description: "按支持地区、账号资格、产品功能和实际任务核对AI服务需求，区分登录、文件、长响应与API，说明测速图能支持的结论边界。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["AI", "入门"]
 sources: ["https://help.openai.com/en/articles/7947663-chatgpt-supported-countries", "https://support.google.com/gemini/answer/13575153?hl=en"]
 draft: false
-related: ["/blog/ai-login-versus-use/", "/blog/platform-supported-region/", "/blog/ai-streaming-response/"]
+related: ["/blog/ai-login-versus-use/", "/blog/ai-streaming-response/", "/blog/platform-supported-region/", "/blog/network-layer-checklist/"]
+category: "应用场景"
 ---
+
 购买写着“支持AI”的网络订阅前，先确认自己要使用的平台、产品和功能。打开网页、登录账号、发送消息、上传文件和使用API是不同环节。一张解锁图无法证明它们全部可用，也不能替代平台对所在地和账号的要求。
 
 ## 先检查资格，再检查连接
@@ -34,3 +36,7 @@ ChatGPT官方支持地区页明确说明支持范围及范围外访问的账号�
 假设某账号能进入对话页，但选择文件后立即报错。先核对文件格式、大小、功能权限与服务状态，再观察错误是在本地选择、上传传输还是处理阶段发生。如果普通文字任务正常，也只能说明该任务在该时刻成功，不能写成“所有AI服务已解锁”。这是排查示例，不是品牌测试记录。
 
 把结果带回[AI服务专题](/recommend/ai/)与品牌资料对照。本站绿色节点数属于维护者提供图表的状态计数，缺少长期请求分母；不代表账号可用率。出现连接问题时可按[网络分层检查](/blog/network-layer-checklist/)保留可复核证据，避免反复改身份或付款信息试探规则。
+
+## 购买判断与功能故障分开记录
+
+先做购买资格判断，再做实际功能验收。可以把条件分成三栏：明确满足、明确不满足、尚未确认。只要必需资格仍未知，就不能因某个节点探测显示绿色而完成购买判断。已有账号遇到问题时，另按[登录与具体功能的区别](/blog/ai-login-versus-use/)定位错误；仅持续回复中断时，转到[长回复中断的记录方法](/blog/ai-streaming-response/)，不把两个问题混成一个“AI解锁率”。

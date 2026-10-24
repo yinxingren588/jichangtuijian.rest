@@ -32,7 +32,7 @@ export const brandFit:Record<string,BrandFit>={
  kuaili:{audience:'想对照轻量年付与标准月付的用户',highlight:'两种付款周期与额度分开呈现',caution:'年付月均与完整账单应分开核对'},
  'proton-vpn':{audience:'希望先了解免费 VPN 条件的用户',highlight:'已收录官方免费方案与设备条件',caution:'免费条件不代表付费功能或本地可用性'},
  mullvad:{audience:'偏好明确欧元月度报价的用户',highlight:'统一欧元月价，付款周期较直观',caution:'使用权益及本地连接表现需另核对'},
- windscribe:{audience:'想了解协议配置与设备条件的用户',highlight:'已收录多协议配置与连接数说明',caution:'价格和流量尚未核实'},
- tunnelbear:{audience:'希望先做轻量免费试用的用户',highlight:'官方资料列有 2 GB 免费额度',caution:'免费额度的重置周期尚未核实'},
+ windscribe:{audience:'想比较免费、月付和年付的用户',highlight:'月付9美元、完整年费69美元与免费额度单列',caution:'年付月均不是月付，账号共享禁止，结算税费尚未核实'},
+ tunnelbear:{audience:'希望先做轻量免费试用的用户',highlight:'官方每月2 GB免费额度，按账户创建对应日重置',caution:'未用额度不结转，免费功能不等于付费权益'},
  'hide-me':{audience:'想把免费与付费方案分别比较的用户',highlight:'免费条件与完整月付方案单列',caution:'税费、设备与功能范围分别核对'}
 };

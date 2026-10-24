@@ -1,13 +1,13 @@
 ---
 title: "晚高峰选节点，应看哪些持续性指标"
-description: "应关注任务成功率、时延波动和故障持续时间，而不只是测速页面出现过的最高速率。"
+description: "晚高峰选节点先看持续任务是否完成，再看响应、吞吐和恢复。结合任务对照表与会议假设样本，记录观察次序、失败及未知时段，形成适用范围清楚的候选结论。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["线路", "节点与线路"]
-category: "节点与线路"
+category: "性能与测量"
 sources: ["https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/line-labels/", "/guides/run-controlled-node-test/", "/blog/node-latency-color/"]
+related: ["/blog/stability-method/", "/blog/time-window-testing/", "/blog/failure-recovery-time/", "/blog/fallback-independence/"]
 draft: false
 ---
 
@@ -39,3 +39,9 @@ draft: false
 备用节点应先确认权限和任务可用性，不等故障时才首次导入。切换后要重新确认上传、会议或网页会话是否真正恢复，不能只看连接图标。长期稳定性需要更多时段和失败记录，单晚观察只能帮助下一步筛选。
 
 接着使用[同条件节点测试教程](/guides/run-controlled-node-test/)、[稳定性记录方法](/blog/stability-method/)和[备用是否独立](/blog/fallback-independence/)，逐步完善自己的候选表。
+
+## 记录测试次序，别让时间变化代替节点差异
+
+若每晚固定先测A、很久以后才测B，两个候选可能经历不同负载。可以在允许的小范围观察中交替顺序，并记录开始时间；这只能减少某些混杂，不能消除所有差异，更不意味少量样本足够发布全国名次。
+
+没有观察的晚间时段记为未测，不因白天正常就补成成功。某次设备休眠或网络切换，应另记缺测和环境变化；若核心任务已经恢复，先完成任务，避免为了凑测试数量持续消耗额度。

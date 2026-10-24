@@ -9,7 +9,7 @@ const records=airports.map(brand=>{
  return {brand:brand.name,slug:brand.slug,kind:brand.kind,url:site.url+'/airport/'+brand.slug+'/',preview:'http://127.0.0.1:4321/airport/'+brand.slug+'/',title:$('title').text(),description:$('meta[name="description"]').attr('content')!,keywords:$('meta[name="keywords"]').attr('content')!,heading:$('h1').text()};
 });
 for(const r of records)if(r.description!==brandSeo[r.slug].description||!r.keywords||r.title!==brandSeo[r.slug].title+' · '+site.name)throw Error('Build and TDK configuration differ: '+r.slug);
-const lines=[`# 全部品牌独立 TDK 完整清单 · ${brandSeoUpdated}`,'','本轮已为全部 33 个独立品牌页编写标题、描述和关键词，并单独设置页面大标题：28 个机场品牌与另外 5 个商业 VPN 品牌。以下 T、D、K 和 H1 均从本次构建的实际页面读取，不是待应用的文案。','',
+const lines=[`# 全部品牌独立 TDK 完整清单 · ${brandSeoUpdated}`,'','当前 33 个独立品牌页均有各自标题、描述、关键词和页面大标题：28 个机场品牌与另外 5 个商业 VPN 品牌。本次导出同步最新公开字段；以下 T、D、K 和 H1 均从实际构建页面读取。','',
 '- T：网页标题，末尾由网站统一加上“ · 航线笔记”；搜索引擎展示文字可能与网页设置不同。',
 '- D：页面描述，分别突出各品牌已有的套餐价格、流量、节点测速资料、优惠条件或待补充项目。',
 '- K：关键词标签，各品牌独立写入，不在正文中重复堆放。',

@@ -49,7 +49,8 @@ test('fact rendering keeps payment period, quota period, unknowns and unlimited 
  brand.plans[0].unlimited=true;assert.match(renderBrandFacts('{{plans}}',brand),/官方不限流量/);
  assert.throws(()=>renderBrandFacts('{{typo}}',brand),/Unknown brand fact token/);
  const vpn=structuredClone(airports.find(b=>b.slug==='tunnelbear')!);vpn.plans[0].trafficGB=3;
- const seo=resolveBrandSeo(vpn);assert.match(seo.description,/3 GB（重置周期尚未核实）/);assert.ok(seo.keywords.some(k=>k.includes('3 GB')));assert.ok(!seo.keywords.some(k=>k.includes('2GB')));
+ const seo=resolveBrandSeo(vpn);assert.match(seo.description,/3 GB\/月/);assert.ok(seo.keywords.some(k=>k.includes('3 GB')));assert.ok(!seo.keywords.some(k=>k.includes('2GB')));
+ delete vpn.plans[0].trafficPeriod;assert.match(resolveBrandSeo(vpn).description,/3 GB（重置周期尚未核实）/);
  vpn.deviceLimit='最多 2 台';assert.ok(resolveBrandSeo(vpn,{...brandSeoTemplates[vpn.slug],description:'{{devices}}'}).description.includes('最多 2 台'));
 });
 
@@ -87,5 +88,5 @@ test('descriptions preserve reference plan amounts, exact coupon case and availa
  for(const slug of ['feimaoyun','firefly','kuaili']){const text=brandSeo[slug].description;assert.ok(text.includes('月均'));assert.ok(text.includes('总额')||text.includes('年费'));assert.ok(text.includes('确认')||text.includes('核对'));}
  assert.match(brandSeo.feiv.description,/200 GB一次性总额度/);assert.match(brandSeo.edgenova.description,/86元\/年、200 GB\/月/);
  for(const b of airports.filter(b=>b.kind==='vpn')){assert.equal(evidenceFor(b.slug),undefined);assert.match(brandSeo[b.slug].description,/暂无.*测速/);}
- assert.match(brandSeo.windscribe.description,/价格、流量额度尚未录入/);assert.match(brandSeo.tunnelbear.description,/重置周期尚未核实/);
+ assert.match(brandSeo.windscribe.description,/9美元\/月/);assert.match(brandSeo.windscribe.description,/69美元\/年/);assert.match(brandSeo.tunnelbear.description,/2 GB\/月/);
 });

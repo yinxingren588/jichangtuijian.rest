@@ -1,13 +1,13 @@
 ---
 title: "结算页多出费用时，怎样核对最终金额"
-description: "最终需要比较的是确认付款前的合计金额，并逐项解释附加费用。商品卡片上的起价可能不包含所有结算条件。"
+description: "拆解币种、周期、减免、费用和应付总额，区分商家预览与支付扣款，处理宣传价与结算冲突时保留可核对的条件。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["预算", "预算与计费"]
 category: "预算与计费"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/plan-cost/", "/guides/prepare-comparison-sheet/", "/blog/discount-order/"]
+related: ["/blog/currency-comparison/", "/blog/discount-order/", "/blog/referral-versus-coupon/", "/blog/post-purchase-validation/"]
 draft: false
 ---
 
@@ -35,3 +35,7 @@ draft: false
 保存时间、套餐、周期、币种、优惠提示与最终金额，截图前遮住姓名、订单敏感字段、支付码和账户信息。向支持渠道说明是哪两个页面不一致，询问完整总额与权益，以免只得到“活动有效”这样无法核对的答复。
 
 不要用重复付款确认价格，不为完成一张比较表而补写不存在的税率、汇率或退款承诺。如果跳转后的品牌、收款主体或套餐与预期不符，应先停止并核对入口。确认订单后，再按[权益生效检查](/blog/post-purchase-validation/)验证；需要区分推广参数与优惠码时，可看[推广链接和优惠码的区别](/blog/referral-versus-coupon/)，长期成本继续看[续费价格](/blog/renewal-price/)。
+
+## 订单相同，支付渠道结果仍需区分
+
+比较金额时把商家订单币种和支付渠道实际扣款分别保存；汇率换算、渠道费用与商家折扣不能混作同一减免。如果最终扣款尚未发生，只能写预览金额，不能写已经实付。准备付款前再次检查套餐、周期和主体是否与原选择一致；入口跳转造成品牌变化时先核对，不为赶优惠忽略订单身份。

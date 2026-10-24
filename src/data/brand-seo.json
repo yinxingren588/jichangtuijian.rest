@@ -437,7 +437,7 @@
   "windscribe": {
     "title": "Windscribe VPN怎么样？套餐价格、流量与节点测速资料核对",
     "heading": "Windscribe VPN怎么样？",
-    "description": "Windscribe VPN适合怎样的配置需求？本页整理官方{{protocols}}配置及{{devices}}的说明，提示账号使用与设备条件应单独核对。{{plans}}，本站暂无节点测速及解锁图；空缺字段不表示免费或无限流量。",
+    "description": "Windscribe VPN免费与Pro如何选择？本页记录默认{{quota:0}}，Pro为{{plan:1}}与{{plan:2}}，年付月均不当月付。另列协议、设备和账号共享条件，本站暂无节点测速及解锁图，公开方案不等于本地使用与最终结算验证。",
     "keywords": [
       "Windscribe VPN",
       "Windscribe怎么样",

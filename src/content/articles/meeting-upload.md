@@ -1,15 +1,16 @@
 ---
 title: "视频会议为什么需要同时关注上传额度"
-description: "按上下行合计速率演算会议月流量，区分推荐带宽与实际消耗，并检查摄像头、共享屏幕和多人用量。"
+description: "视频会议需要同时看上传、下载与会话状态。用20个工作日的27GB假设演算说明双向用量，核对后台传输和会后统计，区分官方带宽要求与实际消耗。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["套餐", "流量与额度"]
-category: "流量与额度"
+category: "应用场景"
 sources: ["https://learn.microsoft.com/en-us/microsoftteams/prepare-network#bandwidth-requirements"]
-related: ["/blog/upload-counting/", "/blog/screen-sharing-load/", "/blog/remote-meeting-priority/"]
+related: ["/blog/remote-meeting-priority/", "/blog/screen-sharing-load/", "/blog/upload-counting/", "/blog/shared-quota/"]
 draft: false
 ---
+
 视频会议不是只下载画面：麦克风、摄像头和共享屏幕可能持续上传。仅用下行速率估算套餐，会遗漏重要部分。会议软件会根据模式、设备和网络调整传输，官网带宽要求通常也不能直接当作自己的恒定用量。
 
 ## 先区分三类数字
@@ -35,3 +36,9 @@ Microsoft Teams的网络文档说明，带宽使用与音视频、共享等模�
 同样的27GB估算不代表体验合格。双向延迟波动、停顿、中断和恢复也会影响会议，应另外记录；下载峰值很高不能证明上传足够或会话连续。可以沿[远程会议优先级](/blog/remote-meeting-priority/)检查本地网络和后台负载。
 
 在[流量需求计算器](/tools/traffic-calculator/)中，会议速率填上下行合计，文件用量按整组月总量填，避免再按人数重复计算共享文件。把建议额度带回[稳定优先专题](/recommend/stable/)与条款核对，不以单张测速图替代工作任务验收。
+
+## 会前与会后各做一次核对
+
+会前查看是否存在相册同步、云盘上传或软件更新；得到允许后，先暂停可延期的传输，再观察同一会议模式，避免把共享上行争用写成线路结论。测试时不要同时跑下载峰值，它会改变原来的网络条件。
+
+会后记录实际持续时间，以及中途关闭摄像头、开启共享或切网的时间段。若总量来自系统统计，就标明统计范围可能包含后台任务；若来自账号余额，就记录刷新时点。余额差与理论值不符时，先核对口径，不反推某个品牌必定采用特定倍率。

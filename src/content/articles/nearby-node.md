@@ -1,13 +1,13 @@
 ---
 title: "VPN节点怎么选？距离、地区与延迟的核对方法"
-description: "VPN节点选择从任务地区、套餐权限和客户端支持开始，再对照延迟、持续传输与失败记录。解释为什么最近的服务器不一定最快，怎样做同条件比较，以及节点连通与平台账号资格的区别。"
+description: "VPN节点选择应先匹配目标规则和任务，再比较同条件记录。按地区、距离、指标与备用框架筛选候选，结合三候选淘汰示例，判断权限、任务证据与未测字段。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["VPN节点", "线路", "节点与线路"]
 category: "节点与线路"
-sources: ["https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency", "https://www.cloudflare.com/learning/access-management/what-is-a-vpn/"]
-related: ["/blog/node-name-labels/", "/guides/run-controlled-node-test/", "/blog/region-target-match/", "/blog/ai-access/"]
+sources: ["https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency", "https://www.rfc-editor.org/rfc/rfc2330"]
+related: ["/blog/node-name-labels/", "/blog/region-target-match/", "/blog/peak-hour-selection/", "/guides/run-controlled-node-test/"]
 draft: false
 ---
 
@@ -68,3 +68,15 @@ VPN节点怎么选？先确定目标服务允许的地区和你要完成的任�
 ### 节点选择与套餐性价比如何一起看？
 
 先确认哪种付款模型覆盖实际用量，再验证候选节点能否完成任务。按[性价比机场的成本方法](/blog/plan-cost/)分别记录周期和额度，不把低单价直接变成速度或隐私保障结论。
+
+## 用一张淘汰表结束反复切换
+
+假设三个虚构候选中，A最低延迟较低但不满足必要地区条件，B满足条件且完成了核心任务，C满足条件但还未验证。应先排除A，把B保留为当前候选，给C安排有限对照，而不是按最低延迟将A置顶。这个例子解释决策顺序，不对应本站品牌实测。
+
+| 候选 | 必要条件 | 当前任务证据 | 下一步 |
+| --- | --- | --- | --- |
+| A | 不满足 | 即使有低延迟也不足 | 排除该任务候选 |
+| B | 满足 | 有限样本完成 | 保留并跨时段复查 |
+| C | 满足 | 尚未观察 | 标待验证，不当作失败 |
+
+完成选择后写下“用于什么任务、在哪种接入下、上次何时验证”。任务和网络变化后，再复核这条记录，而不是把个人候选名单变成永久地区排名。

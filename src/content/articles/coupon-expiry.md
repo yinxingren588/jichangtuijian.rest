@@ -1,13 +1,13 @@
 ---
 title: "优惠码没有标有效期，还能写成长期有效吗"
-description: "没有有效期说明时只能记录有效期未知，不能把暂时能输入或页面长期存在解释成永久有效。"
+description: "把活动截止、资料读取和实际预览时间分开，处理冲突时保留原文与时区，不将未标期限的优惠码宣传为长期有效。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["预算", "预算与计费"]
 category: "预算与计费"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/plan-cost/", "/guides/prepare-comparison-sheet/", "/blog/monthly-cashflow/"]
+related: ["/blog/coupon-user-eligibility/", "/blog/discount-order/", "/guides/check-coupon-without-payment/", "/blog/source-staleness/"]
 draft: false
 ---
 
@@ -37,3 +37,7 @@ draft: false
 本站的维护者优惠码用于帮助继续核对。没有确认的折扣、适用范围和有效期，均不自动用于计算券后价格；更新页面不会让这些未知项自动变成事实。客户应按自身需求先判断方案是否合适，再核对优惠。
 
 继续阅读[优惠叠加的判断](/blog/discount-order/)与[最终结算金额](/blog/checkout-amount/)。需要实际操作时，按[不付款检查优惠](/guides/check-coupon-without-payment/)记录条件，避免把资料存在误认为优惠已验证。
+
+## 同一活动出现两个截止时间
+
+遇到宣传页和结算提示的截止时间冲突，先保存两处原文、时区、所选方案和读取时刻，再向可信渠道确认。不擅自采用更晚日期，也不以页面仍能打开推断活动延长。无法获得明确答复时，预算按已确认的未优惠金额安排；读者若不接受这个金额，就不应因等待确认而被催促下单。

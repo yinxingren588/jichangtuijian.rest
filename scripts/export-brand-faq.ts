@@ -10,7 +10,7 @@ const records=airports.map(brand=>{
 fs.writeFileSync('docs/brand-faq-export.json',JSON.stringify({updated:'2026-10-24',records},null,2)+'\n');
 fs.writeFileSync('docs/brand-faq.md',[
  '# 全部品牌专属问答清单','',
- '2026-10-24 · 33 个品牌，每家 4 条，共 132 条。保留原有 33 条独立问答，本轮新增 99 条。以下问答已与构建后的页面逐项比对，套餐、优惠码及差额使用当前资料库字段，不代表重新核验了商家结算或连接能力。','',
+ '2026-10-24 · 33 个品牌，每家 4 条，共 132 条。当前专属问答已与构建后的页面逐项比对，本轮同步了新核对的VPN公开字段。套餐、优惠码及差额使用同一资料库字段，公开资料复核不代表商家登录后结算或独立连接测试。','',
  ...records.flatMap((r,i)=>[`## ${i+1}. ${r.brand}`,'',`[打开品牌问答](${r.preview})`,'',...r.questions.flatMap((q,n)=>[`### ${n+1}. ${q.question}`,'',q.answer,''])]),
  '## 后续维护','',
  '新增的专属问答在 src/data/brand-faq.json；原有首条问答在 src/data/brand-editorials.json。双花括号占位符从套餐资料库取值；修改资料后重新构建，并运行 npm run export:faq 生成实际页面清单。没有独立测速证据的品牌不补写性能结论。',''

@@ -1,13 +1,13 @@
 ---
 title: "推广链接中的code与结算优惠码有什么区别"
-description: "链接里的推荐标识可能用于归因，优惠码用于结算规则；两者即使都叫code，也不能默认互相替代。"
+description: "推广入口的推荐参数与结算优惠码用途不同。核对原始代码、适用条件、基础价、减免与实付，辨别推荐归因和订单折扣，不按代码字符推断优惠。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["账户", "订阅与账户"]
-category: "订阅与账户"
+category: "预算与计费"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/buying-checklist/", "/guides/prepare-support-ticket/", "/blog/account-expiry-versus-quota/"]
+related: ["/blog/coupon-user-eligibility/", "/blog/coupon-expiry/", "/blog/discount-order/", "/blog/checkout-amount/"]
 draft: false
 ---
 
@@ -30,6 +30,12 @@ draft: false
 
 本站保留维护者提供的原始推广链接和优惠码，代码大小写不自行修改。即使代码包含90、88等数字，也不能按字符推断九折或八八折；某些活动可能限新用户、特定周期或套餐，但具体限制必须以当前已确认的条款为准。
 
+## 优惠未出现时记录什么
+
+用一行保存读取时间、目标档位、付款周期、输入的原始代码、提示文字与减免行。假设入口有推荐标识，但结算仍为原价，应写“推荐入口已使用，当前订单未见减免”，不能写“优惠已自动到账”。若码被接受却没有金额变化，也保留这种差异。
+
+不要将多个推荐参数与优惠码拼接试探，更不需要连续注册不同身份来绕过资格。推广归因是否成功往往不是消费者可见事实，应与可见的账单减免分开表述。
+
 ## 怎样检查而不立即付款
 
 先确认外部入口与预期品牌相符，再选择目标档位，查看当前账单、优惠提示和续费条件。只记录必要的非敏感字段；如果流程要求付款后才能确认某项权益，就把该项列为未确认，不能写成已经验证。具体操作可参考[付款前检查优惠条件](/guides/check-coupon-without-payment/)。
@@ -37,3 +43,5 @@ draft: false
 推广关系还涉及商业披露。网站可能通过推荐入口获得佣金，但这不能替代客户的独立选择，也不能证明某品牌质量更高或当前折扣更大。比较时先确认实际任务、额度和周期，再讨论优惠。
 
 如果代码无效，记录所选方案、付款周期、提示与时间，不公开账户或完整订单凭据。接着检查[用户资格差异](/blog/coupon-user-eligibility/)和[优惠有效期](/blog/coupon-expiry/)，避免用重复注册或重复付款试探规则。
+
+继续阅读：[相同优惠码为什么不同用户结果不同](/blog/coupon-user-eligibility/)、[优惠码没有标有效期，还能写成长期有效吗](/blog/coupon-expiry/)、[优惠码与活动价能否叠加，应该怎么判断](/blog/discount-order/)、[结算页多出费用时，怎样核对最终金额](/blog/checkout-amount/)。

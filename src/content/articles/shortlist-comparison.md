@@ -1,13 +1,13 @@
 ---
 title: "候选太多时，怎样缩小比较范围"
-description: "先用明确不兼容的条件排除，再保留少量有来源的候选逐项对照，避免一次比较所有营销指标。"
+description: "候选品牌太多时，先用设备、用途和实付预算等必要条件筛选，再比较少数方案。将关键未知与可选优势分开记录，用具体理由保留候选并安排最小验证。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["决策", "选择与维护"]
 category: "选择与维护"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
-related: ["/blog/buying-checklist/", "/guides/prepare-comparison-sheet/", "/blog/post-purchase-validation/"]
+related: ["/blog/requirements-before-brand/", "/blog/comparison-template/", "/blog/unknown-fields-decision/", "/blog/minimum-verification/"]
 draft: false
 ---
 
@@ -30,6 +30,12 @@ draft: false
 
 待必要条件补齐后，再比较相同币种、付款周期、额度发放和设备权益。一次性总量、月度重置和年付月均分别处理，不能压成一个没有说明的最低月价。存在未知倍率时，也不能生成确定的每GB性价比排名。
 
+## 遇到一强一弱，不急着发明总冠军
+
+假设A在当次支出上更合适，B在已确认的设备范围上更完整，且两者都满足核心条件，可以保留为不同情形的候选。写“适合短期预算”和“适合多设备”，比把不相关优势加总成唯一名次更可解释。
+
+若某一候选在所有已核对关键条件上都不优于另一家，且成本更高，可先降低研究优先级；但未知项不能据此补成劣势，仍需看它是否影响核心任务。保留原因明确，资料更新后才知道是否该重新纳入。
+
 ## 用本站工具保留两到四家
 
 从[品牌目录](/airport/)按预算、付款周期和最低流量筛选，阅读独立品牌页后，再把候选加入[比较表](/compare/)。筛选结果只说明已录入字段满足条件，不证明当前结算或实际速度已经验证；表格中的未知项仍要回到具体方案确认。
@@ -39,3 +45,5 @@ draft: false
 ## 最后安排最小验证
 
 先按任务选择短期或条款允许的试用方式，留出测试和退出成本。保留实际结果后再考虑扩大额度或承诺更长周期，不因为榜单第一就跳过自己的核对。接着使用[候选表教程](/guides/prepare-comparison-sheet/)、[购买清单](/blog/buying-checklist/)和[首次验证预算](/blog/trial-budget/)完成决定。
+
+继续阅读：[选择品牌前，怎样把需求写成可核对条件](/blog/requirements-before-brand/)、[一张有用的套餐比较表，应该保留哪些列](/blog/comparison-template/)、[比较表里有未知项，应该怎样做决定](/blog/unknown-fields-decision/)、[首次购买前，最小验证流程可以怎样安排](/blog/minimum-verification/)。

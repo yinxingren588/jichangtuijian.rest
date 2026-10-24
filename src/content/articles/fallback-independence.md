@@ -1,15 +1,16 @@
 ---
 title: "备用节点是否独立，应该核对什么"
-description: "用故障相关性拆解备用节点选择，核对本地网络、入口、出口、账户和上游，附小规模演练与预算方法。"
+description: "从本地网络、入口、账号与目标检查共同故障点，区分路径说明、有限事件与未知状态，安排不影响工作的备用演练。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["线路", "节点与线路"]
 category: "节点与线路"
 sources: ["https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/same-exit-multiple-nodes/", "/blog/backup-during-outage/", "/blog/backup-subscription-budget/"]
+related: ["/blog/backup-during-outage/", "/blog/backup-subscription-budget/", "/blog/entry-exit-path/", "/blog/failure-recovery-time/"]
 draft: false
 ---
+
 备用节点的价值，在于主路径出问题时仍有机会完成任务。不同名称、国旗或品牌并不能自动证明故障独立。先找可能共享的环节，再验证自己的切换过程，比单纯增加节点数量更有用。
 
 ## 从设备到目标逐层检查
@@ -34,3 +35,7 @@ draft: false
 在有权限且额度充足时，选择非关键时段，先保存配置，完成一个小型任务，再按正常操作切换备用并重做。记录切换步骤、耗时、是否需要重新登录、任务是否需重启，以及恢复原配置的方法。不主动制造供应商故障，也不关闭单位安全控制来测试。
 
 备用预算要包含有效期、可用额度、设备限制和维护成本。只需要应急时，不必为了账面月均便宜承担不合适的长期付款。可按[备用订阅预算](/blog/backup-subscription-budget/)列成本，在[比较表](/compare/)保留已确认的不同条件；遇到真实中断，再按[故障恢复计时](/blog/failure-recovery-time/)记录切换作用。
+
+## 对独立性采用证据等级
+
+可以分为“有明确路径说明”“只有有限事件对照”“尚不清楚”三种资料状态，不用一个是或否掩盖不确定性。不同IP只是一项地址观察，不能替代不同上游的证明；不同品牌也可能受同一目标故障影响。无法取得内部架构不妨碍制定小规模演练，但应停止计算没有样本支持的联合失效率。

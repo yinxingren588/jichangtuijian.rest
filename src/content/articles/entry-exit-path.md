@@ -1,15 +1,16 @@
 ---
 title: "入口节点与出口地区不是一回事"
-description: "分清设备到入口、服务内部路径与目标看到的出口，用入口相同出口不同的示例说明节点标签的边界。"
+description: "拆分设备接入、服务转发与目标可见出口，区分商家标签、可观察地址和未知拓扑，避免用国旗推断全路径与备用独立性。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["线路", "节点与线路"]
 category: "节点与线路"
 sources: ["https://www.cloudflare.com/learning/access-management/what-is-a-vpn/", "https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/node-name-labels/", "/blog/regional-ip-database/", "/blog/nearby-node/"]
+related: ["/blog/node-name-labels/", "/blog/nearby-node/", "/blog/same-exit-multiple-nodes/", "/blog/fallback-independence/"]
 draft: false
 ---
+
 节点列表中的地区通常是服务的展示信息，不能用一面国旗概括整条网络路径。理解入口与出口，可以帮助判断自己该核对接入质量、目标地区还是平台规则，也能避免把同名地区当作相同线路。
 
 ## 把路径拆成三个部分
@@ -35,3 +36,7 @@ IP地区数据库也可能存在差异。只有目标显示了某地区，仍不
 先写下自己观察的层级：客户端连接接入端失败，还是连接成功后目标报错。保持设备与本地网络不变，记录非敏感节点名称、时间、目标和错误；再按允许范围做小规模对照。公开工单不应附带完整订阅链接或含凭据的地址。
 
 不建议通过频繁修改系统路由猜线路，也不能用一份路由探测输出确定所有隐藏转发关系。可以先读[节点名称解释](/blog/node-name-labels/)，再按[就近节点的任务选择](/blog/nearby-node/)确定验收标准。若需要专线权益，前往[高端专线专题](/recommend/premium/)逐项检查套餐覆盖与个人限速。
+
+## 把标签解释和拓扑证据分栏
+
+资料表可分别保留“商家标签”“目标观察到的来源”“内部路径尚未知”，避免把一列地区扩写成完整路线。若两条节点仅名称不同，而入口或出口信息无法确认，应承认备用独立性未得到证明。对照时不获取其他用户信息、不用扫描推测内部设备；个人观察只能覆盖自己的有限连接。

@@ -1,13 +1,13 @@
 ---
 title: "频繁测速会消耗多少流量，怎样控制样本成本"
-description: "测速本身是数据传输，持续时间、并发数和速度都会影响耗量。测量计划应包含预算，不能把测试流量从记录中排除。"
+description: "测速本身会消耗传输量与套餐额度。根据可用余额、必要任务和计费规则设定测试预算，分清峰值、平均和实际耗量，并在问题已回答或额度不足时停止。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["套餐", "流量与额度"]
 category: "流量与额度"
-sources: ["https://www.rfc-editor.org/rfc/rfc6349"]
-related: ["/blog/plan-cost/", "/guides/calculate-quota-multiplier/", "/blog/peak-day-budget/"]
+sources: ["https://datatracker.ietf.org/doc/html/rfc6349"]
+related: ["/blog/single-multi-thread/", "/blog/quota-display-delay/", "/blog/mixed-multiplier/", "/blog/traffic-alert-threshold/"]
 draft: false
 ---
 
@@ -30,6 +30,12 @@ draft: false
 
 记录账户余量，设置本次测试的次数或流量上限，并尽量固定设备、目标、节点和方法。同一个工具不同服务器的结果不一定可直接比较；改变目标后应作为新样本保存。TCP吞吐的测量还受路径和端系统条件影响，可参考[RFC 6349的测试框架](https://www.rfc-editor.org/rfc/rfc6349)。
 
+## 用账户余量反推本次测试规模
+
+假设可用额度只剩5GB，且还要为必要任务保留3GB，测试预算至多是在已确认口径下剩余的部分，而不是5GB全部。若上传和倍率未知，进一步缩小样本，先补齐计费说明；不能因为测试工具免费就认为套餐消耗也免费。
+
+测试前后记录账户余额与读取时间，等待正常刷新后核对增量。若账户统计包含其他设备或后台任务，差额不能全部归给测速。先控制自己可控的干扰，不要求其他人公开私人用量明细。
+
 ## 什么情况下该停止
 
 如果目标只是确认能完成一项任务，已有可重复结果后无需继续追峰值。余量不足、后台正在同步、设备发热或目标服务器明显变化时，继续测试会同时增加成本与不确定性。先保存条件和结果，解决环境问题再决定是否重测。
@@ -37,3 +43,5 @@ draft: false
 测试结束后对照账户余额的正常刷新，不把客户端显示的单次流量当作商家完整账单。存在差额时，先核对时间窗口、上传、倍率和单位；不能立刻把差额写成确定的异常扣费。
 
 继续看[Mbps与MB每秒换算](/blog/mbps-mbs/)、[同条件节点测试](/guides/run-controlled-node-test/)和[混合倍率核算](/blog/mixed-multiplier/)。图片可以展示某次结果，预算与结论仍需要完整方法和边界。
+
+继续阅读：[单线程与多线程测速为什么可能差很多](/blog/single-multi-thread/)、[客户端用量与账户余额不同，应该先查什么](/blog/quota-display-delay/)、[多种倍率线路混用时，怎样核对总扣量](/blog/mixed-multiplier/)、[额度提醒阈值怎样设置才有实际作用](/blog/traffic-alert-threshold/)。

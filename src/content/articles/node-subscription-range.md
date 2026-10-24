@@ -1,15 +1,16 @@
 ---
 title: "订阅里没有某个节点，是套餐还是配置问题"
-description: "按套餐权限、订阅更新时间和客户端过滤三层定位节点缺失，附旧配置与新权益不同步的排查顺序。"
+description: "订阅缺少节点时先核对当前档位，再分清获取、解析、应用与界面过滤。结合升级后仍显示旧列表的案例，整理应提交的状态，避免用重复付款验证配置问题。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["线路", "节点与线路"]
-category: "节点与线路"
-sources: ["https://www.rfc-editor.org/rfc/rfc2330"]
-related: ["/blog/subscription-update-state/", "/blog/format-client-compatibility/", "/blog/subscription-http-error/"]
+category: "订阅与账户"
+sources: ["https://jichangtuijian.rest/editorial-policy/"]
+related: ["/blog/subscription-update-state/", "/blog/format-client-compatibility/", "/blog/account-expiry-versus-quota/", "/blog/node-maintenance/"]
 draft: false
 ---
+
 订阅列表里找不到宣传图中的节点，先判断“本来应当有”是否成立。宣传截图可能来自不同档位、日期或客户端；节点改名、维护与过滤也会造成列表变化。不要一看到缺失就重买套餐，先保存当前状态。
 
 ## 第一层：确认所购档的权益
@@ -37,3 +38,9 @@ draft: false
 ## 示例：升级后仍看到旧列表
 
 假设订单显示新档已生效，但最近成功更新时间早于升级时间。应先解决更新与格式兼容，再向商家核对新权益；此时重复购买不会证明问题能解决。提交工单只需套餐名、更新时间、客户端版本、缺失节点的非敏感名称和错误文字。可继续看[配置格式兼容性](/blog/format-client-compatibility/)，无需交出密码或完整订阅。
+
+## 向支持方确认时，把状态写完整
+
+可以提供“订单显示甲档已生效、最近成功更新时间早于订单、客户端乙版本、缺少的非敏感节点名称为丙”，并询问丙当前是否仍属于甲档。这样同时明确了需要核对的权益与更新时序，不必提交账号密码或完整令牌。
+
+如果服务明确说明该节点已维护或改名，保存说明日期再更新自己的候选表；如果权益尚未确认，就停在待核对，不用反复购买来测试。一次成功刷新也只证明该轮配置处理，新增节点仍需单独验证任务。

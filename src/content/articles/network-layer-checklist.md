@@ -1,13 +1,13 @@
 ---
 title: "从DNS到应用，怎样建立分层排查顺序"
-description: "把解析、传输、安全握手、HTTP和应用资格分开观察，可以减少把所有错误归结为同一节点问题的情况。"
+description: "从本地接入、DNS、连接到TLS和应用状态，先记录已成功的阶段再定位失败。结合错误对照与403情境，按单项假设排查、恢复配置并转交对应支持。"
 section: "blog"
 published: "2026-10-23"
 updated: "2026-10-24"
 tags: ["协议", "网络原理"]
 category: "网络原理"
 sources: ["https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"]
-related: ["/guides/connection-check/", "/guides/build-network-baseline/", "/blog/dns-split-configuration/"]
+related: ["/blog/http-status-network/", "/blog/tcp-handshake/", "/blog/tls-certificate-time/", "/guides/connection-check/"]
 draft: false
 ---
 
@@ -39,3 +39,9 @@ HTTP是客户端与服务器交换请求和响应的应用层协议，收到响�
 先写下要验证的假设和原设置，再进行一项有依据的变化。观察同一任务，记录成功、失败或无变化；没有改善时恢复原值。不要同时换节点、协议、DNS和客户端，或为了连通关闭证书校验。
 
 如果错误已经指向账号、付款或组织政策，应转向对应支持渠道；看不到的环节保留未知。继续按[连接排查教程](/guides/connection-check/)操作，结合[HTTP状态与超时](/blog/http-status-network/)和[系统时间与证书](/blog/tls-certificate-time/)判断下一步。
+
+## 一次修改没有效果，也是一条结果
+
+假设你认为故障出在解析，但按受支持方式调整后，原任务仍返回相同HTTP页面。应保留“修改内容、前后结果、已恢复原值”，再回到响应内容和访问条件，而不是继续叠加新的DNS。无变化不说明测试毫无价值，它帮助排除这一次具体假设。
+
+向支持方转交时，说明最早失败的已观察阶段、哪些对照仍正常，以及停止在哪里。若只能看到应用通用错误，就标明无法观察下层，不要自行补成“TCP故障”。这样既保留信息，也避免把猜测当作诊断交给下一位处理者。
