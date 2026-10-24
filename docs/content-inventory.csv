@@ -3,7 +3,7 @@ blog,订阅与账户,账户到期与流量耗尽，怎样区分,https://jichangt
 blog,订阅与账户,更换客户端前，怎样避免丢失必要配置信息,https://jichangtuijian.rest/blog/account-migration/,566,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,流量加购包怎样改变当月总成本,https://jichangtuijian.rest/blog/addon-traffic-cost/,606,2026-10-23,https://mullvad.net/en/pricing
 blog,证据与编辑,推广关系存在时，文章应披露哪些信息,https://jichangtuijian.rest/blog/affiliate-editorial/,590,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,基础指南,AI 服务与 VPN 节点：购买前核对什么,https://jichangtuijian.rest/blog/ai-access/,535,2026-10-23,https://help.openai.com/en/articles/7947663-chatgpt-supported-countries | https://support.google.com/gemini/
+blog,基础指南,AI 服务与 VPN 节点：购买前核对什么,https://jichangtuijian.rest/blog/ai-access/,960,2026-10-23,https://help.openai.com/en/articles/7947663-chatgpt-supported-countries | https://support.google.com/gemini/answer/13575153?hl=en
 blog,应用场景,AI平台能登录与能使用具体功能有什么区别,https://jichangtuijian.rest/blog/ai-login-versus-use/,571,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,应用场景,AI回复中途停止，应先区分哪些情况,https://jichangtuijian.rest/blog/ai-streaming-response/,574,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,设备与客户端,Android后台限制为什么可能影响长连接,https://jichangtuijian.rest/blog/android-battery-background/,575,2026-10-23,https://support.google.com/android/answer/9089766
@@ -27,7 +27,7 @@ blog,性能与测量,不同服务横评，哪些条件必须保持一致,https:/
 blog,网络原理,浏览器缓存怎样让断网后的页面看起来还正常,https://jichangtuijian.rest/blog/browser-cache-network/,573,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,隐私与凭据,浏览器扩展权限与VPN应用权限有何不同,https://jichangtuijian.rest/blog/browser-extension-access/,582,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,预算与计费,连续三个月的账单怎样帮助调整套餐,https://jichangtuijian.rest/blog/budget-review/,598,2026-10-23,https://mullvad.net/en/pricing
-blog,应用场景,首播等待和播放中缓冲应该怎样分开,https://jichangtuijian.rest/blog/buffering-versus-startup/,561,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
+blog,应用场景,首播等待和播放中缓冲应该怎样分开,https://jichangtuijian.rest/blog/buffering-versus-startup/,986,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview | https://help.netflix.com/en/node/87
 guides,操作教程 · 通用,教程：建立连接前的网络基线,https://jichangtuijian.rest/guides/build-network-baseline/,705,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,客户端费用和节点费用为什么要分别列账,https://jichangtuijian.rest/blog/bundled-client-fee/,602,2026-10-23,https://mullvad.net/en/pricing
 blog,基础指南,购买机场或 VPN 前，先核对这六项,https://jichangtuijian.rest/blog/buying-checklist/,1100,2026-10-23,https://jichangtuijian.rest/editorial-policy/
@@ -44,13 +44,13 @@ guides,操作教程 · 通用,连接异常怎么排查：一次只验证一个�
 blog,网络原理,连接复用为什么会影响切换节点后的观察,https://jichangtuijian.rest/blog/connection-reuse/,586,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,证据与编辑,发现价格或教程错误，怎样做清晰的更正,https://jichangtuijian.rest/blog/correction-process/,554,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,预算与计费,优惠码没有标有效期，还能写成长期有效吗,https://jichangtuijian.rest/blog/coupon-expiry/,970,2026-10-23,https://jichangtuijian.rest/editorial-policy/
-blog,订阅与账户,相同优惠码为什么不同用户结果不同,https://jichangtuijian.rest/blog/coupon-user-eligibility/,573,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+blog,订阅与账户,相同优惠码为什么不同用户结果不同,https://jichangtuijian.rest/blog/coupon-user-eligibility/,980,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,性能与测量,设备性能为什么可能限制网络测速,https://jichangtuijian.rest/blog/cpu-encryption-limit/,572,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,应用场景,远程办公使用网络工具前，为什么要先核对组织要求,https://jichangtuijian.rest/blog/cross-border-office-policy/,567,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,预算与计费,不同币种套餐怎样做可追溯的价格比较,https://jichangtuijian.rest/blog/currency-comparison/,606,2026-10-23,https://mullvad.net/en/pricing
 blog,证据与编辑,文章更新日期应该对应什么实际变化,https://jichangtuijian.rest/blog/date-integrity/,560,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,独享IP、独享带宽和独享账号有什么区别,https://jichangtuijian.rest/blog/dedicated-ip-scope/,559,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,订阅与账户,设备数量、同时在线和连接数有什么区别,https://jichangtuijian.rest/blog/device-limit-types/,554,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+blog,订阅与账户,设备数量、同时在线和连接数有什么区别,https://jichangtuijian.rest/blog/device-limit-types/,939,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,优惠码与活动价能否叠加，应该怎么判断,https://jichangtuijian.rest/blog/discount-order/,588,2026-10-23,https://mullvad.net/en/pricing
 blog,预算与计费,展示折扣时，四舍五入会造成什么误差,https://jichangtuijian.rest/blog/discount-rounding/,592,2026-10-23,https://mullvad.net/en/pricing
 blog,网络原理,DNS缓存和TTL为什么会影响变更生效时间,https://jichangtuijian.rest/blog/dns-cache-ttl/,599,2026-10-23,https://www.rfc-editor.org/rfc/rfc1034
@@ -59,9 +59,9 @@ blog,隐私与凭据,DNS泄漏检测结果应该怎样解释,https://jichangtuij
 blog,网络原理,打开域名前，DNS解析经过哪些环节,https://jichangtuijian.rest/blog/dns-resolution-chain/,589,2026-10-23,https://www.rfc-editor.org/rfc/rfc1034
 blog,网络原理,分流环境下，DNS与连接路径为什么要一起看,https://jichangtuijian.rest/blog/dns-split-configuration/,579,2026-10-23,https://www.rfc-editor.org/rfc/rfc1034
 blog,流量与额度,下载失败后重试，会不会再次消耗流量,https://jichangtuijian.rest/blog/download-resume/,607,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
-blog,节点与线路,入口节点与出口地区不是一回事,https://jichangtuijian.rest/blog/entry-exit-path/,600,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,性能与测量,故障恢复时间应该从哪一刻开始计算,https://jichangtuijian.rest/blog/failure-recovery-time/,575,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,节点与线路,备用节点是否独立，应该核对什么,https://jichangtuijian.rest/blog/fallback-independence/,577,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,节点与线路,入口节点与出口地区不是一回事,https://jichangtuijian.rest/blog/entry-exit-path/,929,2026-10-23,https://www.cloudflare.com/learning/access-management/what-is-a-vpn/ | https://www.rfc-editor.org/rfc/rfc2330
+blog,性能与测量,故障恢复时间应该从哪一刻开始计算,https://jichangtuijian.rest/blog/failure-recovery-time/,947,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,节点与线路,备用节点是否独立，应该核对什么,https://jichangtuijian.rest/blog/fallback-independence/,937,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,订阅与账户,订阅格式不兼容时，为什么不能反复改服务器密码,https://jichangtuijian.rest/blog/format-client-compatibility/,559,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,应用场景,游戏延迟与节点延迟为什么可能不一致,https://jichangtuijian.rest/blog/gaming-match-server/,562,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,流量与额度,GB 与 GiB 不同，会造成多大的显示差异,https://jichangtuijian.rest/blog/gb-gib/,584,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
@@ -82,7 +82,7 @@ blog,网络原理,双栈网络为什么要分别检查IPv4和IPv6,https://jichan
 blog,节点与线路,同一个节点在不同运营商下表现不同怎么办,https://jichangtuijian.rest/blog/isp-node-difference/,580,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,性能与测量,抖动为何比最低延迟更影响某些实时任务,https://jichangtuijian.rest/blog/jitter-live-tasks/,570,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,应用场景,长时间上传前，怎样减少中断造成的返工,https://jichangtuijian.rest/blog/large-upload-workflow/,567,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
-blog,性能与测量,平均延迟与高分位延迟分别适合看什么,https://jichangtuijian.rest/blog/latency-percentiles/,572,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,性能与测量,平均延迟与高分位延迟分别适合看什么,https://jichangtuijian.rest/blog/latency-percentiles/,928,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 glossary,基础百科,延迟、抖动与带宽，分别影响什么,https://jichangtuijian.rest/glossary/latency/,551,2026-10-23,https://www.rfc-editor.org/rfc/rfc7679 | https://www.rfc-editor.org/rfc/rfc3393
 blog,预算与计费,促销倒计时会改变哪些实际购买条件,https://jichangtuijian.rest/blog/limited-time-sale/,590,2026-10-23,https://mullvad.net/en/pricing
 blog,基础指南,IPLC、IEPL 与专线宣传，应该如何判断,https://jichangtuijian.rest/blog/line-labels/,1029,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
@@ -103,7 +103,7 @@ guides,操作教程 · macOS,macOS 连接指南：网络扩展与代理排错,ht
 blog,隐私与凭据,设备管理描述文件和VPN配置怎样区分,https://jichangtuijian.rest/blog/managed-profile/,564,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,性能与测量,Mbps与MB每秒怎样换算，为什么仍有误差,https://jichangtuijian.rest/blog/mbps-mbs/,1076,2026-10-23,https://www.rfc-editor.org/rfc/rfc6349
 blog,证据与编辑,可复现与可重复验证，在评测中意味着什么,https://jichangtuijian.rest/blog/measurement-reproducibility/,564,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,流量与额度,视频会议为什么需要同时关注上传额度,https://jichangtuijian.rest/blog/meeting-upload/,588,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
+blog,流量与额度,视频会议为什么需要同时关注上传额度,https://jichangtuijian.rest/blog/meeting-upload/,957,2026-10-23,https://learn.microsoft.com/en-us/microsoftteams/prepare-network#bandwidth-requirements
 blog,选择与维护,首次购买前，最小验证流程可以怎样安排,https://jichangtuijian.rest/blog/minimum-verification/,560,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,流量与额度,多种倍率线路混用时，怎样核对总扣量,https://jichangtuijian.rest/blog/mixed-multiplier/,990,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,应用场景,Wi-Fi切换移动数据时，哪些任务需要重新确认,https://jichangtuijian.rest/blog/mobile-data-continuity/,567,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
@@ -116,13 +116,13 @@ blog,网络原理,公网IP与设备本地地址分别表示什么,https://jichan
 blog,节点与线路,VPN节点怎么选？距离、地区与延迟的核对方法,https://jichangtuijian.rest/blog/nearby-node/,1816,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency | https://www.cloudflare.com/learning/access-management/what-is-a-vpn/
 blog,网络原理,从DNS到应用，怎样建立分层排查顺序,https://jichangtuijian.rest/blog/network-layer-checklist/,1145,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,隐私与凭据,怎样阅读不记录日志的公开声明,https://jichangtuijian.rest/blog/no-log-claims/,583,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-blog,节点与线路,节点数量与可用节点数量怎样区分,https://jichangtuijian.rest/blog/node-count-quality/,578,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,节点与线路,节点数量与可用节点数量怎样区分,https://jichangtuijian.rest/blog/node-count-quality/,961,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,客户端延迟颜色为什么不能代替完整测试,https://jichangtuijian.rest/blog/node-latency-color/,567,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,节点维护公告应该怎样用于故障判断,https://jichangtuijian.rest/blog/node-maintenance/,576,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,机场节点怎么选？读懂节点名称、线路标签与套餐权限,https://jichangtuijian.rest/blog/node-name-labels/,1930,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency | https://www.cloudflare.com/learning/performance/glossary/what-is-latency/
 blog,节点与线路,频繁切换节点会让排错更难吗,https://jichangtuijian.rest/blog/node-rotation/,571,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,节点与线路,怎样建立不依赖记忆的节点选择记录,https://jichangtuijian.rest/blog/node-selection-log/,570,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,节点与线路,订阅里没有某个节点，是套餐还是配置问题,https://jichangtuijian.rest/blog/node-subscription-range/,564,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,节点与线路,订阅里没有某个节点，是套餐还是配置问题,https://jichangtuijian.rest/blog/node-subscription-range/,951,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,证据与编辑,官方说明、第三方整理和独立实测怎样标注,https://jichangtuijian.rest/blog/official-reference-test/,567,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,流量与额度,不限时流量包与按月重置，怎样选口径,https://jichangtuijian.rest/blog/one-time-versus-reset/,983,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,隐私与凭据,使用在线订阅转换工具前要确认什么,https://jichangtuijian.rest/blog/online-converter-risk/,576,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
@@ -131,7 +131,7 @@ blog,网络原理,PAC自动代理配置为什么可能让不同网站走不同�
 blog,应用场景,下载开发工具或软件包时，速度之外还要看什么,https://jichangtuijian.rest/blog/package-download-integrity/,566,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,订阅与账户,套餐改名后，怎样核对是不是同一个方案,https://jichangtuijian.rest/blog/package-renaming/,562,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,换套餐前，怎样比较升级与临时加购,https://jichangtuijian.rest/blog/package-switch-cost/,596,2026-10-23,https://mullvad.net/en/pricing
-blog,性能与测量,丢包率应该连同哪些样本条件一起报告,https://jichangtuijian.rest/blog/packet-loss-sample/,565,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,性能与测量,丢包率应该连同哪些样本条件一起报告,https://jichangtuijian.rest/blog/packet-loss-sample/,891,2026-10-23,https://www.rfc-editor.org/rfc/rfc7680 | https://www.rfc-editor.org/rfc/rfc2330
 blog,预算与计费,季付和半年付怎样与月付公平比较,https://jichangtuijian.rest/blog/payment-frequency/,585,2026-10-23,https://mullvad.net/en/pricing
 blog,流量与额度,月度用量接近上限时，怎样安排高需求日期,https://jichangtuijian.rest/blog/peak-day-budget/,596,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
 blog,节点与线路,晚高峰选节点，应看哪些持续性指标,https://jichangtuijian.rest/blog/peak-hour-selection/,1021,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
@@ -160,7 +160,7 @@ blog,节点与线路,节点地区应该与目标服务器怎样配合,https://ji
 blog,节点与线路,不同网站显示不同IP地区，应该相信哪个,https://jichangtuijian.rest/blog/regional-ip-database/,574,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,应用场景,远程桌面为什么对延迟波动特别敏感,https://jichangtuijian.rest/blog/remote-desktop-latency/,566,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,应用场景,远程会议选连接方式，为什么不能只看下载速度,https://jichangtuijian.rest/blog/remote-meeting-priority/,568,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
-blog,预算与计费,续费价格与首购价格不一致，应该比较哪个,https://jichangtuijian.rest/blog/renewal-price/,594,2026-10-23,https://mullvad.net/en/pricing
+blog,预算与计费,续费价格与首购价格不一致，应该比较哪个,https://jichangtuijian.rest/blog/renewal-price/,986,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,订阅与账户,续费是否立即重置流量，应该到哪里确认,https://jichangtuijian.rest/blog/renewal-reset-interaction/,557,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,选择与维护,选择品牌前，怎样把需求写成可核对条件,https://jichangtuijian.rest/blog/requirements-before-brand/,544,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,节点与线路,住宅IP宣传为什么需要额外证据,https://jichangtuijian.rest/blog/residential-ip-claims/,569,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
@@ -183,24 +183,24 @@ blog,流量与额度,多台设备共享流量时，怎样估算家庭总需求,h
 blog,选择与维护,候选太多时，怎样缩小比较范围,https://jichangtuijian.rest/blog/shortlist-comparison/,1025,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,性能与测量,单线程与多线程测速为什么可能差很多,https://jichangtuijian.rest/blog/single-multi-thread/,571,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,证据与编辑,多个网站写相同套餐，为什么仍要追溯原始来源,https://jichangtuijian.rest/blog/source-chain/,559,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,订阅与账户,参考文章里的价格过时了，应该怎样处理,https://jichangtuijian.rest/blog/source-staleness/,574,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+blog,订阅与账户,参考文章里的价格过时了，应该怎样处理,https://jichangtuijian.rest/blog/source-staleness/,1013,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,性能与测量,下载快为什么不等于网页响应快,https://jichangtuijian.rest/blog/speed-versus-response/,564,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,流量与额度,频繁测速会消耗多少流量，怎样控制样本成本,https://jichangtuijian.rest/blog/speedtest-quota/,1001,2026-10-23,https://www.rfc-editor.org/rfc/rfc6349
 blog,基础指南,稳定性怎么测：一份可复核的记录方法,https://jichangtuijian.rest/blog/stability-method/,1105,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,选择与维护,什么时候应该停止继续修改网络设置,https://jichangtuijian.rest/blog/stop-conditions/,550,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,应用场景,流媒体片库与网络连通为什么不是同一结果,https://jichangtuijian.rest/blog/streaming-library/,1083,2026-10-23,https://help.netflix.com/en/node/14164 | https://help.netflix.com/en/node/114701
 blog,流量与额度,视频预加载与离线缓存怎样影响用量,https://jichangtuijian.rest/blog/streaming-preload/,581,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
-blog,应用场景,自动画质为什么会干扰线路比较,https://jichangtuijian.rest/blog/streaming-quality-adaptive/,562,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
+blog,应用场景,自动画质为什么会干扰线路比较,https://jichangtuijian.rest/blog/streaming-quality-adaptive/,938,2026-10-23,https://help.netflix.com/en/node/87 | https://help.netflix.com/en/node/114701
 blog,订阅与账户,订阅更新返回错误码时，先保留哪些信息,https://jichangtuijian.rest/blog/subscription-http-error/,558,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,隐私与凭据,为什么订阅链接应按密码级别保管,https://jichangtuijian.rest/blog/subscription-token/,1119,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-blog,订阅与账户,更新订阅成功与节点可连接有什么不同,https://jichangtuijian.rest/blog/subscription-update-state/,579,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+blog,订阅与账户,更新订阅成功与节点可连接有什么不同,https://jichangtuijian.rest/blog/subscription-update-state/,1015,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview | https://jichangtuijian.rest/editorial-policy/
 glossary,基础百科,订阅链接是什么？为什么应当保密,https://jichangtuijian.rest/glossary/subscription/,537,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,隐私与凭据,客服要求提供完整订阅或密码时怎么判断,https://jichangtuijian.rest/blog/support-impersonation/,570,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
-blog,订阅与账户,一份有效的连接故障工单应该怎样组织,https://jichangtuijian.rest/blog/support-ticket-quality/,556,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+blog,订阅与账户,一份有效的连接故障工单应该怎样组织,https://jichangtuijian.rest/blog/support-ticket-quality/,1051,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url | https://jichangtuijian.rest/editorial-policy/
 blog,网络原理,TCP连上了，为什么网页仍可能打不开,https://jichangtuijian.rest/blog/tcp-handshake/,587,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,性能与测量,一份可复核网络测试日志应该有哪些字段,https://jichangtuijian.rest/blog/test-log-format/,564,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,证据与编辑,用户评论能够替代可复核测量吗,https://jichangtuijian.rest/blog/testimonial-evidence/,566,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-blog,性能与测量,标称带宽、端口速率和实测吞吐怎样区分,https://jichangtuijian.rest/blog/throughput-capacity/,576,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
+blog,性能与测量,标称带宽、端口速率和实测吞吐怎样区分,https://jichangtuijian.rest/blog/throughput-capacity/,975,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136 | https://www.rfc-editor.org/rfc/rfc2330
 blog,性能与测量,测五秒与测五分钟，结论为什么不同,https://jichangtuijian.rest/blog/time-window-testing/,559,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
 blog,网络原理,系统时间不准为什么会影响安全连接,https://jichangtuijian.rest/blog/tls-certificate-time/,585,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,流量与额度,额度提醒阈值怎样设置才有实际作用,https://jichangtuijian.rest/blog/traffic-alert-threshold/,586,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
@@ -215,8 +215,8 @@ blog,选择与维护,比较表里有未知项，应该怎样做决定,https://ji
 blog,流量与额度,不限流量套餐为什么仍要读公平使用规则,https://jichangtuijian.rest/blog/unlimited-fair-use/,590,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
 blog,预算与计费,预付套餐提前停用，怎样复盘真实成本,https://jichangtuijian.rest/blog/unused-months/,599,2026-10-23,https://mullvad.net/en/pricing
 blog,预算与计费,升级套餐时的抵扣应该怎样读,https://jichangtuijian.rest/blog/upgrade-credit/,603,2026-10-23,https://mullvad.net/en/pricing
-blog,流量与额度,上传流量是否计入套餐，为什么必须先问清,https://jichangtuijian.rest/blog/upload-counting/,584,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
-blog,流量与额度,知道视频码率后，怎样估算流量需求,https://jichangtuijian.rest/blog/video-bitrate-budget/,593,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
+blog,流量与额度,上传流量是否计入套餐，为什么必须先问清,https://jichangtuijian.rest/blog/upload-counting/,941,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
+blog,流量与额度,知道视频码率后，怎样估算流量需求,https://jichangtuijian.rest/blog/video-bitrate-budget/,937,2026-10-23,https://help.netflix.com/en/node/87 | https://www.rfc-editor.org/rfc/rfc5136
 blog,应用场景,游戏能玩但语音异常，为什么要分别排查,https://jichangtuijian.rest/blog/voice-chat-versus-game/,557,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,隐私与凭据,使用VPN之后，HTTPS仍然重要吗,https://jichangtuijian.rest/blog/vpn-https-boundary/,570,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 glossary,基础百科,VPN是什么？VPN机场与商业VPN有什么区别,https://jichangtuijian.rest/glossary/vpn/,1840,2026-10-23,https://www.cloudflare.com/learning/access-management/what-is-a-vpn/

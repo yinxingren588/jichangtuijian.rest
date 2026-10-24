@@ -1,0 +1,14 @@
+---
+import {deepTopicGuide} from '../data/topic-guides';
+const {slug}=Astro.props as {slug:string};
+const guide=deepTopicGuide(slug);
+---
+{guide&&<section class="selection-guide topic-selection" aria-labelledby="topic-selection-heading" data-topic-guide={slug}>
+ <div class="section-head"><div><p class="eyebrow">DECISION GUIDE / 先确定判断标准</p><h2 id="topic-selection-heading">{guide.heading}</h2></div><a class="text-link" href="#topic-ranking-heading">直接看十品牌排行 ↓</a></div>
+ <p>{guide.intro}</p>
+ <div class="table-wrap selection-reference-table" role="region" aria-label="本专题任务与证据对照，可横向滚动" tabindex="0"><table><caption>按任务检查资料，不以单一标签代替实际条件</caption><thead><tr>{guide.columns.map(c=><th scope="col">{c}</th>)}</tr></thead><tbody>{guide.rows.map(row=><tr><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td></tr>)}</tbody></table></div>
+ <div class="topic-scenario"><p class="eyebrow">SCENARIO / 判断示例</p><h3>{guide.caseTitle}</h3><p>{guide.caseText}</p></div>
+ <div class="selection-cards">{guide.steps.map((step,i)=><article class="selection-card"><span class="selection-number">STEP 0{i+1}</span><h3>{step.title}</h3><p>{step.text}</p><a class="text-link" href={step.link.href}>{step.link.label} →</a></article>)}</div>
+ <div class="topic-guide-questions">{guide.questions.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div>
+ <nav class="topic-guide-reading" aria-label="本专题延伸阅读">{guide.links.map(link=><a href={link.href}>{link.label} →</a>)}</nav>
+</section>}
