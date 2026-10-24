@@ -1,7 +1,7 @@
 .header-inner{gap:18px}
 .nav{gap:18px}
-.header-contact{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 15px;border:1px solid #6885ad;border-radius:9px;color:#d8e7ff;background:#14243b;font-size:12px;white-space:nowrap;flex-shrink:0}
-.header-contact:hover{background:#233d61;border-color:#a3c2ef;color:#edf4ff}
+.header-contact{display:inline-flex;align-items:center;justify-content:center;padding:12px 0;border:0;border-radius:0;color:#95a5c0;background:transparent;font-size:12px;white-space:nowrap;flex-shrink:0}
+.header-contact:hover{color:#d8e6ff}
 .contact-dialog{width:min(580px,calc(100% - 36px));max-height:calc(100dvh - 40px);margin:auto;padding:0;border:1px solid #405b81;border-radius:20px;background:#0e192b;color:#bdcfe8;box-shadow:0 28px 100px #0008;overflow-y:auto;overscroll-behavior:contain}
 .contact-dialog::backdrop{background:#030916b8;backdrop-filter:blur(7px)}
 body:has(.contact-dialog[open]){overflow:hidden}
@@ -46,7 +46,7 @@ body:has(.contact-dialog[open]){overflow:hidden}
  .header-inner>.logo{font-size:20px;gap:7px}
  .header-inner .logo-mark{font-size:24px}
  .header-inner .logo small{display:none}
- .header-contact{padding:8px 10px;min-height:38px}
+.header-contact{padding:8px 0;min-height:38px}
  .menu-button{padding:8px;min-height:38px}
  .contact-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px);border-radius:16px}
  .contact-dialog-content{padding:22px 18px}
