@@ -4,28 +4,28 @@
   "html": [
     {
       "file": "search/index.html",
-      "bytes": 194505,
-      "gzipBytes": 42325
+      "bytes": 197473,
+      "gzipBytes": 43395
     },
     {
       "file": "recommend/premium/index.html",
-      "bytes": 51193,
-      "gzipBytes": 12391
+      "bytes": 54161,
+      "gzipBytes": 13360
     },
     {
       "file": "airport/index.html",
-      "bytes": 68217,
-      "gzipBytes": 12066
+      "bytes": 71185,
+      "gzipBytes": 13085
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 33124,
-      "gzipBytes": 11453
+      "bytes": 36092,
+      "gzipBytes": 12384
     },
     {
       "file": "airport/yuzhoucloud/index.html",
-      "bytes": 33063,
-      "gzipBytes": 11411
+      "bytes": 36031,
+      "gzipBytes": 12345
     }
   ],
   "javascript": [
@@ -52,9 +52,9 @@
   ],
   "css": [
     {
-      "file": "_astro/Base.BI-xgKrk.css",
-      "bytes": 96962,
-      "gzipBytes": 20037
+      "file": "_astro/Base.CGL8rHxw.css",
+      "bytes": 101416,
+      "gzipBytes": 21016
     },
     {
       "file": "_astro/traffic-calculator.Cv7GrPJ7.css",

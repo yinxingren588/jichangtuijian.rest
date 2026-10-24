@@ -1,0 +1,63 @@
+.header-inner{gap:18px}
+.nav{gap:18px}
+.header-contact{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 15px;border:1px solid #6885ad;border-radius:9px;color:#d8e7ff;background:#14243b;font-size:12px;white-space:nowrap;flex-shrink:0}
+.header-contact:hover{background:#233d61;border-color:#a3c2ef;color:#edf4ff}
+.contact-dialog{width:min(580px,calc(100% - 36px));max-height:calc(100dvh - 40px);margin:auto;padding:0;border:1px solid #405b81;border-radius:20px;background:#0e192b;color:#bdcfe8;box-shadow:0 28px 100px #0008;overflow-y:auto;overscroll-behavior:contain}
+.contact-dialog::backdrop{background:#030916b8;backdrop-filter:blur(7px)}
+body:has(.contact-dialog[open]){overflow:hidden}
+.contact-dialog-content{padding:30px}
+.contact-dialog-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.contact-dialog-top .eyebrow{font-size:11px;letter-spacing:1.6px;margin:0;color:#97b8e6}
+.contact-dialog-top form{margin:0}
+.contact-close{display:grid;place-items:center;width:36px;height:36px;border:1px solid #344a69;border-radius:9px;background:#15253d;color:#c5daf9;font-size:25px;line-height:1}
+.contact-close:hover{background:#243f62;border-color:#6f94c3}
+.contact-dialog h2{font-size:30px;letter-spacing:-.6px;margin:15px 0 13px}
+.contact-introduction{font-size:15px;line-height:1.9;color:#c5d5ec;margin:0}
+.contact-topics{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 23px}
+.contact-topics>span{padding:4px 10px;border:1px solid #304763;border-radius:20px;color:#a9c7ed;font-size:12px;background:#14233b}
+.contact-channels{display:grid;grid-template-columns:minmax(0,1fr);gap:13px;margin:22px 0 25px;max-width:720px}
+.contact-channel{display:flex;align-items:center;gap:15px;padding:19px;border:1px solid #3c5578;border-radius:13px;background:linear-gradient(120deg,#172a46,#111d30);text-decoration:none;min-width:0}
+.contact-channel:hover{border-color:#9ab9e5;background:#1c3454;color:#edf5ff}
+.contact-channel-icon{display:grid;place-items:center;width:45px;height:45px;flex-shrink:0;border:1px solid #49678d;border-radius:12px;background:#233d61;color:#c4dafe}
+.contact-telegram .contact-channel-icon{background:#183c52;color:#a0def9;border-color:#365c74}
+.contact-channel-icon svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.contact-channel-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.contact-channel-copy strong{font-size:16px;font-weight:600;color:#e0ecff}
+.contact-channel-copy>span{font-size:14px;line-height:1.7;color:#c4d8f6;overflow-wrap:anywhere}
+.contact-channel-copy small{font-size:12px;color:#9db6d7;line-height:1.8}
+.contact-channel-arrow{font-size:21px;color:#b6d3ff;flex-shrink:0}
+.contact-guidance{font-size:13px;color:#9fb7d8;line-height:1.9;margin:0;padding-top:3px}
+.contact-detail-link{display:inline-flex;align-items:center;gap:14px;min-height:44px;margin-top:12px;font-size:13px;color:#bdd6fa}
+@media(max-width:1050px){
+ .header-inner{min-height:79px;flex-wrap:wrap;gap:12px}
+ .header-inner>.logo{order:1}
+ .header-contact{order:2;margin-left:auto}
+ .menu-button{display:block;order:3;margin-left:0;min-height:40px;padding:8px 12px;border:1px solid #3e5477;border-radius:7px;font-size:12px;color:#c7d9f7;background:#111e33}
+ .header-search{display:none}
+ .nav{display:none;order:4;width:100%;gap:0;padding:12px 0 20px;font-size:12px}
+ .nav[data-open=true]{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+ .nav>a{padding:10px 12px;border-radius:7px}
+ .nav a[aria-current=page]{background:#1c2c48}
+ .nav a[aria-current=page]:after{display:none}
+ .nav .search-link{display:block;color:#c1d7fc}
+}
+@media(max-width:450px){
+ .header-inner{gap:8px}
+ .header-inner>.logo{font-size:20px;gap:7px}
+ .header-inner .logo-mark{font-size:24px}
+ .header-inner .logo small{display:none}
+ .header-contact{padding:8px 10px;min-height:38px}
+ .menu-button{padding:8px;min-height:38px}
+ .contact-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px);border-radius:16px}
+ .contact-dialog-content{padding:22px 18px}
+ .contact-dialog h2{font-size:26px}
+ .contact-introduction{font-size:14px}
+ .contact-topics{margin:17px 0 20px;gap:6px}
+ .contact-topics>span{font-size:12px;padding:3px 8px}
+ .contact-channel{gap:11px;padding:16px 12px}
+ .contact-channel-icon{width:36px;height:36px;border-radius:10px}
+ .contact-channel-icon svg{width:21px;height:21px}
+ .contact-channel-copy strong{font-size:15px}
+ .contact-channel-copy>span{font-size:13px}
+ .contact-channel-arrow{font-size:18px}
+}

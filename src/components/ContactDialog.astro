@@ -1,0 +1,31 @@
+---
+import ContactChannels from './ContactChannels.astro';
+import {contact} from '../data/contact';
+---
+<dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-description">
+ <div class="contact-dialog-content">
+  <div class="contact-dialog-top"><p class="eyebrow">LET’S CONNECT / 保持联系</p><form method="dialog"><button type="submit" class="contact-close" aria-label="关闭联络窗口" autofocus><span aria-hidden="true">×</span></button></form></div>
+  <h2 id="contact-dialog-title">联络我们</h2>
+  <p id="contact-dialog-description" class="contact-introduction">{contact.introduction}</p>
+  <div class="contact-topics" aria-label="联络事项"><span>品牌合作</span><span>资料更新</span><span>站点反馈</span></div>
+  <ContactChannels/>
+  <p class="contact-guidance">{contact.guidance}</p>
+  <a class="contact-detail-link" href="/contact/">查看完整联络说明 <span aria-hidden="true">→</span></a>
+ </div>
+</dialog>
+<script>
+const dialog=document.querySelector<HTMLDialogElement>('#contact-dialog')!;
+document.querySelectorAll<HTMLAnchorElement>('[data-contact-open]').forEach(link=>link.addEventListener('click',event=>{
+ if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||typeof dialog.showModal!=='function')return;
+ event.preventDefault();if(!dialog.open)dialog.showModal();
+}));
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+dialog.addEventListener('keydown',event=>{
+ if(event.key==='Escape'){event.stopPropagation();return;}
+ if(event.key!=='Tab')return;
+ const targets=[...dialog.querySelectorAll<HTMLElement>('a[href],button:not([disabled])')].filter(element=>element.getClientRects().length>0);
+ const first=targets[0],last=targets.at(-1);
+ if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+ else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+});
+</script>
