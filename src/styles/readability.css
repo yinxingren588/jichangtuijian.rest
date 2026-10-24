@@ -1,0 +1,96 @@
+/* Reading sizes and flexible controls shared by current and future pages. */
+:root{--reading-muted:#b1c3de}
+html{scroll-padding-bottom:110px}
+body{overflow-wrap:break-word}
+.prose{font-size:16px;line-height:1.95}
+.prose :is(p,li){color:#d0dcef}
+.prose h2{scroll-margin-top:28px}
+.prose .guide-interface{margin:28px 0;background:#101d31}
+.prose .guide-interface figcaption{font-size:13px;line-height:1.85;color:#b7cbe9}
+.prose .table-wrap{max-width:100%;overflow-x:auto}
+.prose table{min-width:520px;font-size:14px}
+.prose table th,.prose table td{font-size:14px;line-height:1.8}
+.prose :is(a,button,summary){text-underline-offset:5px}
+.guide-steps-note{padding:17px 20px;border:1px solid #46658f;border-radius:9px;background:#172b46;color:#d1e3fc;line-height:1.9;margin:22px 0}
+.breadcrumb [aria-current=page]{white-space:normal;overflow-wrap:anywhere}
+.header-inner,.compare-toolbar,.snapshot-actions,.topic-overview-heading,.library-list-heading{min-width:0}
+.nav{flex-wrap:wrap;gap:10px 17px}
+.table-wrap:focus-visible,.topic-overview-scroll:focus-visible{outline:3px solid #b6d0ff;outline-offset:3px}
+.button,.quiet-button,.text-link,.save-brand,.coupon-copy{line-height:1.6}
+.section-head>a,.topic-overview-heading>a{white-space:normal}
+.save-brand{white-space:normal;text-align:center}
+.directory-row-actions .save-brand{max-width:100%}
+.guide-tutorial-links{display:flex;gap:10px 20px;flex-wrap:wrap;font-size:13px;margin:14px 0 20px;color:#bed7ff}
+@media(max-width:760px){
+ body{line-height:1.85}
+ .prose{font-size:16px;line-height:1.95;padding:23px 18px}
+ .prose h2{font-size:23px;line-height:1.6;margin-top:32px}
+ .prose h3{font-size:19px;line-height:1.65}
+ .prose :is(p,li){line-height:1.95}
+ .prose .sources li a{font-size:14px}
+ .prose .guide-interface figcaption{font-size:13px;padding:14px}
+ .page-intro>p:not(.eyebrow),.reading-row p,.guide-item p,.card p,.note,.hero-description,.modern-resources p,.home-method p:not(.eyebrow),.brand-mini-focus{font-size:14px;line-height:1.9}
+ .brand-mini-focus{font-size:14px!important}
+ .page-intro .muted,.brand-page-intro>.muted{font-size:13px!important;color:#afc2de!important}
+ .fine-print,.muted,.snapshot-footnote,.snapshot-grid dd>small,.brand-directory-row small,.topic-chart-time,.topic-rank-plan>small,.topic-table-hint,.compare-save-status{font-size:13px;line-height:1.85;color:var(--reading-muted)}
+ .snapshot-grid dt,.brand-fit>div>span,.brand-fit>div>p,.coupon-conditions dd,.coupon-conditions dt,.coupon-conditions>p,.brand-checkpoints p{font-size:13px!important;line-height:1.85}
+ .brand-fit>div{grid-template-columns:5em minmax(0,1fr);padding:12px}
+ .snapshot-grid dd{font-size:18px}
+ .snapshot-heading h2{font-size:23px}
+ .brand-filter-grid{gap:18px 12px}
+ .brand-filter-grid>label,.brand-filter-footer,.brand-filter-footer button{font-size:14px;line-height:1.7}
+ .brand-filter-grid input,.brand-filter-grid select,.compare-controls select,.search-input,.comparison-share-box input{font-size:16px;min-height:48px}
+ .brand-filter-footer{align-items:flex-start;flex-wrap:wrap}
+ .brand-filter-panel>.fine-print{font-size:13px;line-height:1.85;color:#afc3e0}
+ .brand-directory-row .directory-plan,.brand-directory-row .coupon,.directory-row-actions .text-link{font-size:14px}
+ .directory-plan>span{line-height:1.85}
+ .directory-quick-links,.reading-context,.reading-position,.reading-utility,.sidebar a,.mobile-toc summary,.mobile-toc nav a{font-size:14px;line-height:1.8}
+ .mobile-toc nav a,.sidebar a{padding-block:8px}
+ .reading-context,.reading-utility{gap:13px 18px}
+ .reading-context a:last-child{margin-left:0}
+ .button,.quiet-button,.text-link,.coupon-copy,.save-brand{font-size:14px;min-height:44px}
+ .text-link{display:inline-flex;align-items:center;white-space:normal}
+ .snapshot-actions .save-brand,.snapshot-actions .text-link,.snapshot-actions .quiet-button,.snapshot-actions .button,.snapshot-grid .coupon button{font-size:14px;min-height:44px}
+ .snapshot-actions{gap:12px 18px}
+ .topic-method p,.topic-rank-content>p,.topic-rank-plan>p,.topic-selection-toolbar p,.topic-rank-brand>div>span{font-size:14px;line-height:1.85;color:#bbcee9}
+ .topic-rank-brand h3{font-size:20px}
+ .topic-rank-metric,.topic-rank-metric>strong,.topic-rank-plan .topic-plan-label,.topic-rank-plan>span:not(.topic-plan-label){font-size:13px}
+ .topic-rank-plan .coupon code{font-size:14px}
+ .topic-rank-actions{gap:11px 20px;font-size:14px}
+ .topic-rank-actions>a,.topic-rank-actions .save-brand{display:inline-flex;align-items:center;min-height:44px;font-size:14px}
+ .topic-rank-actions .topic-back-top{font-size:13px}
+ .topic-tabs>a,.topic-rank-jumps>a{font-size:13px;min-height:44px;align-items:center;padding:9px 12px}
+ .topic-overview-heading{align-items:flex-start;flex-wrap:wrap}
+ .topic-overview-heading>a{font-size:13px;min-height:36px}
+ .topic-overview-table{min-width:1140px}
+ .topic-overview-table :is(th,td),.topic-overview-table thead th,.topic-overview-table td>strong,.topic-overview-brand>a:last-child{font-size:14px;line-height:1.8}
+ .topic-overview-table td>small,.topic-overview-table td>span,.topic-overview-table caption{font-size:12px;line-height:1.8}
+ .topic-overview-table tr>:first-child{width:185px;min-width:185px}
+ .topic-overview-table th:nth-child(2){width:190px}.topic-overview-table th:nth-child(3){width:170px}.topic-overview-table th:nth-child(4){width:180px}.topic-overview-table th:nth-child(5){width:240px}.topic-overview-table th:nth-child(6){width:130px}
+ .topic-overview-table .coupon code,.topic-overview-table .coupon-copy{font-size:13px}
+ .topic-overview-table td:last-child>a{font-size:13px;min-height:40px;display:flex;align-items:center}
+ .topic-selection-toolbar .button,.topic-selection-toolbar button[type=button]{font-size:14px;min-height:44px}
+ .selected-comparison :is(th,td),.selected-comparison thead th{font-size:14px;line-height:1.85;padding:14px}
+ .selected-comparison caption,.compare-scroll-hint,.comparison-chart-note>p{font-size:13px;line-height:1.85;color:#b2c8e7}
+ .selected-comparison table{min-width:calc(130px + var(--compare-columns)*205px)}
+ .selected-comparison tr>:first-child{width:130px;min-width:130px}
+ .compare-modes button,.compare-save-tools button,.compare-save-tools>a{font-size:14px;min-height:44px;white-space:normal}
+ .compare-modes{flex-wrap:wrap}.compare-modes button{flex:1 1 80px}
+ .compare-toolbar{display:block}.compare-toolbar>a{display:inline-block;margin-top:12px;white-space:normal}
+ .compare-save-tools button{flex-basis:calc(50% - 7px)}
+ .brand-library .section-head p:not(.eyebrow),.brand-library>[role=status],.brand-library-grid li,.brand-library-grid .library-empty,.brand-library-grid .button,.library-list-heading>button,.brand-library-grid li>button{font-size:14px;line-height:1.85}
+ .library-list-heading{align-items:flex-start;flex-wrap:wrap}.library-list-heading h3{font-size:17px}
+ .library-list-heading>button,.brand-library-grid li>button{min-height:44px}
+ .brand-mobile-actions>a,.brand-mobile-actions>button{font-size:14px;flex-wrap:wrap;gap:4px;min-height:48px}
+ .topic-mobile-bar>a,.topic-mobile-bar>button{font-size:13px;min-height:52px}
+ .topic-mobile-panel nav>a{font-size:14px}.topic-mobile-panel nav>a>span{font-size:12px}.topic-mobile-panel button{font-size:14px;min-height:44px}
+ .topic-mobile-panel{max-height:calc(100dvh - 120px);overflow-y:auto}
+ .brand-details p,.brand-details li,.brand-faq p,.brand-faq summary,.brand-details .brand-checkpoints p{font-size:15px;line-height:1.95}
+ .brand-details .coupon-conditions dd{font-size:14px}
+ .evidence-context dd,.evidence-context dt,.unlock-grid,.chart-card figcaption p,.chart-meta,.evidence-method p{font-size:13px!important;line-height:1.85}
+ .footer-links{font-size:14px}.footer-bottom{font-size:13px;line-height:1.85}
+ .footer-links>a{padding-block:7px}
+ .memory-toast{font-size:14px;line-height:1.85}
+ .guide-tutorial-links{font-size:14px;gap:10px 18px}
+}
+@media(max-width:360px){.wrap{padding-inline:16px}.prose{padding:21px 15px}.brand-filter-grid{grid-template-columns:1fr}.brand-fit>div{grid-template-columns:1fr;gap:4px}.snapshot-grid{grid-template-columns:1fr}.compare-save-tools button{flex-basis:100%}}

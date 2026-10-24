@@ -3,7 +3,7 @@ title: "教程：核对优惠码条件而不误读券后价"
 description: "将代码文本、资格提示与最终金额分别记录。"
 section: "guides"
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-24"
 tags: ["教程", "通用"]
 category: "操作教程 · 通用"
 sources: ["https://jichangtuijian.rest/editorial-policy/"]
@@ -23,11 +23,11 @@ draft: false
 
 ## 操作步骤
 
-<figure class="guide-interface"><a href="/guides/coupon-overview.jpg" target="_blank" rel="noopener"><img src="/guides/coupon-overview.jpg" width="1425" height="990" loading="lazy" decoding="async" alt="本站品牌页速览：复制代码不等于当前订单已验证优惠。此图不是商家结算截图。"/></a><figcaption>本站品牌页速览：复制代码不等于当前订单已验证优惠。此图不是商家结算截图。 点击图片可查看完整尺寸。</figcaption></figure>
+<figure class="guide-interface"><a href="/guides/coupon-overview.jpg" target="_blank" rel="noopener"><img src="/guides/coupon-overview.jpg" width="1265" height="712" loading="lazy" decoding="async" alt="本站品牌页速览：复制代码不等于当前订单已验证优惠。此图不是商家结算截图。"/></a><figcaption>本站品牌页速览：复制代码不等于当前订单已验证优惠。此图不是商家结算截图。 点击图片可查看完整尺寸。</figcaption></figure>
 
 ### 第1步：复制正确的代码
 
-在品牌首屏速览点击“复制”，手机也可使用底部“复制优惠码”。保留原有大小写，粘贴后检查前后空格。推广入口中的邀请参数与结算优惠码不是同一个字段，不能把注册链接里的code参数当作优惠码。
+在品牌首屏速览点击“复制”，手机也可使用底部“复制优惠码”。等待“已复制”提示后再粘贴；若浏览器不允许自动复制，按页面提示手动复制代码。保留原有大小写，粘贴后检查前后空格。推广入口中的邀请参数与结算优惠码不是同一个字段，不能把注册链接里的code参数当作优惠码。
 
 ### 第2步：看清优惠参考状态
 
@@ -70,4 +70,4 @@ draft: false
 
 ## 关联知识
 
-可以返回[品牌资料库](/airport/)、[套餐比较工具](/compare/)以及[实际账单核对](/blog/checkout-amount/)继续整理。
+可以使用[预算与周期筛选](/guides/read-source-price-conflict/)、[保存候选与分享对比](/guides/prepare-comparison-sheet/)以及[实际账单核对](/blog/checkout-amount/)继续整理。

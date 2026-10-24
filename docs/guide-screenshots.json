@@ -1,0 +1,50 @@
+[
+  {
+    "file": "brand-filters.jpg",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "794db46d3fad8875f470e362631d2471513bc6da9230ed858669910561275dfb",
+    "captured": "2026-10-24",
+    "page": "/airport/#brand-filters",
+    "guides": [
+      "read-source-price-conflict"
+    ]
+  },
+  {
+    "file": "brand-shortlist.jpg",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "b436699ddf5475a2ef2d77c635891ee84cadc964c306368cf85cea27f7be623d",
+    "captured": "2026-10-24",
+    "page": "/airport/#my-brands",
+    "guides": [
+      "prepare-comparison-sheet"
+    ]
+  },
+  {
+    "file": "comparison-tool.jpg",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "d18a01b15e6f03c81180a7ef885bbb95205abe4a0cae2f224583bdac070584ab",
+    "captured": "2026-10-24",
+    "page": "/compare/?brands=yinxingren,muguang&view=charts#compare-workspace",
+    "guides": [
+      "prepare-comparison-sheet"
+    ]
+  },
+  {
+    "file": "coupon-overview.jpg",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "5e49ada5192185a98b2182cdfe94cf4173ff9649c634b12da22df5e2105aaa9d",
+    "captured": "2026-10-24",
+    "page": "/airport/yinxingren/#brand-snapshot-title",
+    "guides": [
+      "check-coupon-without-payment"
+    ]
+  }
+]

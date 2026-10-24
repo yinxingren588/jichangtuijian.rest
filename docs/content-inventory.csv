@@ -34,7 +34,7 @@ blog,基础指南,购买机场或 VPN 前，先核对这六项,https://jichangtu
 guides,操作教程 · 通用,教程：按不同倍率计算实际流量消耗,https://jichangtuijian.rest/guides/calculate-quota-multiplier/,714,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,网络原理,CDN会怎样影响节点测速与网站体验,https://jichangtuijian.rest/blog/cdn-routing/,588,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,选择与维护,修改配置之前，为什么要先写下原值,https://jichangtuijian.rest/blog/change-record/,551,2026-10-23,https://jichangtuijian.rest/editorial-policy/
-guides,操作教程 · 通用,教程：核对优惠码条件而不误读券后价,https://jichangtuijian.rest/guides/check-coupon-without-payment/,1846,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+guides,操作教程 · 通用,教程：核对优惠码条件而不误读券后价,https://jichangtuijian.rest/guides/check-coupon-without-payment/,1939,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,结算页多出费用时，怎样核对最终金额,https://jichangtuijian.rest/blog/checkout-amount/,600,2026-10-23,https://mullvad.net/en/pricing
 blog,隐私与凭据,复制订阅到剪贴板后，还需要注意什么,https://jichangtuijian.rest/blog/clipboard-sync/,570,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,应用场景,云端开发环境访问异常，应怎样分层判断,https://jichangtuijian.rest/blog/cloud-development/,558,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
@@ -141,7 +141,7 @@ blog,基础指南,性价比机场怎么算：周期、倍率与每 GB 成本,htt
 blog,应用场景,平台支持地区与IP显示地区怎样分别确认,https://jichangtuijian.rest/blog/platform-supported-region/,549,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,网络原理,端口号与协议名称有什么区别,https://jichangtuijian.rest/blog/port-number-role/,588,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 blog,选择与维护,付款成功后，怎样确认买到的方案已经生效,https://jichangtuijian.rest/blog/post-purchase-validation/,556,2026-10-23,https://jichangtuijian.rest/editorial-policy/
-guides,操作教程 · 通用,教程：建立一张能区分周期的套餐比较表,https://jichangtuijian.rest/guides/prepare-comparison-sheet/,1936,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+guides,操作教程 · 通用,教程：筛选套餐、保存候选与分享品牌对比,https://jichangtuijian.rest/guides/prepare-comparison-sheet/,2715,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 guides,操作教程 · 通用,教程：把连接问题写成可处理的支持工单,https://jichangtuijian.rest/guides/prepare-support-ticket/,689,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,隐私与凭据,做连接检测时，怎样减少向外部站点暴露信息,https://jichangtuijian.rest/blog/privacy-minimal-testing/,572,2026-10-23,https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
 blog,网络原理,系统代理与隧道模式覆盖哪些流量,https://jichangtuijian.rest/blog/proxy-versus-tunnel/,582,2026-10-23,https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
@@ -152,7 +152,7 @@ blog,流量与额度,客户端用量与账户余额不同，应该先查什么,h
 blog,流量与额度,流量重置是自然月还是账单月，如何区分,https://jichangtuijian.rest/blog/quota-reset-clock/,572,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
 blog,流量与额度,未用完的流量能否结转，下单前看哪些字眼,https://jichangtuijian.rest/blog/quota-rollover/,577,2026-10-23,https://www.rfc-editor.org/rfc/rfc5136
 blog,证据与编辑,为什么套餐收录不等于具备排名资格,https://jichangtuijian.rest/blog/ranking-evidence-entry/,572,2026-10-23,https://www.rfc-editor.org/rfc/rfc2330
-guides,操作教程 · 通用,教程：处理参考页里月付与年付折算的冲突,https://jichangtuijian.rest/guides/read-source-price-conflict/,714,2026-10-23,https://jichangtuijian.rest/editorial-policy/
+guides,操作教程 · 通用,教程：按预算筛选套餐并核对月付与年付口径,https://jichangtuijian.rest/guides/read-source-price-conflict/,2213,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,选择与维护,阅读机场推荐榜时，怎样识别缺少依据的结论,https://jichangtuijian.rest/blog/reading-seo-lists/,553,2026-10-23,https://jichangtuijian.rest/editorial-policy/
 blog,预算与计费,购买网络服务应该保存哪些订单信息,https://jichangtuijian.rest/blog/receipt-records/,607,2026-10-23,https://mullvad.net/en/pricing
 blog,订阅与账户,推广链接中的code与结算优惠码有什么区别,https://jichangtuijian.rest/blog/referral-versus-coupon/,575,2026-10-23,https://jichangtuijian.rest/editorial-policy/

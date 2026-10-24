@@ -1,4 +1,4 @@
-﻿Keyword,Intent,Target URL,Page Type,Priority,Title,H1
+Keyword,Intent,Target URL,Page Type,Priority,Title,H1
 机场推荐,了解选择方法,https://jichangtuijian.rest/,Pillar,P0,机场推荐与节点选择指南｜比较套餐、读懂 VPN,机场推荐，从选得明白开始。
 机场节点,理解节点参数,https://jichangtuijian.rest/glossary/latency/,Glossary,P1,延迟、抖动与带宽，分别影响什么,延迟、抖动与带宽，分别影响什么
 性价比机场,计算套餐成本,https://jichangtuijian.rest/blog/plan-cost/,Guide,P0,性价比机场怎么算：周期、倍率与每 GB 成本,性价比机场怎么算：周期、倍率与每 GB 成本
@@ -192,7 +192,7 @@ PAC自动代理配置为什么可能让不同网站走不同路径,单一知识�
 平台支持地区与IP显示地区怎样分别确认,单一知识问题,https://jichangtuijian.rest/blog/platform-supported-region/,Article,P1,平台支持地区与IP显示地区怎样分别确认,平台支持地区与IP显示地区怎样分别确认
 端口号与协议名称有什么区别,单一知识问题,https://jichangtuijian.rest/blog/port-number-role/,Article,P1,端口号与协议名称有什么区别,端口号与协议名称有什么区别
 付款成功后，怎样确认买到的方案已经生效,单一知识问题,https://jichangtuijian.rest/blog/post-purchase-validation/,Article,P1,付款成功后，怎样确认买到的方案已经生效,付款成功后，怎样确认买到的方案已经生效
-教程：建立一张能区分周期的套餐比较表,具体操作教程,https://jichangtuijian.rest/guides/prepare-comparison-sheet/,Tutorial,P1,教程：建立一张能区分周期的套餐比较表,教程：建立一张能区分周期的套餐比较表
+教程：筛选套餐、保存候选与分享品牌对比,具体操作教程,https://jichangtuijian.rest/guides/prepare-comparison-sheet/,Tutorial,P1,教程：筛选套餐、保存候选与分享品牌对比,教程：筛选套餐、保存候选与分享品牌对比
 教程：把连接问题写成可处理的支持工单,具体操作教程,https://jichangtuijian.rest/guides/prepare-support-ticket/,Tutorial,P1,教程：把连接问题写成可处理的支持工单,教程：把连接问题写成可处理的支持工单
 做连接检测时，怎样减少向外部站点暴露信息,单一知识问题,https://jichangtuijian.rest/blog/privacy-minimal-testing/,Article,P1,做连接检测时，怎样减少向外部站点暴露信息,做连接检测时，怎样减少向外部站点暴露信息
 系统代理与隧道模式覆盖哪些流量,单一知识问题,https://jichangtuijian.rest/blog/proxy-versus-tunnel/,Article,P1,系统代理与隧道模式覆盖哪些流量,系统代理与隧道模式覆盖哪些流量
@@ -203,7 +203,7 @@ QUIC、UDP与TCP的关系怎样理解,单一知识问题,https://jichangtuijian.
 流量重置是自然月还是账单月，如何区分,单一知识问题,https://jichangtuijian.rest/blog/quota-reset-clock/,Article,P1,流量重置是自然月还是账单月，如何区分,流量重置是自然月还是账单月，如何区分
 未用完的流量能否结转，下单前看哪些字眼,单一知识问题,https://jichangtuijian.rest/blog/quota-rollover/,Article,P1,未用完的流量能否结转，下单前看哪些字眼,未用完的流量能否结转，下单前看哪些字眼
 为什么套餐收录不等于具备排名资格,单一知识问题,https://jichangtuijian.rest/blog/ranking-evidence-entry/,Article,P1,为什么套餐收录不等于具备排名资格,为什么套餐收录不等于具备排名资格
-教程：处理参考页里月付与年付折算的冲突,具体操作教程,https://jichangtuijian.rest/guides/read-source-price-conflict/,Tutorial,P1,教程：处理参考页里月付与年付折算的冲突,教程：处理参考页里月付与年付折算的冲突
+教程：按预算筛选套餐并核对月付与年付口径,具体操作教程,https://jichangtuijian.rest/guides/read-source-price-conflict/,Tutorial,P1,教程：按预算筛选套餐并核对月付与年付口径,教程：按预算筛选套餐并核对月付与年付口径
 阅读机场推荐榜时，怎样识别缺少依据的结论,单一知识问题,https://jichangtuijian.rest/blog/reading-seo-lists/,Article,P1,阅读机场推荐榜时，怎样识别缺少依据的结论,阅读机场推荐榜时，怎样识别缺少依据的结论
 购买网络服务应该保存哪些订单信息,单一知识问题,https://jichangtuijian.rest/blog/receipt-records/,Article,P1,购买网络服务应该保存哪些订单信息,购买网络服务应该保存哪些订单信息
 推广链接中的code与结算优惠码有什么区别,单一知识问题,https://jichangtuijian.rest/blog/referral-versus-coupon/,Article,P1,推广链接中的code与结算优惠码有什么区别,推广链接中的code与结算优惠码有什么区别

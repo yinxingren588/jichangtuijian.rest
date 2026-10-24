@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 import {load} from 'cheerio';
 import {airports,partnerAirports,planPriceText,planTrafficText} from '../src/data/airports';
 import {evidenceFor} from '../src/data/evidence';
@@ -45,10 +46,29 @@ test('28 brands have distinct chart-reading and checkout checkpoints rendered in
  for(const brand of partnerAirports){const $=load(fs.readFileSync('dist/airport/'+brand.slug+'/index.html','utf8'));const text=$('.brand-checkpoints').text();assert.ok(text.includes(brandCheckpoints[brand.slug].chart));assert.ok(text.includes(brandCheckpoints[brand.slug].checkout));}
 });
 
-test('core comparison and coupon tutorials render their actual website screenshots with intrinsic sizes and captions',()=>{
- for(const [slug,file]of [['prepare-comparison-sheet','comparison-tool.jpg'],['check-coupon-without-payment','coupon-overview.jpg']]){
-  const $=load(fs.readFileSync('dist/guides/'+slug+'/index.html','utf8'));const figure=$('.guide-interface');const img=figure.find('img');
-  assert.equal(figure.length,1);assert.equal(img.attr('src'),'/guides/'+file);assert.equal(img.attr('loading'),'lazy');assert.equal(img.attr('width'),'1425');assert.ok(Number(img.attr('height'))>900);
-  assert.ok(figure.find('figcaption').text().includes('本站'));assert.ok(fs.existsSync('dist/guides/'+file));
+test('tutorial screenshots match their captured files, dimensions and descriptive captions',()=>{
+ const shots=JSON.parse(fs.readFileSync('docs/guide-screenshots.json','utf8'));
+ assert.equal(shots.length,4);
+ for(const shot of shots){
+  const bytes=fs.readFileSync('dist/guides/'+shot.file);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),shot.sha256);
+  for(const slug of shot.guides){
+   const $=load(fs.readFileSync('dist/guides/'+slug+'/index.html','utf8'));
+   const img=$('.guide-interface img').filter((_,el)=>$(el).attr('src')==='/guides/'+shot.file);
+   assert.equal(img.length,1);assert.equal(img.attr('width'),String(shot.width));assert.equal(img.attr('height'),String(shot.height));assert.equal(img.attr('loading'),'lazy');
+   assert.ok(img.attr('alt')!.includes('本站'));assert.ok(img.closest('figure').find('figcaption').text().includes('本站'));
+   assert.equal(img.closest('a').attr('href'),img.attr('src'));
+  }
  }
+});
+
+test('Markdown tables keep all cells within a focusable horizontal reading region',()=>{
+ let tables=0;
+ for(const slug of ['prepare-comparison-sheet','read-source-price-conflict','check-coupon-without-payment']){
+  const $=load(fs.readFileSync('dist/guides/'+slug+'/index.html','utf8'));
+  assert.ok($('.page-intro').text().includes('更新 2026-10-24'));
+  assert.equal($('.prose h3').filter((_,el)=>/^第[1-6]步/.test($(el).text())).length,6);
+  $('.prose table').each((_,el)=>{tables++;const parent=$(el).parent();assert.ok(parent.hasClass('article-table-scroll'));assert.equal(parent.attr('tabindex'),'0');assert.equal(parent.attr('role'),'region');assert.ok(parent.attr('aria-label')!.includes('横向滚动'));assert.ok($(el).find('th').length>=2);assert.ok($(el).find('td').length>=3);});
+ }
+ assert.ok(tables>=2);
 });

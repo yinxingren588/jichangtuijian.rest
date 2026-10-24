@@ -1,31 +1,31 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "scope": "构建文件字节统计；gzip为本地估算，实际传输由托管设置决定。不是网络加载、Lighthouse或Core Web Vitals测量。",
   "html": [
     {
       "file": "search/index.html",
-      "bytes": 179474,
-      "gzipBytes": 38865
+      "bytes": 179688,
+      "gzipBytes": 38922
     },
     {
       "file": "airport/index.html",
-      "bytes": 71804,
-      "gzipBytes": 12729
+      "bytes": 72157,
+      "gzipBytes": 12904
     },
     {
       "file": "compare/index.html",
-      "bytes": 79662,
-      "gzipBytes": 12005
+      "bytes": 79815,
+      "gzipBytes": 12060
     },
     {
       "file": "airport/yinxingren/index.html",
       "bytes": 31548,
-      "gzipBytes": 11201
+      "gzipBytes": 11204
     },
     {
       "file": "airport/yuzhoucloud/index.html",
       "bytes": 31495,
-      "gzipBytes": 11190
+      "gzipBytes": 11192
     }
   ],
   "javascript": [
@@ -47,13 +47,13 @@
   ],
   "css": [
     {
-      "file": "_astro/Base.EbWhoLnp.css",
-      "bytes": 80448,
-      "gzipBytes": 17310
+      "file": "_astro/Base.Bs-HPSX4.css",
+      "bytes": 88274,
+      "gzipBytes": 18539
     }
   ],
   "thirdPartyCode": "没有新增第三方运行时脚本、远程字体或追踪请求。",
-  "imageLoading": "图表及两张教程界面截图使用loading=lazy，原始图按需打开。",
+  "imageLoading": "图表及四张教程界面截图使用loading=lazy，原始图按需打开。",
   "thresholds": {
     "htmlGzipBytes": 80000,
     "javascriptGzipBytes": 40000,
