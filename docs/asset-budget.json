@@ -19,13 +19,13 @@
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 31766,
-      "gzipBytes": 11258
+      "bytes": 32886,
+      "gzipBytes": 11361
     },
     {
       "file": "airport/wuyou/index.html",
-      "bytes": 31754,
-      "gzipBytes": 11251
+      "bytes": 32684,
+      "gzipBytes": 11348
     }
   ],
   "javascript": [

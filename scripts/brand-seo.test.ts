@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {load} from 'cheerio';
 import {airports,partnerAirports} from '../src/data/airports';
-import {brandSeo,brandSeoUpdated} from '../src/data/brand-seo';
+import {brandSeo,brandSeoUpdated,brandSeoTemplates,resolveBrandSeo} from '../src/data/brand-seo';
+import {questionsForBrand,brandFaqTemplates} from '../src/data/brand-faq';
+import {renderBrandFacts} from '../src/lib/brand-facts';
 import {evidenceFor} from '../src/data/evidence';
 import {site} from '../src/data/site';
 
@@ -18,6 +20,48 @@ test('every published brand has independently editable, distinct TDK and a separ
   assert.ok(seo.title.length>seo.heading.length);assert.ok(seo.description.length>=90&&seo.description.length<=180,b.slug+' description length');
   assert.ok(seo.keywords.length>=6&&seo.keywords.length<=9,b.slug);assert.equal(new Set(seo.keywords).size,seo.keywords.length);
  }
+});
+
+test('changing catalogue facts updates metadata and authored FAQ without editing their templates',()=>{
+ const brand=structuredClone(partnerAirports[0]);
+ brand.plans[0].price=31.25;brand.plans[0].trafficGB=211;brand.coupon!.code='CaseSensitiveNEW';
+ const seo=resolveBrandSeo(brand),faq=questionsForBrand(brand).map(q=>q.question+' '+q.answer).join(' ');
+ for(const text of [seo.description,faq]){
+  assert.ok(text.includes('31.25元/月'));assert.ok(text.includes('211 GB/月'));assert.ok(text.includes('CaseSensitiveNEW'));
+  assert.ok(!text.includes('24元/月'));assert.ok(!text.includes('144 GB'));assert.ok(!text.includes('yxr888'));
+ }
+ assert.ok(seo.keywords.includes('CaseSensitiveNEW'));assert.ok(!seo.keywords.includes('yxr888'));
+ delete brand.coupon;
+ const without=resolveBrandSeo(brand);assert.ok(!without.description.includes('CaseSensitiveNEW'));assert.ok(!without.keywords.includes(''));assert.ok(!without.keywords.includes('{{couponCode}}'));
+ brand.plans=[];
+ assert.match(resolveBrandSeo(brand).description,/价格、流量额度尚未录入/);
+ assert.ok(!resolveBrandSeo(brand).description.includes('31.25'));
+ assert.equal(resolveBrandSeo(brand).title,brandSeoTemplates[brand.slug].title);
+});
+
+test('fact rendering keeps payment period, quota period, unknowns and unlimited separate',()=>{
+ const brand=structuredClone(partnerAirports[0]);
+ brand.plans=[{...brand.plans[0],price:9,period:'year',priceKind:'monthly-equivalent',trafficGB:50,trafficPeriod:'month'}];
+ assert.match(renderBrandFacts('{{plans}} {{billing}}',brand),/年付折算9元\/月均、50 GB\/月.*完整年费总额待确认/);
+ brand.plans[0].priceKind='total';assert.match(renderBrandFacts('{{plans}} {{billing}}',brand),/9元\/年、50 GB\/月 $/);
+ brand.plans[0].period='one-time';brand.plans[0].trafficPeriod='one-time';assert.match(renderBrandFacts('{{plans}}',brand),/9元不限时、50 GB一次性总额度/);
+ delete brand.plans[0].trafficGB;assert.match(renderBrandFacts('{{plans}}',brand),/流量额度尚未核实/);
+ brand.plans[0].unlimited=true;assert.match(renderBrandFacts('{{plans}}',brand),/官方不限流量/);
+ assert.throws(()=>renderBrandFacts('{{typo}}',brand),/Unknown brand fact token/);
+ const vpn=structuredClone(airports.find(b=>b.slug==='tunnelbear')!);vpn.plans[0].trafficGB=3;
+ const seo=resolveBrandSeo(vpn);assert.match(seo.description,/3 GB（重置周期尚未核实）/);assert.ok(seo.keywords.some(k=>k.includes('3 GB')));assert.ok(!seo.keywords.some(k=>k.includes('2GB')));
+ vpn.deviceLimit='最多 2 台';assert.ok(resolveBrandSeo(vpn,{...brandSeoTemplates[vpn.slug],description:'{{devices}}'}).description.includes('最多 2 台'));
+});
+
+test('all 33 brand pages render four distinct authored questions and resolved answers',()=>{
+ assert.deepEqual(Object.keys(brandFaqTemplates).sort(),airports.map(b=>b.slug).sort());
+ const questionSet=new Set<string>();
+ for(const brand of airports){
+  const questions=questionsForBrand(brand),$=load(fs.readFileSync('dist/airport/'+brand.slug+'/index.html','utf8'));
+  assert.equal(questions.length,4,brand.slug);assert.equal($('.brand-faq').length,4);assert.equal($('.brand-faq[open]').length,1);
+  questions.forEach((q,i)=>{questionSet.add(q.question);assert.equal($('.brand-faq summary').eq(i).text(),q.question);assert.equal($('.brand-faq p').eq(i).text(),q.answer);assert.ok(q.answer.length>45,brand.slug);assert.ok(!q.answer.includes('{{'),brand.slug);});
+ }
+ assert.equal(questionSet.size,132);
 });
 
 test('built brand head, social metadata, H1 and canonical use that brand own values',()=>{

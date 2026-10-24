@@ -19,6 +19,7 @@
     "indexnow:key": "tsx scripts/indexnow-key.ts",
     "audit:assets": "tsx scripts/audit-assets.ts",
     "export:tdk": "tsx scripts/export-brand-tdk.ts",
+    "export:faq": "tsx scripts/export-brand-faq.ts",
     "audit:keywords": "tsx scripts/audit-keywords.ts"
   },
   "dependencies": {
