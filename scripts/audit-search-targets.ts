@@ -14,7 +14,7 @@ const rows=searchIntentTargets.map(target=>{
  if(!incoming.get(target.url)?.size)errors.push('无正文入站链接 '+target.url);
  return {...target,title:$('title').text(),h1:$('h1').text(),incomingPages:incoming.get(target.url)?.size||0};
 });
-fs.writeFileSync('docs/search-intent-targets.json',JSON.stringify({updated:'2026-10-24',scope:'编辑规划与实际目标页核对；未获取搜索量、排名、展现或点击数据。',passed:!errors.length,keywords:rows.length,pages:new Set(rows.map(r=>r.url)).size,rows},null,2)+'\n');
+fs.writeFileSync('docs/search-intent-targets.json',JSON.stringify({updated:'2026-10-26',scope:'编辑规划与实际目标页核对；未获取搜索量、排名、展现或点击数据。',passed:!errors.length,keywords:rows.length,pages:new Set(rows.map(r=>r.url)).size,rows},null,2)+'\n');
 const csv=(value:unknown)=>'"'+String(value??'').replaceAll('"','""')+'"';
 fs.writeFileSync('docs/search-performance-tracker.csv','\uFEFF'+[
  ['关键词','主要目标URL','需求','优先级','分组','实际Title','实际H1','正文入站页数','Bing展现','Bing点击','Bing平均位置','观察周期'].map(csv).join(','),

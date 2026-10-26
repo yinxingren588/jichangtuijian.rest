@@ -8,8 +8,10 @@ import ChartViewer from '../components/ChartViewer.astro';
 import ContactDialog from '../components/ContactDialog.astro';
 import BrandMemoryClient from '../components/BrandMemoryClient.astro';
 import {site} from '../data/site';
+import {subjectKeywords} from '../lib/page-keywords';
 interface Props {title:string;description:string;keywords?:string[];noindex?:boolean;breadcrumbs?:{name:string;url:string}[];schema?:Record<string,unknown>[]}
-const {title,description,keywords=[],noindex=false,breadcrumbs=[],schema=[]}=Astro.props;
+const {title,description,keywords:providedKeywords=[],noindex=false,breadcrumbs=[],schema=[]}=Astro.props;
+const keywords=providedKeywords.length?providedKeywords:noindex?[]:subjectKeywords(title);
 const canonical=new URL(Astro.url.pathname,site.url).href;
 const nav=[['首页','/'],['品牌套餐','/airport/'],['横向对比','/compare/'],['操作教程','/guides/'],['知识文章','/blog/'],['推荐专题','/recommend/'],['测速图表','/evidence/'],['我的清单','/airport/#my-brands']];
 const graph=[{'@type':'Organization','@id':site.url+'/#organization',name:site.name,url:site.url},{'@type':'WebSite','@id':site.url+'/#website',name:site.name,url:site.url,inLanguage:'zh-CN'},...(breadcrumbs.length?[{'@type':'BreadcrumbList',itemListElement:[{name:'首页',url:'/'},...breadcrumbs].map((b,i)=>({'@type':'ListItem',position:i+1,name:b.name,item:new URL(b.url,site.url).href}))}]:[]),...schema];

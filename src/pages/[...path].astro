@@ -10,6 +10,7 @@ import CoreReadingRoutes from '../components/CoreReadingRoutes.astro';
 import CostPlanExamples from '../components/CostPlanExamples.astro';
 import NodeTaskGuide from '../components/NodeTaskGuide.astro';
 import {keywordsForPath} from '../data/core-keywords';
+import {subjectKeywords} from '../lib/page-keywords';
 import pageDates from '../data/page-dates.json';
 import {relatedEntries,categoryFor,categoryUrl,readingMinutes} from '../lib/content';
 import ArticleJourney from '../components/ArticleJourney.astro';
@@ -45,8 +46,10 @@ const schema=mode==='article'?[{'@type':article!.data.section==='blog'?'BlogPost
 const rendered=mode==='article'?await render(article!):null;
 const Content=rendered?.Content;
 const related=mode==='article'?relatedEntries(article!,articles):[];
+const coreKeywords=keywordsForPath(Astro.url.pathname);
+const pageKeywords=mode==='brand'?brandSeo[slug].keywords:mode==='article'?[...new Set([...coreKeywords,...subjectKeywords(title,article!.data.tags)])].slice(0,6):slug==='budget'&&mode==='topic'?['低预算机场推荐','月付10元以内机场','便宜机场套餐']:coreKeywords;
 ---
-<Base title={title} description={description} keywords={mode==='brand'?brandSeo[slug].keywords:slug==='budget'&&mode==='topic'?['低预算机场推荐','月付10元以内机场','便宜机场套餐']:keywordsForPath(Astro.url.pathname)} noindex={mode==='ranking'} breadcrumbs={breadcrumbs} schema={schema}>
+<Base title={title} description={description} keywords={pageKeywords} noindex={mode==='ranking'} breadcrumbs={breadcrumbs} schema={schema}>
 <header class:list={["page-intro",{"brand-page-intro":mode==="brand"}]}><p class="eyebrow">{mode==='article'?'FIELD NOTES / 实用知识':mode==='brand'?'BRAND RECORD / 价格与条款':'CONNECTION GUIDE / 航线笔记'}</p><h1>{heading}</h1><p>{description}</p><p class="muted">{mode==='article'?`发布 ${article!.data.published} · 更新 ${article!.data.updated} · ${categoryFor(article!)} · AI 辅助整理`:mode==='brand'?`页面更新：${brandSeoUpdated} · 参考资料查看：${brand!.referenceChecked||brand!.lastVerified||'待核对'}`:`页面更新：${(pageDates as Record<string,string>)[Astro.url.pathname]||'2026-10-23'}`}</p></header>
 {mode==='article'&&Content&&<div class="article-layout"><div class="reading-main"><div class="reading-context"><a href={categoryUrl(article!)}>{categoryFor(article!)} ↗</a><span>约 {readingMinutes(article!)} 分钟阅读</span><a href="#reading-navigation">上一篇 / 下一篇 ↓</a><a href="#continue-reading">延伸阅读 ↓</a></div><details class="mobile-toc"><summary>本文目录 · {rendered?.headings.filter(h=>h.depth===2).length} 个章节</summary><nav aria-label="手机文章目录">{rendered?.headings.filter(h=>h.depth===2).map(h=><a href={'#'+h.slug}>{h.text}</a>)}</nav></details><article class="prose"><Content/><h2>来源与核验范围</h2><p>以下为参考原始资料。品牌价格和功能应以资料库对应字段为准；本文不包含品牌测速或使用体验。内容由站点维护者使用 AI 辅助整理，尚不构成独立实测。</p><ul class="sources">{article!.data.sources.map((s:string)=><li><a href={s} target="_blank" rel="noopener noreferrer">{new URL(s).hostname} · 原始资料 ↗</a></li>)}</ul></article>{slug==='plan-cost'&&<CostPlanExamples/>}{['node-name-labels','nearby-node'].includes(slug)&&<NodeTaskGuide vpn={slug==='nearby-node'}/>}<ArticleJourney current={article!} entries={articles} related={related}/></div><aside class="sidebar card"><h2 class="text-lg font-bold text-ink">本文目录</h2>{rendered?.headings.filter(h=>h.depth===2).map(h=><a href={'#'+h.slug}>{h.text}</a>)}<h2 class="text-lg font-bold text-ink">继续阅读</h2><a href="#continue-reading">相关知识与操作教程 →</a><a href={categoryUrl(article!)}>返回 {categoryFor(article!)} →</a><a href="/recommend/">按需求选择 →</a><a href="/airport/">品牌资料与套餐 →</a></aside></div>}
 {mode==='policy'&&<>{slug==='contact'&&<ContactChannels/>}<article class="prose max-w-[820px]">{policy!.blocks.map(([h,p])=><><h2>{h}</h2><p>{p}</p></>)}{slug==='contact'&&<p><a href={site.repository+'/issues'} target="_blank" rel="noopener noreferrer">通过 GitHub 提交公开资料纠错 ↗</a></p>}<p><a href="/editorial-policy/">查看编辑政策</a> · <a href="/contact/">联络我们</a></p></article></>}
