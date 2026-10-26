@@ -1,0 +1,21 @@
+---
+import type {Airport} from '../data/airports';
+import {buyingGuideFor,buyingGuideUpdated} from '../data/brand-buying-guides';
+import {evidenceFor} from '../data/evidence';
+import {brandCheckpoints} from '../data/brand-checkpoints';
+interface Props {brand:Airport}
+const {brand}=Astro.props;
+const guide=buyingGuideFor(brand);
+const evidence=evidenceFor(brand.slug);
+---
+<section class="brand-buying-guide" aria-labelledby="selection-heading" data-brand-buying-guide={brand.slug}>
+ <p class="eyebrow">EDITOR'S DECISION / 站长选购结论</p>
+ <h2 id="selection-heading">{guide.headline}</h2>
+ <p class="buying-guide-summary">{guide.summary}</p>
+ <p class="buying-guide-byline">航线笔记站长 · 选购解读更新于 <time datetime={buyingGuideUpdated}>{buyingGuideUpdated}</time> · 根据本站套餐资料与站长实测图整理</p>
+ <div class="buying-guide-fit"><div><h3>适合哪些需求</h3><p>{guide.forWhom}</p></div><div><h3>哪些需求不宜直接选择</h3><p>{guide.notFor}</p></div></div>
+ <div class="buying-guide-choice"><h3>两档套餐怎样选</h3><p>{guide.choice}</p><div class="inline-reading"><a href="#plans-heading">查看套餐价格与流量 ↓</a><a href="/tools/traffic-calculator/">估算自己的月度用量 ↗</a></div></div>
+ <dl class="buying-guide-tradeoffs"><div><dt>资料中可比较的优势</dt><dd>{guide.advantage}</dd></div><div><dt>需要接受或确认的取舍</dt><dd>{guide.tradeoff}</dd></div></dl>
+ <div class="buying-guide-evidence"><h3>实测怎样支持这个判断</h3><p>{guide.evidenceFocus}</p>{evidence&&<p class="buying-guide-measurement">图示时间 <time>{evidence.time}</time>（时区未标注），样本 {evidence.nodeCount} 个节点，记录的平均下载为 {evidence.averageDownloadMBps.toFixed(2)} MB/s。该数值用于描述这批样本，不代表购买档位保证速度或长期可用率。</p>}<div class="inline-reading"><a href="#performance-evidence">对照本品牌站长实测原图 ↓</a><a href="#brand-fact-history">查看套餐与优惠记录 ↓</a></div></div>
+ {brandCheckpoints[brand.slug]&&<details class="brand-decision-checks"><summary>展开本品牌的读图与付款检查重点</summary><div class="brand-checkpoints"><div><h3>这组图表重点看什么</h3><p>{brandCheckpoints[brand.slug].chart}</p></div><div><h3>付款前优先确认什么</h3><p>{brandCheckpoints[brand.slug].checkout}</p></div></div><div class="inline-reading"><a href="/blog/buying-checklist/">购买前检查清单 ↗</a><a href="/guides/prepare-comparison-sheet/">整理自己的候选表 ↗</a></div></details>}
+</section>

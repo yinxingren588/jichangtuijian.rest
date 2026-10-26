@@ -1,0 +1,1358 @@
+{
+  "yinxingren": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "纯专线入门版",
+            "price": 24.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 144.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/yinxingren/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "纯专线主力版",
+            "price": 48.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/yinxingren/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "yxr888",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/yinxingren/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 yxr888 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "muguang": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "专线基础月付",
+            "price": 20.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 120.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/muguang/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "海量进阶月付",
+            "price": 38.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 300.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/muguang/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/muguang/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "breezenet": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "微风入门版",
+            "price": 8.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 200.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/breezenet/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "微风进阶版",
+            "price": 18.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 500.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/breezenet/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "weifeng90",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/breezenet/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 weifeng90 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "feimaoyun": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "特惠年付折算",
+            "price": 7.0,
+            "currency": "CNY",
+            "period": "year",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "monthly-equivalent",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/feimaoyun/",
+            "note": "来源套餐名和备注写年付折算，付款周期列却写月付；仅展示年付月均参考，实付总额和周期待商家确认。"
+          },
+          {
+            "name": "畅享月付版",
+            "price": 16.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/feimaoyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "flycat888",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/feimaoyun/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 flycat888 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "dalaocloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "大佬轻享版",
+            "price": 18.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 180.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/dalaocloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "大佬至尊版",
+            "price": 38.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 450.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/dalaocloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/dalaocloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "feiv": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "轻量入门版",
+            "price": 4.9,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 100.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/feiv/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "不限时海量版",
+            "price": 29.0,
+            "currency": "CNY",
+            "period": "one-time",
+            "trafficGB": 200.0,
+            "trafficPeriod": "one-time",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/feiv/",
+            "note": "来源列为不限时流量包，不作为每月重复发放的额度；有效期与使用条件待商家确认。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/feiv/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "laddercloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "中转基础版",
+            "price": 25.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 125.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/laddercloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "海量专线版",
+            "price": 48.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/laddercloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/laddercloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "lingdongcloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "均衡基础版",
+            "price": 20.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 100.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/lingdongcloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "畅享月付版",
+            "price": 36.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 260.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/lingdongcloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/lingdongcloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "firefly": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "特惠年付折算",
+            "price": 8.0,
+            "currency": "CNY",
+            "period": "year",
+            "trafficGB": 60.0,
+            "trafficPeriod": "month",
+            "priceKind": "monthly-equivalent",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/firefly/",
+            "note": "来源套餐名和备注写年付折算，付款周期列却写月付；仅展示年付月均参考，实付总额和周期待商家确认。"
+          },
+          {
+            "name": "标准月付版",
+            "price": 16.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 160.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/firefly/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "firefly",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/firefly/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 firefly 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "lingmao": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "IPLC专线版",
+            "price": 25.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/lingmao/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "旗舰大流量版",
+            "price": 48.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/lingmao/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/lingmao/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "flashleap": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "纯专线入门版",
+            "price": 24.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/flashleap/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "纯专线进阶版",
+            "price": 46.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 360.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/flashleap/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "shanyue",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/flashleap/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 shanyue 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "wuyou": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "无忧基础版",
+            "price": 19.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 100.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/wuyou/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "无忧进阶版",
+            "price": 36.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 260.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/wuyou/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "wuyou666",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/wuyou/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 wuyou666 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "kuajiecloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "全专线基础版",
+            "price": 20.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 120.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/kuajiecloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "全专线旗舰版",
+            "price": 42.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 320.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/kuajiecloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/kuajiecloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "stardream": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "双专线特惠版",
+            "price": 16.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 100.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/stardream/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "双专线标准版",
+            "price": 32.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 240.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/stardream/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "nmw888",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/stardream/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 nmw888 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "lightspeed": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "隧道基础版",
+            "price": 23.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 148.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/lightspeed/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "隧道高配版",
+            "price": 42.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 360.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/lightspeed/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "jichangcha09",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/lightspeed/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 jichangcha09 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "v2yun": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "IPLC超值版",
+            "price": 14.9,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 100.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/v2yun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "IPLC进阶版",
+            "price": 28.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 240.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/v2yun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "rabbit",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/v2yun/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 rabbit 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "u1s1": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "三网优化基础版",
+            "price": 20.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 120.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/u1s1/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "三网优化旗舰版",
+            "price": 38.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 300.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/u1s1/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "U1S1",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/u1s1/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 U1S1 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "jiliancloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "亲民双专线版",
+            "price": 14.4,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 100.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/jiliancloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "双专线增强版",
+            "price": 28.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 250.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/jiliancloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/jiliancloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "quanqiuyun": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "中转经典版",
+            "price": 20.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 120.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/quanqiuyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "中转海量版",
+            "price": 38.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 300.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/quanqiuyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "tt88",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/quanqiuyun/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 tt88 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "guangnianti": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "击穿底价版",
+            "price": 12.6,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 110.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/guangnianti/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "大流量专线版",
+            "price": 26.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 280.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/guangnianti/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/guangnianti/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "sogoyun": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "企业专线版",
+            "price": 25.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/sogoyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "企业尊享版",
+            "price": 46.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/sogoyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/sogoyun/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "yuzhoucloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "双线超值版",
+            "price": 14.9,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 60.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/yuzhoucloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "双线畅享版",
+            "price": 28.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 180.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/yuzhoucloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": {
+          "code": "YUZHOU553",
+          "status": "user-provided",
+          "discount": "尚未核实",
+          "conditions": "优惠价永久有效（站长确认）；适用套餐与具体折扣比例需分别核对",
+          "validity": "permanent",
+          "validityConfirmedBy": "site-owner",
+          "validityConfirmedAt": "2026-10-24"
+        },
+        "sources": [
+          "https://jiediantuijian.shop/airport/yuzhoucloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    },
+    {
+      "id": "coupon-confirmation-2026-10-24",
+      "date": "2026-10-24",
+      "kind": "coupon-confirmation",
+      "title": "站长确认优惠价永久有效",
+      "note": "优惠码 YUZHOU553 对应优惠价由站长确认为永久有效；此记录说明有效期，不补写折扣比例、适用套餐或商家实付金额。"
+    }
+  ],
+  "ermaoyun": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "多节点基础版",
+            "price": 15.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 120.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/ermaoyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "多节点大流量版",
+            "price": 30.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 280.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/ermaoyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/ermaoyun/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "yifanyun": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "专线畅行版",
+            "price": 25.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/yifanyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "专线旗舰版",
+            "price": 45.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/yifanyun/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/yifanyun/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "edgenova": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "年付大流量版",
+            "price": 86.0,
+            "currency": "CNY",
+            "period": "year",
+            "trafficGB": 200.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/edgenova/",
+            "note": "年付总价；流量表头为月度额度，重置规则待商家确认。"
+          },
+          {
+            "name": "进阶专线版",
+            "price": 168.0,
+            "currency": "CNY",
+            "period": "year",
+            "trafficGB": 450.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/edgenova/",
+            "note": "年付总价；流量表头为月度额度，重置规则待商家确认。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/edgenova/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "kexincloud": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "IPLC特惠版",
+            "price": 9.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 45.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/kexincloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "IPLC标准版",
+            "price": 22.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/kexincloud/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/kexincloud/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "sujie": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "新手优化版",
+            "price": 25.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 150.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/sujie/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          },
+          {
+            "name": "极速畅联版",
+            "price": 45.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 350.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/sujie/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/sujie/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ],
+  "kuaili": [
+    {
+      "id": "baseline-2026-10-26",
+      "date": "2026-10-26",
+      "kind": "baseline",
+      "title": "套餐与优惠资料建档",
+      "note": "保存本站当前收录的套餐、计费与流量口径及优惠状态，作为后续变更对照起点。本次仅建立资料快照，未重新核验商家结算；来源读取日期另列。",
+      "snapshot": {
+        "plans": [
+          {
+            "name": "IEPL轻量年付折算",
+            "price": 10.0,
+            "currency": "CNY",
+            "period": "year",
+            "trafficGB": 30.0,
+            "trafficPeriod": "month",
+            "priceKind": "monthly-equivalent",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/kuaili/",
+            "note": "来源套餐名和备注写年付折算，付款周期列却写月付；仅展示年付月均参考，实付总额和周期待商家确认。"
+          },
+          {
+            "name": "IEPL标准版",
+            "price": 24.0,
+            "currency": "CNY",
+            "period": "month",
+            "trafficGB": 120.0,
+            "trafficPeriod": "month",
+            "priceKind": "total",
+            "verified": false,
+            "source": "https://jiediantuijian.shop/airport/kuaili/",
+            "note": "第三方参考套餐，未验证商家当前售价、流量倍率或优惠码适用条件。"
+          }
+        ],
+        "coupon": null,
+        "sources": [
+          "https://jiediantuijian.shop/airport/kuaili/"
+        ],
+        "referenceChecked": "2026-10-24"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+import {planPriceText,planTrafficText,type Airport} from '../data/airports';
+import {historyForBrand} from '../data/brand-fact-history';
+interface Props {brand:Airport}
+const {brand}=Astro.props;
+const events=historyForBrand(brand);
+---
+<section class="brand-fact-history" aria-labelledby="brand-fact-history" data-brand-fact-history={brand.slug}>
+ <p class="eyebrow">FACT HISTORY / 资料维护</p>
+ <h2 id="brand-fact-history">套餐与优惠核对记录</h2>
+ <p>分别保留本站资料记录日期、来源读取日期与站长优惠确认日期。后续有价格、流量或优惠变更时，在这里追加；建档不代表商家刚刚调价或已核验当前结算。</p>
+ <ol class="brand-history-list">{events.map(event=><li data-history-kind={event.kind} data-history-id={event.id}><div class="brand-history-heading"><time datetime={event.date}>{event.date}</time><h3>{event.title}</h3></div><p>{event.note}</p>{event.snapshot&&<details class="brand-history-snapshot"><summary>查看这次记录的套餐与优惠快照</summary><p>套餐来源读取日期：{event.snapshot.referenceChecked||'未记录'}。以下保留记录当时的资料，不随当前套餐表覆盖。</p><div class="table-wrap" tabindex="0" role="region" aria-label={brand.name+'历史套餐快照，可横向滚动'}><table><caption>{brand.name} · {event.date} 资料快照</caption><thead><tr><th scope="col">套餐</th><th scope="col">记录价格 / 付款口径</th><th scope="col">记录流量 / 发放口径</th></tr></thead><tbody>{event.snapshot.plans.map(plan=><tr><th scope="row">{plan.name}</th><td>{planPriceText(plan)}</td><td>{planTrafficText(plan)}</td></tr>)}</tbody></table></div><p>{event.snapshot.coupon?<>记录优惠码：<code>{event.snapshot.coupon.code}</code> · {event.snapshot.coupon.validity==='permanent'?'对应优惠价永久有效（站长确认）':'有效期待核对'}。具体折扣：{event.snapshot.coupon.discount}。适用条件：{event.snapshot.coupon.conditions}。</>:'本次资料快照未录入优惠码；不据此判断商家是否存在其他活动。'}</p>{event.snapshot.sources.length>0&&<p class="brand-history-sources">快照引用：{event.snapshot.sources.map((url,index)=><a href={url} target="_blank" rel="noopener noreferrer">来源页面 {index+1} ↗</a>)}</p>}</details>}</li>)}</ol>
+ <div class="inline-reading"><a href="/contact/">反馈套餐或优惠变化 →</a><a href="#selection-heading">回到站长选购结论 ↑</a></div>
+</section>

@@ -20,6 +20,8 @@
     "audit:assets": "tsx scripts/audit-assets.ts",
     "export:tdk": "tsx scripts/export-brand-tdk.ts",
     "export:faq": "tsx scripts/export-brand-faq.ts",
+    "export:decisions": "tsx scripts/export-brand-decisions.ts",
+    "brand:record": "tsx scripts/record-brand-facts.ts",
     "audit:keywords": "tsx scripts/audit-keywords.ts",
     "audit:targets": "tsx scripts/audit-search-targets.ts"
   },

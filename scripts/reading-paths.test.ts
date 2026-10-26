@@ -5,6 +5,7 @@ import {load} from 'cheerio';
 import {readLibrary} from './library';
 import {airports} from '../src/data/airports';
 import {brandEditorials} from '../src/data/brand-editorials';
+import {buyingGuideFor} from '../src/data/brand-buying-guides';
 import {planComparison} from '../src/lib/brand-content';
 
 const library=readLibrary();
@@ -37,7 +38,8 @@ test('all 28 brand pages have individually authored analysis, relevant reading, 
   const $=load(fs.readFileSync('dist/airport/'+brand.slug+'/index.html','utf8'));
   assert.equal($('[data-brand-editorial]').attr('data-brand-editorial'),brand.slug);
   const text=$('[data-brand-editorial]').text();
-  for(const value of [editorial.focus,editorial.analysis,editorial.scenario,editorial.caution,editorial.verdict,editorial.question,editorial.answer])assert.ok(text.includes(value),brand.slug+' authored content');
+  const decision=buyingGuideFor(brand);
+  for(const value of [editorial.focus,editorial.analysis,editorial.caution,editorial.question,editorial.answer,decision.summary,decision.forWhom,decision.choice,decision.tradeoff])assert.ok(text.includes(value),brand.slug+' authored content');
   for(const id of ['brand-overview','plans-heading','selection-heading','coupon-heading','profile-heading','performance-evidence','brand-faq','brand-reading','brand-alternatives','sources-heading'])assert.equal($('[id="'+id+'"]').length,1,brand.slug+' '+id);
   assert.equal($('[data-evidence-state]').attr('data-evidence-state'),brand.kind==='airport'?'provided':'pending');
   assert.equal($('.brand-reading-list>a').length,3);
