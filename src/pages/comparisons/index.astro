@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import {brandComparisons,comparisonBrands,comparisonUrl} from '../../data/brand-comparisons';
+---
+<Base title="机场品牌深度对照｜五组套餐、流量与测速选择分析" description="围绕隐形人和暮光、微风和飞V、飞猫和大佬、梯子云和灵动、Firefly和灵猫五组品牌，解释月付、年付折算、总量包与节点图怎样一起判断，直达品牌、实测和排查教程。" keywords={['机场品牌对比','隐形人与暮光网络','微风与飞V','飞猫云与大佬云','梯子云与灵动云','Firefly与灵猫']} breadcrumbs={[{name:'品牌深度对照',url:'/comparisons/'}]}>
+ <header class="page-intro"><p class="eyebrow">COMPARE WITH A PURPOSE</p><h1>两家放在一起，读懂真正的取舍。</h1><p>五组品牌，五个不同的选择问题。先看付款与容量，再沿节点原图和结算条件继续核对。</p></header>
+ <section class="reader-value-intro"><h2>每篇对照都回答一个具体问题</h2><p>价格与额度读取本站已有参考资料，不自动计算券后金额；测速保留原图日期与单位。各篇提供三个明示情景，筛选的是同时满足同一预算、容量和付款方式的具体档位。</p><div class="case-reading"><a href="/compare/">自由组合品牌与字段 ⇄</a><a href="/tools/traffic-calculator/">先估算自己的用量 →</a><a href="/troubleshooting/">已有连接问题？进入故障排查 →</a></div></section>
+ <div class="comparison-index-grid">{brandComparisons.map((item,index)=>{const brands=comparisonBrands(item);return <a class="reader-value-card" href={comparisonUrl(item)} data-comparison-card={item.slug}><span class="reader-value-label">0{index+1} / {brands.map(b=>b.name).join(' × ')}</span><h2>{item.focus}</h2><p>{item.lead}</p><span class="text-link">阅读全文与情景判断 →</span></a>;})}</div>
+ <section class="reader-value-intro"><h2>先建立候选，再验证实际任务</h2><p>对照文章不生成综合分或胜负名次。账面条件满足后，还要核对套餐开放节点、客户端、计费倍率及实际结算；图表无法代替完整付款周期里的连接表现。已有故障时先定位范围，避免把反复更换品牌当作唯一排错办法。</p><div class="case-reading"><a href="/airport/">查看全部28品牌 →</a><a href="/evidence/records/">核对原测试日期与环境 →</a><a href="/decisions/">更多用量演算案例 →</a></div></section>
+</Base>

@@ -3,12 +3,14 @@ import type {Airport} from '../data/airports';
 import {buyingGuideFor,buyingGuideUpdated} from '../data/brand-buying-guides';
 import {evidenceFor} from '../data/evidence';
 import {studyForBrand} from '../data/decision-studies';
+import {comparisonsForBrand,comparisonUrl} from '../data/brand-comparisons';
 import {brandCheckpoints} from '../data/brand-checkpoints';
 interface Props {brand:Airport}
 const {brand}=Astro.props;
 const guide=buyingGuideFor(brand);
 const evidence=evidenceFor(brand.slug);
 const study=studyForBrand(brand.slug);
+const comparisons=comparisonsForBrand(brand.slug);
 ---
 <section class="brand-buying-guide" aria-labelledby="selection-heading" data-brand-buying-guide={brand.slug}>
  <p class="eyebrow">EDITOR'S DECISION / 站长选购结论</p>
@@ -21,4 +23,5 @@ const study=studyForBrand(brand.slug);
  <div class="buying-guide-evidence"><h3>实测怎样支持这个判断</h3><p>{guide.evidenceFocus}</p>{evidence&&<p class="buying-guide-measurement">图示时间 <time>{evidence.time}</time>（时区未标注），样本 {evidence.nodeCount} 个节点，记录的平均下载为 {evidence.averageDownloadMBps.toFixed(2)} MB/s。该数值用于描述这批样本，不代表购买档位保证速度或长期可用率。</p>}<div class="inline-reading"><a href="#performance-evidence">对照本品牌站长实测原图 ↓</a><a href="#brand-fact-history">查看套餐与优惠记录 ↓</a></div></div>
  {brandCheckpoints[brand.slug]&&<details class="brand-decision-checks"><summary>展开本品牌的读图与付款检查重点</summary><div class="brand-checkpoints"><div><h3>这组图表重点看什么</h3><p>{brandCheckpoints[brand.slug].chart}</p></div><div><h3>付款前优先确认什么</h3><p>{brandCheckpoints[brand.slug].checkout}</p></div></div><div class="inline-reading"><a href="/blog/buying-checklist/">购买前检查清单 ↗</a><a href="/guides/prepare-comparison-sheet/">整理自己的候选表 ↗</a></div></details>}
  {study&&<div class="buying-guide-choice"><h3>把自己的用量代入案例</h3><p>以明示假设比较当前两档参考方案，先判断容量与付款模型，再核对真实结算和节点。</p><a href={'/decisions/'+study.slug+'/'}>{study.title} →</a></div>}
+ {comparisons.length>0&&<div class="buying-guide-choice"><h3>把这个品牌放到具体对照里</h3><p>围绕付款模型、用量和节点权限阅读编辑分析，保留参考报价与原图时间。</p><div class="inline-reading">{comparisons.map(item=><a href={comparisonUrl(item)}>{item.title} →</a>)}</div></div>}
 </section>
