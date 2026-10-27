@@ -1,0 +1,12 @@
+---
+import type {Airport} from '../data/airports';
+import {checkoutForBrand} from '../data/checkout-evidence';
+interface Props {brand:Airport}
+const {brand}=Astro.props;
+const record=checkoutForBrand(brand.slug);
+---
+<div class="checkout-proof" data-checkout-proof-status={record.status}>
+ <div class="reader-value-heading"><h3 id="checkout-proof">结算核验与凭据</h3><span class="tag neutral">{record.status==='recorded'?'已公开核验记录':'待补充结算凭据'}</span></div>
+ {record.status==='recorded'?<><p><time>{record.checkedAt}</time> · {record.planName} · {record.billingPeriod}</p><dl class="environment-fields"><div><dt>优惠前记录金额</dt><dd>{record.currency} {record.originalAmount}</dd></div><div><dt>优惠后记录金额</dt><dd>{record.currency} {record.finalAmount}</dd></div><div><dt>续费金额</dt><dd>{record.renewalAmount===null?'尚未记录':record.currency+' '+record.renewalAmount}</dd></div><div><dt>实际应用代码</dt><dd>{record.appliedCoupon||'未记录应用优惠码'}</dd></div></dl><p>{record.conditions}</p>{record.image&&<a href={record.image} target="_blank" rel="noopener"><img src={record.image} alt={brand.name+'的脱敏结算核验截图'} loading="lazy" decoding="async"/></a>}</>:<><p>目前尚未公开{brand.name}的结算核验截图，参考套餐不冒充实际实付记录。{brand.coupon?'已录入代码对应优惠价永久有效（站长确认）；具体折扣、适用档位与续费金额仍需结算凭据说明。':'未提供优惠码不等于商家没有活动。'}</p><details><summary>一份完整的结算记录需要什么？</summary><ul><li>品牌、具体套餐、币种及完整付款周期。</li><li>核对日期、优惠前后金额及实际应用的优惠码。</li><li>适用套餐、叠加与续费说明，以及脱敏截图。</li></ul><p>公开截图前移除邮箱、订单号、支付及订阅凭据；没有记录的金额保持未知。</p></details></>}
+ <div class="inline-reading"><a href="/downloads/checkout-evidence-template.csv" download>下载结算核验表 ↓</a><a href="/contact/">反馈套餐与结算变化 →</a></div>
+</div>

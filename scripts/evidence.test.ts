@@ -40,10 +40,10 @@ test('brand charts, accessible summaries and hub anchors retain source boundarie
  for(const record of evidenceRecords.filter(r=>r.brandSlug)){
   const $=load(fs.readFileSync('dist/airport/'+record.brandSlug+'/index.html','utf8'));const section=$('[data-evidence-state="provided"]');
   assert.equal(section.length,1);assert.equal(section.attr('data-evidence-brand'),record.slug);
-  assert.equal(section.find('[data-chart-open]').length,2);assert.equal(section.find('img[loading="lazy"]').length,2);
+  assert.equal(section.find('[data-chart-open]').length,2);assert.equal(section.find('img[src^="/evidence/"][loading="lazy"]').length,2);
   for(const asset of [record.speed,record.unlock]){assert.equal(section.find('a[data-chart-open]').toArray().filter(e=>$(e).attr('href')===asset.original).length,1);assert.equal(section.find('img[src="'+asset.preview+'"]').length,1);}
   for(const label of ['MB/s','Mbps','时区未注明','站长本人实测','Steam','不作解锁率','绿色状态节点数'])assert.ok(section.text().includes(label),record.slug+' '+label);
-  assert.equal(section.find('.unlock-grid>div').length,10);assert.equal(section.find('time').text(),record.time);
+  assert.equal(section.find('.unlock-grid>div').length,10);assert.equal(section.find('.evidence-context time').text(),record.time);
  }
  const $=load(fs.readFileSync('dist/evidence/index.html','utf8'));
  assert.equal($('[data-evidence-search]').length,29);assert.equal($('[data-chart-open]').length,4);assert.equal($('#wavenet').length,1);

@@ -1,34 +1,39 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "scope": "构建文件字节统计；gzip为本地估算，实际传输由托管设置决定。不是网络加载、Lighthouse或Core Web Vitals测量。",
   "html": [
     {
       "file": "search/index.html",
-      "bytes": 197473,
-      "gzipBytes": 43394
+      "bytes": 200706,
+      "gzipBytes": 44115
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 44033,
-      "gzipBytes": 14695
+      "bytes": 49651,
+      "gzipBytes": 16279
+    },
+    {
+      "file": "airport/breezenet/index.html",
+      "bytes": 49888,
+      "gzipBytes": 16154
     },
     {
       "file": "airport/yuzhoucloud/index.html",
-      "bytes": 43938,
-      "gzipBytes": 14634
+      "bytes": 49280,
+      "gzipBytes": 16132
     },
     {
       "file": "airport/wuyou/index.html",
-      "bytes": 43808,
-      "gzipBytes": 14632
-    },
-    {
-      "file": "airport/feimaoyun/index.html",
-      "bytes": 44051,
-      "gzipBytes": 14605
+      "bytes": 49066,
+      "gzipBytes": 16097
     }
   ],
   "javascript": [
+    {
+      "file": "_astro/search-review.astro_astro_type_script_index_0_lang.FogBPe9A.js",
+      "bytes": 10293,
+      "gzipBytes": 4601
+    },
     {
       "file": "_astro/traffic-calculator.astro_astro_type_script_index_0_lang.mW6_P3D3.js",
       "bytes": 5295,
@@ -52,9 +57,9 @@
   ],
   "css": [
     {
-      "file": "_astro/Base.DjScuFeD.css",
-      "bytes": 101333,
-      "gzipBytes": 20996
+      "file": "_astro/Base.BgF5gQvC.css",
+      "bytes": 108837,
+      "gzipBytes": 22520
     },
     {
       "file": "_astro/traffic-calculator.Cv7GrPJ7.css",

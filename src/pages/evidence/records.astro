@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import TestEnvironmentDetails from '../../components/TestEnvironmentDetails.astro';
+import MeasurementHistory from '../../components/MeasurementHistory.astro';
+import {measurementSessions,chartForSession} from '../../data/measurement-sessions';
+import {evidencePageUrl} from '../../lib/share-evidence';
+---
+<Base title="站长实测记录档案｜测试环境、日期与连续复测资料" description="按品牌查看29组真实图表的原始测试日期与统一环境确认，保留未知参数；下载图表摘要和后续复测记录表，逐次积累可复核的测试资料。" breadcrumbs={[{name:'测速图表',url:'/evidence/'},{name:'实测记录档案',url:'/evidence/records/'}]}>
+ <header class="page-intro"><p class="eyebrow">THE OBSERVATION LOG</p><h1>每次记录，都保留自己的时间与条件。</h1><p>现有29组图表各作为一次既有记录建档。站长已确认全部使用同一环境，后续按真实复测逐次追加。</p><p class="muted">资料维护更新：2026-10-27 · 原图测试日期分别保留</p></header>
+ <TestEnvironmentDetails/>
+ <div class="case-reading"><a href="/downloads/owner-chart-summaries.csv" download>下载29组已有图表摘要 CSV ↓</a><a href="/downloads/measurement-log-template.csv" download>下载后续复测记录表 ↓</a><a href="/share/">下载可分享的实测摘要 →</a><a href="/evidence/">回到高清图表库 →</a></div>
+ <p class="fine-print">下载数据是原图汇总字段转录，包含缺失项，不是逐次请求原始日志。不同品牌的图示测试日期不同；统一环境不把这些结果变成同一时点的竞速名次。</p>
+ <div class="reader-filter"><label for="measurement-filter">按品牌名称查找记录</label><input id="measurement-filter" type="search" placeholder="例如：隐形人、微风、飞V"/><p id="measurement-status" role="status" aria-live="polite">共29组记录</p></div>
+ <div class="measurement-records">{measurementSessions.map(session=>{const chart=chartForSession(session);return <article id={'record-'+chart.slug} class="measurement-record" data-measurement-search={chart.name.toLowerCase()}><div class="reader-value-heading"><h2>{chart.name}</h2><time>{session.testedAt}</time></div><p>{chart.brandSlug?'关联现有品牌档案':'额外图表资料，不新增套餐或推广品牌'} · {chart.nodeCount}个图示节点 · 站长本人实测</p><MeasurementHistory chartSlug={chart.slug}/><div class="case-reading"><a href={evidencePageUrl(chart)}>查看完整图表与说明 →</a><a href={'/share/#share-'+chart.slug}>分享本组摘要 →</a></div></article>;})}</div>
+ <noscript><p>全部记录已列出，可使用浏览器查找品牌名称。</p></noscript>
+ <script>const input=document.querySelector<HTMLInputElement>('#measurement-filter')!;const records=[...document.querySelectorAll<HTMLElement>('[data-measurement-search]')];input.addEventListener('input',()=>{let count=0;const query=input.value.trim().toLowerCase();records.forEach(record=>{record.hidden=!record.dataset.measurementSearch!.includes(query);if(!record.hidden)count++;});document.querySelector('#measurement-status')!.textContent=count?`显示${count}组记录`:'没有匹配记录，请换一个名称。';});</script>
+</Base>

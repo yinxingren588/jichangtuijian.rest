@@ -84,3 +84,7 @@ npm run preview
 ## 原始八个核心关键词
 
 2026-10-24：8个词分配到7个主要页面；映射在 `src/data/core-keywords.ts`。首页及文章目录复用6个内容入口，机场节点、VPN节点与VPN概念扩写为各自的解释页，新手专题补充梯子推荐流程，`/vpn/`按统一数据源展示5家VPN条件。正文仍为200篇文章、30篇教程与5篇百科。`npm run audit:keywords`验证实际HTML中的Title、Description、H1、Keywords、主要内容和相关正文入链，已纳入 `npm test`。实际结果见 `docs/core-keyword-coverage.json`，逐词完成报告见 `docs/core-keyword-implementation.md`。覆盖检查不表示搜索引擎收录或排名已验证。
+
+## 读者价值功能 · 2026-10-27
+
+本轮增加统一环境确认、29组既有实测档案、28品牌待补结算凭据、3篇选择演算案例、29套分享图文与浏览器内Bing CSV复盘工具。新版319页、312个可索引URL；保留原有文章、套餐、优惠、推广入口与原始图表。功能、资料边界与维护步骤见docs/reader-value.md。站长自行部署，本轮未通知新URL；历史306URL的IndexNow HTTP200记录保留。

@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import EvidenceShare from '../components/EvidenceShare.astro';
+import {evidenceRecords} from '../data/evidence';
+---
+<Base title="站长实测摘要下载｜品牌测速分享图与原文说明" description="下载29组站长实测图表的PNG、SVG摘要及可复制文字，保留测试时间、样本、单位和原文链接；分享现有真实记录，不生成虚构复测或用户评价。" breadcrumbs={[{name:'实测摘要分享',url:'/share/'}]}>
+ <header class="page-intro"><p class="eyebrow">SHARE SOMETHING USEFUL</p><h1>分享一组有出处的结果。</h1><p>挑选品牌，下载清晰摘要图，附上日期和原文链接。让读者既能快速了解，也能继续核对完整图表。</p></header>
+ <div class="reader-value-intro"><h2>分享时，把这三件事一起带上。</h2><p>说明这是什么品牌、何时测试、记录能回答什么问题。摘要保留原始单位和时间；不同日期的图表不制作“同一时点最快”名次。图片展示原图汇总字段，完整节点情况仍看原图。</p><p>可在允许分享的相关社群使用这些素材，优先回答一个具体问题，并保留原文链接；不要改成亲身账单或他人评价。</p><div class="case-reading"><a href="/evidence/records/">实测记录与统一环境 →</a><a href="/decisions/">结合具体需求阅读案例 →</a><a href="/contact/">反馈资料或读者问题 →</a></div></div>
+ <div class="measurement-records">{evidenceRecords.map(record=><article id={'share-'+record.slug} class="measurement-record"><h2>{record.name}</h2><p>图示测试时间：{record.time} · {record.brandSlug?'现有品牌实测':'额外图表摘要'}。图示平均下载 {record.averageDownloadMBps.toFixed(2)} MB/s；详细节点结果见原图。</p><EvidenceShare record={record}/></article>)}</div>
+ <aside class="reader-value-card"><h2>站长的内容维护入口</h2><p>准备新的真实资料后，再补充环境参数、复测或结算记录；有Bing搜索数据后，按相同观察口径整理下一轮改进。</p><div class="case-reading"><a href="/downloads/test-environment-template.csv" download>环境记录表 ↓</a><a href="/downloads/checkout-evidence-template.csv" download>结算核验表 ↓</a><a href="/tools/search-review/">打开搜索数据复盘工具 →</a></div></aside>
+</Base>

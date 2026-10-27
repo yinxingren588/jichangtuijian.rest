@@ -1,16 +1,22 @@
 ---
 import {platforms,type EvidenceRecord} from '../data/evidence';
 import ChartGallery from './ChartGallery.astro';
+import TestEnvironmentDetails from './TestEnvironmentDetails.astro';
+import MeasurementHistory from './MeasurementHistory.astro';
+import EvidenceShare from './EvidenceShare.astro';
 interface Props {record:EvidenceRecord;headingId?:string;hub?:boolean}
 const {record:r,headingId='performance-evidence',hub=false}=Astro.props;
 ---
 <section aria-labelledby={headingId} class="brand-evidence" data-evidence-state="provided" data-evidence-brand={r.slug} data-test-author={r.testedBy}>
  <div class="evidence-heading"><div><p class="eyebrow">CHART ARCHIVE / 图表档案</p><h2 id={headingId}>{hub?r.name+' · 图表资料':'节点测速与流媒体解锁图'}</h2></div><span class="tag neutral">站长本人实测</span></div>
  <p>收录 {r.name} 的节点测速图与流媒体、AI 平台状态图。{r.slug==='yinxingren'?'本次采用隐形人 IEPL 专线高清修订版；IEPL 为提供图中的线路标注。':''}图表由站长本人完成并确认是真实测试数据；以下摘要转录自所附汇总图，原始测试日志尚未在本站公开。</p>
- <dl class="evidence-context"><div><dt>图示场景时间 · 时区未注明</dt><dd><time>{r.time}</time></dd></div><div><dt>图示样本 / 地区</dt><dd>{r.nodeCount} 个节点 · 港 / 日 / 新 / 美 / 台</dd></div><div><dt>来源 / 收录日期</dt><dd>站长实测 · 2026-10-23 收录</dd></div><div><dt>本地运营商 / 设备 / 带宽</dt><dd>待站长补充</dd></div></dl>
+ <dl class="evidence-context"><div><dt>图示场景时间 · 时区未注明</dt><dd><time>{r.time}</time></dd></div><div><dt>图示样本 / 地区</dt><dd>{r.nodeCount} 个节点 · 港 / 日 / 新 / 美 / 台</dd></div><div><dt>来源 / 收录日期</dt><dd>站长实测 · 2026-10-23 收录</dd></div><div><dt>本地运营商 / 设备 / 带宽</dt><dd>统一环境（站长确认）· 具体参数待补充</dd></div></dl>
  <div class="evidence-metrics"><div><span>图示平均下载</span><strong>{r.averageDownloadMBps.toFixed(2)} <small>MB/s</small></strong></div><div><span>图示最高峰值</span><strong>{r.peakDownloadMBps.toFixed(2)} <small>MB/s</small></strong></div><div><span>平均 TLS RTT</span><strong>{r.averageTlsMs.toFixed(1)} <small>ms</small></strong></div><div><span>平均 HTTPS Ping</span><strong>{r.averageHttpsMs.toFixed(1)} <small>ms</small></strong></div></div>
  <p class="fine-print">平均值按图中节点等权统计；最高值是全部节点中的峰值，不能代表持续速度或你的本地速度。下载单位为 MB/s，与 Mbps 不同。两类延迟指标分别保留。</p>
+ <TestEnvironmentDetails compact/>
+ <MeasurementHistory chartSlug={r.slug}/>
  <ChartGallery name={r.name} speed={r.speed} unlock={r.unlock}/>
  <details class="unlock-details"><summary>查看平台状态文字摘要 · {platforms.length} 项</summary><dl class="unlock-grid">{platforms.map((platform,i)=><div><dt>{platform}</dt><dd>{r.greenCounts[i]}<span> / {r.nodeCount}</span><small>{i===9?'显示货币区的节点数':'绿色状态节点数'}</small></dd></div>)}</dl><p class="fine-print">分母是图中列出的节点数，非独立请求次数；绿色、黄色部分可用、红色失败与灰色未测应分别阅读。Steam 仅统计货币区显示，不作解锁率。平台状态只对应图示时点，AI 可访问不等于账号或地区使用资格。</p></details>
  <div class="evidence-reading"><p>怎样使用这组结果：先在原图中找到所需地区和具体节点，分别核对速度与平台状态，再按自己的网络条件复测。单次图表不足以判断长期稳定性。</p><div class="inline-reading"><a href="/blog/stability-method/">稳定性怎样记录 ↗</a><a href="/guides/run-controlled-node-test/">同条件节点对照教程 ↗</a>{!hub&&<a href={'/evidence/#'+r.slug}>浏览全部品牌图表 ↗</a>}</div></div>
+ <EvidenceShare record={r}/>
 </section>

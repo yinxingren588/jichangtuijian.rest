@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import {decisionStudies} from '../../data/decision-studies';
+---
+<Base title="机场套餐选择案例｜流量、月付与不限时的具体判断" description="通过隐形人、飞V与微风网络三个问题案例，将参考套餐、用量演算、付款模型和站长实测入口连起来。每个演算明确假设，帮助读者建立自己的选择条件。" keywords={['机场套餐怎么选','隐形人流量','飞V不限时','微风网络流量']} breadcrumbs={[{name:'选择案例',url:'/decisions/'}]}>
+ <header class="page-intro"><p class="eyebrow">DECIDE WITH A CONCRETE QUESTION</p><h1>从一个具体问题，走到自己的选择。</h1><p>把价格、额度和使用安排放在同一个场景里看。三个案例使用明确假设演算，参考套餐与真实实测分别标注。</p></header>
+ <div class="reader-value-grid">{decisionStudies.map((study,index)=><a href={'/decisions/'+study.slug+'/'}><span class="reader-value-label">0{index+1} / {study.brandSlug==='feiv'?'付款模型':'用量判断'}</span><h2>{study.question}</h2><p>{study.lead}</p><span class="text-link">打开案例与交互演算 →</span></a>)}</div>
+ <section class="reader-value-intro"><h2>案例怎样帮助判断？</h2><p>先明确自己的月份、任务和计费流量预算，再看对应套餐能否覆盖。容量判断后，继续核对实际可用节点、设备规则和结算条件；账面够用不能替代连接验证。</p><p>页面中的情景是编辑演算，不是站长用量账单或读者评价。站长测速图保留自己的时间、单位和节点样本，可从各案例直达原图。</p><div class="case-reading"><a href="/tools/traffic-calculator/">估算完整月度任务 →</a><a href="/compare/">比较自己的候选 →</a><a href="/evidence/records/">查看真实测试记录 →</a><a href="/contact/">告诉站长你遇到的问题 →</a></div></section>
+</Base>

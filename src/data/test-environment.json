@@ -1,0 +1,16 @@
+{
+  "id": "owner-shared-environment",
+  "label": "本期统一测试环境",
+  "sameEnvironmentConfirmed": true,
+  "confirmedBy": "site-owner",
+  "confirmedAt": "2026-10-27",
+  "operator": null,
+  "bandwidthMbps": null,
+  "device": null,
+  "operatingSystem": null,
+  "client": null,
+  "clientVersion": null,
+  "protocol": null,
+  "timeZone": null,
+  "note": "站长确认全部现有图表使用同一测试环境；运营商、带宽、设备及客户端等具体参数尚待补充。测试日期仍按各图原始记录保留。"
+}

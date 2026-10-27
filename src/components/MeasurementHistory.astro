@@ -1,0 +1,12 @@
+---
+import {measurementSessions,chartForSession,seriesReadiness} from '../data/measurement-sessions';
+interface Props {chartSlug:string}
+const {chartSlug}=Astro.props;
+const sessions=measurementSessions.filter(session=>session.chartSlug===chartSlug).sort((a,b)=>b.testedAt.localeCompare(a.testedAt));
+const readiness=seriesReadiness(sessions);
+---
+<div class="measurement-history" data-measurement-history={chartSlug}>
+ <h3>连续实测记录</h3><p>已收录 {sessions.length} 次图表记录。{readiness.reason} 原有图表建档不会增加测试次数。</p>
+ <div class="reader-table-scroll" tabindex="0" role="region" aria-label="按日期查看实测记录，可横向滚动"><table><caption>现有测试时间与记录类型</caption><thead><tr><th scope="col">原图测试时间</th><th scope="col">图示平均下载</th><th scope="col">记录类型</th><th scope="col">核对原图</th></tr></thead><tbody>{sessions.map(session=>{const chart=chartForSession(session);return <tr><th scope="row"><time>{session.testedAt}</time></th><td>{chart.averageDownloadMBps.toFixed(2)} MB/s</td><td>既有站长实测图</td><td><a href={chart.speed.original} target="_blank" rel="noopener">测速图 ↗</a> · <a href={chart.unlock.original} target="_blank" rel="noopener">平台图 ↗</a></td></tr>;})}</tbody></table></div>
+ <div class="inline-reading"><a href={'/evidence/records/#record-'+chartSlug}>查看记录档案 →</a><a href="/downloads/measurement-log-template.csv" download>下载后续复测记录表 ↓</a></div>
+</div>

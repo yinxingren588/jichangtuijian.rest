@@ -1,0 +1,13 @@
+---
+import type {EvidenceRecord} from '../data/evidence';
+import {shareEvidenceText} from '../lib/share-evidence';
+interface Props {record:EvidenceRecord;expanded?:boolean}
+const {record,expanded=false}=Astro.props;
+---
+<details class="evidence-share" open={expanded} data-share-brand={record.slug}><summary>分享这组实测摘要</summary><p>保留日期、单位和原文说明，让接收者能继续核对完整图表。</p><img src={'/share-cards/'+record.slug+'.png'} alt={record.name+'实测摘要：测试日期、样本数、速度和延迟；详细结果见原图'} width="1200" height="720" loading="lazy" decoding="async"/><div class="inline-reading"><a href={'/share-cards/'+record.slug+'.png'} download>下载摘要图 PNG ↓</a><a href={'/share-cards/'+record.slug+'.svg'} download>下载矢量图 SVG ↓</a><a href={'/share/#share-'+record.slug}>查看分享说明 →</a></div><label for={'share-text-'+record.slug}>可复制的摘要文字</label><textarea id={'share-text-'+record.slug} readonly rows="6">{shareEvidenceText(record)}</textarea><button type="button" class="quiet-button" data-copy-evidence>复制摘要与原文链接</button><p class="share-copy-status" role="status" aria-live="polite"></p></details>
+<script>
+ document.querySelectorAll<HTMLButtonElement>('[data-copy-evidence]').forEach(button=>button.addEventListener('click',async()=>{
+  const panel=button.closest<HTMLElement>('[data-share-brand]')!;const text=panel.querySelector<HTMLTextAreaElement>('textarea')!;const status=panel.querySelector<HTMLElement>('.share-copy-status')!;
+  try{await navigator.clipboard.writeText(text.value);status.textContent='已复制摘要和原文链接。';}catch{text.focus();text.select();status.textContent='自动复制未完成，摘要已选中，可手动复制。';}
+ }));
+</script>

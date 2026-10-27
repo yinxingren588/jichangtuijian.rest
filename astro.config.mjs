@@ -14,6 +14,6 @@ for(const file of fs.readdirSync(new URL('./src/content/articles/',import.meta.u
 export default defineConfig({
   site: 'https://jichangtuijian.rest', output: 'static', trailingSlash: 'always',
   markdown: {processor:satteri({hastPlugins:[tableRegions]})},
-  integrations: [sitemap({ filter: url => !/\/(404|search)\/$/.test(url) && !/\/ranking\/(overall|value|budget|stable)\/$/.test(url), serialize: item => {const lastmod=pageDates[new URL(item.url).pathname];if(!lastmod)throw Error('Missing actual modification date for '+item.url);return {...item,lastmod};} })],
+  integrations: [sitemap({ filter: url => !url.endsWith('/tools/search-review/') && !/\/(404|search)\/$/.test(url) && !/\/ranking\/(overall|value|budget|stable)\/$/.test(url), serialize: item => {const lastmod=pageDates[new URL(item.url).pathname];if(!lastmod)throw Error('Missing actual modification date for '+item.url);return {...item,lastmod};} })],
   vite: { plugins: [tailwindcss()] }
 });

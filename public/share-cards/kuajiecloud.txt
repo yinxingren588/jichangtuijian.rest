@@ -1,0 +1,5 @@
+跨界云｜站长实测图表摘要
+测试时间：2026-10-15 21:28:44（时区未标注）
+60个节点；图示平均下载67.02 MB/s，平均HTTPS Ping 111.2 ms。
+站长确认本期图表使用同一测试环境，具体参数待补充。不同测试日期不作为同一时点竞速排名；结果仅对应图示条件。
+原图与说明：https://jichangtuijian.rest/airport/kuajiecloud/#performance-evidence

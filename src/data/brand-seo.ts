@@ -11,4 +11,4 @@ export function resolveBrandSeo(brand:Airport,template:BrandSeo=brandSeoTemplate
  return {title:resolve(template.title),heading:resolve(template.heading),description:resolve(template.description),keywords:[...new Set(template.keywords.map(resolve).filter(Boolean))]};
 }
 export const brandSeo:Record<string,BrandSeo>=Object.fromEntries(airports.map(brand=>[brand.slug,resolveBrandSeo(brand)]));
-export const brandSeoUpdated='2026-10-26';
+export const brandSeoUpdated='2026-10-27';
