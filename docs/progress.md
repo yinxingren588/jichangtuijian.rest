@@ -40,3 +40,7 @@ PASS 仅对应每行说明中已完成的技术工作。该表不将缺少真实
 ## FAQ中心与品牌问答增强 · 2026-10-27
 
 FAQ当前201条，分布35页；本轮新增89条，保留原112条。品牌各6条，比较各3条，故障6条与通用12条。网站327页、320个可索引URL。维护和验证见docs/faq-update.md；全站导出npx tsx scripts/export-faq.ts，品牌导出npm run export:faq。当前内容供站长自行上线。
+
+## FAQ继续扩充 · 2026-10-27
+
+全站FAQ当前344条、38页；本轮新增143条，原201条保留。中心60、品牌224、对照30、故障18、案例12条。维护见docs/faq-expansion.md；新增数据在src/data/faq-expansion.json，完整导出仍使用scripts/export-faq.ts。网站327页、320个可索引URL，当前版本供站长自行上线。

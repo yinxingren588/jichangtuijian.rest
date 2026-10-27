@@ -1,5 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import {decisionFaq} from '../../data/page-faq';
+import {faqSchema} from '../../lib/faq';
 import {decisionStudies} from '../../data/decision-studies';
 import {airports,planPriceText,planTrafficText} from '../../data/airports';
 import {renderBrandFacts} from '../../lib/brand-facts';
@@ -8,6 +11,7 @@ export const getStaticPaths=()=>decisionStudies.map(study=>({params:{slug:study.
 interface Props {study:typeof decisionStudies[number]}
 const {study}=Astro.props;
 const brand=airports.find(item=>item.slug===study.brandSlug)!;
+const faqs=decisionFaq(study.slug,brand);
 const isRecurring=study.slug==='feiv-billing';
 const isVideo=study.slug==='breezenet-tasks';
 const names=(indices:number[])=>indices.length?indices.map(i=>brand.plans[i].name).join('、'):'当前两档的账面月额度均不足';
@@ -16,7 +20,7 @@ const recurringRows=isRecurring?[[3,20],[12,10],[12,30]].map(([months,gb])=>{con
 const videoRows=[[1,3,50],[1.5,8,30],[3,15,50]].map(([hours,mbps,files])=>{const result=videoBudget(hours,mbps,30,files,1,20);return [`每天视频${hours}小时，平均${mbps} Mbps`,`30天＋文件${files} GB；假设1倍、预留20%，准备${result.required} GB`,names(chooseMonthlyQuota(brand.plans,result.billedGB,20).eligible)];});
 const rows=isRecurring?recurringRows:isVideo?videoRows:quotaRows;
 ---
-<Base title={study.title} description={renderBrandFacts(study.description,brand)} breadcrumbs={[{name:'选择案例',url:'/decisions/'},{name:brand.name+'案例',url:'/decisions/'+study.slug+'/'}]}>
+<Base title={study.title} description={renderBrandFacts(study.description,brand)} schema={[faqSchema(faqs)]} breadcrumbs={[{name:'选择案例',url:'/decisions/'},{name:brand.name+'案例',url:'/decisions/'+study.slug+'/'}]}>
  <header class="page-intro"><p class="eyebrow">A WORKED EXAMPLE / 把问题算清楚</p><h1>{study.title}</h1><p>{study.lead}</p><p class="muted">案例更新：2026-10-27 · 套餐来源读取：{brand.referenceChecked}</p></header>
  <article class="reader-case" data-decision-study={study.slug}>
   <section><span class="case-example-label">编辑演算示例 · 非真实用户账单</span><h2>{study.question}</h2><p>{isRecurring?'月付与一次性总量有不同的付款和额度模型。下面只在明确的使用月份与计费消耗假设下演算，不假设不限时包永远有效，也不推断可以叠加或续购。':isVideo?'先用平均传输速率与观看时长估算视频消耗，再加上文件与余量。平均速率是演算输入，不对应某个平台保证画质；规划倍率需要按实际线路规则调整。':'先把任务估算换算为计费流量，再给额度留出余量。下面的用量是便于理解档位的假设，不是站长实际月账单；实际倍率及上传扣量仍应另行确认。'}</p></section>
@@ -29,6 +33,7 @@ const rows=isRecurring?recurringRows:isVideo?videoRows:quotaRows;
    </form><div class="case-result" id="case-result" role="status" aria-live="polite"><p>填写自己的预算后计算；也可直接阅读上面的三个静态演算情景。</p></div><noscript><p>交互演算需要JavaScript；上面的情景、假设、套餐及核对路径仍可完整阅读。</p></noscript>
   </section>
   <section><h2>容量判断之后，还要核对什么</h2><ul><li>目标节点与设备是否可用，所购套餐是否开放相同权限。</li><li>流量重置、上传扣量与实际倍率；月付到期与一次性额度有效条件。</li><li>结算金额、优惠适用范围、续费及退款规则。</li></ul><div class="case-reading"><a href={'/airport/'+brand.slug+'/#selection-heading'}>阅读{brand.name}站长结论 →</a><a href={'/airport/'+brand.slug+'/#performance-evidence'}>看本站真实测速图 →</a><a href={'/compare/?brands='+brand.slug}>加入自己的品牌对照 →</a><a href="/tools/traffic-calculator/">估算更多任务 →</a></div></section>
+  <FaqSection items={faqs} id="decision-faq" heading="这个演算的常见问题" intro="明确输入与结果的边界，再核对实际计费和使用条件。"/>
   <section><h2>继续读懂这些条件</h2><div class="case-reading">{study.related.map((url,index)=><a href={url}>{index===0?'阅读相关判断方法':'核对流量和计费规则'} →</a>)}<a href="/decisions/">返回全部选择案例 →</a><a href="/contact/">反馈你的实际问题 →</a></div></section>
  </article>
  <script id="case-data" type="application/json" set:html={JSON.stringify({kind:study.slug,plans:brand.plans}).replace(/</g,'\u003c')}/>

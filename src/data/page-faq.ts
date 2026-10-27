@@ -1,7 +1,11 @@
 import type {FaqItem} from '../lib/faq';
+import expansionRaw from './faq-expansion.json';
+import type {Airport} from './airports';
+import {renderBrandFacts} from '../lib/brand-facts';
+const expansion=expansionRaw as {general:FaqItem[];brands:Record<string,FaqItem[]>;comparisons:Record<string,FaqItem[]>;troubleshooting:FaqItem[];decisions:Record<string,FaqItem[]>};
 import {brandComparisons,renderComparisonText} from './brand-comparisons';
 export const faqUpdated='2026-10-27';
-export const generalFaq:FaqItem[]=[
+const generalFaqOriginal:FaqItem[]=[
  {id:'billing-period',category:'选择与预算',question:'月付、年付月均和不限时流量包，应该先比较什么？',answer:'先看本次完整付款金额和流量发放方式。月付按单月付款判断；年付月均只是折算展示，不能当作可单月支付的报价；一次性包是累计总量，不按月重新发放。付款模型相同后，再比较满足自己计费用量的具体档位。',links:[{title:'读懂付款周期与成本',url:'/blog/plan-cost/'},{title:'按需求比较品牌',url:'/comparisons/'}]},
  {id:'quota-budget',category:'选择与预算',question:'怎样判断自己每月需要多少GB，而不是只看大流量套餐？',answer:'先列出视频、会议、文件和共享设备的任务量，再核对计费倍率与上传扣量，并单独预留余量。计算器使用明确假设估算，不预测真实扣量；如果倍率未知，先保留未知。选套餐时，必须同一档同时满足预算和额度，不能把入门价配上进阶档流量。',links:[{title:'估算自己的月度流量',url:'/tools/traffic-calculator/'},{title:'查看明确假设的选择案例',url:'/decisions/'}]},
  {id:'lowest-price',category:'选择与预算',question:'为什么最低展示价和专题第一名，不能直接替我决定购买？',answer:'展示价可能对应不同付款周期和权益，专题也有各自公开的编辑排序规则。先筛选付款、额度与所需节点，再读具体品牌及原图。指定展示位置不代表实测第一，单次速度或平台状态也不能替代长期记录与实际结算。',links:[{title:'查看专题排序方法',url:'/editorial-policy/'},{title:'查看28家品牌资料',url:'/airport/'}]},
@@ -15,6 +19,7 @@ export const generalFaq:FaqItem[]=[
  {id:'support-privacy',category:'使用与支持',question:'反馈故障需要提供什么，哪些信息应该隐藏？',answer:'记录时间与时区、设备和客户端版本、网络类型、失败任务、脱敏错误码及一次只改一个条件的结果。移除完整订阅、二维码、账号令牌、订单和支付凭据；普通排查不需要公开这些内容。故障中心提供六类提纲，站长联络入口用于沟通站内资料和页面问题。',links:[{title:'查看故障反馈提纲',url:'/troubleshooting/'},{title:'联络站长',url:'/contact/'}]},
  {id:'comparison-next-step',category:'使用与支持',question:'读完品牌对照后，怎样继续核对，而不是只看结论？',answer:'将候选带入自由比较，检查同档价格、额度和原图日期，再返回品牌页核对节点权限与结算凭据。五篇对照都提供明确情景与下一篇入口；若已经出现连接问题，先沿故障路径定位范围，不把更换品牌当作唯一排查方法。',links:[{title:'五组深度对照',url:'/comparisons/'},{title:'自由组合品牌比较',url:'/compare/'}]},
 ];
+export const generalFaq:FaqItem[]=[...generalFaqOriginal,...expansion.general];
 const comparisonFaqTemplates:Record<string,FaqItem[]>={
  'yinxingren-vs-muguang':[
  {question:'隐形人与暮光的专线名称不同，可以直接据此选出更快的一家吗？',answer:'不可以。套餐名与图中线路标注不构成完整路径说明，当前资料也没有逐档证明开放相同节点。先对照自己的付款和计费容量，再核对准备购买档位的具体节点；随后以相同任务验证，而不是按名称给速度结论。'},
@@ -37,8 +42,8 @@ const comparisonFaqTemplates:Record<string,FaqItem[]>={
  {question:'灵猫IPLC名称或Firefly平台绿色状态，能保证我的AI功能可用吗？',answer:'不能。线路名称不代替节点权限与路径说明，绿色状态只对应图示时间、节点和检测目标。页面可达、登录、对话或播放、付款及账号资格各自验证；Steam货币区一栏也不作为解锁率。'},
  {question:'只有某个平台失败，是不是需要马上更换这两家品牌？',answer:'先区分普通网络是否正常，以及平台失败发生在页面、登录还是具体功能，记录时间和提示。核对平台当前服务与账号条件后，只做有限节点对照；故障中心提供对应路径，不能凭一次失败判断整个品牌不可用。'}],
 };
-export function comparisonFaq(slug:string):FaqItem[] {const item=brandComparisons.find(p=>p.slug===slug);const questions=comparisonFaqTemplates[slug];if(!item||!questions)throw Error('Missing comparison FAQ '+slug);return questions.map((q,i)=>({...q,id:'comparison-faq-'+(i+1),answer:renderComparisonText(q.answer,item),links:[{title:'返回本文情景与筛选条件',url:'#scenarios'},{title:'查看完整常见问题',url:'/faq/'}]}));}
-export const troubleshootingFaq:FaqItem[]=[
+export function comparisonFaq(slug:string):FaqItem[] {const item=brandComparisons.find(p=>p.slug===slug);const questions=comparisonFaqTemplates[slug]&&expansion.comparisons[slug]?[...comparisonFaqTemplates[slug],...expansion.comparisons[slug]]:undefined;if(!item||!questions)throw Error('Missing comparison FAQ '+slug);return questions.map((q,i)=>({...q,id:'comparison-faq-'+(i+1),answer:renderComparisonText(q.answer,item),links:q.links??[{title:'返回本文情景与筛选条件',url:'#scenarios'},{title:'查看完整常见问题',url:'/faq/'}]}));}
+const troubleshootingFaqOriginal:FaqItem[]=[
  {id:'help-faq-update',question:'更新失败时，是否应该先删除旧配置再重新导入？',answer:'先保留旧配置及原错误，确认失败在下载、解析还是节点连接环节。账户状态、订阅来源和格式分别核对后再有限重试；删除仍可用配置可能使对照信息丢失。旧凭据若已被撤销，则按可信入口更新，不继续沿用。',links:[{title:'订阅更新五步路径',url:'#subscription-update'}]},
  {id:'help-faq-scope',question:'已连接但只有一个应用失败，为什么先查应用路径？',answer:'不同应用不一定使用相同的代理或隧道路径。先固定网络、节点与任务，观察失败范围及应用设置，再记录解析、连接或证书提示；不要将一个应用失败直接解释成所有节点故障。',links:[{title:'已连接但打不开的路径',url:'#connected-no-web'}]},
  {id:'help-faq-video',question:'视频卡顿时一直测速，是否能更快找出问题？',answer:'反复测速既会消耗流量，也不一定与视频使用相同目标和持续方式。先固定视频、画质和时段，检查本地竞争任务，再只更换一个节点作有限对照；记录卡顿发生的具体环节，比单独保留测速峰值更有解释力。',links:[{title:'测速快但视频卡的路径',url:'#slow-video'}]},
@@ -46,3 +51,6 @@ export const troubleshootingFaq:FaqItem[]=[
  {id:'help-faq-usage',question:'客户端用量与账户余额不同，能直接认定多扣流量吗？',answer:'先对齐采集时间、单位、统计周期和账号覆盖范围，再核对重置、到期、倍率、上传及共享设备规则。没有对齐这些条件的两个读数不能直接相减得出多扣结论；无法解释时保留原读数和未知项供支持人员核对。',links:[{title:'用量与余额核对路径',url:'#usage-mismatch'}]},
  {id:'help-faq-handover',question:'换网络后旧任务中断，但新网页正常，该从哪里继续检查？',answer:'基础网络、新连接与原来的长会话分别验证。记录切换时间和客户端重连状态，再按应用方式恢复原任务；不要反复提交可能重复执行的付款或表单。新请求成功只说明这一请求可用，不自动证明原任务已经恢复。',links:[{title:'网络切换与唤醒路径',url:'#after-network-switch'}]},
 ];
+
+export const troubleshootingFaq:FaqItem[]=[...troubleshootingFaqOriginal,...expansion.troubleshooting];
+export function decisionFaq(slug:string,brand:Airport):FaqItem[]{const items=expansion.decisions[slug];if(!items)throw Error('Missing decision FAQ '+slug);return items.map(q=>({...q,answer:renderBrandFacts(q.answer,brand)}));}

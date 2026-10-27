@@ -8,24 +8,24 @@
       "gzipBytes": 45855
     },
     {
+      "file": "faq/index.html",
+      "bytes": 99225,
+      "gzipBytes": 26809
+    },
+    {
       "file": "troubleshooting/index.html",
-      "bytes": 56114,
-      "gzipBytes": 17780
+      "bytes": 67911,
+      "gzipBytes": 21113
     },
     {
       "file": "airport/breezenet/index.html",
-      "bytes": 54589,
-      "gzipBytes": 17727
+      "bytes": 56509,
+      "gzipBytes": 18521
     },
     {
       "file": "airport/yinxingren/index.html",
-      "bytes": 54281,
-      "gzipBytes": 17699
-    },
-    {
-      "file": "airport/feimaoyun/index.html",
-      "bytes": 53916,
-      "gzipBytes": 17333
+      "bytes": 56351,
+      "gzipBytes": 18440
     }
   ],
   "javascript": [
