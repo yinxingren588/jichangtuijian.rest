@@ -55,15 +55,15 @@ test('fact rendering keeps payment period, quota period, unknowns and unlimited 
  sample.deviceLimit='最多 2 台';assert.ok(resolveBrandSeo(sample,template).description.includes('最多 2 台'));
 });
 
-test('all 28 brand pages render four distinct authored questions and resolved answers',()=>{
+test('all 28 brand pages render six distinct authored questions and resolved answers',()=>{
  assert.deepEqual(Object.keys(brandFaqTemplates).sort(),airports.map(b=>b.slug).sort());
  const questionSet=new Set<string>();
  for(const brand of airports){
   const questions=questionsForBrand(brand),$=load(fs.readFileSync('dist/airport/'+brand.slug+'/index.html','utf8'));
-  assert.equal(questions.length,4,brand.slug);assert.equal($('.brand-faq').length,4);assert.equal($('.brand-faq[open]').length,1);
+  assert.equal(questions.length,6,brand.slug);assert.equal($('.brand-faq').length,6);assert.equal($('.brand-faq[open]').length,1);
   questions.forEach((q,i)=>{questionSet.add(q.question);assert.equal($('.brand-faq summary').eq(i).text(),q.question);assert.equal($('.brand-faq p').eq(i).text(),q.answer);assert.ok(q.answer.length>45,brand.slug);assert.ok(!q.answer.includes('{{'),brand.slug);});
  }
- assert.equal(questionSet.size,112);
+ assert.equal(questionSet.size,168);
 });
 
 test('built brand head, social metadata, H1 and canonical use that brand own values',()=>{

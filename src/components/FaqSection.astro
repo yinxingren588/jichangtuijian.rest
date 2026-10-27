@@ -1,0 +1,6 @@
+---
+import type {FaqItem} from '../lib/faq';
+interface Props {items:FaqItem[];id:string;heading?:string;intro?:string;filterable?:boolean}
+const {items,id,heading='常见问题',intro,filterable=false}=Astro.props;
+---
+<section class="faq-section" aria-labelledby={id} data-faq-block={id}><p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p><h2 id={id}>{heading}</h2>{intro&&<p>{intro}</p>}<div class="faq-items">{items.map((item,index)=><details class="site-faq" id={item.id||id+'-question-'+(index+1)} data-faq-item data-faq-search={filterable?(item.question+' '+item.answer+' '+item.category).toLowerCase():undefined} data-faq-category={item.category} open={index===0}><summary>{item.question}</summary><div class="faq-answer"><p>{item.answer}</p>{item.links?.length&&<div class="inline-reading">{item.links.map(link=><a href={link.url}>{link.title} →</a>)}</div>}</div></details>)}</div></section>

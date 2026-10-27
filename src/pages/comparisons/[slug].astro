@@ -4,12 +4,16 @@ import {brandComparisons,comparisonBrands,comparisonUrl,comparisonUpdated,render
 import {planPriceText,planTrafficText} from '../../data/airports';
 import {evidenceFor} from '../../data/evidence';
 import {site} from '../../data/site';
+import FaqSection from '../../components/FaqSection.astro';
+import {comparisonFaq} from '../../data/page-faq';
+import {faqSchema} from '../../lib/faq';
 export const getStaticPaths=()=>brandComparisons.map(item=>({params:{slug:item.slug},props:{item}}));
 interface Props {item:BrandComparison}
 const {item}=Astro.props;const brands=comparisonBrands(item);const charts=brands.map(b=>evidenceFor(b.slug));
 const text=(value:string)=>renderComparisonText(value,item);
+const faqs=comparisonFaq(item.slug);
 const index=brandComparisons.findIndex(p=>p.slug===item.slug);const next=brandComparisons[(index+1)%brandComparisons.length];const previous=brandComparisons[(index-1+brandComparisons.length)%brandComparisons.length];
-const schema=[{'@type':'Article',headline:item.title,datePublished:comparisonUpdated,dateModified:comparisonUpdated,author:{'@type':'Organization',name:'航线笔记'},mainEntityOfPage:site.url+comparisonUrl(item)}];
+const schema=[faqSchema(faqs),{'@type':'Article',headline:item.title,datePublished:comparisonUpdated,dateModified:comparisonUpdated,author:{'@type':'Organization',name:'航线笔记'},mainEntityOfPage:site.url+comparisonUrl(item)}];
 ---
 <Base title={item.title} description={item.description} keywords={[brands[0].name+'对比'+brands[1].name,brands[0].name+'套餐',brands[1].name+'流量','机场品牌对照']} schema={schema} breadcrumbs={[{name:'品牌深度对照',url:'/comparisons/'},{name:brands.map(b=>b.name).join('与'),url:comparisonUrl(item)}]}>
  <header class="page-intro"><p class="eyebrow">BRAND COMPARISON / 深度对照</p><h1>{item.title}</h1><p>{item.lead}</p><p class="muted">分析更新：<time datetime={comparisonUpdated}>{comparisonUpdated}</time> · 参考套餐来源读取：{brands.map(b=>b.referenceChecked).filter((v,i,a)=>a.indexOf(v)===i).join('、')}</p></header>
@@ -22,6 +26,7 @@ const schema=[{'@type':'Article',headline:item.title,datePublished:comparisonUpd
   <section><h2>不同需求，下一步看什么</h2><div class="comparison-choice-grid">{item.choices.map(choice=><div><h3>{choice.title}</h3><p>{text(choice.text)}</p></div>)}</div></section>
   <section id="charts"><h2>原始测速怎样支持这次选择</h2><p>{item.chartReading}</p><p>站长已确认本期全部图表使用同一测试环境，具体参数仍待补齐。两品牌的测试日期分别保留；没有把不同日期汇总为同一时点竞速排名。</p><div class="reader-table-scroll" tabindex="0" role="region" aria-label="原图时间与单位对照，可横向滚动"><table><thead><tr><th scope="col">品牌</th><th scope="col">图示时间 / 样本</th><th scope="col">图示平均下载</th><th scope="col">图示平均TLS / HTTPS</th></tr></thead><tbody>{brands.map((brand,i)=>{const chart=charts[i];return chart?<tr data-comparison-chart={brand.slug}><th scope="row"><a href={'/airport/'+brand.slug+'/#performance-evidence'}>{brand.name}原图 ↗</a></th><td>{chart.time}<br/>{chart.nodeCount}个节点 · 时区未注明</td><td>{chart.averageDownloadMBps.toFixed(2)} MB/s</td><td>{chart.averageTlsMs.toFixed(1)} ms / {chart.averageHttpsMs.toFixed(1)} ms</td></tr>:<tr><th scope="row">{brand.name}</th><td colspan="3">尚未收录对应图表</td></tr>;})}</tbody></table></div><p class="fine-print">均值按图示节点等权统计；MB/s与Mbps不同。平台绿色计数是节点状态，非逐请求成功率；峰值、延迟、平台状态与长期稳定性分别判断。</p></section>
   <section id="checkout"><h2>付款前的三项具体核对</h2><ol class="comparison-checks">{item.checks.map(check=><li>{check}</li>)}</ol><div class="comparison-choice-grid">{brands.map(brand=><div><h3>{brand.name}优惠与结算</h3><p>{brand.coupon?<>已录入 <code>{brand.coupon.code}</code>，对应优惠价永久有效（站长确认）；具体折扣、适用档位及实际金额待结算凭据核对。</>:'本站未记录该品牌的站长优惠码，不据此判断商家一定没有活动。'}目前未公开结算凭据，不将参考标价写成实际实付。</p><a href={'/airport/'+brand.slug+'/#checkout-proof'}>核对本品牌凭据状态 →</a></div>)}</div></section>
+  <FaqSection items={faqs} id="comparison-faq" heading="关于这两家的常见问题" intro="围绕本文的付款、容量和节点判断继续解答。"/>
   <section><h2>沿当前问题继续阅读</h2><div class="case-reading">{item.related.map(link=><a href={link.url}>{link.title} →</a>)}<a href="/troubleshooting/">故障排查中心 →</a><a href="/comparisons/">返回五组深度对照 →</a></div><p class="fine-print">本文解释现有资料和选择口径，不构成综合排名。品牌档案保留原资料入口及推广关系说明；本篇没有新增商家结算或连接测试。</p></section>
  </article>
  <nav class="article-pagination" aria-label="深度对照前后阅读"><a href={comparisonUrl(previous)}><span>← 上一篇对照</span><strong>{previous.title}</strong></a><a href={comparisonUrl(next)}><span>下一篇对照 →</span><strong>{next.title}</strong></a></nav>

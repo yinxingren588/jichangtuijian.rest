@@ -22,6 +22,8 @@ import {rankBrands,type Ranking} from '../data/ranking';
 import {airports,airportCandidates,partnerAirports} from '../data/airports';
 import {topics,site} from '../data/site';
 import {policies} from '../data/policies';
+import {questionsForBrand} from '../data/brand-faq';
+import {faqSchema} from '../lib/faq';
 export async function getStaticPaths(){
  const articles=await getCollection('articles',a=>!a.data.draft);
  const paths=[...['recommend','ranking','airport','review','guides','blog','glossary'].map(path=>({params:{path},props:{mode:'index',slug:path}})),...topics.map(t=>({params:{path:'recommend/'+t.slug},props:{mode:'topic',slug:t.slug}})),...['overall','value','budget','stable'].map(slug=>({params:{path:'ranking/'+slug},props:{mode:'ranking',slug}})),...airports.map(a=>({params:{path:'airport/'+a.slug},props:{mode:'brand',slug:a.slug}})),...policies.map(p=>({params:{path:p.slug},props:{mode:'policy',slug:p.slug}})),...articles.map(a=>({params:{path:a.data.section+'/'+a.id},props:{mode:'article',slug:a.id}}))];return paths;
@@ -42,7 +44,7 @@ const heading=mode==='brand'?brandSeo[slug].heading:title;
 const parent=mode==='topic'?'recommend':mode==='ranking'?'ranking':mode==='brand'?'airport':mode==='article'?article!.data.section:'';
 const breadcrumbs=[...(parent?[{name:labels[parent],url:'/'+parent+'/'}]:[]),{name:mode==='brand'?brand!.name:title,url:Astro.url.pathname}];
 const rankRows=mode==='ranking'?rankBrands(slug as Ranking):[];
-const schema=mode==='article'?[{'@type':article!.data.section==='blog'?'BlogPosting':'Article',headline:title,description,datePublished:article!.data.published,dateModified:article!.data.updated,inLanguage:'zh-CN',author:{'@type':'Organization',name:site.name},mainEntityOfPage:new URL(Astro.url.pathname,site.url).href}]:mode==='index'&&slug==='airport'?[{'@type':'ItemList',name:'机场品牌资料档案（非排名）',itemListElement:airports.map((a,i)=>({'@type':'ListItem',position:i+1,name:a.name,url:site.url+'/airport/'+a.slug+'/'}))}]:mode==='topic'?[{'@type':'ItemList',name:topic!.name+'十品牌编辑参考排行',description:topicRankingRules[slug as TopicSlug].method,itemListOrder:'https://schema.org/ItemListOrderAscending',numberOfItems:10,itemListElement:topicRanking(slug as TopicSlug).map(r=>({'@type':'ListItem',position:r.rank,name:r.brand.name,url:site.url+'/airport/'+r.brand.slug+'/'}))}]:[];
+const schema=mode==='brand'?[faqSchema(questionsForBrand(brand!))]:mode==='article'?[{'@type':article!.data.section==='blog'?'BlogPosting':'Article',headline:title,description,datePublished:article!.data.published,dateModified:article!.data.updated,inLanguage:'zh-CN',author:{'@type':'Organization',name:site.name},mainEntityOfPage:new URL(Astro.url.pathname,site.url).href}]:mode==='index'&&slug==='airport'?[{'@type':'ItemList',name:'机场品牌资料档案（非排名）',itemListElement:airports.map((a,i)=>({'@type':'ListItem',position:i+1,name:a.name,url:site.url+'/airport/'+a.slug+'/'}))}]:mode==='topic'?[{'@type':'ItemList',name:topic!.name+'十品牌编辑参考排行',description:topicRankingRules[slug as TopicSlug].method,itemListOrder:'https://schema.org/ItemListOrderAscending',numberOfItems:10,itemListElement:topicRanking(slug as TopicSlug).map(r=>({'@type':'ListItem',position:r.rank,name:r.brand.name,url:site.url+'/airport/'+r.brand.slug+'/'}))}]:[];
 const rendered=mode==='article'?await render(article!):null;
 const Content=rendered?.Content;
 const related=mode==='article'?relatedEntries(article!,articles):[];

@@ -36,3 +36,7 @@ PASS 仅对应每行说明中已完成的技术工作。该表不将缺少真实
 ## 品牌深度对照与故障中心 · 2026-10-27
 
 新增五篇独立品牌对照、对照目录与六类症状排查中心，共7页。当前326页、319个可索引URL；原内容库保持。比较文案、情景与排查路径维护见docs/comparison-help.md；运行npx tsx scripts/export-comparison-help.ts导出全文。站长自行部署，本轮不通知未上线的新URL。
+
+## FAQ中心与品牌问答增强 · 2026-10-27
+
+FAQ当前201条，分布35页；本轮新增89条，保留原112条。品牌各6条，比较各3条，故障6条与通用12条。网站327页、320个可索引URL。维护和验证见docs/faq-update.md；全站导出npx tsx scripts/export-faq.ts，品牌导出npm run export:faq。当前内容供站长自行上线。

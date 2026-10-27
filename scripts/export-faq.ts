@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {airports} from '../src/data/airports';
+import {questionsForBrand} from '../src/data/brand-faq';
+import {brandComparisons,comparisonUrl} from '../src/data/brand-comparisons';
+import {generalFaq,comparisonFaq,troubleshootingFaq} from '../src/data/page-faq';
+const records=[{name:'通用FAQ中心',route:'/faq/',questions:generalFaq},...airports.map(b=>({name:b.name+'专属问答',route:'/airport/'+b.slug+'/#brand-faq',questions:questionsForBrand(b)})),...brandComparisons.map(p=>({name:p.title+' · FAQ',route:comparisonUrl(p)+'#comparison-faq',questions:comparisonFaq(p.slug)})),{name:'故障排查FAQ',route:'/troubleshooting/#troubleshooting-faq',questions:troubleshootingFaq}];
+const count=records.reduce((n,r)=>n+r.questions.length,0);if(count!==201)throw Error('Review expected FAQ count before export');
+fs.writeFileSync('docs/faq-complete.json',JSON.stringify({updated:'2026-10-27',total:count,newAnswers:89,pages:35,records},null,2)+'\n');
+const text=['# 全站FAQ完整文案 · 2026-10-27','','28个品牌各6条、五篇对照各3条、故障中心6条及通用中心12条，共201条。本轮新增89条；原有112条品牌问答保持。','',...records.flatMap(r=>['## '+r.name,'','页面：'+r.route,'',...r.questions.flatMap((q,i)=>['### '+(i+1)+'. '+q.question,'',q.answer,'',...(q.links||[]).map(link=>'- '+link.title+'：'+link.url),''])])].join('\n').trimEnd()+'\n';
+fs.writeFileSync('docs/faq-complete.md',text);console.log(`Exported ${count} FAQ answers across ${records.length} pages.`);
